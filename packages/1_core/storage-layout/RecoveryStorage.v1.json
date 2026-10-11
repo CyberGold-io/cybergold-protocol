@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1.0",
+  "compatibility": "append-only-immediate-recovery-no-existing-rights",
+  "derivation": "keccak256(abi.encode(uint256(keccak256(bytes(namespace))) - 1)) & ~bytes32(uint256(0xff))",
+  "alignmentBytes": 256,
+  "namespaces": [
+    {
+      "namespace": "cybergold.core.reserve-lifecycle.storage.v1",
+      "slot": "0xfae32cdf893d4572f8f24b8f81455fdd935e54a7d0ca9330a89269db42408c00",
+      "library": "src/libraries/LibReserveLifecycleStorage.sol",
+      "layout": [
+        {"slotOffset": 0, "field": "records", "type": "mapping(address => ReserveLifecycleRecord)"}
+      ],
+      "mappedValueLayouts": [
+        {
+          "mappingField": "records",
+          "valueType": "ReserveLifecycleRecord",
+          "fields": [
+            {"slotOffset": 0, "byteOffset": 0, "field": "lifecycle", "type": "IRecoveryTypes.ReserveLifecycle", "bytes": 1},
+            {"slotOffset": 1, "byteOffset": 0, "field": "exitEntitlementRaw", "type": "uint256", "bytes": 32}
+          ]
+        }
+      ]
+    },
+    {
+      "namespace": "cybergold.core.recovery.storage.v1",
+      "slot": "0x9c93e9d30446027e39ff4d92a0e041074875ec5eab2dcf6938ecf6e407f2da00",
+      "library": "src/libraries/LibRecoveryStorage.sol",
+      "layout": [
+        {"slotOffset": 0, "field": "coreAttachedRecoveryAssets", "type": "address[]"},
+        {"slotOffset": 1, "field": "pools", "type": "mapping(address => RecoveryPool)"},
+        {"slotOffset": 2, "field": "outstandingRecoveryAssets", "type": "address[]"},
+        {"slotOffset": 3, "field": "outstandingIndexPlusOne", "type": "mapping(address => uint256)"}
+      ],
+      "mappedValueLayouts": [
+        {
+          "mappingField": "pools",
+          "valueType": "RecoveryPool",
+          "fields": [
+            {"slotOffset": 0, "byteOffset": 0, "field": "impaired", "type": "bool", "bytes": 1},
+            {"slotOffset": 1, "byteOffset": 0, "field": "coreAttachedShares", "type": "uint256", "bytes": 32},
+            {"slotOffset": 2, "byteOffset": 0, "field": "redeemableRaw", "type": "uint256", "bytes": 32},
+            {"slotOffset": 3, "byteOffset": 0, "field": "cygldPerAssetRawFp18", "type": "uint256", "bytes": 32},
+            {"slotOffset": 4, "byteOffset": 0, "field": "cygldSupplyCap", "type": "uint256", "bytes": 32},
+            {"slotOffset": 5, "byteOffset": 0, "field": "referenceShares", "type": "uint256", "bytes": 32},
+            {"slotOffset": 6, "byteOffset": 0, "field": "referenceValueCygld", "type": "uint256", "bytes": 32},
+            {"slotOffset": 7, "byteOffset": 0, "field": "shareDecimals", "type": "uint8", "bytes": 1},
+            {"slotOffset": 7, "byteOffset": 1, "field": "decimalsKnown", "type": "bool", "bytes": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "namespace": "cybergold.core.recovery-share.storage.v1",
+      "slot": "0x2076ed1e4ebe5e67adb9bae5ea9d45812f45e2e97689bca2a031fadc9725da00",
+      "library": "src/libraries/LibRecoveryShareStorage.sol",
+      "layout": [
+        {"slotOffset": 0, "field": "supply", "type": "mapping(uint256 => uint256)"}
+      ]
+    }
+  ],
+  "externalNamespacesChecked": [
+    {
+      "owner": "OpenZeppelin Contracts Upgradeable 5.6.1",
+      "namespace": "openzeppelin.storage.ERC1155",
+      "slot": "0x88be536d5240c274a3b1d3a1be54482fd9caa294f08c62a7cde569f49a3c4500"
+    },
+    {
+      "owner": "OpenZeppelin Contracts Upgradeable 5.6.1",
+      "namespace": "openzeppelin.storage.ERC1155Supply",
+      "slot": "0x4a593662ee04d27b6a00ebb31be7fe0c102c2ade82a7c5d764f2df05dc4e2800"
+    },
+    {
+      "owner": "OpenZeppelin Contracts Upgradeable 5.6.1",
+      "namespace": "openzeppelin.storage.ERC1155URIStorage",
+      "slot": "0x89fc852226e759c7c636cf34d732f0198fc56a54876b2374a52beb7b0c558600"
+    }
+  ]
+}

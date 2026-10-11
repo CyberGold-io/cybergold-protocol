@@ -1,0 +1,537 @@
+{
+  "contractName": "CoreDiamond",
+  "expectedSelectorCount": 103,
+  "initializerIntent": {
+    "contract": "DiamondInit",
+    "source": "packages/1_core/src/deploy/DiamondInit.sol",
+    "function": "init",
+    "stateOnlySchemaAdvancementAllowed": false
+  },
+  "compatibilityAuthorities": {
+    "storageInventory": "ci/storage-inventory.json",
+    "interfaceAdvertisementAuthority": "packages/0_shared/src/libraries/LibInterfaceInvariant.sol",
+    "runtimeVersionAuthority": "packages/0_shared/src/helpers/FacetVersionRegistry.sol",
+    "validatedCutAuthority": "packages/0_shared/src/helpers/ValidatedDiamondCut.sol"
+  },
+  "advertisedInterfaces": [
+    {
+      "name": "IERC165",
+      "interfaceId": "0x01ffc9a7",
+      "interfaceSelectorSource": {
+        "kind": "signatures",
+        "signatures": ["supportsInterface(bytes4)"]
+      },
+      "manifestSelectorSource": {
+        "kind": "signatures",
+        "signatures": ["supportsInterface(bytes4)"]
+      }
+    },
+    {
+      "name": "IDiamondCut",
+      "interfaceId": "0x1f931c1c",
+      "interfaceSelectorSource": {
+        "kind": "signatures",
+        "signatures": ["diamondCut((address,uint8,bytes4[])[],address,bytes)"]
+      },
+      "manifestSelectorSource": {
+        "kind": "signatures",
+        "signatures": ["diamondCut((address,uint8,bytes4[])[],address,bytes)"]
+      }
+    },
+    {
+      "name": "IDiamondLoupe",
+      "interfaceId": "0x48e2b093",
+      "interfaceSelectorSource": {
+        "kind": "signatures",
+        "signatures": [
+          "facets()",
+          "facetFunctionSelectors(address)",
+          "facetAddresses()",
+          "facetAddress(bytes4)"
+        ]
+      },
+      "manifestSelectorSource": {
+        "kind": "signatures",
+        "signatures": [
+          "facets()",
+          "facetFunctionSelectors(address)",
+          "facetAddresses()",
+          "facetAddress(bytes4)"
+        ]
+      }
+    },
+    {
+      "name": "IAccessControl",
+      "interfaceId": "0x7965db0b",
+      "interfaceSelectorSource": {
+        "kind": "signatures",
+        "signatures": [
+          "hasRole(bytes32,address)",
+          "getRoleAdmin(bytes32)",
+          "grantRole(bytes32,address)",
+          "revokeRole(bytes32,address)",
+          "renounceRole(bytes32,address)"
+        ]
+      },
+      "manifestSelectorSource": {
+        "kind": "signatures",
+        "signatures": [
+          "supportsInterface(bytes4)",
+          "hasRole(bytes32,address)",
+          "getRoleAdmin(bytes32)",
+          "grantRole(bytes32,address)",
+          "revokeRole(bytes32,address)",
+          "renounceRole(bytes32,address)"
+        ]
+      }
+    },
+    {
+      "name": "IAccessControlEnumerable",
+      "interfaceId": "0x5a05180f",
+      "interfaceSelectorSource": {
+        "kind": "signatures",
+        "signatures": [
+          "getRoleMember(bytes32,uint256)",
+          "getRoleMemberCount(bytes32)"
+        ]
+      },
+      "manifestSelectorSource": {
+        "kind": "signatures",
+        "signatures": [
+          "supportsInterface(bytes4)",
+          "hasRole(bytes32,address)",
+          "getRoleAdmin(bytes32)",
+          "grantRole(bytes32,address)",
+          "revokeRole(bytes32,address)",
+          "renounceRole(bytes32,address)",
+          "getRoleMember(bytes32,uint256)",
+          "getRoleMemberCount(bytes32)"
+        ]
+      }
+    },
+    {
+      "name": "IAccessControlDefaultAdminRules",
+      "interfaceId": "0x31498786",
+      "interfaceSelectorSource": {
+        "kind": "signatures",
+        "signatures": [
+          "defaultAdmin()",
+          "pendingDefaultAdmin()",
+          "defaultAdminDelay()",
+          "pendingDefaultAdminDelay()",
+          "defaultAdminDelayIncreaseWait()",
+          "beginDefaultAdminTransfer(address)",
+          "cancelDefaultAdminTransfer()",
+          "acceptDefaultAdminTransfer()",
+          "changeDefaultAdminDelay(uint48)",
+          "rollbackDefaultAdminDelay()"
+        ]
+      },
+      "manifestSelectorSource": {
+        "kind": "signatures",
+        "signatures": [
+          "supportsInterface(bytes4)",
+          "hasRole(bytes32,address)",
+          "getRoleAdmin(bytes32)",
+          "grantRole(bytes32,address)",
+          "revokeRole(bytes32,address)",
+          "renounceRole(bytes32,address)",
+          "defaultAdmin()",
+          "pendingDefaultAdmin()",
+          "defaultAdminDelay()",
+          "pendingDefaultAdminDelay()",
+          "defaultAdminDelayIncreaseWait()",
+          "beginDefaultAdminTransfer(address)",
+          "cancelDefaultAdminTransfer()",
+          "acceptDefaultAdminTransfer()",
+          "changeDefaultAdminDelay(uint48)",
+          "rollbackDefaultAdminDelay()"
+        ]
+      }
+    },
+    {
+      "name": "IDiamondEmergencyAuthority",
+      "interfaceId": "0x955c24ed",
+      "interfaceSelectorSource": {
+        "kind": "signatures",
+        "signatures": [
+          "safeWallet()",
+          "canPause(address)",
+          "canUnpause(address)",
+          "setSafeWallet(address,address)"
+        ]
+      },
+      "manifestSelectorSource": {
+        "kind": "signatures",
+        "signatures": [
+          "pause()",
+          "unpause()",
+          "paused()",
+          "safeWallet()",
+          "canPause(address)",
+          "canUnpause(address)",
+          "setSafeWallet(address,address)"
+        ]
+      }
+    },
+    {
+      "name": "IERC20",
+      "interfaceId": "0x36372b07",
+      "interfaceSelectorSource": {
+        "kind": "signatures",
+        "signatures": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ]
+      },
+      "manifestSelectorSource": {
+        "kind": "signatures",
+        "signatures": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ]
+      }
+    },
+    {
+      "name": "IERC20Metadata",
+      "interfaceId": "0xa219a025",
+      "interfaceSelectorSource": {
+        "kind": "signatures",
+        "signatures": ["name()", "symbol()", "decimals()"]
+      },
+      "manifestSelectorSource": {
+        "kind": "signatures",
+        "signatures": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)",
+          "name()",
+          "symbol()",
+          "decimals()"
+        ]
+      }
+    },
+    {
+      "name": "IERC20Permit",
+      "interfaceId": "0x9d8ff7da",
+      "interfaceSelectorSource": {
+        "kind": "signatures",
+        "signatures": [
+          "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+          "nonces(address)",
+          "DOMAIN_SEPARATOR()"
+        ]
+      },
+      "manifestSelectorSource": {
+        "kind": "signatures",
+        "signatures": [
+          "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+          "nonces(address)",
+          "DOMAIN_SEPARATOR()"
+        ]
+      }
+    },
+    {
+      "name": "IERC1155",
+      "interfaceId": "0xd9b67a26",
+      "interfaceSelectorSource": {
+        "kind": "signatures",
+        "signatures": [
+          "balanceOf(address,uint256)",
+          "balanceOfBatch(address[],uint256[])",
+          "setApprovalForAll(address,bool)",
+          "isApprovedForAll(address,address)",
+          "safeTransferFrom(address,address,uint256,uint256,bytes)",
+          "safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)"
+        ]
+      },
+      "manifestSelectorSource": {
+        "kind": "signatures",
+        "signatures": [
+          "supportsInterface(bytes4)",
+          "balanceOf(address,uint256)",
+          "balanceOfBatch(address[],uint256[])",
+          "setApprovalForAll(address,bool)",
+          "isApprovedForAll(address,address)",
+          "safeTransferFrom(address,address,uint256,uint256,bytes)",
+          "safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)"
+        ]
+      }
+    },
+    {
+      "name": "IERC1155MetadataURI",
+      "interfaceId": "0x0e89341c",
+      "interfaceSelectorSource": {
+        "kind": "signatures",
+        "signatures": ["uri(uint256)"]
+      },
+      "manifestSelectorSource": {
+        "kind": "signatures",
+        "signatures": [
+          "supportsInterface(bytes4)",
+          "balanceOf(address,uint256)",
+          "balanceOfBatch(address[],uint256[])",
+          "setApprovalForAll(address,bool)",
+          "isApprovedForAll(address,address)",
+          "safeTransferFrom(address,address,uint256,uint256,bytes)",
+          "safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)",
+          "uri(uint256)"
+        ]
+      }
+    },
+    {
+      "name": "ICoreRedemption",
+      "interfaceId": "0x02580072",
+      "interfaceSelectorSource": {
+        "kind": "signatures",
+        "signatures": [
+          "redeem(uint256)",
+          "safeRedeem(uint256,(uint8,address,uint256,uint256)[])",
+          "previewRedeemExactIn(uint256)",
+          "previewRedeemExactOut((uint8,address,uint256,uint256)[])"
+        ]
+      },
+      "manifestSelectorSource": {
+        "kind": "signatures",
+        "signatures": [
+          "redeem(uint256)",
+          "safeRedeem(uint256,(uint8,address,uint256,uint256)[])",
+          "previewRedeemExactIn(uint256)",
+          "previewRedeemExactOut((uint8,address,uint256,uint256)[])"
+        ]
+      }
+    }
+  ],
+  "selectorPolicy": {
+    "facetPriority": {
+      "token": 0,
+      "issuance": 1,
+      "redemption": 2,
+      "rebalance": 3,
+      "preview": 4,
+      "basketAdmin": 5,
+      "controllerConfig": 6,
+      "lens": 7,
+      "reserveLifecycle": 8,
+      "recoveryShare": 9,
+      "recoveryShareMetadata": 10,
+      "recoveryAdmin": 11,
+      "recoveryPoolSettlement": 12
+    },
+    "automaticExclusions": {
+      "FACET_NAMESPACE()": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond.",
+      "FACET_VERSION()": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond.",
+      "init*": "Initializer entrypoints execute only as reviewed delegatecall targets and are never installed runtime selectors."
+    },
+    "signatureExclusions": {},
+    "preferredFacetOwners": {
+      "REDEMPTION_FEE_EXEMPT_ROLE()": {
+        "facet": "controllerConfig",
+        "reason": "The controller configuration facet is the canonical role-constant owner."
+      },
+      "uri(uint256)": {
+        "facet": "recoveryShareMetadata",
+        "reason": "The dedicated recovery-share metadata facet is the canonical ERC-1155 URI owner."
+      }
+    }
+  },
+  "selectorSubsets": [
+    {
+      "function": "redemptionPreviewSelectors",
+      "sourceFacet": "preview",
+      "notice": "Return the preview selectors belonging to the narrow mixed-redemption interface.",
+      "returnDescription": "Mixed-redemption preview selectors in deterministic order.",
+      "signatures": [
+        "previewRedeemExactIn(uint256)",
+        "previewRedeemExactOut((uint8,address,uint256,uint256)[])"
+      ]
+    }
+  ],
+  "output": "generated/abi/CoreDiamond.json",
+  "topologyOutput": "generated/topology/CoreDiamond.json",
+  "semanticDocExemptions": {
+    "error:CannotAddFunctionToDiamondThatAlreadyExists(bytes4)": "Pinned diamond-1 EIP-2535 implementation error; the upstream declaration has no NatSpec and is not authored by CyberGold.",
+    "error:CannotAddSelectorsToZeroAddress(bytes4[])": "Pinned diamond-1 EIP-2535 implementation error; the upstream declaration has no NatSpec and is not authored by CyberGold.",
+    "error:CannotRemoveFunctionThatDoesNotExist(bytes4)": "Pinned diamond-1 EIP-2535 implementation error; the upstream declaration has no NatSpec and is not authored by CyberGold.",
+    "error:CannotRemoveImmutableFunction(bytes4)": "Pinned diamond-1 EIP-2535 implementation error; the upstream declaration has no NatSpec and is not authored by CyberGold.",
+    "error:CannotReplaceFunctionThatDoesNotExists(bytes4)": "Pinned diamond-1 EIP-2535 implementation error; the upstream declaration has no NatSpec and is not authored by CyberGold.",
+    "error:CannotReplaceFunctionWithTheSameFunctionFromTheSameFacet(bytes4)": "Pinned diamond-1 EIP-2535 implementation error; the upstream declaration has no NatSpec and is not authored by CyberGold.",
+    "error:CannotReplaceFunctionsFromFacetWithZeroAddress(bytes4[])": "Pinned diamond-1 EIP-2535 implementation error; the upstream declaration has no NatSpec and is not authored by CyberGold.",
+    "error:CannotReplaceImmutableFunction(bytes4)": "Pinned diamond-1 EIP-2535 implementation error; the upstream declaration has no NatSpec and is not authored by CyberGold.",
+    "error:IncorrectFacetCutAction(uint8)": "Pinned diamond-1 EIP-2535 implementation error; the upstream declaration has no NatSpec and is not authored by CyberGold.",
+    "error:InitializationFunctionReverted(address,bytes)": "Pinned diamond-1 EIP-2535 implementation error; the upstream declaration has no NatSpec and is not authored by CyberGold.",
+    "error:NoBytecodeAtAddress(address,string)": "Pinned diamond-1 EIP-2535 implementation error; the upstream declaration has no NatSpec and is not authored by CyberGold.",
+    "error:NoSelectorsProvidedForFacetForCut(address)": "Pinned diamond-1 EIP-2535 implementation error; the upstream declaration has no NatSpec and is not authored by CyberGold.",
+    "error:RemoveFacetAddressMustBeZeroAddress(address)": "Pinned diamond-1 EIP-2535 implementation error; the upstream declaration has no NatSpec and is not authored by CyberGold.",
+    "event:DiamondCut((address,uint8,bytes4[])[],address,bytes)": "Pinned diamond-1 EIP-2535 standard event; the upstream declaration has no NatSpec and is not authored by CyberGold.",
+    "function:DEFAULT_ADMIN_ROLE()": "Inherited OpenZeppelin public-constant getter whose generated method metadata does not retain declaration-level NatSpec."
+  },
+  "facets": [
+    {
+      "name": "cut",
+      "scope": "base",
+      "contract": "DiamondCutAccessFacet",
+      "source": "packages/0_shared/src/facets/DiamondCutAccessFacet.sol"
+    },
+    {
+      "name": "loupe",
+      "scope": "base",
+      "contract": "ProtocolDiamondLoupeFacet",
+      "source": "packages/0_shared/src/facets/ProtocolDiamondLoupeFacet.sol"
+    },
+    {
+      "name": "access",
+      "scope": "base",
+      "contract": "DefaultAdminAccessControlFacet",
+      "source": "packages/0_shared/src/facets/DefaultAdminAccessControlFacet.sol",
+      "allowInheritedDuplicate": true,
+      "exclude": [
+        "initDefaultAdminAccessControl(address)",
+        "initDefaultAdminAccessControlFromOuter(address)",
+        "owner()"
+      ],
+      "exclusionReasons": {
+        "initDefaultAdminAccessControl(address)": "Standalone initializer is delegatecall-only and absent from the runtime cut.",
+        "initDefaultAdminAccessControlFromOuter(address)": "Outer-coordinator initializer is delegatecall-only and absent from the runtime cut.",
+        "owner()": "Core deliberately has no ERC-5313 owner surface; two-step AccessControl is authoritative."
+      }
+    },
+    {
+      "name": "pause",
+      "scope": "base",
+      "contract": "PausableFacet",
+      "source": "packages/0_shared/src/facets/PausableFacet.sol",
+      "exclude": ["initPausable(address)", "initPausableFromOuter(address)"],
+      "exclusionReasons": {
+        "initPausable(address)": "Standalone initializer is delegatecall-only and absent from the runtime cut.",
+        "initPausableFromOuter(address)": "Outer-coordinator initializer is delegatecall-only and absent from the runtime cut."
+      }
+    },
+    {
+      "name": "token",
+      "scope": "product",
+      "contract": "TokenFacet",
+      "source": "packages/1_core/src/facets/TokenFacet.sol",
+      "selectorSource": "packages/1_core/src/deploy/FacetSelectors.sol",
+      "selectorFunction": "tokenSelectors"
+    },
+    {
+      "name": "issuance",
+      "scope": "product",
+      "contract": "IssuanceFacet",
+      "source": "packages/1_core/src/facets/IssuanceFacet.sol",
+      "selectorSource": "packages/1_core/src/deploy/FacetSelectors.sol",
+      "selectorFunction": "issuanceSelectors"
+    },
+    {
+      "name": "redemption",
+      "scope": "product",
+      "contract": "RedemptionFacet",
+      "source": "packages/1_core/src/facets/RedemptionFacet.sol",
+      "selectorSource": "packages/1_core/src/deploy/FacetSelectors.sol",
+      "selectorFunction": "redemptionSelectors"
+    },
+    {
+      "name": "rebalance",
+      "scope": "product",
+      "contract": "RebalanceFacet",
+      "source": "packages/1_core/src/facets/RebalanceFacet.sol",
+      "selectorSource": "packages/1_core/src/deploy/FacetSelectors.sol",
+      "selectorFunction": "rebalanceSelectors"
+    },
+    {
+      "name": "preview",
+      "scope": "product",
+      "contract": "PreviewFacet",
+      "source": "packages/1_core/src/facets/PreviewFacet.sol",
+      "selectorSource": "packages/1_core/src/deploy/FacetSelectors.sol",
+      "selectorFunction": "previewSelectors"
+    },
+    {
+      "name": "basketAdmin",
+      "scope": "product",
+      "contract": "BasketAdminFacet",
+      "source": "packages/1_core/src/facets/BasketAdminFacet.sol",
+      "selectorSource": "packages/1_core/src/deploy/FacetSelectors.sol",
+      "selectorFunction": "basketAdminSelectors"
+    },
+    {
+      "name": "controllerConfig",
+      "scope": "product",
+      "contract": "ControllerConfigFacet",
+      "source": "packages/1_core/src/facets/ControllerConfigFacet.sol",
+      "selectorSource": "packages/1_core/src/deploy/FacetSelectors.sol",
+      "selectorFunction": "configSelectors"
+    },
+    {
+      "name": "lens",
+      "scope": "product",
+      "contract": "LensFacet",
+      "source": "packages/1_core/src/facets/LensFacet.sol",
+      "selectorSource": "packages/1_core/src/deploy/FacetSelectors.sol",
+      "selectorFunction": "lensSelectors"
+    },
+    {
+      "name": "reserveLifecycle",
+      "scope": "product",
+      "contract": "ReserveLifecycleFacet",
+      "source": "packages/1_core/src/facets/ReserveLifecycleFacet.sol",
+      "selectorSource": "packages/1_core/src/deploy/FacetSelectors.sol",
+      "selectorFunction": "reserveLifecycleSelectors"
+    },
+    {
+      "name": "recoveryShare",
+      "scope": "product",
+      "contract": "RecoveryShareFacet",
+      "source": "packages/1_core/src/facets/RecoveryShareFacet.sol",
+      "selectorSource": "packages/1_core/src/deploy/FacetSelectors.sol",
+      "selectorFunction": "recoveryShareSelectors"
+    },
+    {
+      "name": "recoveryShareMetadata",
+      "scope": "product",
+      "contract": "RecoveryShareMetadataFacet",
+      "source": "packages/1_core/src/facets/RecoveryShareMetadataFacet.sol",
+      "selectorSource": "packages/1_core/src/deploy/FacetSelectors.sol",
+      "selectorFunction": "recoveryShareMetadataSelectors"
+    },
+    {
+      "name": "recoveryAdmin",
+      "scope": "product",
+      "contract": "RecoveryAdminFacet",
+      "source": "packages/1_core/src/facets/RecoveryAdminFacet.sol",
+      "selectorSource": "packages/1_core/src/deploy/FacetSelectors.sol",
+      "selectorFunction": "recoveryAdminSelectors"
+    },
+    {
+      "name": "recoveryPoolSettlement",
+      "scope": "product",
+      "contract": "RecoveryPoolSettlementFacet",
+      "source": "packages/1_core/src/facets/RecoveryPoolSettlementFacet.sol",
+      "selectorSource": "packages/1_core/src/deploy/FacetSelectors.sol",
+      "selectorFunction": "recoveryPoolSettlementSelectors"
+    }
+  ],
+  "interface": {
+    "contract": "ICyberGoldCore",
+    "output": "packages/1_core/src/interfaces/ICyberGoldCore.sol",
+    "erc165Advertised": false,
+    "typeImports": {
+      "IDiamond": "diamond-1/interfaces/IDiamond.sol",
+      "IDiamondLoupe": "diamond-1/interfaces/IDiamondLoupe.sol",
+      "ICoreRedemption": "cybergold-core/interfaces/ICoreRedemption.sol",
+      "IRecoveryTypes": "cybergold-core/interfaces/IRecoveryTypes.sol"
+    }
+  }
+}

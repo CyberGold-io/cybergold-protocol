@@ -1,0 +1,21 @@
+# Compiler files
+cache/
+out/
+.svm/
+broadcast/
+tmp/
+security-tools/.venv/
+.security-tools/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Environment variables
+.env
+.env.local
+env/local-mainnet-tooling.env
+env/local-fork-full.env
+
+# Local reports
+packages/*/lib

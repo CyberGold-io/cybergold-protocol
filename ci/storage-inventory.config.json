@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 2,
+  "build": {
+    "command": [
+      "forge",
+      "build",
+      "--ast",
+      "--skip",
+      "test",
+      "--skip",
+      "script"
+    ],
+    "out": "out"
+  },
+  "compiler": {
+    "version": "0.8.37",
+    "evmVersion": "osaka"
+  },
+  "remappings": [
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+    "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+    "cybergold-core/=packages/1_core/src/",
+    "diamond-1/=lib/diamond-1-hardhat/contracts/",
+    "diamond-infra/=packages/0_shared/src/",
+    "staking/=packages/3_staking/src/"
+  ],
+  "relevantSourcePrefixes": [
+    "packages/0_shared/src/",
+    "packages/1_core/src/",
+    "packages/2_governance/src/",
+    "packages/3_staking/src/",
+    "lib/diamond-1-hardhat/contracts/",
+    "lib/openzeppelin-contracts/contracts/",
+    "lib/openzeppelin-contracts-upgradeable/contracts/"
+  ],
+  "diamonds": {
+    "core": {
+      "entrypoints": [
+        {
+          "contract": "CoreDiamond",
+          "source": "packages/1_core/src/diamond/CoreDiamond.sol"
+        },
+        {
+          "contract": "DiamondInit",
+          "source": "packages/1_core/src/deploy/DiamondInit.sol"
+        },
+        {
+          "contract": "CoreDiamondCutMigrationBridgeInit",
+          "source": "packages/1_core/src/migration/CoreDiamondCutMigrationBridgeInit.sol"
+        },
+        {
+          "contract": "CoreDiamondCutMigrationFacet",
+          "source": "packages/1_core/src/migration/CoreDiamondCutMigrationFacet.sol"
+        },
+        {
+          "contract": "CoreFacetRegistryRetirementInit",
+          "source": "packages/1_core/src/migration/CoreFacetRegistryRetirementInit.sol"
+        },
+        {
+          "contract": "CoreOptionalInitializerMigrationFacet",
+          "source": "packages/1_core/src/migration/CoreOptionalInitializerMigrationFacet.sol"
+        }
+      ],
+      "releaseConfigs": [
+        "script/config/core-release-abi.json"
+      ],
+      "excludeAuxiliarySourcePrefixes": []
+    },
+    "governance": {
+      "entrypoints": [
+        {
+          "contract": "GovernanceDiamond",
+          "source": "packages/2_governance/src/diamond/GovernanceDiamond.sol"
+        },
+        {
+          "contract": "DiamondInit",
+          "source": "packages/2_governance/src/deploy/DiamondInit.sol"
+        }
+      ],
+      "releaseConfigs": [
+        "script/config/governance-release-abi.json"
+      ],
+      "excludeAuxiliarySourcePrefixes": []
+    },
+    "staking": {
+      "entrypoints": [
+        {
+          "contract": "StakingDiamond",
+          "source": "packages/3_staking/src/diamond/StakingDiamond.sol"
+        },
+        {
+          "contract": "DiamondInit",
+          "source": "packages/3_staking/src/deploy/DiamondInit.sol"
+        }
+      ],
+      "releaseConfigs": [
+        "script/config/staking-release-abi.json"
+      ],
+      "excludeAuxiliarySourcePrefixes": [
+        "packages/3_staking/src/sleeves/",
+        "lib/openzeppelin-contracts/contracts/proxy/ERC1967/",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/extensions/ERC4626Upgradeable.sol"
+      ]
+    }
+  },
+  "aliases": [
+    {
+      "alias": "packages/0_shared/src/helpers/LiveFacetVersionRegistry.sol#LIVE_FACET_VERSION_REGISTRY_SLOT",
+      "canonical": "packages/0_shared/src/helpers/FacetVersionRegistry.sol#FACET_VERSION_REGISTRY_SLOT"
+    },
+    {
+      "alias": "packages/0_shared/src/helpers/LiveValidatedDiamondCut.sol#LIVE_VALIDATED_DIAMOND_CUT_STATE_SLOT",
+      "canonical": "packages/0_shared/src/helpers/ValidatedDiamondCut.sol#VALIDATED_DIAMOND_CUT_STATE_SLOT"
+    },
+    {
+      "alias": "packages/1_core/src/migration/CoreDiamondCutMigrationFacet.sol#DIAMOND_STORAGE_POSITION",
+      "canonical": "lib/diamond-1-hardhat/contracts/libraries/LibDiamond.sol#DIAMOND_STORAGE_POSITION"
+    },
+    {
+      "alias": "packages/1_core/src/migration/CoreDiamondCutMigrationFacet.sol#FACET_VERSION_REGISTRY_SLOT",
+      "canonical": "packages/0_shared/src/helpers/FacetVersionRegistry.sol#FACET_VERSION_REGISTRY_SLOT"
+    },
+    {
+      "alias": "packages/1_core/src/migration/CoreDiamondCutMigrationFacet.sol#VALIDATED_DIAMOND_CUT_STATE_SLOT",
+      "canonical": "packages/0_shared/src/helpers/ValidatedDiamondCut.sol#VALIDATED_DIAMOND_CUT_STATE_SLOT"
+    },
+    {
+      "alias": "packages/1_core/src/migration/CoreFacetRegistryRetirementInit.sol#FACET_VERSION_REGISTRY_SLOT",
+      "canonical": "packages/0_shared/src/helpers/FacetVersionRegistry.sol#FACET_VERSION_REGISTRY_SLOT"
+    }
+  ],
+  "literalNamespaces": {
+    "packages/0_shared/src/helpers/FacetVersionRegistry.sol#FACET_VERSION_REGISTRY_SLOT": "cybergold.facet.version.registry",
+    "packages/0_shared/src/helpers/InitContext.sol#INIT_CONTEXT_SLOT": "cybergold.init.context",
+    "packages/0_shared/src/helpers/LiveFacetVersionRegistry.sol#LIVE_FACET_VERSION_REGISTRY_SLOT": "cybergold.facet.version.registry",
+    "packages/0_shared/src/helpers/LiveValidatedDiamondCut.sol#LIVE_VALIDATED_DIAMOND_CUT_STATE_SLOT": "cybergold.validated.diamond.cut.state",
+    "packages/0_shared/src/helpers/ValidatedDiamondCut.sol#VALIDATED_DIAMOND_CUT_STATE_SLOT": "cybergold.validated.diamond.cut.state",
+    "packages/1_core/src/migration/CoreDiamondCutMigrationFacet.sol#FACET_VERSION_REGISTRY_SLOT": "cybergold.facet.version.registry",
+    "packages/1_core/src/migration/CoreDiamondCutMigrationFacet.sol#VALIDATED_DIAMOND_CUT_STATE_SLOT": "cybergold.validated.diamond.cut.state",
+    "packages/1_core/src/migration/CoreFacetRegistryRetirementInit.sol#FACET_VERSION_REGISTRY_SLOT": "cybergold.facet.version.registry"
+  },
+  "rawLayoutTypes": {
+    "packages/0_shared/src/helpers/InitContext.sol#INIT_CONTEXT_SLOT": "bool"
+  },
+  "transientLayoutTypes": {
+    "lib/openzeppelin-contracts/contracts/utils/ReentrancyGuardTransient.sol#REENTRANCY_GUARD_STORAGE": "bool",
+    "packages/1_core/src/migration/LibCoreDiamondCutMigration.sol#MIGRATION_COMMITMENT_SLOT": "bytes32",
+    "packages/1_core/src/migration/LibCoreDiamondCutMigration.sol#RETIREMENT_COMMITMENT_SLOT": "bytes32",
+    "packages/1_core/src/migration/LibCoreOptionalInitializerMigration.sol#COMMITMENT_SLOT": "bytes32"
+  },
+  "retiredPersistentRoots": [
+    {
+      "declaration": "lib/openzeppelin-contracts/contracts/utils/ReentrancyGuard.sol#REENTRANCY_GUARD_STORAGE",
+      "namespace": "openzeppelin.storage.ReentrancyGuard",
+      "slot": "0x9b779b17422d0df92223018b32b4d1fa46e071723d6817e2486d003becc55f00",
+      "type": "uint256",
+      "replacement": "lib/openzeppelin-contracts/contracts/utils/ReentrancyGuardTransient.sol#REENTRANCY_GUARD_STORAGE",
+      "reason": "Reserved forever after the Osaka migration; regression tests require this former persistent guard slot to remain zero."
+    }
+  ]
+}

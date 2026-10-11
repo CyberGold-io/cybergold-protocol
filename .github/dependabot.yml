@@ -1,0 +1,24 @@
+version: 2
+updates:
+  # Dependabot branches are proposals. Adopt reviewed updates on feature/*
+  # branches targeting dev, as required by the Protocol branch policy.
+  - package-ecosystem: uv
+    directory: /security-tools
+    target-branch: dev
+    schedule:
+      interval: weekly
+  - package-ecosystem: gitsubmodule
+    directory: /
+    target-branch: dev
+    schedule:
+      interval: weekly
+    # Reviewed OZ upgrades are paired official tags, curated by the maintainer.
+    # Ignore all bot proposals for these two paths; this is not a tags-only filter.
+    ignore:
+      - dependency-name: lib/openzeppelin-contracts
+      - dependency-name: lib/openzeppelin-contracts-upgradeable
+  - package-ecosystem: github-actions
+    directory: /
+    target-branch: dev
+    schedule:
+      interval: weekly

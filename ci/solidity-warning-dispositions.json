@@ -1,0 +1,2952 @@
+{
+  "schemaVersion": 1,
+  "reviewMetadata": {
+    "compiler-warning-review-2026-07": {
+      "owner": "security-maintainer",
+      "reviewedAt": "2026-07-23",
+      "reviewBy": "2026-10-23",
+      "expiryCondition": "compiler, Foundry profile, dependency revision, warning code/path/span, or deployability classification change"
+    },
+    "pause-gate-warning-agent-review-2026-09-24": {
+      "owner": "Codex agent-assisted source review",
+      "reviewedAt": "2026-09-24",
+      "reviewBy": "2026-10-20",
+      "expiryCondition": "test-harness source/span, compiler, Foundry profile, dependency revision, warning code, or deployability classification change; agent-assisted analysis is not human approval"
+    },
+    "optional-initializer-warning-agent-review-2026-09-28": {
+      "owner": "Codex agent-assisted source review",
+      "reviewedAt": "2026-09-28",
+      "reviewBy": "2026-10-23",
+      "expiryCondition": "test-harness source/span, compiler, Foundry profile, dependency revision, warning code, or deployability classification change; agent-assisted analysis is not human approval"
+    }
+  },
+  "rationales": {
+    "pinned-diamond-future-keyword": "The immutable diamond-1 dependency still names a local returndata value `error`. Authored sources are independently forbidden from introducing future-keyword identifiers.",
+    "pinned-openzeppelin-future-keyword": "The immutable OpenZeppelin dependency still exposes `at` helpers or names local ECDSA results `error`. Authored sources are independently forbidden from introducing these future-keyword identifiers.",
+    "pinned-diamond-memory-safe-comment": "The immutable diamond-1 dependency retains one deprecated NatSpec memory-safe assembly annotation. Authored source uses the block annotation and is checked independently.",
+    "pinned-openzeppelin-erc4626-unreachable": "The immutable OpenZeppelin ERC4626 base contains return paths that are unreachable for the protocol's reverting override. The exact dependency source spans are retained.",
+    "pinned-openzeppelin-transient-slot-composability": "The immutable OpenZeppelin TransientSlot helper emits Solidity's general EIP-1153 composability warning at its tstore instruction. First-party use is limited to OpenZeppelin ReentrancyGuardTransient, which clears the guard at the end of every call.",
+    "nondeployable-harness-size": "This exact script or test harness embeds deployment/test machinery and is never a Mainnet deployment artifact. Runtime and initcode limits for deployable contracts are enforced independently by ci/check-sizes.sh.",
+    "test-only-forced-ether-selfdestruct": "This exact test helper creates and destroys itself in one transaction solely to force Ether into the Staking shell and exercise EIP-6780-era forced-balance behavior. No production selfdestruct is accepted."
+  },
+  "acceptedWarnings": [
+    {
+      "code": "6335",
+      "path": "lib/openzeppelin-contracts/contracts/utils/structs/Checkpoints.sol",
+      "start": 19333,
+      "end": 19467,
+      "spanSha256": "4d4dbf608747a21f91f80fa9fb3dd8c1d45e593dbadb63187350b4618a259912",
+      "fingerprint": "00c7a12d590b2bc7c64e33360580080d2596a2b4df9a1e6230b71064849659fb",
+      "scopes": [
+        "governance",
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "pinned-openzeppelin-future-keyword"
+    },
+    {
+      "code": "5574",
+      "path": "packages/3_staking/test/facets/TokenFacet.t.sol",
+      "start": 2919,
+      "end": 13860,
+      "spanSha256": "22efa2f2279618b639c31119d45100edd5d9282a164bf8e7299c5e41d1064cb4",
+      "fingerprint": "0153d8b781e2d9deb06cd0f9bc7008b05bed893c7616884b2bf8005cdcd46399",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/invariant/CombinedAssetCardinalityInvariant.t.sol",
+      "start": 7287,
+      "end": 12322,
+      "spanSha256": "659128603492972182a9cc1ccc7b5a0b33d883e4dc549abca044cda5812ed25b",
+      "fingerprint": "0300d90320f8db5429d4e06bd166a937acc098e9d64b7820bfe13eb1490195e5",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/RecoveryScaleGas.t.sol",
+      "start": 462,
+      "end": 20284,
+      "spanSha256": "09e0fd0b7d7c75a1ced1dcc6090df62a917bf08316b78a465f26ba5c9ec5507b",
+      "fingerprint": "0372ba7f4e5f921d23bf57660cd578732552aa67c411da83324f6a708358de19",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/0_shared/test/diamond/ProtocolDiamond.t.sol",
+      "start": 455,
+      "end": 1886,
+      "spanSha256": "27989a8cde670d097db0138e49b72ff343f4b4328a818c29ca9be7c3c25afeab",
+      "fingerprint": "04caed06b4a498751f2a4021b595098d3246631d9ae6db469f8c1a204973d181",
+      "scopes": [
+        "shared"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/2_governance/test/facets/GovernorCancellation.t.sol",
+      "start": 9983,
+      "end": 18849,
+      "spanSha256": "d733641c2cd5b9fc8db539be038a79a34c2b06e8eef61fb595d02e48ac62458c",
+      "fingerprint": "050c770232e113d9c302d6699b46fe46e10651c11afc6cec3a3623dcf0c346e0",
+      "scopes": [
+        "governance"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/ImmediateRecovery.t.sol",
+      "start": 3806,
+      "end": 20325,
+      "spanSha256": "0e5e8fef470042767db618f758f9d96028d9247b0c86ba55d3d8f0230f6b0eca",
+      "fingerprint": "05d1bb503c40b23f0931cc5e617df9539451c10f21da83587f2b7683bfb93594",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "6335",
+      "path": "lib/openzeppelin-contracts/contracts/utils/structs/DoubleEndedQueue.sol",
+      "start": 7139,
+      "end": 7267,
+      "spanSha256": "e4a9c370446d649e63ed2c7fa6f98548f22bdfdcbe3af4810fcf779052b2c9c0",
+      "fingerprint": "06839fe3f1dcaee7093867f1b834a9879a037b6c03b0137d6fbfcdbc4aa2b112",
+      "scopes": [
+        "governance",
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "pinned-openzeppelin-future-keyword"
+    },
+    {
+      "code": "3860",
+      "path": "test/VerifyCoreOnly.t.sol",
+      "start": 352,
+      "end": 881,
+      "spanSha256": "dc8294517dc4ce2e8b0d1a45f0baa1f79e1820894f8136b0b741250bfe0f0656",
+      "fingerprint": "06ed386341153edb1e25aac7c43ae180cc5de53a4caf2fccb9ec627b501a5f43",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/integration/CoreDeploymentHelper.t.sol",
+      "start": 1560,
+      "end": 19825,
+      "spanSha256": "bc760ada0203c21680fadecd4848fde2d3202a5ea5228bbfd8f83b51b0471b58",
+      "fingerprint": "09d7252ad3e047fa5658d02e796970b94e87e61c3f0b825f3ab7b4b03eafe601",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/RecoveryRedemption.t.sol",
+      "start": 275,
+      "end": 10750,
+      "spanSha256": "3d5e77606912ec8da4c371f522e725cddc523924d2879e922cc58d34ba15c6fb",
+      "fingerprint": "0ad2a4aec56111676691c0eb3e99b6de43d6c5f00696a6474f5fb2a6e4ad13f4",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "test/IntegrationFlow_CapDeallocate.t.sol",
+      "start": 664,
+      "end": 3157,
+      "spanSha256": "2777795ea5d8ce3488fc33403dbb35a02798118ab4f35625c1015de5e3d39877",
+      "fingerprint": "0b8c1d9b52bbbad4dccb7f778c8e8702b79bf5760cce7785f953c1f3f867a1fb",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "test/IntegrationFlow_RoleWiring.t.sol",
+      "start": 1646,
+      "end": 12919,
+      "spanSha256": "ebadd8bcc1e9555b5b941da64538060947220818f44ae936919fd79d3a4f9c7b",
+      "fingerprint": "0ca0d83b8a2b726de1a8c4902b8d571a8763409d2503cbd811c2bbc1f58bdd94",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/3_staking/test/DiamondBase.t.sol",
+      "start": 1564,
+      "end": 5644,
+      "spanSha256": "79ea97f2819e49a26912ab371288e8266feb8e73d47e88fe2ee7eb7888b1099c",
+      "fingerprint": "0cc1583f34a9deb3fd9c85a9c4c1da8aa8d3c1797acebc0ef686a6f59b911398",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/ReserveLifecycle.t.sol",
+      "start": 397,
+      "end": 10004,
+      "spanSha256": "4631f99b1539a3eaba41442e737bc3218d0b457334a694f880bf592c1522cc69",
+      "fingerprint": "abaac644a094b080fddd5c847d1e27219f4ae86076dfebd6372e5dc31ead3340",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "pause-gate-warning-agent-review-2026-09-24",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/2_governance/test/facets/TreasuryFacet.t.sol",
+      "start": 2183,
+      "end": 12559,
+      "spanSha256": "40f117c2cf43413347bc27ba6fb331e0bb05bf7d329ca272e065ab046dcac5a5",
+      "fingerprint": "0e9f34ef2f34da1f20abb534dea7a90efb9237d551e8ccf8f2555e23b3b9872d",
+      "scopes": [
+        "governance"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/0_shared/test/facets/DefaultAdminAccessControlFacet.t.sol",
+      "start": 990,
+      "end": 14445,
+      "spanSha256": "4132fec57a62053db588d057183caac482f0e27f0c87afb42ed32f4dc8d08fda",
+      "fingerprint": "11f6bcf72a343ab0bb3078bcc103f11981629ecaef630063081ee3d2239ca948",
+      "scopes": [
+        "shared"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/RecoveryAdminCoverage.t.sol",
+      "start": 276,
+      "end": 3209,
+      "spanSha256": "8f3c9d7b6e87155b106a39e8e9117e646c5138f74ee7b359a53e1c1bde481293",
+      "fingerprint": "1b49bdfdde938a61486ceb3240845b6d3abfdd7759afb89d39c3236738e7ab89",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "pause-gate-warning-agent-review-2026-09-24",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/3_staking/test/DeployAndCustodyCoverage.t.sol",
+      "start": 2540,
+      "end": 49383,
+      "spanSha256": "82ad8c409a12a2ad557b9498672d825c0ed442a5d6076fe1a226d1b600bda7d5",
+      "fingerprint": "17ddcf207b17000e6ddd73973944a815e1626c3f1a6ba8b4b9faeb1b98b69202",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "test/IntegrationFlow_Redemption.t.sol",
+      "start": 767,
+      "end": 2846,
+      "spanSha256": "5eb0ec399eff623430d848d594441d639888793ed0f2c192c91aed5f308154bf",
+      "fingerprint": "19c8a6a3eda6264c6768d45c80f57b5abc59c8f4203e9ba6a6241312f9a902e7",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/2_governance/test/facets/RecoveryFundFacet.t.sol",
+      "start": 16986,
+      "end": 66480,
+      "spanSha256": "b2a8b8e859bde665933048a1215e7c2f67727edf30b51c32a6b9ae9bbea9ef43",
+      "fingerprint": "1d87824ced5f1d117b19cde23f14451142cf3b27f8fdf8191c333365b5a3b23c",
+      "scopes": [
+        "governance"
+      ],
+      "reviewMetadataId": "pause-gate-warning-agent-review-2026-09-24",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/2_governance/test/DiamondInit.t.sol",
+      "start": 5512,
+      "end": 62908,
+      "spanSha256": "b4ba6d03c61b3a2aa551ae82eb812db78c523a5b2e93009c5737e3cd87d16b35",
+      "fingerprint": "1dd33bde5c6dfc9d254593fdd82e02722945da0244701325edcef4ce9d3d289f",
+      "scopes": [
+        "governance"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/DiamondInitCoverage.t.sol",
+      "start": 27888,
+      "end": 29176,
+      "spanSha256": "23023bff26401c45656af588e99938f65e229e328b92cd912b78c50c23af5c4e",
+      "fingerprint": "1f8f0814ba4433a3566a144f27265e072e2e5c4961b3bd0dbf36375e94b83d17",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/WS1LifecycleAdminCoverage.t.sol",
+      "start": 1709,
+      "end": 3284,
+      "spanSha256": "1b685d9a2e28a799d436b24317a9a636c152890c53b9281c3c34ef2d8cc361e2",
+      "fingerprint": "20265560ee0e583bd7492585342e72f6fa20e1b15e0b105e5b1805a0078d1b85",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/3_staking/test/facets/SleeveRegistryFacet.t.sol",
+      "start": 2590,
+      "end": 16032,
+      "spanSha256": "35fdf7b052feb98be1f433ec4535c14fab23d43de43a0e6478f6886ea91ff219",
+      "fingerprint": "20c41f89c1c7408b78e47ddbc0eb4c1e4b67815dfd57ac59ec74c125ae9bc392",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "test/IntegrationFlow_EndToEnd.t.sol",
+      "start": 973,
+      "end": 7696,
+      "spanSha256": "487c4e4769053c02762d801cff8f071483fb7a7859cea4f02daa26316e515448",
+      "fingerprint": "20cf64a6fed50f789c206d9da599a96624537fa3aa432a376974d3b627e036f1",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "test/IntegrationFlow_Redemption.t.sol",
+      "start": 767,
+      "end": 2846,
+      "spanSha256": "5eb0ec399eff623430d848d594441d639888793ed0f2c192c91aed5f308154bf",
+      "fingerprint": "20e15a95d1c0b4dde64fd62f5d80a13a8ae22401405f96a14b6bbc73da93591e",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "test/IntegrationFlow_RoleWiring.t.sol",
+      "start": 1646,
+      "end": 12919,
+      "spanSha256": "ebadd8bcc1e9555b5b941da64538060947220818f44ae936919fd79d3a4f9c7b",
+      "fingerprint": "2124015461e1d4d5ea8e1afc4dc1adb3b3187eaf8e2d2a9390585db9146a0547",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/3_staking/test/StakingCommittedShellFactory.t.sol",
+      "start": 1417,
+      "end": 8476,
+      "spanSha256": "fd5b839a7f959e9b58dbbe888d6aafbfec54f5a345427b6d7757f182f82242c9",
+      "fingerprint": "220c93277b83f4cf2d0c854dcab4979de49852e9a70fc4374e8ebe8ca19ad3f7",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "test/IntegrationFlow_PauseAccess.t.sol",
+      "start": 1111,
+      "end": 8758,
+      "spanSha256": "10cf7b29f9f0e95f289940c56904086e5915e09ddc59bfce1f837368150120a6",
+      "fingerprint": "234febfa1f9e66d77c01753c7707ae592b42eade05f255c97c0a36d709765f6c",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "test/IntegrationFlow_Governance.t.sol",
+      "start": 4162,
+      "end": 63290,
+      "spanSha256": "7fde821f6ca3fc5d31aca61a0639ec67511026eeee21f2e1d00f3c5d84d7f51e",
+      "fingerprint": "23d7fdd655a9db0afab9476eb16ddbb7d981baf10e9e70f1ab4a98229d1d97d2",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/2_governance/test/facets/RecoveryFundFacet.t.sol",
+      "start": 16986,
+      "end": 66480,
+      "spanSha256": "b2a8b8e859bde665933048a1215e7c2f67727edf30b51c32a6b9ae9bbea9ef43",
+      "fingerprint": "d70c3fec7b5cd31cd5602d7a638a4dd6dbe7e72e10d8bd97bb8f1f338188ffd1",
+      "scopes": [
+        "governance"
+      ],
+      "reviewMetadataId": "pause-gate-warning-agent-review-2026-09-24",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/2_governance/test/ReleaseAbiConformance.t.sol",
+      "start": 523,
+      "end": 3420,
+      "spanSha256": "dc14705e7aab43a06117dd58834c575f7f128f28d0c416d601335f3d57567844",
+      "fingerprint": "24a19d5cc2ee44e3d37177ae3260341814c40620cf6e631be54401497d18f5af",
+      "scopes": [
+        "governance"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/3_staking/test/facets/QueueFacet.t.sol",
+      "start": 2836,
+      "end": 34487,
+      "spanSha256": "48100f8e4d918bed8ad155c80a3c6ad8a26fa556525be99936689b76a4fd0c16",
+      "fingerprint": "24a27260aef2ce952fcdff2f58727ba197438f1e4ee45167dd081aedf12b9189",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/3_staking/test/sleeves/SleeveBase.t.sol",
+      "start": 2392,
+      "end": 20792,
+      "spanSha256": "742c066a827fc61eb21e98fb94f66a4b22b365e1445e641031f811956c1d61f2",
+      "fingerprint": "25191a5ac18fb6e004780fe4c7f4d25cd97aaae10eb70eab6d6e00dd011ff2eb",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/WS1LifecycleAdminCoverage.t.sol",
+      "start": 1709,
+      "end": 3284,
+      "spanSha256": "1b685d9a2e28a799d436b24317a9a636c152890c53b9281c3c34ef2d8cc361e2",
+      "fingerprint": "258fb1812f6830c2dfbbc56e3eab54eddb07d60360262dd8bf3597032b9f70c4",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5159",
+      "path": "packages/3_staking/test/StakingAtomicLaunch.t.sol",
+      "start": 4183,
+      "end": 4195,
+      "spanSha256": "45c423dfef7889446c0718652044edbf79e8026de38c948d16a38b6dcfe80a66",
+      "fingerprint": "25a0a4869015dce4786a78693074b823784312978e9a745cc3084b0cab15ea02",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "test-only-forced-ether-selfdestruct"
+    },
+    {
+      "code": "5574",
+      "path": "packages/3_staking/test/facets/LensFacet.t.sol",
+      "start": 2361,
+      "end": 15800,
+      "spanSha256": "5000b7ce4eae3a6a2636bd4b9435a16aa91dba4e43023ad8d5aa48810df6448c",
+      "fingerprint": "26f2a7f7326cd5c182689e70dccbb778cd85cd8b44f75ab6b44e52e5d4c08bef",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/0_shared/test/LiveDiamondCutAuthorityCoverage.t.sol",
+      "start": 7109,
+      "end": 18868,
+      "spanSha256": "aa4507f0f8ce3c9d73d3656f21f53d0e248f8dce8b187e378ab81bf360aef891",
+      "fingerprint": "2c30119eb1746e0fef670ea8e4ba605890428d5e14df4a6528ab9ee8ff716dd8",
+      "scopes": [
+        "shared"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/BasketAdminFacet.t.sol",
+      "start": 459,
+      "end": 7503,
+      "spanSha256": "32cd475f976469c2c5c5399503101903cad1495ea9c3bd1ae53002b18ce0a06a",
+      "fingerprint": "2dbc8147ef6502eae6ed027dbbceec4af614b50a53556b9b6832f93446cbd845",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/3_staking/test/facets/CustodyFacet.t.sol",
+      "start": 1713,
+      "end": 8265,
+      "spanSha256": "26e250aab3af22bd4de4e50cab76181b18adfc411ad495af07ee89335d427778",
+      "fingerprint": "2e56897872b457f3dfbf147486fbe499cc61a0bf4f0ecf9deeefbe06ff3a2ba6",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/2_governance/script/GovernanceDiamondDeploy.s.sol",
+      "start": 1409,
+      "end": 2389,
+      "spanSha256": "41139f627ef4175bc236385d1209157f84a466791b712693f026ec0195a1983f",
+      "fingerprint": "305ca3ed67ec072a7abb52392ce17f66578f125aa2c7195d67db5eb4df3ea144",
+      "scopes": [
+        "governance"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/AccountCallbackGasBoundary.t.sol",
+      "start": 686,
+      "end": 17015,
+      "spanSha256": "6388cf1020e97ef5722c2671076d538f89210eff9e6320dc48822ff135278a3f",
+      "fingerprint": "3087dff1ea9baf8c445937ca449126a11cc82922b61ed78e1520d800387fb95e",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "test/IntegrationFlow_SwapHarvest.t.sol",
+      "start": 682,
+      "end": 2821,
+      "spanSha256": "b0bb170b86a02cf9e9abc433f2e2df2c8685e2abecb48bf69d053c03ece5ae76",
+      "fingerprint": "312be8f85d02faa536e2cab30a584cd43c0d8d8081dec35f09b757f53dc951d0",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/ReserveLifecycleCoverage.t.sol",
+      "start": 8428,
+      "end": 12832,
+      "spanSha256": "f10bfc3536272054d53c164cdd896899f8fa56b85a95060128db3f118cc271a4",
+      "fingerprint": "33781d5e597da78258d94f9a2da3cd5179e49b4760e456ca8018e440617828b7",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/0_shared/test/facets/ReentrancyGuardFacet.t.sol",
+      "start": 1169,
+      "end": 4035,
+      "spanSha256": "ae771a5a7fefcc64cd4196a1b0c2974c790e8acdb137318055fa7eb546fa1728",
+      "fingerprint": "338efc34f66a10996fe4873c6c7ad7ce568efc93ee4bbe80a2861b2ecfb0f0d9",
+      "scopes": [
+        "shared"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/RedemptionFacet.t.sol",
+      "start": 411,
+      "end": 8155,
+      "spanSha256": "6a5a8a8963fd41c83cbb8aa11d5fbe2f44d082693e026d1a7ccfac43a9345f21",
+      "fingerprint": "342b20c2f9412b96c5fe80e7456252fca2774527d31d5ee71ded4aefa19977e5",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/2_governance/test/invariant/GovernanceLifecycleInvariant.t.sol",
+      "start": 11817,
+      "end": 15160,
+      "spanSha256": "3c8baebf60e18314dc4b437b4333a3ec6268b0b7d3c7ef8011d6ba4b1122bbe3",
+      "fingerprint": "343466469c1de0689d12d26fa4b48409b35f19eaf3527b3fbf49bf5ea857735a",
+      "scopes": [
+        "governance"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "test/IntegrationFlow_CurveSleeveFork.t.sol",
+      "start": 682,
+      "end": 1821,
+      "spanSha256": "cdb6e59616157df146ff031976c05dadfb5abbd402a5c245f52bae5100c1a6c2",
+      "fingerprint": "34789ea7c010dc13abe9d7469b67e1b0f92fab30edcd2e30a9210fda5c0de693",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/3_staking/test/facets/CustodyFacet.t.sol",
+      "start": 1713,
+      "end": 8265,
+      "spanSha256": "26e250aab3af22bd4de4e50cab76181b18adfc411ad495af07ee89335d427778",
+      "fingerprint": "38b0753221a4ed3f81696a4a256b4b64d3f091d52e0dbbe552fc5418447e8dcc",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/integration/IntegrationFlow_Recovery.t.sol",
+      "start": 2919,
+      "end": 9333,
+      "spanSha256": "29dcf7da8ee1d0ba3e2fa6565613cad9d583d3644b654b3f5fbee81d27e4def3",
+      "fingerprint": "3a3d063512e8e1c80a0637aa947cfa4e4f4799accdb97f556da942974a0f9ece",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/WS1LeanCoverage.t.sol",
+      "start": 9417,
+      "end": 11193,
+      "spanSha256": "d35ada46c9b2ffa31b1b28fc45578d5e129ae7bee0c5d13b8871628968d711c1",
+      "fingerprint": "3cec13c8e553aa194f7a8fbf021fc6ee376fdd16435169d534a7523f60c0baf7",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/ControllerBaseWs1Coverage.t.sol",
+      "start": 28252,
+      "end": 38692,
+      "spanSha256": "6b290700b10a48b295d6c6048d65f45deac1def919620b11803db47b35469b70",
+      "fingerprint": "3d01a3f32f28b649559d9b7d1489717c495d817625fac01854239cf552d9747c",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/3_staking/test/StakingAtomicLaunch.t.sol",
+      "start": 8192,
+      "end": 91672,
+      "spanSha256": "15e3fb71b15936a55ac8db70acb7d6434ac22bac2249a806b566f029d08326e0",
+      "fingerprint": "3d142b95c6f7c83c03a17a37bd31d6bdc73a018c846281e5e9bb887794672b5b",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/CoreDiamondCutMigrationCoverage.t.sol",
+      "start": 9292,
+      "end": 34171,
+      "spanSha256": "5f019c496a9e2e000d43d0e83f010524006297debf5e6113aade975bb874344e",
+      "fingerprint": "41029986fcd02ad896718c87908646b398e22b63c652984cd6a5f31602ec3973",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "optional-initializer-warning-agent-review-2026-09-28",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "2394",
+      "path": "lib/openzeppelin-contracts/contracts/utils/TransientSlot.sol",
+      "start": 3119,
+      "end": 3125,
+      "spanSha256": "f3e34f79068cce91e580e62d6da37c54ebe3c567641a1facc3896d3d6df47091",
+      "fingerprint": "41e6a6c112f50b3256465bce12eab612b279c4af6a2b74c3a22a6ad4bdee8430",
+      "scopes": [
+        "core",
+        "governance",
+        "root",
+        "shared",
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "pinned-openzeppelin-transient-slot-composability"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/integration/IntegrationFlow_Recovery.t.sol",
+      "start": 2919,
+      "end": 9333,
+      "spanSha256": "29dcf7da8ee1d0ba3e2fa6565613cad9d583d3644b654b3f5fbee81d27e4def3",
+      "fingerprint": "43e59438ca9869abc96679d9bf60a57df72146c35ccb0e1c1da16ec993ae911b",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/3_staking/test/sleeves/SleeveManual.t.sol",
+      "start": 510,
+      "end": 3897,
+      "spanSha256": "bb8b616f0f3ce24bf6bf1c12900a79e4b9ec4721323279ff961316b38b21cde8",
+      "fingerprint": "46d7c173faa04dd035bba6ee6e0a675f50550d55be0639f3303adb4633cc520f",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/BasketRegression.t.sol",
+      "start": 824,
+      "end": 16120,
+      "spanSha256": "4896e62bda4fc41d5b646782d8e017673c3448d19be1d264e57d4aab790b9999",
+      "fingerprint": "47e62af983929fe4dbbfadde1a6f558ad47d0b2ce8a812bbc9047d7cf5abcf58",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/WS1LeanCoverage.t.sol",
+      "start": 9417,
+      "end": 11193,
+      "spanSha256": "d35ada46c9b2ffa31b1b28fc45578d5e129ae7bee0c5d13b8871628968d711c1",
+      "fingerprint": "49b8ae07222d312b5ac5978fe2927abb556e7907364cb5a21adfb3ef112953ca",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/RecoveryRedemption.t.sol",
+      "start": 275,
+      "end": 10750,
+      "spanSha256": "3d5e77606912ec8da4c371f522e725cddc523924d2879e922cc58d34ba15c6fb",
+      "fingerprint": "4b157d2c495cae3f85e8bee2105356dfa5045fb075d6245b21a83f222ec7e6e6",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/InitFacet.t.sol",
+      "start": 130,
+      "end": 2447,
+      "spanSha256": "bb7e132d9765e6d30e84b613f71ee555ce76d268006f781371d104d8c7ac1703",
+      "fingerprint": "4b4d94e0c77c447018ab1d562e53de444fe58f294b598e04917f71681c427661",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/CoreDiamondCutMigration.t.sol",
+      "start": 4941,
+      "end": 28417,
+      "spanSha256": "c5d62622155ce299432d12baf2b2d77fcbda5bb04a9a3209a6f06c8aeb9c9be0",
+      "fingerprint": "5ebac9212e617fad3439a6da23058174d8b163d53bfa7ce1abfe77e592d70d4c",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "optional-initializer-warning-agent-review-2026-09-28",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/CoreEnsPrimaryNameInit.t.sol",
+      "start": 2420,
+      "end": 7769,
+      "spanSha256": "f130d86574f3fddbebb41d7abf37e0ee3e4c43ef5f1f48e4bddb664f89683f92",
+      "fingerprint": "4c94332e6b8ed0b8b74082de4ef49fbbd11934aaa3b77a9bc7ff2bc4bd30f979",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/invariant/CombinedAssetCardinalityInvariant.t.sol",
+      "start": 7287,
+      "end": 12322,
+      "spanSha256": "659128603492972182a9cc1ccc7b5a0b33d883e4dc549abca044cda5812ed25b",
+      "fingerprint": "4e550cfb6b4a0a204938a6078ab213a3cb46ccea9dfecfd70e73d04d66aa9d5a",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/3_staking/test/sleeves/Sleeve4626.t.sol",
+      "start": 1953,
+      "end": 11226,
+      "spanSha256": "e980e64f90cc572429ca1a0fe4f7489dca2eb200722fa565bb78770d857ab01c",
+      "fingerprint": "4f35042904d41b776a438df40ed8426b00dc974a08fe8f3631a42d888e25e051",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/3_staking/test/StakingLaunchCoverage.t.sol",
+      "start": 5519,
+      "end": 24484,
+      "spanSha256": "11757ef7c232e02b06cc529a6b2add28ea1594a7c559939bf7ab41fc5a8316ce",
+      "fingerprint": "5011f55aa8389306f2a50b356f8d35b173afd7cdbf72f28f0bea1e1712a78804",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/0_shared/test/DeployUtilities.t.sol",
+      "start": 3383,
+      "end": 66413,
+      "spanSha256": "ec7ad60f443974659555bd0d5c5d6f9df981fec6c724ba006393d27e8340ad30",
+      "fingerprint": "5091721586e02b2156c8b65ef8d20d5ef3da5c2e103be62326fe2f86fde4d550",
+      "scopes": [
+        "shared"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/2_governance/test/DeployParams.t.sol",
+      "start": 713,
+      "end": 17807,
+      "spanSha256": "ca21db6588e1cb84cfd259d0fd3fd4e88e877d835bf5985e78eb056b3cd9efd6",
+      "fingerprint": "52fb48cde4cd32270939b56b13cc594f237daaf0e907b141c1d564257ece5310",
+      "scopes": [
+        "governance"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/2_governance/test/facets/GovernorCoreFacet.t.sol",
+      "start": 3007,
+      "end": 20804,
+      "spanSha256": "e845eefe5c3f4683c7f7261d36ee6243dca09643660e53576059321bca09112c",
+      "fingerprint": "530fa531e936c6783eb2469d01d530441c0c837c37794260ddd99ee4680947c0",
+      "scopes": [
+        "governance"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/RebalanceFacet.t.sol",
+      "start": 598,
+      "end": 14074,
+      "spanSha256": "63182ad51735d109a9c3e4b8d8b551ff9c325f3c2c424b697709f3a3b3bec9d7",
+      "fingerprint": "53eb1981ef6cf245ddce5dd1d41b7d8e7b8f0a957df7467076a7456f77a403fd",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/RedemptionFacet.t.sol",
+      "start": 411,
+      "end": 8155,
+      "spanSha256": "6a5a8a8963fd41c83cbb8aa11d5fbe2f44d082693e026d1a7ccfac43a9345f21",
+      "fingerprint": "54ca068250fd755cf4f9a8d9b806a660673780ade72ae0bea5d19e8292189e8e",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/3_staking/test/integration/StakingDiamondIntegration.t.sol",
+      "start": 1534,
+      "end": 7300,
+      "spanSha256": "c379541e8be49fae6483ff24ad2fdac414053d1a710c43eb8bc6af0c9c71e12b",
+      "fingerprint": "54ebbf334de8792d1ed693487246963e31c842958f4a183c822048e2617019cb",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "script/DeployProtocol.s.sol",
+      "start": 721,
+      "end": 4029,
+      "spanSha256": "187c3172171cf15e092c68f6d77edbefe0cc873436e4f1785fdd4b721c5733e0",
+      "fingerprint": "557a09eecb5d8d649009f62c11fdf425d2091fffe50d5218912a28e00e30e697",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "6335",
+      "path": "lib/openzeppelin-contracts/contracts/utils/structs/Checkpoints.sol",
+      "start": 26662,
+      "end": 26796,
+      "spanSha256": "26abd03d98c313b16c07f4738b085b5de59b5f4183aa8e1373a8b69d3d79e022",
+      "fingerprint": "5616c7b13267e0ac435f1a179d663037cedeb5ac5d7d36e8a6e2e5196ff4d384",
+      "scopes": [
+        "governance",
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "pinned-openzeppelin-future-keyword"
+    },
+    {
+      "code": "3860",
+      "path": "packages/3_staking/test/StakingAtomicLaunch.t.sol",
+      "start": 8192,
+      "end": 91672,
+      "spanSha256": "15e3fb71b15936a55ac8db70acb7d6434ac22bac2249a806b566f029d08326e0",
+      "fingerprint": "578dbf19166c95c3d5b00008722bb30ac45289b9b2c6a2a27f3b357818370496",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/3_staking/test/sleeves/Sleeve4626.t.sol",
+      "start": 1953,
+      "end": 11226,
+      "spanSha256": "e980e64f90cc572429ca1a0fe4f7489dca2eb200722fa565bb78770d857ab01c",
+      "fingerprint": "57b602a2d041b1c2bad773d30210cb4b50aadf2a016f19e5fa141ba9cadaa1bd",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/RecoveryIssuance.t.sol",
+      "start": 337,
+      "end": 3088,
+      "spanSha256": "ff12611c07561647773d1e13e9e2ef95052d6c61a4221bc64413f3a371f4c4a4",
+      "fingerprint": "595fabf7f1f12b50f363f31c14002ad13bf5fda66386aa7ab1ad0108a212a596",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "6335",
+      "path": "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableSet.sol",
+      "start": 9583,
+      "end": 9705,
+      "spanSha256": "4677171f76027043aab1904877c8844b56723d6bead655c37b72340d3f948a71",
+      "fingerprint": "5a7ab9b7ffee46cb0540fa6d89bd0b9850de1881b49f9b1177d6fb243d62ab11",
+      "scopes": [
+        "core",
+        "governance",
+        "root",
+        "shared",
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "pinned-openzeppelin-future-keyword"
+    },
+    {
+      "code": "5574",
+      "path": "packages/2_governance/test/GovernanceAuthorityTopology.t.sol",
+      "start": 1777,
+      "end": 14752,
+      "spanSha256": "b8d1220ff1a7ca123681387cd22718ad49ea31d1ce672a670246fbe51f6dd1be",
+      "fingerprint": "5ae0ed079b8bd08de7eedee7edef977ade77bb11619bf00718f714a6ec0a5cf7",
+      "scopes": [
+        "governance"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "test/IntegrationFlow_DynamicEmergencyAuthority.t.sol",
+      "start": 1374,
+      "end": 26305,
+      "spanSha256": "fc25ebe23b8a7804ccab05dd256be01b76acb4f5d4967c38ff963055cb97c2e4",
+      "fingerprint": "5b974b6c08cd5c6d60c5f1e7392d6a3603f559f75d8b320048d5f044760a1448",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/2_governance/test/DeployParams.t.sol",
+      "start": 713,
+      "end": 17807,
+      "spanSha256": "ca21db6588e1cb84cfd259d0fd3fd4e88e877d835bf5985e78eb056b3cd9efd6",
+      "fingerprint": "5ce1efc9d38b0e052d0cff8a017ae0869bffdd29ddc084427a2d087429730557",
+      "scopes": [
+        "governance"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/0_shared/test/LiveValidatedDiamondCut.t.sol",
+      "start": 9780,
+      "end": 66226,
+      "spanSha256": "f6844c5abba0e78cb397ba83b45f1453fb6e274e9108f348742d28d7fcac33f1",
+      "fingerprint": "607c7682c13c29639f06d218aa3d6b15de56d924eeea8797b4606f1ff9c2fb9c",
+      "scopes": [
+        "shared"
+      ],
+      "reviewMetadataId": "optional-initializer-warning-agent-review-2026-09-28",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/3_staking/test/DeployAndCustodyCoverage.t.sol",
+      "start": 2540,
+      "end": 49383,
+      "spanSha256": "82ad8c409a12a2ad557b9498672d825c0ed442a5d6076fe1a226d1b600bda7d5",
+      "fingerprint": "5df51ec38455cc75aadc4d1b21476f9929ccb15e3302ee5433b5247f696a3f45",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "test/DeployParamsCoverage.t.sol",
+      "start": 3391,
+      "end": 21081,
+      "spanSha256": "6775359543cf93a2e26d1535273f17dbdea54837eaf8eee68b357359ab149d9a",
+      "fingerprint": "5f6cdd4d80a6713f2c3d3d9c1d2d0e9245b8938ade636cd0ed62ca235afc5b72",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/ControllerConfigFacet.t.sol",
+      "start": 396,
+      "end": 7082,
+      "spanSha256": "38345c5192d05b52be2670787aba6c20de25236af1983d49d24c79d537c65647",
+      "fingerprint": "5fbd9ae9d7dd29c0c0995c5b1450a0ea20fd475b444e36897e5a163527e8299a",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/3_staking/test/DiamondBase.t.sol",
+      "start": 1564,
+      "end": 5644,
+      "spanSha256": "79ea97f2819e49a26912ab371288e8266feb8e73d47e88fe2ee7eb7888b1099c",
+      "fingerprint": "6010c85f621f41531246cf2fa1796bb08b16e753caaf56989f33d5d83969713e",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "6335",
+      "path": "lib/openzeppelin-contracts/contracts/utils/structs/Checkpoints.sol",
+      "start": 12004,
+      "end": 12138,
+      "spanSha256": "39b7b6d069809968447e346853db9b6b005544431c9ef271f389d410a2dc1d3f",
+      "fingerprint": "60d4ac0852063b3a034272bc3751c05dc2105940449ccb2a74abc09894e7606c",
+      "scopes": [
+        "governance",
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "pinned-openzeppelin-future-keyword"
+    },
+    {
+      "code": "3860",
+      "path": "packages/3_staking/test/facets/TokenFacet.t.sol",
+      "start": 2919,
+      "end": 13860,
+      "spanSha256": "22efa2f2279618b639c31119d45100edd5d9282a164bf8e7299c5e41d1064cb4",
+      "fingerprint": "61e774881107433ccde05d574f8da75269594ee152ab0eba7e5e75f2d624dcb9",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/fuzz/RecoveryAccounting.t.sol",
+      "start": 3395,
+      "end": 4377,
+      "spanSha256": "1e58a97d465b9439a1ac81bdefa3d3aa7667690a64a2ef092421d75e8d2b30af",
+      "fingerprint": "64f59bd044ac4f1af9e18270f525834b2bac299d8bff0dd4b5617b2c01682ebf",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/script/CoreDiamondDeploy.s.sol",
+      "start": 872,
+      "end": 2684,
+      "spanSha256": "040b78b6f24c27c90c3dc4d316c11b6ca2716b53b97359ab4d570f4d8012a383",
+      "fingerprint": "654568727dfd785e47e587a8e58fdf6cab5f05487a1492de577cad8195ddf350",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/2_governance/test/facets/GovernorCoreFacet.t.sol",
+      "start": 3007,
+      "end": 20804,
+      "spanSha256": "e845eefe5c3f4683c7f7261d36ee6243dca09643660e53576059321bca09112c",
+      "fingerprint": "66080343e6f6b812334aa107259267410a29159326bae44b30dcb1c323010175",
+      "scopes": [
+        "governance"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/2_governance/test/facets/TreasuryFacet.t.sol",
+      "start": 2183,
+      "end": 12559,
+      "spanSha256": "40f117c2cf43413347bc27ba6fb331e0bb05bf7d329ca272e065ab046dcac5a5",
+      "fingerprint": "674a045f3da352bd770addd0d62143981b0aca6293ad709fcf1629ce1b9c4740",
+      "scopes": [
+        "governance"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/3_staking/test/facets/SleeveRegistryFacet.t.sol",
+      "start": 2590,
+      "end": 16032,
+      "spanSha256": "35fdf7b052feb98be1f433ec4535c14fab23d43de43a0e6478f6886ea91ff219",
+      "fingerprint": "6a216a0c1607d73f23e200dd5cdd0dcfa9b802b99b8efdc88944ddd1e5bdf2b9",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/CoreRecoveryPrecisionInit.t.sol",
+      "start": 588,
+      "end": 3520,
+      "spanSha256": "30af1e848a745f2bc5cde9a513d6a03d02874adf1a7af2df7dc434bd7e61164c",
+      "fingerprint": "6b5aff0998918a5993ce6dab32b1ff0d26f41983dcd8a3a1baaf604d898a97c2",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/PreviewFacet.t.sol",
+      "start": 529,
+      "end": 21080,
+      "spanSha256": "33d77782f2dfd7077ed947ed7f80e033544794299a5aedbcc46f2707512e93d8",
+      "fingerprint": "6b678deeec04b05eab9a8a3ec02e9e466b47cbe79be0f2123cd3d7efd92dbb05",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/3_staking/test/StakingLaunchCoverage.t.sol",
+      "start": 5519,
+      "end": 24484,
+      "spanSha256": "11757ef7c232e02b06cc529a6b2add28ea1594a7c559939bf7ab41fc5a8316ce",
+      "fingerprint": "6b97a446f3384ddbe00230e730a8f30b502c84a60fc14c3cbc77161140857b0e",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/ReserveLifecycleActivationCanonicality.t.sol",
+      "start": 508,
+      "end": 5647,
+      "spanSha256": "925499992414239e20f747cb0c77bad9cb2e7aae339d693bd3315fd9e74d4703",
+      "fingerprint": "6cfe2209dfe8622987ebfbbd56934b20379f11dc08f4d7220eebc680932960c1",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/0_shared/test/facets/PausableFacet.t.sol",
+      "start": 5089,
+      "end": 15219,
+      "spanSha256": "db1f0af31ab8c7f6bc345b3b62858fc3e37fc491004c30bcdf961888c3b34290",
+      "fingerprint": "6db08c2cdcb9b7e9e3496b64dca157e96c7187820d020875d4ede3290e61acab",
+      "scopes": [
+        "shared"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "test/IntegrationFlow_DiamondEtherGuards.t.sol",
+      "start": 1041,
+      "end": 3751,
+      "spanSha256": "a2aefba9f1a464eaf9eba75bb10a1715d66e2f26fd690356dbe4aa2e6c3ebea7",
+      "fingerprint": "6f368c435636ad7bf6bdbe392cce4f8b0c5b62abfcb36eb7c0f2da9d42aef446",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/BasketAdminFacet.t.sol",
+      "start": 459,
+      "end": 7503,
+      "spanSha256": "32cd475f976469c2c5c5399503101903cad1495ea9c3bd1ae53002b18ce0a06a",
+      "fingerprint": "7173f91aa49d079d6ec6ef41126618ae088353c6146fb9eba1490fd2237ffd3c",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "test/DeployParamsCoverage.t.sol",
+      "start": 3391,
+      "end": 21081,
+      "spanSha256": "6775359543cf93a2e26d1535273f17dbdea54837eaf8eee68b357359ab149d9a",
+      "fingerprint": "732d87c9d90b94ed3a613903bba872ad679fbc44ab57a698890020366907f998",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/3_staking/test/facets/VaultFacet.t.sol",
+      "start": 3499,
+      "end": 16181,
+      "spanSha256": "2a9e259f2fb9a8eddcbfebe40ecccc18526009ffeb31e0e52b79ef7b19953fb7",
+      "fingerprint": "733d8fa571de3383f2663061fa82c182f21b864ed8bac0c7084a968cfca324a4",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "script/DeployCoreDiamond.s.sol",
+      "start": 674,
+      "end": 4145,
+      "spanSha256": "2ac471f14f0b27884d605563c765e97ab846ee2b8c30234e6fd1431d5487c48b",
+      "fingerprint": "73bff51e671e0c4aec2e18b21cc0106e8ad579d3502e6711aabebba32414c979",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "test/IntegrationFlow_DiamondEtherGuards.t.sol",
+      "start": 1041,
+      "end": 3751,
+      "spanSha256": "a2aefba9f1a464eaf9eba75bb10a1715d66e2f26fd690356dbe4aa2e6c3ebea7",
+      "fingerprint": "73c7e773e811ef7f02a6f44a59751edadfbfd6fa56a690eda181a104d378f6d2",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/PreviewFacet.t.sol",
+      "start": 529,
+      "end": 21080,
+      "spanSha256": "33d77782f2dfd7077ed947ed7f80e033544794299a5aedbcc46f2707512e93d8",
+      "fingerprint": "73d6d5bf18fbe1db5f1090c31d4d430cdbc9ef502bd6e39ade2e8f6a972c2d34",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/3_staking/test/ReleaseAbiConformance.t.sol",
+      "start": 976,
+      "end": 5199,
+      "spanSha256": "9368653dfa3d586d508c54cbf79141ef977388dff98c935136431da207fea4f8",
+      "fingerprint": "7463e002759a9fd1598dd8be85fcf5bd81f130ef8b3eb99b94d063821bb563a9",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/3_staking/test/facets/LensFacet.t.sol",
+      "start": 2361,
+      "end": 15800,
+      "spanSha256": "5000b7ce4eae3a6a2636bd4b9435a16aa91dba4e43023ad8d5aa48810df6448c",
+      "fingerprint": "747b994f5c239d1ed58c0e61141eda8ecab53f389a2a3128a90eb4af0cc4b8ec",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "test/IntegrationFlow_SwapHarvest.t.sol",
+      "start": 682,
+      "end": 2821,
+      "spanSha256": "b0bb170b86a02cf9e9abc433f2e2df2c8685e2abecb48bf69d053c03ece5ae76",
+      "fingerprint": "76d3d9ae344d320eccad467e68a6b0b7ad5b44cc6aed22b6401199fa6440cf78",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/DeployParams.t.sol",
+      "start": 830,
+      "end": 11598,
+      "spanSha256": "ebf7ccd384be10b899d9ce3603660409f09fb56881ff978895d48bc8905e172b",
+      "fingerprint": "77904a90dc7da0c2cf8d2c75ab8effa2a74a9aba80a83475f4cc18d2aafba718",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/3_staking/test/InitializationFlow.t.sol",
+      "start": 1666,
+      "end": 6871,
+      "spanSha256": "d30c568a69c6b46494f5bdbb4ba273b89bea0aab4b371b094a1ac0094c2b5ac9",
+      "fingerprint": "77e81e2b862b01b0f9f2e4608838dbe0aa2aa155af4e30987b7ab24cc7330a1a",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/RecoveryScaleGas.t.sol",
+      "start": 462,
+      "end": 20284,
+      "spanSha256": "09e0fd0b7d7c75a1ced1dcc6090df62a917bf08316b78a465f26ba5c9ec5507b",
+      "fingerprint": "7802955d8689d1af2fef0692bf143d6b5a943347e501b8028aceb6bf79bfb5fe",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/2_governance/test/invariant/GovernanceLifecycleInvariant.t.sol",
+      "start": 11817,
+      "end": 15160,
+      "spanSha256": "3c8baebf60e18314dc4b437b4333a3ec6268b0b7d3c7ef8011d6ba4b1122bbe3",
+      "fingerprint": "7813c9875ac490ce609398428c8e4668ca8e72b6f08d1bf31bc15db2ca430403",
+      "scopes": [
+        "governance"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "test/IntegrationFlow_CurveSleeveFork.t.sol",
+      "start": 682,
+      "end": 1821,
+      "spanSha256": "cdb6e59616157df146ff031976c05dadfb5abbd402a5c245f52bae5100c1a6c2",
+      "fingerprint": "79303623734d1b85a8f3b15a3f3025fb84a64ced704ccb9e7dbbcd70e6053b1c",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5740",
+      "path": "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/extensions/ERC4626Upgradeable.sol",
+      "start": 10961,
+      "end": 11017,
+      "spanSha256": "712ae75f2e200784f268b344ae2d5b2a21d8c131148cc015e1a93cfef05571a8",
+      "fingerprint": "7ab8fc1390d46486bdb1fba11d003c67384e278f5f6ac3353d4329ee43b84efa",
+      "scopes": [
+        "root",
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "pinned-openzeppelin-erc4626-unreachable"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/RecoveryActivation.t.sol",
+      "start": 2729,
+      "end": 8596,
+      "spanSha256": "0d21b53375bc4bbbf4ea65416d977184f3d586fcdeaf25cde576850d0deffd2f",
+      "fingerprint": "7c8e05c4adce0c582d5b442f3f8cb29cfd7c2ae4b0ff6401e60f5f8326a6f1a6",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/SafeSettlementFacet.t.sol",
+      "start": 404,
+      "end": 26540,
+      "spanSha256": "00171504605dc26d77432013b15925261748b7aa7bc1b588ef207901c7d6697e",
+      "fingerprint": "7f619c932ac026b47ae1bc78b24f0f9d48613c5372419e0ca836df4929a365aa",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "test/IntegrationFlow_CustodyRoles.t.sol",
+      "start": 800,
+      "end": 2643,
+      "spanSha256": "7ac121499d6995c1824103968e2c5f64d57510b2e302d7c96e93e20bbc45ba8a",
+      "fingerprint": "8515689c810578185615901fcd2e9d8da0594b16d97953fd5cbe97dfcb9ca741",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/3_staking/script/StakingDiamondDeploy.s.sol",
+      "start": 1256,
+      "end": 2911,
+      "spanSha256": "309787b88aec777c2333aecff79dc6c1acc06723bc25921aaddd728c088b8e3d",
+      "fingerprint": "8728378caece7fb2978fbf8223c51e54a3fc61df96bf469c264069f5020eed32",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/fuzz/RecoveryAccounting.t.sol",
+      "start": 3395,
+      "end": 4377,
+      "spanSha256": "1e58a97d465b9439a1ac81bdefa3d3aa7667690a64a2ef092421d75e8d2b30af",
+      "fingerprint": "88db8eecb0af6d804a0c70b8f82877079507d42de36d697bdae18e95d6787a82",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "test/IntegrationFlow_Sleeve4626.t.sol",
+      "start": 762,
+      "end": 2065,
+      "spanSha256": "5db3f6d5b1bdcce77afb2fbad1d7b8f3285c47ea399652425309a7615d210a3d",
+      "fingerprint": "89765b410d8ff7b136ef5c1a0a0d98c9520b954a337016d9053b74799ac1bd00",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/DiamondInitCoverage.t.sol",
+      "start": 3253,
+      "end": 27237,
+      "spanSha256": "32421a1e8b7988cfd68752d84eb6d74ee6187307a05b3d49db53dbc0bb5a8861",
+      "fingerprint": "8a226481eccc664d47cb32cbc270c56d588c42d0696a7a42da51e515371fc724",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/RecoveryShareCallback.t.sol",
+      "start": 12274,
+      "end": 27381,
+      "spanSha256": "5cd5edf80111531b778cf70c02e7f4d3d270e38e6007b0099dd1c6f259ba231f",
+      "fingerprint": "8cb9852394bb5d5a76320289efe6ae019576d7a49b0a612fdf82af4541a61af2",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/0_shared/test/LiveValidatedDiamondCut.t.sol",
+      "start": 9780,
+      "end": 66226,
+      "spanSha256": "f6844c5abba0e78cb397ba83b45f1453fb6e274e9108f348742d28d7fcac33f1",
+      "fingerprint": "b8e5dce60270a4da851b6a712d67568cd2621d46d00503ffd35ffb51d7a63f61",
+      "scopes": [
+        "shared"
+      ],
+      "reviewMetadataId": "optional-initializer-warning-agent-review-2026-09-28",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "6335",
+      "path": "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableSet.sol",
+      "start": 18279,
+      "end": 18401,
+      "spanSha256": "37ab9e55ddfdd6cb18b76be3947506bb10a51db2f665747d66c33163e79122ee",
+      "fingerprint": "9063bdf20a0cd84dd740d85e22ef32bed3e574c2394ab2cfab58ce1fd11ab947",
+      "scopes": [
+        "core",
+        "governance",
+        "root",
+        "shared",
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "pinned-openzeppelin-future-keyword"
+    },
+    {
+      "code": "5574",
+      "path": "packages/2_governance/test/facets/GovernorCancellation.t.sol",
+      "start": 1779,
+      "end": 9981,
+      "spanSha256": "d734c73d5dfadb626c631518810ff6e6c63948a1e093f2f01991b98b7068191a",
+      "fingerprint": "912ff8e2b51809ff09b84665f167452ef10848a868f7bd9003f10bbeabc1e726",
+      "scopes": [
+        "governance"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/SafeSettlementFacet.t.sol",
+      "start": 404,
+      "end": 26540,
+      "spanSha256": "00171504605dc26d77432013b15925261748b7aa7bc1b588ef207901c7d6697e",
+      "fingerprint": "922512fac4f45f265d0c934c5229bcb6fd745728ca07ff9816579f846565747d",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/ControllerBaseWs1Coverage.t.sol",
+      "start": 8814,
+      "end": 28250,
+      "spanSha256": "5890bf19659b0096fca77c33981f4a78a41660a34f42481eacebb6b08740bfe0",
+      "fingerprint": "96e9a25505f069bfaac0a597b3550a1ca36cdcd441eca34f7707f50714c17eba",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5740",
+      "path": "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/extensions/ERC4626Upgradeable.sol",
+      "start": 11401,
+      "end": 11457,
+      "spanSha256": "712ae75f2e200784f268b344ae2d5b2a21d8c131148cc015e1a93cfef05571a8",
+      "fingerprint": "9a43a122cb789b941cbae6f73819c2e6b93604d5f3921c2decbb15fd223745ee",
+      "scopes": [
+        "root",
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "pinned-openzeppelin-erc4626-unreachable"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/WS1LifecycleAdminCoverage.t.sol",
+      "start": 3286,
+      "end": 18047,
+      "spanSha256": "9bd943dee7471a593e931f833a7c3e706e9db8cce8ba3e2ecdbf04eb48bf4f11",
+      "fingerprint": "9b5088473031ac7cbb751b37342c01bd8bb55b7967a6722a17a1e9c2d0fe77aa",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "test/IntegrationFlow_SleeveCurve.t.sol",
+      "start": 812,
+      "end": 1944,
+      "spanSha256": "412063620fe2749cd5e6ae6aae6834b3438dc7144634a11d1c1eb2d9b89c401a",
+      "fingerprint": "9bec7acd02990bccd477736250a6759bb51f48f977d9d97bad64784a7cb18ae6",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/3_staking/test/InitializationFlow.t.sol",
+      "start": 1666,
+      "end": 6871,
+      "spanSha256": "d30c568a69c6b46494f5bdbb4ba273b89bea0aab4b371b094a1ac0094c2b5ac9",
+      "fingerprint": "9e2f653f812ed2cacd156ffae0d4b37a8b11a660c75a978be6e1b0e817c4b877",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/0_shared/test/DeployUtilities.t.sol",
+      "start": 2956,
+      "end": 3381,
+      "spanSha256": "11c00ac1966083517b42d782e9cab2c6477c891fc6ba3bbee3d459a1f3b8cc50",
+      "fingerprint": "9e61c020f3276441e1d0118e1a41d9e600961db69da4b587554121d5b987b55d",
+      "scopes": [
+        "shared"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/3_staking/test/ReleaseAbiConformance.t.sol",
+      "start": 976,
+      "end": 5199,
+      "spanSha256": "9368653dfa3d586d508c54cbf79141ef977388dff98c935136431da207fea4f8",
+      "fingerprint": "9ebcaf13c88c0114077603ae47520054acdf51d6ad49e03937b3b3f027deb6f6",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "test/IntegrationFlow_PauseAccess.t.sol",
+      "start": 1111,
+      "end": 8758,
+      "spanSha256": "10cf7b29f9f0e95f289940c56904086e5915e09ddc59bfce1f837368150120a6",
+      "fingerprint": "9eec685a553317aff69f7f2bcd1f96c1f00bdba0547a5c060a126e6f801ae891",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "6335",
+      "path": "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableSet.sol",
+      "start": 13900,
+      "end": 14020,
+      "spanSha256": "d9de4f240bc3de44c5282f1837d818763f3d3092a9f0faf7100066c6cfaed6e0",
+      "fingerprint": "a0dba7ee2c891df65cd232ebaad30353da4295fe2adbcbb7e56b56caddda2c27",
+      "scopes": [
+        "core",
+        "governance",
+        "root",
+        "shared",
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "pinned-openzeppelin-future-keyword"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/integration/CoreDeploymentHelper.t.sol",
+      "start": 1560,
+      "end": 19825,
+      "spanSha256": "bc760ada0203c21680fadecd4848fde2d3202a5ea5228bbfd8f83b51b0471b58",
+      "fingerprint": "a4fe04f2f0b8a2c79cca0e353355e82a84769212a7f27c617e1ba7d4ccdd648c",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/3_staking/test/facets/FundManagerFacet.t.sol",
+      "start": 2599,
+      "end": 36041,
+      "spanSha256": "ac3ee9c3b81406688208242c0ed5ddca1687fc35234bba99aa04f884ee873be7",
+      "fingerprint": "a7beab39ee7c5cae75ea8aee8c54dce0dfe650768476c1790f06556a9ae1383a",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "test/IntegrationFlow_Governance.t.sol",
+      "start": 4162,
+      "end": 63290,
+      "spanSha256": "7fde821f6ca3fc5d31aca61a0639ec67511026eeee21f2e1d00f3c5d84d7f51e",
+      "fingerprint": "a86b8dc3b57cef10f93f85604e3d6f1ffab7d17d2a8f3711a648c19f9fc69a6a",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5740",
+      "path": "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/extensions/ERC4626Upgradeable.sol",
+      "start": 11028,
+      "end": 11041,
+      "spanSha256": "1a035643a5bebe0da57b26a0bebd9ff55769c323d4492a18baeb3f4c5d1e744b",
+      "fingerprint": "a87d2aaf717946f1cc06e52512d7d2ed7dbffc03a0a42a89d4ee6af8f341bf31",
+      "scopes": [
+        "root",
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "pinned-openzeppelin-erc4626-unreachable"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/ReserveLifecycleActivationCanonicality.t.sol",
+      "start": 508,
+      "end": 5647,
+      "spanSha256": "925499992414239e20f747cb0c77bad9cb2e7aae339d693bd3315fd9e74d4703",
+      "fingerprint": "a9665aa149c8e153eec0b6b84a1d93631a7af87c0944ac3101da0ddc80eba633",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/2_governance/test/facets/GovernorCancellation.t.sol",
+      "start": 9983,
+      "end": 18849,
+      "spanSha256": "d733641c2cd5b9fc8db539be038a79a34c2b06e8eef61fb595d02e48ac62458c",
+      "fingerprint": "a9c5e232a78fe80eca8cfeca8ecc3addb342d240faeeb9a03a132ea5069fe134",
+      "scopes": [
+        "governance"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "script/VerifyCoreOnly.s.sol",
+      "start": 4082,
+      "end": 31877,
+      "spanSha256": "bcba4c013c05db49908db56005997e41c3c8e64361552afdb130820dadb3404a",
+      "fingerprint": "ade9ea2bb7017a105dcda2ad47c181671af583714ae373197d8e8d0e428e7640",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/TokenAccountCallbacks.t.sol",
+      "start": 983,
+      "end": 22515,
+      "spanSha256": "b90e98d21aa9ececa4fe1966efd5db7b12f5384ade214887e9e9f0421f7cd5b8",
+      "fingerprint": "ae643a665b902a1ae785daaa67324ada924ebfb412364949346737040f4a65e7",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/3_staking/test/facets/QueueFacet.t.sol",
+      "start": 2836,
+      "end": 34487,
+      "spanSha256": "48100f8e4d918bed8ad155c80a3c6ad8a26fa556525be99936689b76a4fd0c16",
+      "fingerprint": "aee7192fd17a652391b7f6f33de0bb9f43561c2600ba3035f9af972cd60c6667",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/CoreRecoveryPrecisionInit.t.sol",
+      "start": 588,
+      "end": 3520,
+      "spanSha256": "30af1e848a745f2bc5cde9a513d6a03d02874adf1a7af2df7dc434bd7e61164c",
+      "fingerprint": "b0444f5098ad1ec3aa269ae0aa2bfc9bbc82c84defb261289ac8ee6beaa8c122",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/IssuanceFacet.t.sol",
+      "start": 792,
+      "end": 24803,
+      "spanSha256": "54a9ae81b9b636882c07aff1cf9f9cae94774a76f234febadf0d5c86e458170e",
+      "fingerprint": "b127413eed193e83008f616e27c6e2e95ecf200778304e49a84a7ec94a2279ae",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/RecoveryZeroResolutionCoverage.t.sol",
+      "start": 366,
+      "end": 4337,
+      "spanSha256": "00311f65bbbc8c556c8888bd2e9c4671fcf033f6f6c52b887187c5ccbd0d7202",
+      "fingerprint": "796fecdad7b3037403dc49bb038002550f4ea38d9a652d59d2967351dcaae068",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "pause-gate-warning-agent-review-2026-09-24",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/3_staking/test/facets/VaultFacet.t.sol",
+      "start": 3499,
+      "end": 16181,
+      "spanSha256": "2a9e259f2fb9a8eddcbfebe40ecccc18526009ffeb31e0e52b79ef7b19953fb7",
+      "fingerprint": "b50d1ad4ef500b6dfc74116c1c37dc5048ea15a905fa9f0f5cb0b17f5522f1a2",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/ReleaseAbiConformance.t.sol",
+      "start": 565,
+      "end": 3877,
+      "spanSha256": "31b3a22cdaf8a7584fb95d35ef8f62a66f416bdc5fc5a3a5974da9b593d042c4",
+      "fingerprint": "b7a062e7f96bfb53950ae6aedd24bb4fe58146fa5b91ee81aaa45455f7dbc60d",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/2_governance/test/invariant/RecoveryFundAccountingInvariant.t.sol",
+      "start": 13282,
+      "end": 18983,
+      "spanSha256": "54c8e66d402cbffc236650a371fda85afd2293433cbd44560c3d73948adfa525",
+      "fingerprint": "b7bc9d42efd6d02f013c8ffc95668e718866307cad2c439e27842eb043b99e51",
+      "scopes": [
+        "governance"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "2424",
+      "path": "lib/diamond-1-hardhat/contracts/libraries/LibDiamond.sol",
+      "start": 9048,
+      "end": 9192,
+      "spanSha256": "a0add889d12b06d251c23984e0b9c81f394e2d48d0d1607ac93825b78ebceea0",
+      "fingerprint": "b7fb8960ee2087ab58116e3a49c9a1aaf720a1d7c944d135bfe8966b826cb67d",
+      "scopes": [
+        "core",
+        "governance",
+        "root",
+        "shared",
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "pinned-diamond-memory-safe-comment"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/IssuanceFacet.t.sol",
+      "start": 792,
+      "end": 24803,
+      "spanSha256": "54a9ae81b9b636882c07aff1cf9f9cae94774a76f234febadf0d5c86e458170e",
+      "fingerprint": "b913f19f566db4ceb8e5545afb1b27b02fcd56f039bfc8912bc42669f449c280",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "6335",
+      "path": "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableSet.sol",
+      "start": 35074,
+      "end": 35199,
+      "spanSha256": "dfc4db91bf68ab977427722e926ab1232c26c7c769934be8f16ceae26cec10f3",
+      "fingerprint": "b9c21a88084264a20fc814613d237f23c52ed6e2d9e43751826a59b720075466",
+      "scopes": [
+        "core",
+        "governance",
+        "root",
+        "shared",
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "pinned-openzeppelin-future-keyword"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/CoreSettlementSnapshot.t.sol",
+      "start": 543,
+      "end": 8486,
+      "spanSha256": "83014e035b1f78908701ec1a12d61b92a349649a2d1dd82be42590a69d9a2766",
+      "fingerprint": "ba13fd7e2bc13dc0f48c69ecbc31f78ca280b49b3154031bf4f3dd0de8c239cf",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/3_staking/test/integration/StakingDiamondIntegration.t.sol",
+      "start": 1534,
+      "end": 7300,
+      "spanSha256": "c379541e8be49fae6483ff24ad2fdac414053d1a710c43eb8bc6af0c9c71e12b",
+      "fingerprint": "ba2f5fed31c28d6d0be46ed478ebb9deb5ee7d87f3596da8a9bf4ff1bebef6ac",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/2_governance/test/ReleaseAbiConformance.t.sol",
+      "start": 523,
+      "end": 3420,
+      "spanSha256": "dc14705e7aab43a06117dd58834c575f7f128f28d0c416d601335f3d57567844",
+      "fingerprint": "bb3c9c808489484c692f8fa71095af1e55e43fe6b4b4a964e7379e4a38428c9c",
+      "scopes": [
+        "governance"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/3_staking/test/StakingCommittedShellFactory.t.sol",
+      "start": 1417,
+      "end": 8476,
+      "spanSha256": "fd5b839a7f959e9b58dbbe888d6aafbfec54f5a345427b6d7757f182f82242c9",
+      "fingerprint": "bcc0bf61d0462f4ab435a70d3600b729a34a2ba207674dcdd5548b0bf208485e",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "test/IntegrationFlow_CustodyRoles.t.sol",
+      "start": 800,
+      "end": 2643,
+      "spanSha256": "7ac121499d6995c1824103968e2c5f64d57510b2e302d7c96e93e20bbc45ba8a",
+      "fingerprint": "be3e6052d9d8a89322397dc44767824b3ef2aba12e5df88e180eb1ff463f5637",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "script/DeployCoreDiamond.s.sol",
+      "start": 674,
+      "end": 4145,
+      "spanSha256": "2ac471f14f0b27884d605563c765e97ab846ee2b8c30234e6fd1431d5487c48b",
+      "fingerprint": "be4c49cd84f570771ac4fe80d069df6e5c886a3ec6633061b9414e00b88711a2",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/2_governance/test/facets/TokenFacet.t.sol",
+      "start": 572,
+      "end": 10133,
+      "spanSha256": "ae2689729377b6a9146085ca98d54d3cbc55491351aca21b79f721a6e85ae22f",
+      "fingerprint": "be755e3f9bf3398c5efb1f2ce673b4efa447c2f12f9b5e32de556d4ece6bb76d",
+      "scopes": [
+        "governance"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/0_shared/test/facets/AccessControlFacet.t.sol",
+      "start": 733,
+      "end": 7564,
+      "spanSha256": "548ec3d69fb7ae1355e298477ffd4c7a94c78c7789bde4efdff9cf00299d2f6c",
+      "fingerprint": "bef5e0655455120269791b5dff965b06dbc8fd0434b5cbd4d1643ac8a17c8031",
+      "scopes": [
+        "shared"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/ControllerConfigFacet.t.sol",
+      "start": 396,
+      "end": 7082,
+      "spanSha256": "38345c5192d05b52be2670787aba6c20de25236af1983d49d24c79d537c65647",
+      "fingerprint": "bf59a0aa594d90d671427a96582140c822fc08f1cfb4f849802ddbcedf2cc56f",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/2_governance/test/GovernanceAuthorityTopology.t.sol",
+      "start": 1777,
+      "end": 14752,
+      "spanSha256": "b8d1220ff1a7ca123681387cd22718ad49ea31d1ce672a670246fbe51f6dd1be",
+      "fingerprint": "c2eb74d5bf6266996fcc31e7d03b11880b752ea17c611a3aba0f1ca089188cec",
+      "scopes": [
+        "governance"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/script/CoreDiamondDeploy.s.sol",
+      "start": 872,
+      "end": 2684,
+      "spanSha256": "040b78b6f24c27c90c3dc4d316c11b6ca2716b53b97359ab4d570f4d8012a383",
+      "fingerprint": "c2ebb2595efe406d0f3edd02ef039e354c5388ee7196f8d996f661922d69aba5",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/BasketRegression.t.sol",
+      "start": 824,
+      "end": 16120,
+      "spanSha256": "4896e62bda4fc41d5b646782d8e017673c3448d19be1d264e57d4aab790b9999",
+      "fingerprint": "c3210bb8759a82d6e1616fe089ea91694787559dfaf3885117f6fb23be7fde2f",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/3_staking/test/facets/FundManagerFacet.t.sol",
+      "start": 2599,
+      "end": 36041,
+      "spanSha256": "ac3ee9c3b81406688208242c0ed5ddca1687fc35234bba99aa04f884ee873be7",
+      "fingerprint": "c3ccfc343c31eeb12f941cfd31ad4917f715aba25e2994d6c30f8f9a8286994f",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/RecoveryControllerCoverage.t.sol",
+      "start": 275,
+      "end": 2106,
+      "spanSha256": "f15183d80f1bf6c6c8b3c5c921244b06bd29791f0383c474ee4bfbb2233193a2",
+      "fingerprint": "c426e1fbdb80843721ab9f1344aa3641649991dfb03296487e4e97d6fbfb4549",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/WS1LifecycleAdminCoverage.t.sol",
+      "start": 3286,
+      "end": 18047,
+      "spanSha256": "9bd943dee7471a593e931f833a7c3e706e9db8cce8ba3e2ecdbf04eb48bf4f11",
+      "fingerprint": "c50bb9d49b6bd123ee84c10631988d297870533a9b30c348c34c452a5b507cb8",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "test/IntegrationFlow_CapDeallocate.t.sol",
+      "start": 664,
+      "end": 3157,
+      "spanSha256": "2777795ea5d8ce3488fc33403dbb35a02798118ab4f35625c1015de5e3d39877",
+      "fingerprint": "c57df238854f7807d7e61a8714e4712807aea6cbbc474e7a142cd2618fdd26f9",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/RecoveryAdminCoverage.t.sol",
+      "start": 276,
+      "end": 3209,
+      "spanSha256": "8f3c9d7b6e87155b106a39e8e9117e646c5138f74ee7b359a53e1c1bde481293",
+      "fingerprint": "6306666bfea287abf4854e0bc3017f73d50cad2160b28609fedf9404666a1274",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "pause-gate-warning-agent-review-2026-09-24",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "6335",
+      "path": "lib/diamond-1-hardhat/contracts/libraries/LibDiamond.sol",
+      "start": 8833,
+      "end": 8851,
+      "spanSha256": "9eecd6de741439109b181780370093b5eb0fa812f2fdf8c406f941e8c0abf02c",
+      "fingerprint": "c87daec7ef3b62f1fdf2a104ce9c9742110d96d60683da52650f4330cfcdf65e",
+      "scopes": [
+        "core",
+        "governance",
+        "root",
+        "shared",
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "pinned-diamond-future-keyword"
+    },
+    {
+      "code": "3860",
+      "path": "test/VerifyCoreOnly.t.sol",
+      "start": 2026,
+      "end": 5175,
+      "spanSha256": "0f16e42a371a712f9cc4e4af5ad4fa8c7d757ff9c44b06a063e9dcf004f6e37b",
+      "fingerprint": "cabb824b6279364f1f07e4b4678d33b5b495427bb93fa88ccfb13b1e0cf40c0a",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/InitFacet.t.sol",
+      "start": 130,
+      "end": 2447,
+      "spanSha256": "bb7e132d9765e6d30e84b613f71ee555ce76d268006f781371d104d8c7ac1703",
+      "fingerprint": "cb7bea595d6dc771788913f943e7db669377576be1548dcae510a55d366d6781",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "6335",
+      "path": "lib/openzeppelin-contracts/contracts/utils/structs/Checkpoints.sol",
+      "start": 4663,
+      "end": 4797,
+      "spanSha256": "025bfbb7af45254fbe5a445e06cd6d772ee3fa0c644dea3adbc278f51ffa95b4",
+      "fingerprint": "cd39d32f03b78a9424691467987632d55447609dd4e9398630473a7d9205de7b",
+      "scopes": [
+        "governance",
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "pinned-openzeppelin-future-keyword"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/ReserveLifecycle.t.sol",
+      "start": 397,
+      "end": 10004,
+      "spanSha256": "4631f99b1539a3eaba41442e737bc3218d0b457334a694f880bf592c1522cc69",
+      "fingerprint": "15cd5d182c54405bdfd3e2334d03757e41f24b6bc9460834724f126024aac299",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "pause-gate-warning-agent-review-2026-09-24",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "6335",
+      "path": "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableSet.sol",
+      "start": 22612,
+      "end": 22731,
+      "spanSha256": "a99cd2b3ebe54f0276bcece61adb17ab9fe5403fb749247c3f39aa453006bd14",
+      "fingerprint": "cdcc45dc52ab983affa810b398ba669786dec2ce48ceda12f689dfff10b8436f",
+      "scopes": [
+        "core",
+        "governance",
+        "root",
+        "shared",
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "pinned-openzeppelin-future-keyword"
+    },
+    {
+      "code": "5574",
+      "path": "packages/0_shared/test/DeployUtilities.t.sol",
+      "start": 3383,
+      "end": 66413,
+      "spanSha256": "ec7ad60f443974659555bd0d5c5d6f9df981fec6c724ba006393d27e8340ad30",
+      "fingerprint": "cdd1a0e907ecbb0b1c30a862238816056aec7ecc3405d572eb3649b175aeb187",
+      "scopes": [
+        "shared"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "test/VerifyCoreOnly.t.sol",
+      "start": 352,
+      "end": 881,
+      "spanSha256": "dc8294517dc4ce2e8b0d1a45f0baa1f79e1820894f8136b0b741250bfe0f0656",
+      "fingerprint": "cf81868ef6e88f267b4836a6fd270878d7b7a1caa9340f0c876cc0cd408f548c",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "test/IntegrationFlow_SleeveCurve.t.sol",
+      "start": 812,
+      "end": 1944,
+      "spanSha256": "412063620fe2749cd5e6ae6aae6834b3438dc7144634a11d1c1eb2d9b89c401a",
+      "fingerprint": "cfb534c3b7e22beec950bd89afd23404df9fcaa11ca13072f3f608684cc98b74",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/CoreSettlementSnapshot.t.sol",
+      "start": 543,
+      "end": 8486,
+      "spanSha256": "83014e035b1f78908701ec1a12d61b92a349649a2d1dd82be42590a69d9a2766",
+      "fingerprint": "d47791c22982d12c2e6c48ef7c8adc3f1177bdd7c6e426994c8c2d054339a1a4",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/0_shared/test/facets/PausableFacet.t.sol",
+      "start": 5089,
+      "end": 15219,
+      "spanSha256": "db1f0af31ab8c7f6bc345b3b62858fc3e37fc491004c30bcdf961888c3b34290",
+      "fingerprint": "d546a0d30251e162c29f146486a1df072054c8ce2b5d48c46a318dbd5f2f6b13",
+      "scopes": [
+        "shared"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/CoreDiamondCutMigration.t.sol",
+      "start": 4941,
+      "end": 28417,
+      "spanSha256": "c5d62622155ce299432d12baf2b2d77fcbda5bb04a9a3209a6f06c8aeb9c9be0",
+      "fingerprint": "2505c8a98a68692aa8c95addfaa49f260003811bd4a4980566a72fa825f20955",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "optional-initializer-warning-agent-review-2026-09-28",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/CoreEnsPrimaryNameInit.t.sol",
+      "start": 2420,
+      "end": 7769,
+      "spanSha256": "f130d86574f3fddbebb41d7abf37e0ee3e4c43ef5f1f48e4bddb664f89683f92",
+      "fingerprint": "d8f9435baf333693f8b5127006fe03403d67e271c3933aeaefdb1efee87c4a9b",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "test/VerifyCoreOnly.t.sol",
+      "start": 2026,
+      "end": 5175,
+      "spanSha256": "0f16e42a371a712f9cc4e4af5ad4fa8c7d757ff9c44b06a063e9dcf004f6e37b",
+      "fingerprint": "d9eb1f0909941fff022b9f2a178c6a2f93f7c1d9124051e195d175c70637b47a",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/BasketAdminFacetInvariant.t.sol",
+      "start": 342,
+      "end": 7390,
+      "spanSha256": "aacdb8389e9e1f0892275a77f4b5e25d5e950479d5bd3abb985ecbf3af785228",
+      "fingerprint": "dabda8b345f210c0c97a6c4b630a369a5843e260a094d19186a6e2a9b4f35217",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/2_governance/test/DiamondInit.t.sol",
+      "start": 5512,
+      "end": 62908,
+      "spanSha256": "b4ba6d03c61b3a2aa551ae82eb812db78c523a5b2e93009c5737e3cd87d16b35",
+      "fingerprint": "db89b249603fa4336b05221ec2d44478755d66aac1d4ac6b8b9270cc986aeeaf",
+      "scopes": [
+        "governance"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/RecoveryActivation.t.sol",
+      "start": 2729,
+      "end": 8596,
+      "spanSha256": "0d21b53375bc4bbbf4ea65416d977184f3d586fcdeaf25cde576850d0deffd2f",
+      "fingerprint": "dcbcbaac0acf490b87c1523950f3421ef8004f860dde1d17aba82d6657978b1e",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/RebalanceFacet.t.sol",
+      "start": 598,
+      "end": 14074,
+      "spanSha256": "63182ad51735d109a9c3e4b8d8b551ff9c325f3c2c424b697709f3a3b3bec9d7",
+      "fingerprint": "de48d9efb39bcdb354ee8064f293c168afa7d62a581c90eaed41531a8f516973",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/3_staking/test/sleeves/SleeveCurve.t.sol",
+      "start": 5013,
+      "end": 34457,
+      "spanSha256": "162cc5fb5dc1b9fc4095e0a54bce176db3185eab22b9d1c943437cc6b2e187a8",
+      "fingerprint": "df9736bc32f055d12631725b9b0fd2dbf5e6782b93dc5d488d8bbdc5cece9a6d",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/3_staking/test/DeploymentArtifactCoverageGaps.t.sol",
+      "start": 3027,
+      "end": 61570,
+      "spanSha256": "ef4afbca13ccfe8ce5b3f8a18a263a921bc315b0656a3716afeef2c87bc64c18",
+      "fingerprint": "e10b9fbee042836d4a70b5b1220f04ce578a1132d2938688e7d7f668880be7b6",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/WS1LeanCoverage.t.sol",
+      "start": 3782,
+      "end": 7590,
+      "spanSha256": "4711227864821b327fc802f7523a06fc66859188cdc9191c63d6d619984f42fe",
+      "fingerprint": "e170293118018168d7dc701f38cc714db015e501691938c450e3081f57bb56ca",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/ImmediateRecovery.t.sol",
+      "start": 3806,
+      "end": 20325,
+      "spanSha256": "0e5e8fef470042767db618f758f9d96028d9247b0c86ba55d3d8f0230f6b0eca",
+      "fingerprint": "e221801fd5c5819b33044d8fc91d6ba3d696bab78a3376ab1caeec721ce4363c",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/3_staking/test/StakingRegression.t.sol",
+      "start": 1340,
+      "end": 17369,
+      "spanSha256": "d076ea92365765b1f7d90132bf653edbb6c2b19ec634458308d290e887ae6774",
+      "fingerprint": "e2a98246c6521c7c21d137d6ec763f1032a487de4934ffb11aa350ebe8ef6a68",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/3_staking/test/sleeves/SleeveCurve.t.sol",
+      "start": 5013,
+      "end": 34457,
+      "spanSha256": "162cc5fb5dc1b9fc4095e0a54bce176db3185eab22b9d1c943437cc6b2e187a8",
+      "fingerprint": "e3e6f3358dea4182293598a65a52daabe04848ce48087d03634b31c273c6e870",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "test/IntegrationFlow_SleeveManual.t.sol",
+      "start": 787,
+      "end": 2113,
+      "spanSha256": "184e3c046ba3581ca1f281d8573b44414f14108f0500b3fbab03db18cd54ee94",
+      "fingerprint": "e50297fd8faa1ac33cb607381c5a416f8ffca42ba30023f82e596bef02ee7a9b",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/3_staking/test/DeploymentArtifactCoverageGaps.t.sol",
+      "start": 3027,
+      "end": 61570,
+      "spanSha256": "ef4afbca13ccfe8ce5b3f8a18a263a921bc315b0656a3716afeef2c87bc64c18",
+      "fingerprint": "e53afcbf7b1c1d9cb0b7549378214e34d5af5bfa0304b127104d4833bbe17ec9",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "test/IntegrationFlow_EndToEnd.t.sol",
+      "start": 973,
+      "end": 7696,
+      "spanSha256": "487c4e4769053c02762d801cff8f071483fb7a7859cea4f02daa26316e515448",
+      "fingerprint": "e59e0285d8e2de54b590fbc3f7e43be3642b74706b83fa840b16fe4e9231cee9",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/RecoveryZeroResolutionCoverage.t.sol",
+      "start": 366,
+      "end": 4337,
+      "spanSha256": "00311f65bbbc8c556c8888bd2e9c4671fcf033f6f6c52b887187c5ccbd0d7202",
+      "fingerprint": "27cdc482fc45b82c3a74469780c712dbceae206fae02df8dd0a5638ea09c77cf",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "pause-gate-warning-agent-review-2026-09-24",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/CoreDiamondCutMigrationCoverage.t.sol",
+      "start": 9292,
+      "end": 34171,
+      "spanSha256": "5f019c496a9e2e000d43d0e83f010524006297debf5e6113aade975bb874344e",
+      "fingerprint": "275bf52eafa934850bd4b3ce98ac871d99af59e198d72f6c477f186c09702280",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "optional-initializer-warning-agent-review-2026-09-28",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/ReserveLifecycleCoverage.t.sol",
+      "start": 8428,
+      "end": 12832,
+      "spanSha256": "f10bfc3536272054d53c164cdd896899f8fa56b85a95060128db3f118cc271a4",
+      "fingerprint": "e977dff1b22c27e84923d0cd331ae3d0a761017a77cdc9e77fe31700f3960de5",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/RecoveryControllerCoverage.t.sol",
+      "start": 275,
+      "end": 2106,
+      "spanSha256": "f15183d80f1bf6c6c8b3c5c921244b06bd29791f0383c474ee4bfbb2233193a2",
+      "fingerprint": "ea2a2e27998d3d9214bb6e0f6a01d7e7324eead7bb4dcf5bbc39142577a03738",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/RecoveryIssuance.t.sol",
+      "start": 337,
+      "end": 3088,
+      "spanSha256": "ff12611c07561647773d1e13e9e2ef95052d6c61a4221bc64413f3a371f4c4a4",
+      "fingerprint": "eac3708b08004bb81cfa43b01aa1ff3f5afa005d0e8dc37416e6fad3cfce064a",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/DiamondInitCoverage.t.sol",
+      "start": 3253,
+      "end": 27237,
+      "spanSha256": "32421a1e8b7988cfd68752d84eb6d74ee6187307a05b3d49db53dbc0bb5a8861",
+      "fingerprint": "eadf766544953640c2c0a0df18249aa558c955f60cc6f6de66647caf5f3ccb1f",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/3_staking/test/StakingRegression.t.sol",
+      "start": 1340,
+      "end": 17369,
+      "spanSha256": "d076ea92365765b1f7d90132bf653edbb6c2b19ec634458308d290e887ae6774",
+      "fingerprint": "eba867959b1a46ddec17c77ef7a215c25aaeed2b5afb65d953603824ba7e6504",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "6335",
+      "path": "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableSet.sol",
+      "start": 28833,
+      "end": 28960,
+      "spanSha256": "2df411fb755d222ac6fdda4361f678c07af33d70213aeec8f357c769d85eb5cc",
+      "fingerprint": "ec773425370c684357b49ef7fbb66298557d548719aad7b32e314700302f5c3f",
+      "scopes": [
+        "core",
+        "governance",
+        "root",
+        "shared",
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "pinned-openzeppelin-future-keyword"
+    },
+    {
+      "code": "5574",
+      "path": "test/IntegrationFlow_Sleeve4626.t.sol",
+      "start": 762,
+      "end": 2065,
+      "spanSha256": "5db3f6d5b1bdcce77afb2fbad1d7b8f3285c47ea399652425309a7615d210a3d",
+      "fingerprint": "ecfd3b14e8cf4dcf22efcbccab67eeee8e4566d027d2a2b76a2cfe45c909d9f8",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5740",
+      "path": "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/extensions/ERC4626Upgradeable.sol",
+      "start": 11468,
+      "end": 11481,
+      "spanSha256": "96b06c46a1e0ca740401a2e5653b111e4cb18317b81339111f52df8f1e1dd929",
+      "fingerprint": "f105695404af681cc3863fd5ee3959f5a08cdd2cd43943f7e861b2ee60da7e46",
+      "scopes": [
+        "root",
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "pinned-openzeppelin-erc4626-unreachable"
+    },
+    {
+      "code": "3860",
+      "path": "packages/3_staking/script/StakingDiamondDeploy.s.sol",
+      "start": 1256,
+      "end": 2911,
+      "spanSha256": "309787b88aec777c2333aecff79dc6c1acc06723bc25921aaddd728c088b8e3d",
+      "fingerprint": "f15054098b210b3d6d8d7d6fe2a2d46d7215bc1b42f3671dd8988ff0a03c8e0b",
+      "scopes": [
+        "staking"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "test/IntegrationFlow_DynamicEmergencyAuthority.t.sol",
+      "start": 1374,
+      "end": 26305,
+      "spanSha256": "fc25ebe23b8a7804ccab05dd256be01b76acb4f5d4967c38ff963055cb97c2e4",
+      "fingerprint": "f6b16ee44d0985e0f5d9a9ef5e9a1f1fcf426901508b8ce869507b21a616512f",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "script/VerifyCoreOnly.s.sol",
+      "start": 4082,
+      "end": 31877,
+      "spanSha256": "bcba4c013c05db49908db56005997e41c3c8e64361552afdb130820dadb3404a",
+      "fingerprint": "f6cec9dea98fdddeff250ad42a915120b8798a69f2a0b6b9819b5f24270f4869",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "test/IntegrationFlow_SleeveManual.t.sol",
+      "start": 787,
+      "end": 2113,
+      "spanSha256": "184e3c046ba3581ca1f281d8573b44414f14108f0500b3fbab03db18cd54ee94",
+      "fingerprint": "f727e373890a8425f8b0664df8d5f789bd94412de7c68f439008587c58f7482c",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/BasketAdminFacetInvariant.t.sol",
+      "start": 342,
+      "end": 7390,
+      "spanSha256": "aacdb8389e9e1f0892275a77f4b5e25d5e950479d5bd3abb985ecbf3af785228",
+      "fingerprint": "f86a57b3af88bafb622d186cc8fd214395cf89eb91025774fabe953204b3733a",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/2_governance/test/invariant/RecoveryFundAccountingInvariant.t.sol",
+      "start": 13282,
+      "end": 18983,
+      "spanSha256": "54c8e66d402cbffc236650a371fda85afd2293433cbd44560c3d73948adfa525",
+      "fingerprint": "f9874184f0e6823a6e9ff8d85bc1c8bb7802f6ac28e6589e780bb6074734fc29",
+      "scopes": [
+        "governance"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/ImmediateRecovery.t.sol",
+      "start": 20327,
+      "end": 26006,
+      "spanSha256": "6d0485d2af971f78674ca5fdc87a6b0ccba226ccd3306c2979c4206f930ce8a6",
+      "fingerprint": "fa0bfade5fc31aeba6c14f5393c809abcfc03cfd7cc6d39b96af2bfff2d37d20",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "script/DeployProtocol.s.sol",
+      "start": 721,
+      "end": 4029,
+      "spanSha256": "187c3172171cf15e092c68f6d77edbefe0cc873436e4f1785fdd4b721c5733e0",
+      "fingerprint": "fabf4b2b7ba580f100eaf26246d980c03d6601ec5808126bbbc11875d838cfc6",
+      "scopes": [
+        "root"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/ReleaseAbiConformance.t.sol",
+      "start": 565,
+      "end": 3877,
+      "spanSha256": "31b3a22cdaf8a7584fb95d35ef8f62a66f416bdc5fc5a3a5974da9b593d042c4",
+      "fingerprint": "fcfa661268a6486d64205967e3f083fd82bfad3708ad1406bc44de173ba4ecfc",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/2_governance/script/GovernanceDiamondDeploy.s.sol",
+      "start": 1409,
+      "end": 2389,
+      "spanSha256": "41139f627ef4175bc236385d1209157f84a466791b712693f026ec0195a1983f",
+      "fingerprint": "fd34be0c3957340a13b35e2d3e43420e91ead9e81d89ed8e8ad8b9e29e9a3383",
+      "scopes": [
+        "governance"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/DeployParams.t.sol",
+      "start": 830,
+      "end": 11598,
+      "spanSha256": "ebf7ccd384be10b899d9ce3603660409f09fb56881ff978895d48bc8905e172b",
+      "fingerprint": "ff7803f94aaf17f614b86ab83e0f9703f4e0038a677326459b4483bb4aacc985",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "3860",
+      "path": "packages/1_core/test/CoreOptionalInitializerMigration.t.sol",
+      "start": 2557,
+      "end": 26489,
+      "spanSha256": "14b4586d521649a6bbece48adbfa48a056cb651aa525f2c2fd6812e1711a8427",
+      "fingerprint": "2a0780fc4867a9c0a121b715ffd77f5e823d97a1928af2520563a49b28cce24b",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "optional-initializer-warning-agent-review-2026-09-28",
+      "rationaleId": "nondeployable-harness-size"
+    },
+    {
+      "code": "5574",
+      "path": "packages/1_core/test/CoreOptionalInitializerMigration.t.sol",
+      "start": 2557,
+      "end": 26489,
+      "spanSha256": "14b4586d521649a6bbece48adbfa48a056cb651aa525f2c2fd6812e1711a8427",
+      "fingerprint": "d2710edfc607bbfaf3c325ce25597081a9a698c94b2552650bc09c3df4814c80",
+      "scopes": [
+        "core"
+      ],
+      "reviewMetadataId": "optional-initializer-warning-agent-review-2026-09-28",
+      "rationaleId": "nondeployable-harness-size"
+    }
+  ]
+}

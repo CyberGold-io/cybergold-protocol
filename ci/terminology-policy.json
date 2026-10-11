@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "forbiddenLegacyProductPattern": "\\btier(?:\\s*[-_ ]\\s*[0-9]+|[-_][a-z0-9][a-z0-9_-]*)?\\b",
+  "allowedContextPatterns": [
+    "\\b(?:uniswap\\s+)?fee\\s+tiers?\\b",
+    "\\b(?:des|aux|les|par\\s+des)\\s+tiers\\b"
+  ],
+  "extensions": [
+    ".md",
+    ".json",
+    ".py",
+    ".sh",
+    ".sol",
+    ".toml",
+    ".ts",
+    ".tsx",
+    ".yaml",
+    ".yml"
+  ],
+  "excludedParts": [
+    ".ci-workspace",
+    ".git",
+    ".next",
+    ".security-tools",
+    ".venv",
+    "archive",
+    "cache",
+    "deployments",
+    "dist",
+    "generated",
+    "lib",
+    "node_modules",
+    "out"
+  ],
+  "excludedFiles": [
+    "ci/check-terminology.py",
+    "ci/terminology-policy.json",
+    "docs/assurance/2026-07-predeployment/horizontal-repository-consistency.md",
+    "docs/reference/terminology.md"
+  ],
+  "fixtures": {
+    "rejected": [
+      "legacy tier",
+      "tier 2 allocation",
+      "tier-alpha release",
+      "TIER_4"
+    ],
+    "allowed": [
+      "Uniswap fee tier",
+      "supported fee tiers",
+      "des tiers indépendants",
+      "basket asset class"
+    ]
+  }
+}

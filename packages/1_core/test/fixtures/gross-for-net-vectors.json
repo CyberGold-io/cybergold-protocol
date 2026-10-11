@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "denominator": 1000000,
+  "formula": "floor((netCygldOut - 1) * denominator / (denominator - feePpm)) + 1",
+  "success": [
+    { "name": "unit-zero-fee", "netCygldOut": 1, "feePpm": 0, "grossCygldOut": 1, "protocolFeeCygld": 0 },
+    { "name": "unit-protocol-max-fee", "netCygldOut": 1, "feePpm": 10000, "grossCygldOut": 1, "protocolFeeCygld": 0 },
+    { "name": "below-first-protocol-max-fee-unit", "netCygldOut": 99, "feePpm": 10000, "grossCygldOut": 99, "protocolFeeCygld": 0 },
+    { "name": "first-protocol-max-fee-unit", "netCygldOut": 100, "feePpm": 10000, "grossCygldOut": 101, "protocolFeeCygld": 1 },
+    { "name": "after-first-protocol-max-fee-unit", "netCygldOut": 101, "feePpm": 10000, "grossCygldOut": 102, "protocolFeeCygld": 1 },
+    { "name": "below-first-launch-fee-unit", "netCygldOut": 999, "feePpm": 1000, "grossCygldOut": 999, "protocolFeeCygld": 0 },
+    { "name": "first-launch-fee-unit", "netCygldOut": 1000, "feePpm": 1000, "grossCygldOut": 1001, "protocolFeeCygld": 1 },
+    { "name": "after-first-launch-fee-unit", "netCygldOut": 1001, "feePpm": 1000, "grossCygldOut": 1002, "protocolFeeCygld": 1 },
+    { "name": "below-first-one-ppm-fee-unit", "netCygldOut": 999999, "feePpm": 1, "grossCygldOut": 999999, "protocolFeeCygld": 0 },
+    { "name": "first-one-ppm-fee-unit", "netCygldOut": 1000000, "feePpm": 1, "grossCygldOut": 1000001, "protocolFeeCygld": 1 },
+    { "name": "after-first-one-ppm-fee-unit", "netCygldOut": 1000001, "feePpm": 1, "grossCygldOut": 1000002, "protocolFeeCygld": 1 },
+    { "name": "launch-fee-transition-below-one-token", "netCygldOut": 999999, "feePpm": 1000, "grossCygldOut": 1000999, "protocolFeeCygld": 1000 },
+    { "name": "launch-fee-transition-one-token", "netCygldOut": 1000000, "feePpm": 1000, "grossCygldOut": 1001001, "protocolFeeCygld": 1001 },
+    { "name": "one-cygld-launch-fee", "netCygldOut": 1000000000000000000, "feePpm": 1000, "grossCygldOut": 1001001001001001001, "protocolFeeCygld": 1001001001001001 },
+    { "name": "one-cygld-helper-max-fee", "netCygldOut": 1000000000000000000, "feePpm": 5000, "grossCygldOut": 1005025125628140703, "protocolFeeCygld": 5025125628140703 },
+    { "name": "one-cygld-protocol-max-fee", "netCygldOut": 1000000000000000000, "feePpm": 10000, "grossCygldOut": 1010101010101010101, "protocolFeeCygld": 10101010101010101 },
+    { "name": "uint256-max-zero-fee", "netCygldOut": 115792089237316195423570985008687907853269984665640564039457584007913129639935, "feePpm": 0, "grossCygldOut": 115792089237316195423570985008687907853269984665640564039457584007913129639935, "protocolFeeCygld": 0 },
+    { "name": "largest-net-at-protocol-max-fee", "netCygldOut": 114634168344943033469335275158601028774737284818984158399063008167833998343536, "feePpm": 10000, "grossCygldOut": 115792089237316195423570985008687907853269984665640564039457584007913129639935, "protocolFeeCygld": 1157920892373161954235709850086879078532699846656405640394575840079131296399 }
+  ],
+  "reverts": [
+    { "name": "zero-net", "netCygldOut": 0, "feePpm": 1000, "reason": "zero-net" },
+    { "name": "gross-overflow", "netCygldOut": 115792089237316195423570985008687907853269984665640564039457584007913129639935, "feePpm": 1, "reason": "gross-overflow" }
+  ]
+}

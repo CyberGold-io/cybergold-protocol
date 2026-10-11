@@ -1,0 +1,4192 @@
+{
+  "schemaVersion": 2,
+  "generator": "ci/check-storage-inventory.py",
+  "compiler": {
+    "version": "0.8.37",
+    "evmVersion": "osaka",
+    "layoutSource": "temporary Foundry storageLayout harness"
+  },
+  "diamonds": {
+    "core": {
+      "artifactClosure": [
+        {
+          "contract": "CoreDiamond",
+          "source": "packages/1_core/src/diamond/CoreDiamond.sol"
+        },
+        {
+          "contract": "DiamondInit",
+          "source": "packages/1_core/src/deploy/DiamondInit.sol"
+        },
+        {
+          "contract": "CoreDiamondCutMigrationBridgeInit",
+          "source": "packages/1_core/src/migration/CoreDiamondCutMigrationBridgeInit.sol"
+        },
+        {
+          "contract": "CoreDiamondCutMigrationFacet",
+          "source": "packages/1_core/src/migration/CoreDiamondCutMigrationFacet.sol"
+        },
+        {
+          "contract": "CoreFacetRegistryRetirementInit",
+          "source": "packages/1_core/src/migration/CoreFacetRegistryRetirementInit.sol"
+        },
+        {
+          "contract": "CoreOptionalInitializerMigrationFacet",
+          "source": "packages/1_core/src/migration/CoreOptionalInitializerMigrationFacet.sol"
+        },
+        {
+          "contract": "DiamondCutAccessFacet",
+          "source": "packages/0_shared/src/facets/DiamondCutAccessFacet.sol"
+        },
+        {
+          "contract": "ProtocolDiamondLoupeFacet",
+          "source": "packages/0_shared/src/facets/ProtocolDiamondLoupeFacet.sol"
+        },
+        {
+          "contract": "DefaultAdminAccessControlFacet",
+          "source": "packages/0_shared/src/facets/DefaultAdminAccessControlFacet.sol"
+        },
+        {
+          "contract": "PausableFacet",
+          "source": "packages/0_shared/src/facets/PausableFacet.sol"
+        },
+        {
+          "contract": "TokenFacet",
+          "source": "packages/1_core/src/facets/TokenFacet.sol"
+        },
+        {
+          "contract": "IssuanceFacet",
+          "source": "packages/1_core/src/facets/IssuanceFacet.sol"
+        },
+        {
+          "contract": "RedemptionFacet",
+          "source": "packages/1_core/src/facets/RedemptionFacet.sol"
+        },
+        {
+          "contract": "RebalanceFacet",
+          "source": "packages/1_core/src/facets/RebalanceFacet.sol"
+        },
+        {
+          "contract": "PreviewFacet",
+          "source": "packages/1_core/src/facets/PreviewFacet.sol"
+        },
+        {
+          "contract": "BasketAdminFacet",
+          "source": "packages/1_core/src/facets/BasketAdminFacet.sol"
+        },
+        {
+          "contract": "ControllerConfigFacet",
+          "source": "packages/1_core/src/facets/ControllerConfigFacet.sol"
+        },
+        {
+          "contract": "LensFacet",
+          "source": "packages/1_core/src/facets/LensFacet.sol"
+        },
+        {
+          "contract": "ReserveLifecycleFacet",
+          "source": "packages/1_core/src/facets/ReserveLifecycleFacet.sol"
+        },
+        {
+          "contract": "RecoveryShareFacet",
+          "source": "packages/1_core/src/facets/RecoveryShareFacet.sol"
+        },
+        {
+          "contract": "RecoveryShareMetadataFacet",
+          "source": "packages/1_core/src/facets/RecoveryShareMetadataFacet.sol"
+        },
+        {
+          "contract": "RecoveryAdminFacet",
+          "source": "packages/1_core/src/facets/RecoveryAdminFacet.sol"
+        },
+        {
+          "contract": "RecoveryPoolSettlementFacet",
+          "source": "packages/1_core/src/facets/RecoveryPoolSettlementFacet.sol"
+        }
+      ],
+      "sourcesScanned": [
+        "lib/diamond-1-hardhat/contracts/Diamond.sol",
+        "lib/diamond-1-hardhat/contracts/interfaces/IDiamond.sol",
+        "lib/diamond-1-hardhat/contracts/interfaces/IDiamondCut.sol",
+        "lib/diamond-1-hardhat/contracts/interfaces/IDiamondLoupe.sol",
+        "lib/diamond-1-hardhat/contracts/interfaces/IERC165.sol",
+        "lib/diamond-1-hardhat/contracts/interfaces/IERC173.sol",
+        "lib/diamond-1-hardhat/contracts/libraries/LibDiamond.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/access/AccessControlUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/access/extensions/AccessControlDefaultAdminRulesUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/access/extensions/AccessControlEnumerableUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/ERC1155Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/ERC20Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/extensions/ERC20PermitUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/NoncesUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/PausableUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/cryptography/EIP712Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol",
+        "lib/openzeppelin-contracts/contracts/access/IAccessControl.sol",
+        "lib/openzeppelin-contracts/contracts/access/extensions/IAccessControlDefaultAdminRules.sol",
+        "lib/openzeppelin-contracts/contracts/access/extensions/IAccessControlEnumerable.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC1363.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC165.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC20.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC20Metadata.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC5267.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC5313.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC6372.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/draft-IERC6093.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/utils/Initializable.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155Receiver.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC1155/utils/ERC1155Utils.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Permit.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Arrays.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Bytes.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Comparators.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Panic.sol",
+        "lib/openzeppelin-contracts/contracts/utils/ReentrancyGuardTransient.sol",
+        "lib/openzeppelin-contracts/contracts/utils/SlotDerivation.sol",
+        "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Strings.sol",
+        "lib/openzeppelin-contracts/contracts/utils/TransientSlot.sol",
+        "lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol",
+        "lib/openzeppelin-contracts/contracts/utils/cryptography/MessageHashUtils.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
+        "lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol",
+        "lib/openzeppelin-contracts/contracts/utils/math/SignedMath.sol",
+        "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableSet.sol",
+        "packages/0_shared/src/deploy/FacetSelectors.sol",
+        "packages/0_shared/src/deploy/FacetSpec.sol",
+        "packages/0_shared/src/diamond/ProtocolDiamond.sol",
+        "packages/0_shared/src/facets/AccessControlFacet.sol",
+        "packages/0_shared/src/facets/DefaultAdminAccessControlFacet.sol",
+        "packages/0_shared/src/facets/DiamondCutAccessFacet.sol",
+        "packages/0_shared/src/facets/PausableFacet.sol",
+        "packages/0_shared/src/facets/ProtocolDiamondLoupeFacet.sol",
+        "packages/0_shared/src/helpers/FacetVersionRegistry.sol",
+        "packages/0_shared/src/helpers/InitContext.sol",
+        "packages/0_shared/src/helpers/InitCoordinator.sol",
+        "packages/0_shared/src/helpers/LiveFacetVersionRegistry.sol",
+        "packages/0_shared/src/helpers/ReentrancyGuardInitializable.sol",
+        "packages/0_shared/src/helpers/ValidatedDiamondCut.sol",
+        "packages/0_shared/src/interfaces/IDiamondEmergencyAuthority.sol",
+        "packages/0_shared/src/interfaces/ISafeWallet.sol",
+        "packages/0_shared/src/libraries/LibEmergencyAuthority.sol",
+        "packages/0_shared/src/libraries/LibInterfaceInvariant.sol",
+        "packages/0_shared/src/libraries/StandardInterfaceManifests.sol",
+        "packages/1_core/src/deploy/CoreAuthorityInvariant.sol",
+        "packages/1_core/src/deploy/DiamondInit.sol",
+        "packages/1_core/src/deploy/FacetSelectors.sol",
+        "packages/1_core/src/diamond/CoreDiamond.sol",
+        "packages/1_core/src/diamond/LibAppStorage.sol",
+        "packages/1_core/src/facets/BasketAdminFacet.sol",
+        "packages/1_core/src/facets/ControllerBase.sol",
+        "packages/1_core/src/facets/ControllerConfigFacet.sol",
+        "packages/1_core/src/facets/InitFacet.sol",
+        "packages/1_core/src/facets/IssuanceFacet.sol",
+        "packages/1_core/src/facets/LensFacet.sol",
+        "packages/1_core/src/facets/PreviewFacet.sol",
+        "packages/1_core/src/facets/RebalanceFacet.sol",
+        "packages/1_core/src/facets/RecoveryAdminFacet.sol",
+        "packages/1_core/src/facets/RecoveryPoolSettlementFacet.sol",
+        "packages/1_core/src/facets/RecoveryShareFacet.sol",
+        "packages/1_core/src/facets/RecoveryShareMetadataFacet.sol",
+        "packages/1_core/src/facets/RedemptionControllerBase.sol",
+        "packages/1_core/src/facets/RedemptionFacet.sol",
+        "packages/1_core/src/facets/ReserveLifecycleFacet.sol",
+        "packages/1_core/src/facets/TokenFacet.sol",
+        "packages/1_core/src/interfaces/ICoreDiamondCutMigration.sol",
+        "packages/1_core/src/interfaces/ICoreOptionalInitializerMigration.sol",
+        "packages/1_core/src/interfaces/ICoreRecovery.sol",
+        "packages/1_core/src/interfaces/ICoreRedemption.sol",
+        "packages/1_core/src/interfaces/ICoreTypes.sol",
+        "packages/1_core/src/interfaces/ICyberGoldCore.sol",
+        "packages/1_core/src/interfaces/ICygldApprovalCallback.sol",
+        "packages/1_core/src/interfaces/ICygldOutflowCallback.sol",
+        "packages/1_core/src/interfaces/IRecoveryShareMetadata.sol",
+        "packages/1_core/src/interfaces/IRecoveryShareOutflowCallback.sol",
+        "packages/1_core/src/interfaces/IRecoveryShareRedemptionCallback.sol",
+        "packages/1_core/src/interfaces/IRecoveryTypes.sol",
+        "packages/1_core/src/libraries/LibAccountCallbacks.sol",
+        "packages/1_core/src/libraries/LibActiveReserve.sol",
+        "packages/1_core/src/libraries/LibAllowanceExposureStorage.sol",
+        "packages/1_core/src/libraries/LibBasketConfig.sol",
+        "packages/1_core/src/libraries/LibCoreAssetCardinality.sol",
+        "packages/1_core/src/libraries/LibRecoveryPoolSettlement.sol",
+        "packages/1_core/src/libraries/LibRecoveryShareStorage.sol",
+        "packages/1_core/src/libraries/LibRecoveryState.sol",
+        "packages/1_core/src/libraries/LibRecoveryStorage.sol",
+        "packages/1_core/src/libraries/LibRedemptionCap.sol",
+        "packages/1_core/src/libraries/LibReserve.sol",
+        "packages/1_core/src/libraries/LibReserveLifecycle.sol",
+        "packages/1_core/src/libraries/LibReserveLifecycleStorage.sol",
+        "packages/1_core/src/libraries/LibStrictBalanceProbe.sol",
+        "packages/1_core/src/libraries/LibSupplyCap.sol",
+        "packages/1_core/src/migration/CoreDiamondCutMigrationBridgeInit.sol",
+        "packages/1_core/src/migration/CoreDiamondCutMigrationFacet.sol",
+        "packages/1_core/src/migration/CoreFacetRegistryRetirementInit.sol",
+        "packages/1_core/src/migration/CoreOptionalInitializerMigrationFacet.sol",
+        "packages/1_core/src/migration/LibCoreDiamondCutMigration.sol",
+        "packages/1_core/src/migration/LibCoreOptionalInitializerMigration.sol"
+      ],
+      "auxiliaryDeployableStorageSourcesExcluded": [],
+      "importOnlyStorageSourcesExcluded": [],
+      "namespaces": [
+        "openzeppelin.storage.AccessControl",
+        "cybergold.core.recovery-share.storage.v1",
+        "cybergold.storage.EmergencyAuthority",
+        "openzeppelin.storage.ERC20",
+        "openzeppelin.storage.Nonces",
+        "cybergold.facet.version.registry",
+        "cybergold.core.allowance-exposure.storage.v1",
+        "openzeppelin.storage.ERC1155",
+        "cybergold.core.recovery.storage.v1",
+        "openzeppelin.storage.EIP712",
+        "openzeppelin.storage.AccessControlEnumerable",
+        "diamond.standard.diamond.storage",
+        "cybergold.init.context",
+        "openzeppelin.storage.Pausable",
+        "cybergold.core.app.storage.v2",
+        "openzeppelin.storage.AccessControlDefaultAdminRules",
+        "openzeppelin.storage.Initializable",
+        "cybergold.core.reserve-lifecycle.storage.v1",
+        "cybergold.validated.diamond.cut.state",
+        "cybergold.interface.selector.manifests",
+        "cybergold.core.diamond-cut-migration.transient.commitment",
+        "openzeppelin.storage.ReentrancyGuard",
+        "cybergold.core.facet-registry-retirement.transient.commitment",
+        "cybergold.core.optional-initializer-migration.transient.commitment"
+      ]
+    },
+    "governance": {
+      "artifactClosure": [
+        {
+          "contract": "GovernanceDiamond",
+          "source": "packages/2_governance/src/diamond/GovernanceDiamond.sol"
+        },
+        {
+          "contract": "DiamondInit",
+          "source": "packages/2_governance/src/deploy/DiamondInit.sol"
+        },
+        {
+          "contract": "DiamondCutAccessLiveFacet",
+          "source": "packages/0_shared/src/facets/DiamondCutAccessLiveFacet.sol"
+        },
+        {
+          "contract": "ProtocolDiamondLoupeFacet",
+          "source": "packages/0_shared/src/facets/ProtocolDiamondLoupeFacet.sol"
+        },
+        {
+          "contract": "AccessControlFacet",
+          "source": "packages/0_shared/src/facets/AccessControlFacet.sol"
+        },
+        {
+          "contract": "PausableFacet",
+          "source": "packages/0_shared/src/facets/PausableFacet.sol"
+        },
+        {
+          "contract": "RecoveryFundFacet",
+          "source": "packages/2_governance/src/facets/RecoveryFundFacet.sol"
+        },
+        {
+          "contract": "GovernorCoreFacet",
+          "source": "packages/2_governance/src/facets/GovernorCoreFacet.sol"
+        },
+        {
+          "contract": "TokenFacet",
+          "source": "packages/2_governance/src/facets/TokenFacet.sol"
+        },
+        {
+          "contract": "TreasuryFacet",
+          "source": "packages/2_governance/src/facets/TreasuryFacet.sol"
+        },
+        {
+          "contract": "GovernorSettingsFacet",
+          "source": "packages/2_governance/src/facets/GovernorSettingsFacet.sol"
+        },
+        {
+          "contract": "RecoveryFundLensFacet",
+          "source": "packages/2_governance/src/facets/RecoveryFundLensFacet.sol"
+        }
+      ],
+      "sourcesScanned": [
+        "lib/diamond-1-hardhat/contracts/Diamond.sol",
+        "lib/diamond-1-hardhat/contracts/interfaces/IDiamond.sol",
+        "lib/diamond-1-hardhat/contracts/interfaces/IDiamondCut.sol",
+        "lib/diamond-1-hardhat/contracts/interfaces/IDiamondLoupe.sol",
+        "lib/diamond-1-hardhat/contracts/interfaces/IERC165.sol",
+        "lib/diamond-1-hardhat/contracts/interfaces/IERC173.sol",
+        "lib/diamond-1-hardhat/contracts/libraries/LibDiamond.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/access/AccessControlUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/access/extensions/AccessControlDefaultAdminRulesUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/access/extensions/AccessControlEnumerableUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/governance/GovernorUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/governance/extensions/GovernorVotesUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/governance/utils/VotesUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/ERC20Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/extensions/ERC20PermitUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/extensions/ERC20VotesUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/NoncesUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/PausableUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/cryptography/EIP712Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol",
+        "lib/openzeppelin-contracts/contracts/access/IAccessControl.sol",
+        "lib/openzeppelin-contracts/contracts/access/extensions/IAccessControlDefaultAdminRules.sol",
+        "lib/openzeppelin-contracts/contracts/access/extensions/IAccessControlEnumerable.sol",
+        "lib/openzeppelin-contracts/contracts/governance/IGovernor.sol",
+        "lib/openzeppelin-contracts/contracts/governance/utils/IVotes.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC1271.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC1363.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC165.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC20.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC20Metadata.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC5267.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC5313.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC5805.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC6372.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC7913.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/draft-IERC6093.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/utils/Initializable.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155Receiver.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Permit.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Address.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Arrays.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Bytes.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Comparators.sol",
+        "lib/openzeppelin-contracts/contracts/utils/ERC6372Utils.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Errors.sol",
+        "lib/openzeppelin-contracts/contracts/utils/LowLevelCall.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Panic.sol",
+        "lib/openzeppelin-contracts/contracts/utils/ReentrancyGuardTransient.sol",
+        "lib/openzeppelin-contracts/contracts/utils/SlotDerivation.sol",
+        "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Strings.sol",
+        "lib/openzeppelin-contracts/contracts/utils/TransientSlot.sol",
+        "lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol",
+        "lib/openzeppelin-contracts/contracts/utils/cryptography/MessageHashUtils.sol",
+        "lib/openzeppelin-contracts/contracts/utils/cryptography/SignatureChecker.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
+        "lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol",
+        "lib/openzeppelin-contracts/contracts/utils/math/SignedMath.sol",
+        "lib/openzeppelin-contracts/contracts/utils/structs/Checkpoints.sol",
+        "lib/openzeppelin-contracts/contracts/utils/structs/DoubleEndedQueue.sol",
+        "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableSet.sol",
+        "lib/openzeppelin-contracts/contracts/utils/types/Time.sol",
+        "packages/0_shared/src/deploy/FacetSelectors.sol",
+        "packages/0_shared/src/deploy/FacetSpec.sol",
+        "packages/0_shared/src/diamond/ProtocolDiamond.sol",
+        "packages/0_shared/src/facets/AccessControlFacet.sol",
+        "packages/0_shared/src/facets/DefaultAdminAccessControlFacet.sol",
+        "packages/0_shared/src/facets/DiamondCutAccessLiveFacet.sol",
+        "packages/0_shared/src/facets/PausableFacet.sol",
+        "packages/0_shared/src/facets/ProtocolDiamondLoupeFacet.sol",
+        "packages/0_shared/src/helpers/FacetVersionRegistry.sol",
+        "packages/0_shared/src/helpers/InitContext.sol",
+        "packages/0_shared/src/helpers/LiveFacetVersionRegistry.sol",
+        "packages/0_shared/src/helpers/LiveInitCoordinator.sol",
+        "packages/0_shared/src/helpers/LiveValidatedDiamondCut.sol",
+        "packages/0_shared/src/helpers/ReentrancyGuardInitializable.sol",
+        "packages/0_shared/src/helpers/ValidatedDiamondCut.sol",
+        "packages/0_shared/src/interfaces/IDiamondEmergencyAuthority.sol",
+        "packages/0_shared/src/interfaces/ISafeWallet.sol",
+        "packages/0_shared/src/libraries/LibEmergencyAuthority.sol",
+        "packages/0_shared/src/libraries/LibInterfaceInvariant.sol",
+        "packages/0_shared/src/libraries/StandardInterfaceManifests.sol",
+        "packages/1_core/src/interfaces/ICygldApprovalCallback.sol",
+        "packages/1_core/src/interfaces/ICygldOutflowCallback.sol",
+        "packages/1_core/src/interfaces/IRecoveryShareOutflowCallback.sol",
+        "packages/1_core/src/interfaces/IRecoveryShareRedemptionCallback.sol",
+        "packages/1_core/src/interfaces/IRecoveryTypes.sol",
+        "packages/2_governance/src/deploy/DiamondInit.sol",
+        "packages/2_governance/src/deploy/FacetSelectors.sol",
+        "packages/2_governance/src/diamond/GovernanceDiamond.sol",
+        "packages/2_governance/src/facets/GovernorCoreFacet.sol",
+        "packages/2_governance/src/facets/GovernorSettingsFacet.sol",
+        "packages/2_governance/src/facets/RecoveryFundBase.sol",
+        "packages/2_governance/src/facets/RecoveryFundFacet.sol",
+        "packages/2_governance/src/facets/RecoveryFundLensFacet.sol",
+        "packages/2_governance/src/facets/TokenFacet.sol",
+        "packages/2_governance/src/facets/TreasuryFacet.sol",
+        "packages/2_governance/src/interfaces/IRecoveryFundCore.sol",
+        "packages/2_governance/src/interfaces/IRecoveryFundTypes.sol",
+        "packages/2_governance/src/libraries/LibGovernorBounds.sol",
+        "packages/2_governance/src/libraries/LibGovernorExecution.sol",
+        "packages/2_governance/src/libraries/LibGovernorExternalSupply.sol",
+        "packages/2_governance/src/libraries/LibGovernorPolicy.sol",
+        "packages/2_governance/src/libraries/LibRecoveryFundMath.sol",
+        "packages/2_governance/src/libraries/LibRecoveryFundStorage.sol",
+        "packages/2_governance/src/libraries/LibRecoveryFundTransfer.sol"
+      ],
+      "auxiliaryDeployableStorageSourcesExcluded": [],
+      "importOnlyStorageSourcesExcluded": [],
+      "namespaces": [
+        "openzeppelin.storage.AccessControl",
+        "cybergold.governance.core.storage",
+        "cybergold.governance.execution.storage",
+        "openzeppelin.storage.GovernorVotes",
+        "cybergold.storage.EmergencyAuthority",
+        "openzeppelin.storage.ERC20",
+        "openzeppelin.storage.Nonces",
+        "cybergold.facet.version.registry",
+        "openzeppelin.storage.Governor",
+        "cybergold.governance.recovery-fund.storage.v1",
+        "openzeppelin.storage.EIP712",
+        "openzeppelin.storage.AccessControlEnumerable",
+        "diamond.standard.diamond.storage",
+        "cybergold.init.context",
+        "openzeppelin.storage.Pausable",
+        "openzeppelin.storage.Votes",
+        "openzeppelin.storage.AccessControlDefaultAdminRules",
+        "openzeppelin.storage.Initializable",
+        "cybergold.governance.policy.storage",
+        "cybergold.validated.diamond.cut.state",
+        "cybergold.interface.selector.manifests",
+        "openzeppelin.storage.ReentrancyGuard"
+      ]
+    },
+    "staking": {
+      "artifactClosure": [
+        {
+          "contract": "StakingDiamond",
+          "source": "packages/3_staking/src/diamond/StakingDiamond.sol"
+        },
+        {
+          "contract": "DiamondInit",
+          "source": "packages/3_staking/src/deploy/DiamondInit.sol"
+        },
+        {
+          "contract": "DiamondCutAccessLiveFacet",
+          "source": "packages/0_shared/src/facets/DiamondCutAccessLiveFacet.sol"
+        },
+        {
+          "contract": "StakingDiamondLoupeFacet",
+          "source": "packages/3_staking/src/facets/StakingDiamondLoupeFacet.sol"
+        },
+        {
+          "contract": "DefaultAdminAccessControlFacet",
+          "source": "packages/0_shared/src/facets/DefaultAdminAccessControlFacet.sol"
+        },
+        {
+          "contract": "PausableFacet",
+          "source": "packages/0_shared/src/facets/PausableFacet.sol"
+        },
+        {
+          "contract": "TokenFacet",
+          "source": "packages/3_staking/src/facets/TokenFacet.sol"
+        },
+        {
+          "contract": "VaultFacet",
+          "source": "packages/3_staking/src/facets/VaultFacet.sol"
+        },
+        {
+          "contract": "QueueFacet",
+          "source": "packages/3_staking/src/facets/QueueFacet.sol"
+        },
+        {
+          "contract": "QueueOperatorFacet",
+          "source": "packages/3_staking/src/facets/QueueOperatorFacet.sol"
+        },
+        {
+          "contract": "QueueSigFacet",
+          "source": "packages/3_staking/src/facets/QueueSigFacet.sol"
+        },
+        {
+          "contract": "CustodyFacet",
+          "source": "packages/3_staking/src/facets/CustodyFacet.sol"
+        },
+        {
+          "contract": "SleeveRegistryFacet",
+          "source": "packages/3_staking/src/facets/SleeveRegistryFacet.sol"
+        },
+        {
+          "contract": "FundManagerFacet",
+          "source": "packages/3_staking/src/facets/FundManagerFacet.sol"
+        },
+        {
+          "contract": "LensFacet",
+          "source": "packages/3_staking/src/facets/LensFacet.sol"
+        }
+      ],
+      "sourcesScanned": [
+        "lib/diamond-1-hardhat/contracts/Diamond.sol",
+        "lib/diamond-1-hardhat/contracts/interfaces/IDiamond.sol",
+        "lib/diamond-1-hardhat/contracts/interfaces/IDiamondCut.sol",
+        "lib/diamond-1-hardhat/contracts/interfaces/IDiamondLoupe.sol",
+        "lib/diamond-1-hardhat/contracts/interfaces/IERC165.sol",
+        "lib/diamond-1-hardhat/contracts/interfaces/IERC173.sol",
+        "lib/diamond-1-hardhat/contracts/libraries/LibDiamond.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/access/AccessControlUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/access/extensions/AccessControlDefaultAdminRulesUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/access/extensions/AccessControlEnumerableUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/UUPSUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/ERC20Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/extensions/ERC4626Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/PausableUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol",
+        "lib/openzeppelin-contracts/contracts/access/IAccessControl.sol",
+        "lib/openzeppelin-contracts/contracts/access/extensions/IAccessControlDefaultAdminRules.sol",
+        "lib/openzeppelin-contracts/contracts/access/extensions/IAccessControlEnumerable.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC1363.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC165.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC1967.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC20.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC20Metadata.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC4626.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC5313.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC6372.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/draft-IERC1822.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/draft-IERC6093.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Proxy.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Utils.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/Proxy.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/beacon/IBeacon.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/utils/Initializable.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/utils/UUPSUpgradeable.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155Receiver.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Permit.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Address.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Arrays.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Bytes.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Comparators.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Errors.sol",
+        "lib/openzeppelin-contracts/contracts/utils/LowLevelCall.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Panic.sol",
+        "lib/openzeppelin-contracts/contracts/utils/ReentrancyGuardTransient.sol",
+        "lib/openzeppelin-contracts/contracts/utils/SlotDerivation.sol",
+        "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Strings.sol",
+        "lib/openzeppelin-contracts/contracts/utils/TransientSlot.sol",
+        "lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol",
+        "lib/openzeppelin-contracts/contracts/utils/cryptography/MessageHashUtils.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
+        "lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol",
+        "lib/openzeppelin-contracts/contracts/utils/math/SignedMath.sol",
+        "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableSet.sol",
+        "packages/0_shared/src/deploy/FacetSelectors.sol",
+        "packages/0_shared/src/deploy/FacetSpec.sol",
+        "packages/0_shared/src/diamond/ProtocolDiamond.sol",
+        "packages/0_shared/src/facets/AccessControlFacet.sol",
+        "packages/0_shared/src/facets/DefaultAdminAccessControlFacet.sol",
+        "packages/0_shared/src/facets/DiamondCutAccessLiveFacet.sol",
+        "packages/0_shared/src/facets/PausableFacet.sol",
+        "packages/0_shared/src/facets/ProtocolDiamondLoupeFacet.sol",
+        "packages/0_shared/src/helpers/FacetVersionRegistry.sol",
+        "packages/0_shared/src/helpers/InitContext.sol",
+        "packages/0_shared/src/helpers/LiveFacetVersionRegistry.sol",
+        "packages/0_shared/src/helpers/LiveInitCoordinator.sol",
+        "packages/0_shared/src/helpers/LiveValidatedDiamondCut.sol",
+        "packages/0_shared/src/helpers/ReentrancyGuardInitializable.sol",
+        "packages/0_shared/src/helpers/ValidatedDiamondCut.sol",
+        "packages/0_shared/src/interfaces/IDiamondEmergencyAuthority.sol",
+        "packages/0_shared/src/interfaces/ISafeWallet.sol",
+        "packages/0_shared/src/libraries/LibEmergencyAuthority.sol",
+        "packages/0_shared/src/libraries/LibInterfaceInvariant.sol",
+        "packages/0_shared/src/libraries/StandardInterfaceManifests.sol",
+        "packages/1_core/src/interfaces/ICoreRedemption.sol",
+        "packages/3_staking/src/deploy/DiamondInit.sol",
+        "packages/3_staking/src/deploy/FacetSelectors.sol",
+        "packages/3_staking/src/deploy/SleeveDeployerHelper.sol",
+        "packages/3_staking/src/deploy/StakingAuthorityInvariant.sol",
+        "packages/3_staking/src/deploy/StakingInterfaceInit.sol",
+        "packages/3_staking/src/deploy/StakingLaunchTypes.sol",
+        "packages/3_staking/src/deploy/StakingSleeveInvariant.sol",
+        "packages/3_staking/src/diamond/LibAppStorage.sol",
+        "packages/3_staking/src/diamond/StakingDiamond.sol",
+        "packages/3_staking/src/facets/CustodyFacet.sol",
+        "packages/3_staking/src/facets/FundManagerFacet.sol",
+        "packages/3_staking/src/facets/LensFacet.sol",
+        "packages/3_staking/src/facets/QueueFacet.sol",
+        "packages/3_staking/src/facets/QueueOperatorFacet.sol",
+        "packages/3_staking/src/facets/QueueRequestBase.sol",
+        "packages/3_staking/src/facets/QueueSigFacet.sol",
+        "packages/3_staking/src/facets/SleeveRegistryFacet.sol",
+        "packages/3_staking/src/facets/StakingDiamondLoupeFacet.sol",
+        "packages/3_staking/src/facets/TokenFacet.sol",
+        "packages/3_staking/src/facets/VaultFacet.sol",
+        "packages/3_staking/src/interfaces/ICyberGoldStaking.sol",
+        "packages/3_staking/src/libraries/LibQueueEIP712.sol",
+        "packages/3_staking/src/libraries/LibQueueIndex.sol",
+        "packages/3_staking/src/libraries/LibQueueReadiness.sol",
+        "packages/3_staking/src/libraries/LibStakingDiamondAuthority.sol",
+        "packages/3_staking/src/libraries/LibStakingLaunch.sol",
+        "packages/3_staking/src/sleeves/ISleeve.sol",
+        "packages/3_staking/src/sleeves/Sleeve4626.sol",
+        "packages/3_staking/src/sleeves/SleeveBase.sol",
+        "packages/3_staking/src/sleeves/SleeveCurve.sol",
+        "packages/3_staking/src/sleeves/SleeveManual.sol",
+        "packages/3_staking/src/sleeves/SleeveProxy.sol"
+      ],
+      "auxiliaryDeployableStorageSourcesExcluded": [
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/extensions/ERC4626Upgradeable.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Proxy.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Utils.sol",
+        "packages/3_staking/src/sleeves/ISleeve.sol",
+        "packages/3_staking/src/sleeves/Sleeve4626.sol",
+        "packages/3_staking/src/sleeves/SleeveBase.sol",
+        "packages/3_staking/src/sleeves/SleeveCurve.sol",
+        "packages/3_staking/src/sleeves/SleeveManual.sol",
+        "packages/3_staking/src/sleeves/SleeveProxy.sol"
+      ],
+      "importOnlyStorageSourcesExcluded": [],
+      "namespaces": [
+        "openzeppelin.storage.AccessControl",
+        "cybergold.storage.EmergencyAuthority",
+        "openzeppelin.storage.ERC20",
+        "cybergold.facet.version.registry",
+        "cybergold.staking.app.storage",
+        "cybergold.staking.atomic.launch",
+        "openzeppelin.storage.AccessControlEnumerable",
+        "diamond.standard.diamond.storage",
+        "cybergold.init.context",
+        "openzeppelin.storage.Pausable",
+        "openzeppelin.storage.AccessControlDefaultAdminRules",
+        "openzeppelin.storage.Initializable",
+        "cybergold.validated.diamond.cut.state",
+        "cybergold.interface.selector.manifests",
+        "openzeppelin.storage.ReentrancyGuard"
+      ]
+    }
+  },
+  "genericStorageUseExemptions": [
+    {
+      "source": "lib/openzeppelin-contracts/contracts/utils/Arrays.sol",
+      "function": "unsafeAccess",
+      "line": "729",
+      "reason": "Pinned OpenZeppelin generic utility derives or accepts an element/slot at the call site; it does not own a diamond storage root."
+    },
+    {
+      "source": "lib/openzeppelin-contracts/contracts/utils/Arrays.sol",
+      "function": "unsafeAccess",
+      "line": "742",
+      "reason": "Pinned OpenZeppelin generic utility derives or accepts an element/slot at the call site; it does not own a diamond storage root."
+    },
+    {
+      "source": "lib/openzeppelin-contracts/contracts/utils/Arrays.sol",
+      "function": "unsafeAccess",
+      "line": "755",
+      "reason": "Pinned OpenZeppelin generic utility derives or accepts an element/slot at the call site; it does not own a diamond storage root."
+    },
+    {
+      "source": "lib/openzeppelin-contracts/contracts/utils/Arrays.sol",
+      "function": "unsafeAccess",
+      "line": "768",
+      "reason": "Pinned OpenZeppelin generic utility derives or accepts an element/slot at the call site; it does not own a diamond storage root."
+    },
+    {
+      "source": "lib/openzeppelin-contracts/contracts/utils/Arrays.sol",
+      "function": "unsafeAccess",
+      "line": "781",
+      "reason": "Pinned OpenZeppelin generic utility derives or accepts an element/slot at the call site; it does not own a diamond storage root."
+    },
+    {
+      "source": "lib/openzeppelin-contracts/contracts/utils/Arrays.sol",
+      "function": "unsafeSetLength",
+      "line": "848",
+      "reason": "Pinned OpenZeppelin generic utility derives or accepts an element/slot at the call site; it does not own a diamond storage root."
+    },
+    {
+      "source": "lib/openzeppelin-contracts/contracts/utils/Arrays.sol",
+      "function": "unsafeSetLength",
+      "line": "859",
+      "reason": "Pinned OpenZeppelin generic utility derives or accepts an element/slot at the call site; it does not own a diamond storage root."
+    },
+    {
+      "source": "lib/openzeppelin-contracts/contracts/utils/Arrays.sol",
+      "function": "unsafeSetLength",
+      "line": "870",
+      "reason": "Pinned OpenZeppelin generic utility derives or accepts an element/slot at the call site; it does not own a diamond storage root."
+    },
+    {
+      "source": "lib/openzeppelin-contracts/contracts/utils/Arrays.sol",
+      "function": "unsafeSetLength",
+      "line": "881",
+      "reason": "Pinned OpenZeppelin generic utility derives or accepts an element/slot at the call site; it does not own a diamond storage root."
+    },
+    {
+      "source": "lib/openzeppelin-contracts/contracts/utils/Arrays.sol",
+      "function": "unsafeSetLength",
+      "line": "892",
+      "reason": "Pinned OpenZeppelin generic utility derives or accepts an element/slot at the call site; it does not own a diamond storage root."
+    },
+    {
+      "source": "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+      "function": "getAddressSlot",
+      "line": "67",
+      "reason": "Pinned OpenZeppelin generic utility derives or accepts an element/slot at the call site; it does not own a diamond storage root."
+    },
+    {
+      "source": "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+      "function": "getBooleanSlot",
+      "line": "76",
+      "reason": "Pinned OpenZeppelin generic utility derives or accepts an element/slot at the call site; it does not own a diamond storage root."
+    },
+    {
+      "source": "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+      "function": "getBytes32Slot",
+      "line": "85",
+      "reason": "Pinned OpenZeppelin generic utility derives or accepts an element/slot at the call site; it does not own a diamond storage root."
+    },
+    {
+      "source": "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+      "function": "getUint256Slot",
+      "line": "94",
+      "reason": "Pinned OpenZeppelin generic utility derives or accepts an element/slot at the call site; it does not own a diamond storage root."
+    },
+    {
+      "source": "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+      "function": "getInt256Slot",
+      "line": "103",
+      "reason": "Pinned OpenZeppelin generic utility derives or accepts an element/slot at the call site; it does not own a diamond storage root."
+    },
+    {
+      "source": "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+      "function": "getStringSlot",
+      "line": "112",
+      "reason": "Pinned OpenZeppelin generic utility derives or accepts an element/slot at the call site; it does not own a diamond storage root."
+    },
+    {
+      "source": "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+      "function": "getStringSlot",
+      "line": "121",
+      "reason": "Pinned OpenZeppelin generic utility derives or accepts an element/slot at the call site; it does not own a diamond storage root."
+    },
+    {
+      "source": "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+      "function": "getBytesSlot",
+      "line": "130",
+      "reason": "Pinned OpenZeppelin generic utility derives or accepts an element/slot at the call site; it does not own a diamond storage root."
+    },
+    {
+      "source": "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+      "function": "getBytesSlot",
+      "line": "139",
+      "reason": "Pinned OpenZeppelin generic utility derives or accepts an element/slot at the call site; it does not own a diamond storage root."
+    },
+    {
+      "source": "lib/openzeppelin-contracts/contracts/utils/structs/Checkpoints.sol",
+      "function": "_unsafeAccess",
+      "line": "231",
+      "reason": "Pinned OpenZeppelin generic utility derives or accepts an element/slot at the call site; it does not own a diamond storage root."
+    },
+    {
+      "source": "lib/openzeppelin-contracts/contracts/utils/structs/Checkpoints.sol",
+      "function": "_unsafeAccess",
+      "line": "446",
+      "reason": "Pinned OpenZeppelin generic utility derives or accepts an element/slot at the call site; it does not own a diamond storage root."
+    },
+    {
+      "source": "lib/openzeppelin-contracts/contracts/utils/structs/Checkpoints.sol",
+      "function": "_unsafeAccess",
+      "line": "661",
+      "reason": "Pinned OpenZeppelin generic utility derives or accepts an element/slot at the call site; it does not own a diamond storage root."
+    },
+    {
+      "source": "lib/openzeppelin-contracts/contracts/utils/structs/Checkpoints.sol",
+      "function": "_unsafeAccess",
+      "line": "876",
+      "reason": "Pinned OpenZeppelin generic utility derives or accepts an element/slot at the call site; it does not own a diamond storage root."
+    }
+  ],
+  "retiredPersistentRoots": [
+    {
+      "declaration": "lib/openzeppelin-contracts/contracts/utils/ReentrancyGuard.sol#REENTRANCY_GUARD_STORAGE",
+      "namespace": "openzeppelin.storage.ReentrancyGuard",
+      "slot": "0x9b779b17422d0df92223018b32b4d1fa46e071723d6817e2486d003becc55f00",
+      "type": "uint256",
+      "replacement": "lib/openzeppelin-contracts/contracts/utils/ReentrancyGuardTransient.sol#REENTRANCY_GUARD_STORAGE",
+      "reason": "Reserved forever after the Osaka migration; regression tests require this former persistent guard slot to remain zero."
+    }
+  ],
+  "roots": [
+    {
+      "namespace": "openzeppelin.storage.AccessControl",
+      "formula": "erc7201",
+      "slot": "0x02dd7bc7dec4dceedda775e58dd541e08a116c6c53815c0bd028192f7b626800",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "core",
+        "governance",
+        "staking"
+      ],
+      "declarations": [
+        "lib/openzeppelin-contracts-upgradeable/contracts/access/AccessControlUpgradeable.sol#AccessControlStorageLocation"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct AccessControlUpgradeable.AccessControlStorage",
+        "tree": {
+          "label": "struct AccessControlUpgradeable.AccessControlStorage",
+          "encoding": "inplace",
+          "numberOfBytes": "32",
+          "members": [
+            {
+              "label": "_roles",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "mapping(bytes32 => struct AccessControlUpgradeable.RoleData)",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "bytes32",
+                  "encoding": "inplace",
+                  "numberOfBytes": "32"
+                },
+                "value": {
+                  "label": "struct AccessControlUpgradeable.RoleData",
+                  "encoding": "inplace",
+                  "numberOfBytes": "64",
+                  "members": [
+                    {
+                      "label": "hasRole",
+                      "slot": "0",
+                      "offset": 0,
+                      "type": {
+                        "label": "mapping(address => bool)",
+                        "encoding": "mapping",
+                        "numberOfBytes": "32",
+                        "key": {
+                          "label": "address",
+                          "encoding": "inplace",
+                          "numberOfBytes": "20"
+                        },
+                        "value": {
+                          "label": "bool",
+                          "encoding": "inplace",
+                          "numberOfBytes": "1"
+                        }
+                      }
+                    },
+                    {
+                      "label": "adminRole",
+                      "slot": "1",
+                      "offset": 0,
+                      "type": {
+                        "label": "bytes32",
+                        "encoding": "inplace",
+                        "numberOfBytes": "32"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "sha256": "6d0a0b3c435db930650b1c22c5b522ed772a0eca754d03d76af0c354811dee75"
+      },
+      "storagePointerUses": [
+        {
+          "source": "lib/openzeppelin-contracts-upgradeable/contracts/access/AccessControlUpgradeable.sol",
+          "function": "_getAccessControlStorage",
+          "line": "68"
+        }
+      ]
+    },
+    {
+      "namespace": "cybergold.governance.core.storage",
+      "formula": "keccak256-string",
+      "slot": "0x069bd5d6d9e398589a762052a1cea2c8afda71f33c2cab21bfa7d650cc3c60bc",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "governance"
+      ],
+      "declarations": [
+        "packages/2_governance/src/facets/GovernorCoreFacet.sol#CORE_STORAGE_POSITION"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct GovernorCoreFacet.CoreStorage",
+        "tree": {
+          "label": "struct GovernorCoreFacet.CoreStorage",
+          "encoding": "inplace",
+          "numberOfBytes": "64",
+          "members": [
+            {
+              "label": "proposalVotes",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "mapping(uint256 => struct GovernorCoreFacet.ProposalVote)",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "uint256",
+                  "encoding": "inplace",
+                  "numberOfBytes": "32"
+                },
+                "value": {
+                  "label": "struct GovernorCoreFacet.ProposalVote",
+                  "encoding": "inplace",
+                  "numberOfBytes": "128",
+                  "members": [
+                    {
+                      "label": "againstVotes",
+                      "slot": "0",
+                      "offset": 0,
+                      "type": {
+                        "label": "uint256",
+                        "encoding": "inplace",
+                        "numberOfBytes": "32"
+                      }
+                    },
+                    {
+                      "label": "forVotes",
+                      "slot": "1",
+                      "offset": 0,
+                      "type": {
+                        "label": "uint256",
+                        "encoding": "inplace",
+                        "numberOfBytes": "32"
+                      }
+                    },
+                    {
+                      "label": "abstainVotes",
+                      "slot": "2",
+                      "offset": 0,
+                      "type": {
+                        "label": "uint256",
+                        "encoding": "inplace",
+                        "numberOfBytes": "32"
+                      }
+                    },
+                    {
+                      "label": "hasVoted",
+                      "slot": "3",
+                      "offset": 0,
+                      "type": {
+                        "label": "mapping(address => bool)",
+                        "encoding": "mapping",
+                        "numberOfBytes": "32",
+                        "key": {
+                          "label": "address",
+                          "encoding": "inplace",
+                          "numberOfBytes": "20"
+                        },
+                        "value": {
+                          "label": "bool",
+                          "encoding": "inplace",
+                          "numberOfBytes": "1"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "label": "proposalQuorums",
+              "slot": "1",
+              "offset": 0,
+              "type": {
+                "label": "mapping(uint256 => uint256)",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "uint256",
+                  "encoding": "inplace",
+                  "numberOfBytes": "32"
+                },
+                "value": {
+                  "label": "uint256",
+                  "encoding": "inplace",
+                  "numberOfBytes": "32"
+                }
+              }
+            }
+          ]
+        },
+        "sha256": "3683a9e1db0ae974225c4fb3807c6fcb91a430c5466b4784f512c9d79fe1c5f6"
+      },
+      "storagePointerUses": [
+        {
+          "source": "packages/2_governance/src/facets/GovernorCoreFacet.sol",
+          "function": "_coreStorage",
+          "line": "109"
+        }
+      ]
+    },
+    {
+      "namespace": "cybergold.governance.execution.storage",
+      "formula": "keccak256-string",
+      "slot": "0x0bf56fcc26137081544f2fb54e25e4389d9dd6eee2e50ee0c2464bfab2c8e90f",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "governance"
+      ],
+      "declarations": [
+        "packages/2_governance/src/libraries/LibGovernorExecution.sol#STORAGE_POSITION"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct LibGovernorExecution.ExecutionStorage",
+        "tree": {
+          "label": "struct LibGovernorExecution.ExecutionStorage",
+          "encoding": "inplace",
+          "numberOfBytes": "32",
+          "members": [
+            {
+              "label": "proposalWindows",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "mapping(uint256 => struct LibGovernorExecution.ProposalExecutionWindow)",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "uint256",
+                  "encoding": "inplace",
+                  "numberOfBytes": "32"
+                },
+                "value": {
+                  "label": "struct LibGovernorExecution.ProposalExecutionWindow",
+                  "encoding": "inplace",
+                  "numberOfBytes": "32",
+                  "members": [
+                    {
+                      "label": "readyAt",
+                      "slot": "0",
+                      "offset": 0,
+                      "type": {
+                        "label": "uint48",
+                        "encoding": "inplace",
+                        "numberOfBytes": "6"
+                      }
+                    },
+                    {
+                      "label": "expiresAt",
+                      "slot": "0",
+                      "offset": 6,
+                      "type": {
+                        "label": "uint48",
+                        "encoding": "inplace",
+                        "numberOfBytes": "6"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "sha256": "0f62228ebc683f86407e33eb33b6919bc7ae00a36868b6d21b1768464e910e70"
+      },
+      "storagePointerUses": [
+        {
+          "source": "packages/2_governance/src/libraries/LibGovernorExecution.sol",
+          "function": "executionStorage",
+          "line": "26"
+        }
+      ]
+    },
+    {
+      "namespace": "cybergold.core.recovery-share.storage.v1",
+      "formula": "erc7201",
+      "slot": "0x2076ed1e4ebe5e67adb9bae5ea9d45812f45e2e97689bca2a031fadc9725da00",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "core"
+      ],
+      "declarations": [
+        "packages/1_core/src/libraries/LibRecoveryShareStorage.sol#STORAGE_LOCATION"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct LibRecoveryShareStorage.Layout",
+        "tree": {
+          "label": "struct LibRecoveryShareStorage.Layout",
+          "encoding": "inplace",
+          "numberOfBytes": "32",
+          "members": [
+            {
+              "label": "supply",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "mapping(uint256 => uint256)",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "uint256",
+                  "encoding": "inplace",
+                  "numberOfBytes": "32"
+                },
+                "value": {
+                  "label": "uint256",
+                  "encoding": "inplace",
+                  "numberOfBytes": "32"
+                }
+              }
+            }
+          ]
+        },
+        "sha256": "df87579a9789c2e3e60189cc0001aed89309a37ac3a152dbe6a8d025b89c4f5f"
+      },
+      "storagePointerUses": [
+        {
+          "source": "packages/1_core/src/libraries/LibRecoveryShareStorage.sol",
+          "function": "getLayout",
+          "line": "21"
+        }
+      ]
+    },
+    {
+      "namespace": "openzeppelin.storage.GovernorVotes",
+      "formula": "erc7201",
+      "slot": "0x3ba4977254e415696610a40ebf2258dbfa0ec6a2ff64e84bfe715ff16977cc00",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "governance"
+      ],
+      "declarations": [
+        "lib/openzeppelin-contracts-upgradeable/contracts/governance/extensions/GovernorVotesUpgradeable.sol#GovernorVotesStorageLocation"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct GovernorVotesUpgradeable.GovernorVotesStorage",
+        "tree": {
+          "label": "struct GovernorVotesUpgradeable.GovernorVotesStorage",
+          "encoding": "inplace",
+          "numberOfBytes": "32",
+          "members": [
+            {
+              "label": "_token",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "contract IERC5805",
+                "encoding": "inplace",
+                "numberOfBytes": "20"
+              }
+            }
+          ]
+        },
+        "sha256": "4a90d1cbd3b526cd6bea8a9b89776b96093585b6c742bf9c0ed31a1e4e2da6cd"
+      },
+      "storagePointerUses": [
+        {
+          "source": "lib/openzeppelin-contracts-upgradeable/contracts/governance/extensions/GovernorVotesUpgradeable.sol",
+          "function": "_getGovernorVotesStorage",
+          "line": "27"
+        }
+      ]
+    },
+    {
+      "namespace": "cybergold.storage.EmergencyAuthority",
+      "formula": "erc7201",
+      "slot": "0x513d37eedc2d7de2e29625428c80148c9bb7f7daf0e09d0261c85d7c6077c600",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "core",
+        "governance",
+        "staking"
+      ],
+      "declarations": [
+        "packages/0_shared/src/libraries/LibEmergencyAuthority.sol#STORAGE_LOCATION"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct LibEmergencyAuthority.Layout",
+        "tree": {
+          "label": "struct LibEmergencyAuthority.Layout",
+          "encoding": "inplace",
+          "numberOfBytes": "32",
+          "members": [
+            {
+              "label": "safeWallet",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "address",
+                "encoding": "inplace",
+                "numberOfBytes": "20"
+              }
+            }
+          ]
+        },
+        "sha256": "10bbbcc57aa35bdf14d90b66411056ac9079b0d2166e1c6439ef34d5c7cd3b5e"
+      },
+      "storagePointerUses": [
+        {
+          "source": "packages/0_shared/src/libraries/LibEmergencyAuthority.sol",
+          "function": "getLayout",
+          "line": "16"
+        }
+      ]
+    },
+    {
+      "namespace": "openzeppelin.storage.ERC20",
+      "formula": "erc7201",
+      "slot": "0x52c63247e1f47db19d5ce0460030c497f067ca4cebf71ba98eeadabe20bace00",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "core",
+        "governance",
+        "staking"
+      ],
+      "declarations": [
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/ERC20Upgradeable.sol#ERC20StorageLocation"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct ERC20Upgradeable.ERC20Storage",
+        "tree": {
+          "label": "struct ERC20Upgradeable.ERC20Storage",
+          "encoding": "inplace",
+          "numberOfBytes": "160",
+          "members": [
+            {
+              "label": "_balances",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "mapping(address => uint256)",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "address",
+                  "encoding": "inplace",
+                  "numberOfBytes": "20"
+                },
+                "value": {
+                  "label": "uint256",
+                  "encoding": "inplace",
+                  "numberOfBytes": "32"
+                }
+              }
+            },
+            {
+              "label": "_allowances",
+              "slot": "1",
+              "offset": 0,
+              "type": {
+                "label": "mapping(address => mapping(address => uint256))",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "address",
+                  "encoding": "inplace",
+                  "numberOfBytes": "20"
+                },
+                "value": {
+                  "label": "mapping(address => uint256)",
+                  "encoding": "mapping",
+                  "numberOfBytes": "32",
+                  "key": {
+                    "label": "address",
+                    "encoding": "inplace",
+                    "numberOfBytes": "20"
+                  },
+                  "value": {
+                    "label": "uint256",
+                    "encoding": "inplace",
+                    "numberOfBytes": "32"
+                  }
+                }
+              }
+            },
+            {
+              "label": "_totalSupply",
+              "slot": "2",
+              "offset": 0,
+              "type": {
+                "label": "uint256",
+                "encoding": "inplace",
+                "numberOfBytes": "32"
+              }
+            },
+            {
+              "label": "_name",
+              "slot": "3",
+              "offset": 0,
+              "type": {
+                "label": "string",
+                "encoding": "bytes",
+                "numberOfBytes": "32"
+              }
+            },
+            {
+              "label": "_symbol",
+              "slot": "4",
+              "offset": 0,
+              "type": {
+                "label": "string",
+                "encoding": "bytes",
+                "numberOfBytes": "32"
+              }
+            }
+          ]
+        },
+        "sha256": "3d660965bf09d045bb90edcacb6a7779d7407de446ef1d46e64e3bf6a73ac88e"
+      },
+      "storagePointerUses": [
+        {
+          "source": "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/ERC20Upgradeable.sol",
+          "function": "_getERC20Storage",
+          "line": "47"
+        }
+      ]
+    },
+    {
+      "namespace": "openzeppelin.storage.Nonces",
+      "formula": "erc7201",
+      "slot": "0x5ab42ced628888259c08ac98db1eb0cf702fc1501344311d8b100cd1bfe4bb00",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "core",
+        "governance"
+      ],
+      "declarations": [
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/NoncesUpgradeable.sol#NoncesStorageLocation"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct NoncesUpgradeable.NoncesStorage",
+        "tree": {
+          "label": "struct NoncesUpgradeable.NoncesStorage",
+          "encoding": "inplace",
+          "numberOfBytes": "32",
+          "members": [
+            {
+              "label": "_nonces",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "mapping(address => uint256)",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "address",
+                  "encoding": "inplace",
+                  "numberOfBytes": "20"
+                },
+                "value": {
+                  "label": "uint256",
+                  "encoding": "inplace",
+                  "numberOfBytes": "32"
+                }
+              }
+            }
+          ]
+        },
+        "sha256": "f012e28cf2ff2a85d4016f912a8e49a32051cc8955d4219832f25f8811a67615"
+      },
+      "storagePointerUses": [
+        {
+          "source": "lib/openzeppelin-contracts-upgradeable/contracts/utils/NoncesUpgradeable.sol",
+          "function": "_getNoncesStorage",
+          "line": "25"
+        }
+      ]
+    },
+    {
+      "namespace": "cybergold.facet.version.registry",
+      "formula": "literal",
+      "slot": "0x719ab1798b7437cf2b0a642d6beb72f1485a260ffbc7817c2b7c41ec779b30e8",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "core",
+        "governance",
+        "staking"
+      ],
+      "declarations": [
+        "packages/0_shared/src/helpers/FacetVersionRegistry.sol#FACET_VERSION_REGISTRY_SLOT",
+        "packages/0_shared/src/helpers/LiveFacetVersionRegistry.sol#LIVE_FACET_VERSION_REGISTRY_SLOT",
+        "packages/1_core/src/migration/CoreDiamondCutMigrationFacet.sol#FACET_VERSION_REGISTRY_SLOT",
+        "packages/1_core/src/migration/CoreFacetRegistryRetirementInit.sol#FACET_VERSION_REGISTRY_SLOT"
+      ],
+      "aliases": [
+        {
+          "alias": "packages/0_shared/src/helpers/LiveFacetVersionRegistry.sol#LIVE_FACET_VERSION_REGISTRY_SLOT",
+          "canonical": "packages/0_shared/src/helpers/FacetVersionRegistry.sol#FACET_VERSION_REGISTRY_SLOT"
+        },
+        {
+          "alias": "packages/1_core/src/migration/CoreDiamondCutMigrationFacet.sol#FACET_VERSION_REGISTRY_SLOT",
+          "canonical": "packages/0_shared/src/helpers/FacetVersionRegistry.sol#FACET_VERSION_REGISTRY_SLOT"
+        },
+        {
+          "alias": "packages/1_core/src/migration/CoreFacetRegistryRetirementInit.sol#FACET_VERSION_REGISTRY_SLOT",
+          "canonical": "packages/0_shared/src/helpers/FacetVersionRegistry.sol#FACET_VERSION_REGISTRY_SLOT"
+        }
+      ],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct FacetVersionRegistry.FacetVersionStore",
+        "tree": {
+          "label": "struct FacetVersionRegistry.FacetVersionStore",
+          "encoding": "inplace",
+          "numberOfBytes": "160",
+          "members": [
+            {
+              "label": "versions",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "mapping(bytes32 => uint64)",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "bytes32",
+                  "encoding": "inplace",
+                  "numberOfBytes": "32"
+                },
+                "value": {
+                  "label": "uint64",
+                  "encoding": "inplace",
+                  "numberOfBytes": "8"
+                }
+              }
+            },
+            {
+              "label": "runtimeCodeHashes",
+              "slot": "1",
+              "offset": 0,
+              "type": {
+                "label": "mapping(bytes32 => bytes32)",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "bytes32",
+                  "encoding": "inplace",
+                  "numberOfBytes": "32"
+                },
+                "value": {
+                  "label": "bytes32",
+                  "encoding": "inplace",
+                  "numberOfBytes": "32"
+                }
+              }
+            },
+            {
+              "label": "pendingFacets",
+              "slot": "2",
+              "offset": 0,
+              "type": {
+                "label": "mapping(bytes32 => address)",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "bytes32",
+                  "encoding": "inplace",
+                  "numberOfBytes": "32"
+                },
+                "value": {
+                  "label": "address",
+                  "encoding": "inplace",
+                  "numberOfBytes": "20"
+                }
+              }
+            },
+            {
+              "label": "pendingVersions",
+              "slot": "3",
+              "offset": 0,
+              "type": {
+                "label": "mapping(bytes32 => uint64)",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "bytes32",
+                  "encoding": "inplace",
+                  "numberOfBytes": "32"
+                },
+                "value": {
+                  "label": "uint64",
+                  "encoding": "inplace",
+                  "numberOfBytes": "8"
+                }
+              }
+            },
+            {
+              "label": "pendingRuntimeCodeHashes",
+              "slot": "4",
+              "offset": 0,
+              "type": {
+                "label": "mapping(bytes32 => bytes32)",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "bytes32",
+                  "encoding": "inplace",
+                  "numberOfBytes": "32"
+                },
+                "value": {
+                  "label": "bytes32",
+                  "encoding": "inplace",
+                  "numberOfBytes": "32"
+                }
+              }
+            }
+          ]
+        },
+        "sha256": "ab1f89e623e56007c327fe2104dedeb2beb4f6d1f7c9cb0d72d6a9762eb20ef3"
+      },
+      "storagePointerUses": [
+        {
+          "source": "packages/0_shared/src/helpers/FacetVersionRegistry.sol",
+          "function": "_facetVersions",
+          "line": "56"
+        },
+        {
+          "source": "packages/0_shared/src/helpers/LiveFacetVersionRegistry.sol",
+          "function": "_facetVersions",
+          "line": "49"
+        }
+      ]
+    },
+    {
+      "namespace": "openzeppelin.storage.Governor",
+      "formula": "erc7201",
+      "slot": "0x7c712897014dbe49c045ef1299aa2d5f9e67e48eea4403efa21f1e0f3ac0cb00",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "governance"
+      ],
+      "declarations": [
+        "lib/openzeppelin-contracts-upgradeable/contracts/governance/GovernorUpgradeable.sol#GovernorStorageLocation"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct GovernorUpgradeable.GovernorStorage",
+        "tree": {
+          "label": "struct GovernorUpgradeable.GovernorStorage",
+          "encoding": "inplace",
+          "numberOfBytes": "128",
+          "members": [
+            {
+              "label": "_name",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "string",
+                "encoding": "bytes",
+                "numberOfBytes": "32"
+              }
+            },
+            {
+              "label": "_proposals",
+              "slot": "1",
+              "offset": 0,
+              "type": {
+                "label": "mapping(uint256 => struct GovernorUpgradeable.ProposalCore)",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "uint256",
+                  "encoding": "inplace",
+                  "numberOfBytes": "32"
+                },
+                "value": {
+                  "label": "struct GovernorUpgradeable.ProposalCore",
+                  "encoding": "inplace",
+                  "numberOfBytes": "64",
+                  "members": [
+                    {
+                      "label": "proposer",
+                      "slot": "0",
+                      "offset": 0,
+                      "type": {
+                        "label": "address",
+                        "encoding": "inplace",
+                        "numberOfBytes": "20"
+                      }
+                    },
+                    {
+                      "label": "voteStart",
+                      "slot": "0",
+                      "offset": 20,
+                      "type": {
+                        "label": "uint48",
+                        "encoding": "inplace",
+                        "numberOfBytes": "6"
+                      }
+                    },
+                    {
+                      "label": "voteDuration",
+                      "slot": "0",
+                      "offset": 26,
+                      "type": {
+                        "label": "uint32",
+                        "encoding": "inplace",
+                        "numberOfBytes": "4"
+                      }
+                    },
+                    {
+                      "label": "executed",
+                      "slot": "0",
+                      "offset": 30,
+                      "type": {
+                        "label": "bool",
+                        "encoding": "inplace",
+                        "numberOfBytes": "1"
+                      }
+                    },
+                    {
+                      "label": "canceled",
+                      "slot": "0",
+                      "offset": 31,
+                      "type": {
+                        "label": "bool",
+                        "encoding": "inplace",
+                        "numberOfBytes": "1"
+                      }
+                    },
+                    {
+                      "label": "etaSeconds",
+                      "slot": "1",
+                      "offset": 0,
+                      "type": {
+                        "label": "uint48",
+                        "encoding": "inplace",
+                        "numberOfBytes": "6"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "label": "_governanceCall",
+              "slot": "2",
+              "offset": 0,
+              "type": {
+                "label": "struct DoubleEndedQueue.Bytes32Deque",
+                "encoding": "inplace",
+                "numberOfBytes": "64",
+                "members": [
+                  {
+                    "label": "_begin",
+                    "slot": "0",
+                    "offset": 0,
+                    "type": {
+                      "label": "uint128",
+                      "encoding": "inplace",
+                      "numberOfBytes": "16"
+                    }
+                  },
+                  {
+                    "label": "_end",
+                    "slot": "0",
+                    "offset": 16,
+                    "type": {
+                      "label": "uint128",
+                      "encoding": "inplace",
+                      "numberOfBytes": "16"
+                    }
+                  },
+                  {
+                    "label": "_data",
+                    "slot": "1",
+                    "offset": 0,
+                    "type": {
+                      "label": "mapping(uint128 => bytes32)",
+                      "encoding": "mapping",
+                      "numberOfBytes": "32",
+                      "key": {
+                        "label": "uint128",
+                        "encoding": "inplace",
+                        "numberOfBytes": "16"
+                      },
+                      "value": {
+                        "label": "bytes32",
+                        "encoding": "inplace",
+                        "numberOfBytes": "32"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "sha256": "21e083f40bb1aafd25a788e48bc54033d45c24ad96888e81c4d1411977b7336b"
+      },
+      "storagePointerUses": [
+        {
+          "source": "lib/openzeppelin-contracts-upgradeable/contracts/governance/GovernorUpgradeable.sol",
+          "function": "_getGovernorStorage",
+          "line": "68"
+        }
+      ]
+    },
+    {
+      "namespace": "cybergold.core.allowance-exposure.storage.v1",
+      "formula": "erc7201",
+      "slot": "0x82979c3c1ff6a584fe415ff8f61e419cd1bd9aff948add55b5e9cebc19114600",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "core"
+      ],
+      "declarations": [
+        "packages/1_core/src/libraries/LibAllowanceExposureStorage.sol#STORAGE_LOCATION"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct LibAllowanceExposureStorage.Layout",
+        "tree": {
+          "label": "struct LibAllowanceExposureStorage.Layout",
+          "encoding": "inplace",
+          "numberOfBytes": "32",
+          "members": [
+            {
+              "label": "allowanceSums",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "mapping(address => struct LibAllowanceExposureStorage.AllowanceSum)",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "address",
+                  "encoding": "inplace",
+                  "numberOfBytes": "20"
+                },
+                "value": {
+                  "label": "struct LibAllowanceExposureStorage.AllowanceSum",
+                  "encoding": "inplace",
+                  "numberOfBytes": "64",
+                  "members": [
+                    {
+                      "label": "low",
+                      "slot": "0",
+                      "offset": 0,
+                      "type": {
+                        "label": "uint256",
+                        "encoding": "inplace",
+                        "numberOfBytes": "32"
+                      }
+                    },
+                    {
+                      "label": "high",
+                      "slot": "1",
+                      "offset": 0,
+                      "type": {
+                        "label": "uint256",
+                        "encoding": "inplace",
+                        "numberOfBytes": "32"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "sha256": "163c68b5a90cb31c3aaf5ac58580a57bb880a2bbd129c9b152316c0be15aeebc"
+      },
+      "storagePointerUses": [
+        {
+          "source": "packages/1_core/src/libraries/LibAllowanceExposureStorage.sol",
+          "function": "getLayout",
+          "line": "23"
+        }
+      ]
+    },
+    {
+      "namespace": "openzeppelin.storage.ERC1155",
+      "formula": "erc7201",
+      "slot": "0x88be536d5240c274a3b1d3a1be54482fd9caa294f08c62a7cde569f49a3c4500",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "core"
+      ],
+      "declarations": [
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/ERC1155Upgradeable.sol#ERC1155StorageLocation"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct ERC1155Upgradeable.ERC1155Storage",
+        "tree": {
+          "label": "struct ERC1155Upgradeable.ERC1155Storage",
+          "encoding": "inplace",
+          "numberOfBytes": "96",
+          "members": [
+            {
+              "label": "_balances",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "mapping(uint256 => mapping(address => uint256))",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "uint256",
+                  "encoding": "inplace",
+                  "numberOfBytes": "32"
+                },
+                "value": {
+                  "label": "mapping(address => uint256)",
+                  "encoding": "mapping",
+                  "numberOfBytes": "32",
+                  "key": {
+                    "label": "address",
+                    "encoding": "inplace",
+                    "numberOfBytes": "20"
+                  },
+                  "value": {
+                    "label": "uint256",
+                    "encoding": "inplace",
+                    "numberOfBytes": "32"
+                  }
+                }
+              }
+            },
+            {
+              "label": "_operatorApprovals",
+              "slot": "1",
+              "offset": 0,
+              "type": {
+                "label": "mapping(address => mapping(address => bool))",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "address",
+                  "encoding": "inplace",
+                  "numberOfBytes": "20"
+                },
+                "value": {
+                  "label": "mapping(address => bool)",
+                  "encoding": "mapping",
+                  "numberOfBytes": "32",
+                  "key": {
+                    "label": "address",
+                    "encoding": "inplace",
+                    "numberOfBytes": "20"
+                  },
+                  "value": {
+                    "label": "bool",
+                    "encoding": "inplace",
+                    "numberOfBytes": "1"
+                  }
+                }
+              }
+            },
+            {
+              "label": "_uri",
+              "slot": "2",
+              "offset": 0,
+              "type": {
+                "label": "string",
+                "encoding": "bytes",
+                "numberOfBytes": "32"
+              }
+            }
+          ]
+        },
+        "sha256": "c8657db54ad912fa26dc097ce7f2413fe2e90c5efe475cd91b294b00b759580e"
+      },
+      "storagePointerUses": [
+        {
+          "source": "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/ERC1155Upgradeable.sol",
+          "function": "_getERC1155Storage",
+          "line": "39"
+        }
+      ]
+    },
+    {
+      "namespace": "cybergold.governance.recovery-fund.storage.v1",
+      "formula": "erc7201",
+      "slot": "0x902e6a2d7e9cb88e4a3b9fa10fb5f40f0aa4c8c068454989655905c02697f900",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "governance"
+      ],
+      "declarations": [
+        "packages/2_governance/src/libraries/LibRecoveryFundStorage.sol#STORAGE_LOCATION"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct LibRecoveryFundStorage.Layout",
+        "tree": {
+          "label": "struct LibRecoveryFundStorage.Layout",
+          "encoding": "inplace",
+          "numberOfBytes": "96",
+          "members": [
+            {
+              "label": "trustedCore",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "address",
+                "encoding": "inplace",
+                "numberOfBytes": "20"
+              }
+            },
+            {
+              "label": "totalCommittedCygld",
+              "slot": "1",
+              "offset": 0,
+              "type": {
+                "label": "uint256",
+                "encoding": "inplace",
+                "numberOfBytes": "32"
+              }
+            },
+            {
+              "label": "facilities",
+              "slot": "2",
+              "offset": 0,
+              "type": {
+                "label": "mapping(address => struct LibRecoveryFundStorage.Facility)",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "address",
+                  "encoding": "inplace",
+                  "numberOfBytes": "20"
+                },
+                "value": {
+                  "label": "struct LibRecoveryFundStorage.Facility",
+                  "encoding": "inplace",
+                  "numberOfBytes": "128",
+                  "members": [
+                    {
+                      "label": "generation",
+                      "slot": "0",
+                      "offset": 0,
+                      "type": {
+                        "label": "uint64",
+                        "encoding": "inplace",
+                        "numberOfBytes": "8"
+                      }
+                    },
+                    {
+                      "label": "coverageShares",
+                      "slot": "1",
+                      "offset": 0,
+                      "type": {
+                        "label": "uint256",
+                        "encoding": "inplace",
+                        "numberOfBytes": "32"
+                      }
+                    },
+                    {
+                      "label": "purchasedShares",
+                      "slot": "2",
+                      "offset": 0,
+                      "type": {
+                        "label": "uint256",
+                        "encoding": "inplace",
+                        "numberOfBytes": "32"
+                      }
+                    },
+                    {
+                      "label": "initialCygldCommitment",
+                      "slot": "3",
+                      "offset": 0,
+                      "type": {
+                        "label": "uint256",
+                        "encoding": "inplace",
+                        "numberOfBytes": "32"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "sha256": "1da2a6291139c65fcb8ec3db5ba2d9fa9fb55a078b7b42d352343e3bd131060a"
+      },
+      "storagePointerUses": [
+        {
+          "source": "packages/2_governance/src/libraries/LibRecoveryFundStorage.sol",
+          "function": "getLayout",
+          "line": "31"
+        }
+      ]
+    },
+    {
+      "namespace": "cybergold.core.recovery.storage.v1",
+      "formula": "erc7201",
+      "slot": "0x9c93e9d30446027e39ff4d92a0e041074875ec5eab2dcf6938ecf6e407f2da00",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "core"
+      ],
+      "declarations": [
+        "packages/1_core/src/libraries/LibRecoveryStorage.sol#STORAGE_LOCATION"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct LibRecoveryStorage.Layout",
+        "tree": {
+          "label": "struct LibRecoveryStorage.Layout",
+          "encoding": "inplace",
+          "numberOfBytes": "128",
+          "members": [
+            {
+              "label": "coreAttachedRecoveryAssets",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "address[]",
+                "encoding": "dynamic_array",
+                "numberOfBytes": "32",
+                "base": {
+                  "label": "address",
+                  "encoding": "inplace",
+                  "numberOfBytes": "20"
+                }
+              }
+            },
+            {
+              "label": "pools",
+              "slot": "1",
+              "offset": 0,
+              "type": {
+                "label": "mapping(address => struct LibRecoveryStorage.RecoveryPool)",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "address",
+                  "encoding": "inplace",
+                  "numberOfBytes": "20"
+                },
+                "value": {
+                  "label": "struct LibRecoveryStorage.RecoveryPool",
+                  "encoding": "inplace",
+                  "numberOfBytes": "256",
+                  "members": [
+                    {
+                      "label": "impaired",
+                      "slot": "0",
+                      "offset": 0,
+                      "type": {
+                        "label": "bool",
+                        "encoding": "inplace",
+                        "numberOfBytes": "1"
+                      }
+                    },
+                    {
+                      "label": "coreAttachedShares",
+                      "slot": "1",
+                      "offset": 0,
+                      "type": {
+                        "label": "uint256",
+                        "encoding": "inplace",
+                        "numberOfBytes": "32"
+                      }
+                    },
+                    {
+                      "label": "redeemableRaw",
+                      "slot": "2",
+                      "offset": 0,
+                      "type": {
+                        "label": "uint256",
+                        "encoding": "inplace",
+                        "numberOfBytes": "32"
+                      }
+                    },
+                    {
+                      "label": "cygldPerAssetRawFp18",
+                      "slot": "3",
+                      "offset": 0,
+                      "type": {
+                        "label": "uint256",
+                        "encoding": "inplace",
+                        "numberOfBytes": "32"
+                      }
+                    },
+                    {
+                      "label": "cygldSupplyCap",
+                      "slot": "4",
+                      "offset": 0,
+                      "type": {
+                        "label": "uint256",
+                        "encoding": "inplace",
+                        "numberOfBytes": "32"
+                      }
+                    },
+                    {
+                      "label": "referenceShares",
+                      "slot": "5",
+                      "offset": 0,
+                      "type": {
+                        "label": "uint256",
+                        "encoding": "inplace",
+                        "numberOfBytes": "32"
+                      }
+                    },
+                    {
+                      "label": "referenceValueCygld",
+                      "slot": "6",
+                      "offset": 0,
+                      "type": {
+                        "label": "uint256",
+                        "encoding": "inplace",
+                        "numberOfBytes": "32"
+                      }
+                    },
+                    {
+                      "label": "shareDecimals",
+                      "slot": "7",
+                      "offset": 0,
+                      "type": {
+                        "label": "uint8",
+                        "encoding": "inplace",
+                        "numberOfBytes": "1"
+                      }
+                    },
+                    {
+                      "label": "decimalsKnown",
+                      "slot": "7",
+                      "offset": 1,
+                      "type": {
+                        "label": "bool",
+                        "encoding": "inplace",
+                        "numberOfBytes": "1"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "label": "outstandingRecoveryAssets",
+              "slot": "2",
+              "offset": 0,
+              "type": {
+                "label": "address[]",
+                "encoding": "dynamic_array",
+                "numberOfBytes": "32",
+                "base": {
+                  "label": "address",
+                  "encoding": "inplace",
+                  "numberOfBytes": "20"
+                }
+              }
+            },
+            {
+              "label": "outstandingIndexPlusOne",
+              "slot": "3",
+              "offset": 0,
+              "type": {
+                "label": "mapping(address => uint256)",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "address",
+                  "encoding": "inplace",
+                  "numberOfBytes": "20"
+                },
+                "value": {
+                  "label": "uint256",
+                  "encoding": "inplace",
+                  "numberOfBytes": "32"
+                }
+              }
+            }
+          ]
+        },
+        "sha256": "a0dc21ab52fbaef2fc6cf9d059ed45c97d7d039778a14c24099f2e7d05bbe762"
+      },
+      "storagePointerUses": [
+        {
+          "source": "packages/1_core/src/libraries/LibRecoveryStorage.sol",
+          "function": "getLayout",
+          "line": "37"
+        }
+      ]
+    },
+    {
+      "namespace": "openzeppelin.storage.EIP712",
+      "formula": "erc7201",
+      "slot": "0xa16a46d94261c7517cc8ff89f61c0ce93598e3c849801011dee649a6a557d100",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "core",
+        "governance"
+      ],
+      "declarations": [
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/cryptography/EIP712Upgradeable.sol#EIP712StorageLocation"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct EIP712Upgradeable.EIP712Storage",
+        "tree": {
+          "label": "struct EIP712Upgradeable.EIP712Storage",
+          "encoding": "inplace",
+          "numberOfBytes": "128",
+          "members": [
+            {
+              "label": "_hashedName",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "bytes32",
+                "encoding": "inplace",
+                "numberOfBytes": "32"
+              }
+            },
+            {
+              "label": "_hashedVersion",
+              "slot": "1",
+              "offset": 0,
+              "type": {
+                "label": "bytes32",
+                "encoding": "inplace",
+                "numberOfBytes": "32"
+              }
+            },
+            {
+              "label": "_name",
+              "slot": "2",
+              "offset": 0,
+              "type": {
+                "label": "string",
+                "encoding": "bytes",
+                "numberOfBytes": "32"
+              }
+            },
+            {
+              "label": "_version",
+              "slot": "3",
+              "offset": 0,
+              "type": {
+                "label": "string",
+                "encoding": "bytes",
+                "numberOfBytes": "32"
+              }
+            }
+          ]
+        },
+        "sha256": "8c4e552a08478e71029d1045e849ea7bf4960976597344efb033e46e5415b76e"
+      },
+      "storagePointerUses": [
+        {
+          "source": "lib/openzeppelin-contracts-upgradeable/contracts/utils/cryptography/EIP712Upgradeable.sol",
+          "function": "_getEIP712Storage",
+          "line": "48"
+        }
+      ]
+    },
+    {
+      "namespace": "cybergold.staking.app.storage",
+      "formula": "keccak256-string",
+      "slot": "0xadd3043a8a9903fb211fe9fafdd1bb2c468188bbbc4ee88eb45440767aa2b5dc",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "staking"
+      ],
+      "declarations": [
+        "packages/3_staking/src/diamond/LibAppStorage.sol#APP_STORAGE_POSITION"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct LibAppStorage.AppStorage",
+        "tree": {
+          "label": "struct LibAppStorage.AppStorage",
+          "encoding": "inplace",
+          "numberOfBytes": "928",
+          "members": [
+            {
+              "label": "vault",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "struct LibAppStorage.VaultStorage",
+                "encoding": "inplace",
+                "numberOfBytes": "32",
+                "members": [
+                  {
+                    "label": "fundManagerHealthy",
+                    "slot": "0",
+                    "offset": 0,
+                    "type": {
+                      "label": "bool",
+                      "encoding": "inplace",
+                      "numberOfBytes": "1"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "label": "queue",
+              "slot": "1",
+              "offset": 0,
+              "type": {
+                "label": "struct LibAppStorage.QueueStorage",
+                "encoding": "inplace",
+                "numberOfBytes": "672",
+                "members": [
+                  {
+                    "label": "readyEpochs",
+                    "slot": "0",
+                    "offset": 0,
+                    "type": {
+                      "label": "struct LibAppStorage.ReadyEpoch[]",
+                      "encoding": "dynamic_array",
+                      "numberOfBytes": "32",
+                      "base": {
+                        "label": "struct LibAppStorage.ReadyEpoch",
+                        "encoding": "inplace",
+                        "numberOfBytes": "64",
+                        "members": [
+                          {
+                            "label": "boundaryId",
+                            "slot": "0",
+                            "offset": 0,
+                            "type": {
+                              "label": "uint256",
+                              "encoding": "inplace",
+                              "numberOfBytes": "32"
+                            }
+                          },
+                          {
+                            "label": "readyAt",
+                            "slot": "1",
+                            "offset": 0,
+                            "type": {
+                              "label": "uint64",
+                              "encoding": "inplace",
+                              "numberOfBytes": "8"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "label": "epochsHead",
+                    "slot": "1",
+                    "offset": 0,
+                    "type": {
+                      "label": "uint256",
+                      "encoding": "inplace",
+                      "numberOfBytes": "32"
+                    }
+                  },
+                  {
+                    "label": "nodes",
+                    "slot": "2",
+                    "offset": 0,
+                    "type": {
+                      "label": "mapping(uint256 => struct LibAppStorage.QueueNode)",
+                      "encoding": "mapping",
+                      "numberOfBytes": "32",
+                      "key": {
+                        "label": "uint256",
+                        "encoding": "inplace",
+                        "numberOfBytes": "32"
+                      },
+                      "value": {
+                        "label": "struct LibAppStorage.QueueNode",
+                        "encoding": "inplace",
+                        "numberOfBytes": "160",
+                        "members": [
+                          {
+                            "label": "prevId",
+                            "slot": "0",
+                            "offset": 0,
+                            "type": {
+                              "label": "uint256",
+                              "encoding": "inplace",
+                              "numberOfBytes": "32"
+                            }
+                          },
+                          {
+                            "label": "nextId",
+                            "slot": "1",
+                            "offset": 0,
+                            "type": {
+                              "label": "uint256",
+                              "encoding": "inplace",
+                              "numberOfBytes": "32"
+                            }
+                          },
+                          {
+                            "label": "controller",
+                            "slot": "2",
+                            "offset": 0,
+                            "type": {
+                              "label": "address",
+                              "encoding": "inplace",
+                              "numberOfBytes": "20"
+                            }
+                          },
+                          {
+                            "label": "owner",
+                            "slot": "3",
+                            "offset": 0,
+                            "type": {
+                              "label": "address",
+                              "encoding": "inplace",
+                              "numberOfBytes": "20"
+                            }
+                          },
+                          {
+                            "label": "shares",
+                            "slot": "4",
+                            "offset": 0,
+                            "type": {
+                              "label": "uint256",
+                              "encoding": "inplace",
+                              "numberOfBytes": "32"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "label": "headId",
+                    "slot": "3",
+                    "offset": 0,
+                    "type": {
+                      "label": "uint256",
+                      "encoding": "inplace",
+                      "numberOfBytes": "32"
+                    }
+                  },
+                  {
+                    "label": "tailId",
+                    "slot": "4",
+                    "offset": 0,
+                    "type": {
+                      "label": "uint256",
+                      "encoding": "inplace",
+                      "numberOfBytes": "32"
+                    }
+                  },
+                  {
+                    "label": "readyBoundaryId",
+                    "slot": "5",
+                    "offset": 0,
+                    "type": {
+                      "label": "uint256",
+                      "encoding": "inplace",
+                      "numberOfBytes": "32"
+                    }
+                  },
+                  {
+                    "label": "queryIds",
+                    "slot": "6",
+                    "offset": 0,
+                    "type": {
+                      "label": "mapping(address => uint256[])",
+                      "encoding": "mapping",
+                      "numberOfBytes": "32",
+                      "key": {
+                        "label": "address",
+                        "encoding": "inplace",
+                        "numberOfBytes": "20"
+                      },
+                      "value": {
+                        "label": "uint256[]",
+                        "encoding": "dynamic_array",
+                        "numberOfBytes": "32",
+                        "base": {
+                          "label": "uint256",
+                          "encoding": "inplace",
+                          "numberOfBytes": "32"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "label": "queryIndex",
+                    "slot": "7",
+                    "offset": 0,
+                    "type": {
+                      "label": "mapping(address => mapping(uint256 => uint256))",
+                      "encoding": "mapping",
+                      "numberOfBytes": "32",
+                      "key": {
+                        "label": "address",
+                        "encoding": "inplace",
+                        "numberOfBytes": "20"
+                      },
+                      "value": {
+                        "label": "mapping(uint256 => uint256)",
+                        "encoding": "mapping",
+                        "numberOfBytes": "32",
+                        "key": {
+                          "label": "uint256",
+                          "encoding": "inplace",
+                          "numberOfBytes": "32"
+                        },
+                        "value": {
+                          "label": "uint256",
+                          "encoding": "inplace",
+                          "numberOfBytes": "32"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "label": "isOwnerOperator",
+                    "slot": "8",
+                    "offset": 0,
+                    "type": {
+                      "label": "mapping(address => mapping(address => bool))",
+                      "encoding": "mapping",
+                      "numberOfBytes": "32",
+                      "key": {
+                        "label": "address",
+                        "encoding": "inplace",
+                        "numberOfBytes": "20"
+                      },
+                      "value": {
+                        "label": "mapping(address => bool)",
+                        "encoding": "mapping",
+                        "numberOfBytes": "32",
+                        "key": {
+                          "label": "address",
+                          "encoding": "inplace",
+                          "numberOfBytes": "20"
+                        },
+                        "value": {
+                          "label": "bool",
+                          "encoding": "inplace",
+                          "numberOfBytes": "1"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "label": "isControllerOperator",
+                    "slot": "9",
+                    "offset": 0,
+                    "type": {
+                      "label": "mapping(address => mapping(address => bool))",
+                      "encoding": "mapping",
+                      "numberOfBytes": "32",
+                      "key": {
+                        "label": "address",
+                        "encoding": "inplace",
+                        "numberOfBytes": "20"
+                      },
+                      "value": {
+                        "label": "mapping(address => bool)",
+                        "encoding": "mapping",
+                        "numberOfBytes": "32",
+                        "key": {
+                          "label": "address",
+                          "encoding": "inplace",
+                          "numberOfBytes": "20"
+                        },
+                        "value": {
+                          "label": "bool",
+                          "encoding": "inplace",
+                          "numberOfBytes": "1"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "label": "claimableShares",
+                    "slot": "10",
+                    "offset": 0,
+                    "type": {
+                      "label": "mapping(address => uint256)",
+                      "encoding": "mapping",
+                      "numberOfBytes": "32",
+                      "key": {
+                        "label": "address",
+                        "encoding": "inplace",
+                        "numberOfBytes": "20"
+                      },
+                      "value": {
+                        "label": "uint256",
+                        "encoding": "inplace",
+                        "numberOfBytes": "32"
+                      }
+                    }
+                  },
+                  {
+                    "label": "claimableSharesTotal",
+                    "slot": "11",
+                    "offset": 0,
+                    "type": {
+                      "label": "uint256",
+                      "encoding": "inplace",
+                      "numberOfBytes": "32"
+                    }
+                  },
+                  {
+                    "label": "claimExpiry",
+                    "slot": "12",
+                    "offset": 0,
+                    "type": {
+                      "label": "uint64",
+                      "encoding": "inplace",
+                      "numberOfBytes": "8"
+                    }
+                  },
+                  {
+                    "label": "headSweepLimit",
+                    "slot": "13",
+                    "offset": 0,
+                    "type": {
+                      "label": "uint256",
+                      "encoding": "inplace",
+                      "numberOfBytes": "32"
+                    }
+                  },
+                  {
+                    "label": "autoProcessMax",
+                    "slot": "14",
+                    "offset": 0,
+                    "type": {
+                      "label": "uint256",
+                      "encoding": "inplace",
+                      "numberOfBytes": "32"
+                    }
+                  },
+                  {
+                    "label": "seqInBlock",
+                    "slot": "15",
+                    "offset": 0,
+                    "type": {
+                      "label": "uint64",
+                      "encoding": "inplace",
+                      "numberOfBytes": "8"
+                    }
+                  },
+                  {
+                    "label": "seqTimestamp",
+                    "slot": "15",
+                    "offset": 8,
+                    "type": {
+                      "label": "uint64",
+                      "encoding": "inplace",
+                      "numberOfBytes": "8"
+                    }
+                  },
+                  {
+                    "label": "nonces",
+                    "slot": "16",
+                    "offset": 0,
+                    "type": {
+                      "label": "mapping(address => uint256)",
+                      "encoding": "mapping",
+                      "numberOfBytes": "32",
+                      "key": {
+                        "label": "address",
+                        "encoding": "inplace",
+                        "numberOfBytes": "20"
+                      },
+                      "value": {
+                        "label": "uint256",
+                        "encoding": "inplace",
+                        "numberOfBytes": "32"
+                      }
+                    }
+                  },
+                  {
+                    "label": "domainSeparator",
+                    "slot": "17",
+                    "offset": 0,
+                    "type": {
+                      "label": "bytes32",
+                      "encoding": "inplace",
+                      "numberOfBytes": "32"
+                    }
+                  },
+                  {
+                    "label": "hashedName",
+                    "slot": "18",
+                    "offset": 0,
+                    "type": {
+                      "label": "bytes32",
+                      "encoding": "inplace",
+                      "numberOfBytes": "32"
+                    }
+                  },
+                  {
+                    "label": "hashedVersion",
+                    "slot": "19",
+                    "offset": 0,
+                    "type": {
+                      "label": "bytes32",
+                      "encoding": "inplace",
+                      "numberOfBytes": "32"
+                    }
+                  },
+                  {
+                    "label": "cachedChainId",
+                    "slot": "20",
+                    "offset": 0,
+                    "type": {
+                      "label": "uint256",
+                      "encoding": "inplace",
+                      "numberOfBytes": "32"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "label": "fm",
+              "slot": "22",
+              "offset": 0,
+              "type": {
+                "label": "struct LibAppStorage.FundManagerStorage",
+                "encoding": "inplace",
+                "numberOfBytes": "224",
+                "members": [
+                  {
+                    "label": "cygld",
+                    "slot": "0",
+                    "offset": 0,
+                    "type": {
+                      "label": "address",
+                      "encoding": "inplace",
+                      "numberOfBytes": "20"
+                    }
+                  },
+                  {
+                    "label": "treasury",
+                    "slot": "1",
+                    "offset": 0,
+                    "type": {
+                      "label": "address",
+                      "encoding": "inplace",
+                      "numberOfBytes": "20"
+                    }
+                  },
+                  {
+                    "label": "performanceFeePpm",
+                    "slot": "2",
+                    "offset": 0,
+                    "type": {
+                      "label": "uint256",
+                      "encoding": "inplace",
+                      "numberOfBytes": "32"
+                    }
+                  },
+                  {
+                    "label": "principalPerAsset",
+                    "slot": "3",
+                    "offset": 0,
+                    "type": {
+                      "label": "mapping(address => uint256)",
+                      "encoding": "mapping",
+                      "numberOfBytes": "32",
+                      "key": {
+                        "label": "address",
+                        "encoding": "inplace",
+                        "numberOfBytes": "20"
+                      },
+                      "value": {
+                        "label": "uint256",
+                        "encoding": "inplace",
+                        "numberOfBytes": "32"
+                      }
+                    }
+                  },
+                  {
+                    "label": "sleeves",
+                    "slot": "4",
+                    "offset": 0,
+                    "type": {
+                      "label": "mapping(address => struct LibAppStorage.SleeveConfig)",
+                      "encoding": "mapping",
+                      "numberOfBytes": "32",
+                      "key": {
+                        "label": "address",
+                        "encoding": "inplace",
+                        "numberOfBytes": "20"
+                      },
+                      "value": {
+                        "label": "struct LibAppStorage.SleeveConfig",
+                        "encoding": "inplace",
+                        "numberOfBytes": "64",
+                        "members": [
+                          {
+                            "label": "registered",
+                            "slot": "0",
+                            "offset": 0,
+                            "type": {
+                              "label": "bool",
+                              "encoding": "inplace",
+                              "numberOfBytes": "1"
+                            }
+                          },
+                          {
+                            "label": "approved",
+                            "slot": "0",
+                            "offset": 1,
+                            "type": {
+                              "label": "bool",
+                              "encoding": "inplace",
+                              "numberOfBytes": "1"
+                            }
+                          },
+                          {
+                            "label": "asset",
+                            "slot": "0",
+                            "offset": 2,
+                            "type": {
+                              "label": "address",
+                              "encoding": "inplace",
+                              "numberOfBytes": "20"
+                            }
+                          },
+                          {
+                            "label": "principalAssets",
+                            "slot": "1",
+                            "offset": 0,
+                            "type": {
+                              "label": "uint256",
+                              "encoding": "inplace",
+                              "numberOfBytes": "32"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "label": "registeredSleeves",
+                    "slot": "5",
+                    "offset": 0,
+                    "type": {
+                      "label": "address[]",
+                      "encoding": "dynamic_array",
+                      "numberOfBytes": "32",
+                      "base": {
+                        "label": "address",
+                        "encoding": "inplace",
+                        "numberOfBytes": "20"
+                      }
+                    }
+                  },
+                  {
+                    "label": "swapAdapter",
+                    "slot": "6",
+                    "offset": 0,
+                    "type": {
+                      "label": "address",
+                      "encoding": "inplace",
+                      "numberOfBytes": "20"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "sha256": "b5d6fb8ec02d15ab7048c4a650174c93db703050f10e1c98cb7f26ec04ae9226"
+      },
+      "storagePointerUses": [
+        {
+          "source": "packages/3_staking/src/diamond/LibAppStorage.sol",
+          "function": "appStorage",
+          "line": "91"
+        }
+      ]
+    },
+    {
+      "namespace": "cybergold.staking.atomic.launch",
+      "formula": "erc7201",
+      "slot": "0xaf998c30b6bf758887c4f7ae3b9979a4920a749d595a880ba4118393868a6f00",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "staking"
+      ],
+      "declarations": [
+        "packages/3_staking/src/libraries/LibStakingLaunch.sol#STORAGE_SLOT"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct LibStakingLaunch.Layout",
+        "tree": {
+          "label": "struct LibStakingLaunch.Layout",
+          "encoding": "inplace",
+          "numberOfBytes": "160",
+          "members": [
+            {
+              "label": "phase",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "enum LibStakingLaunch.Phase",
+                "encoding": "inplace",
+                "numberOfBytes": "1"
+              }
+            },
+            {
+              "label": "commitment",
+              "slot": "1",
+              "offset": 0,
+              "type": {
+                "label": "bytes32",
+                "encoding": "inplace",
+                "numberOfBytes": "32"
+              }
+            },
+            {
+              "label": "activePayloadHash",
+              "slot": "2",
+              "offset": 0,
+              "type": {
+                "label": "bytes32",
+                "encoding": "inplace",
+                "numberOfBytes": "32"
+              }
+            },
+            {
+              "label": "finalizationHash",
+              "slot": "3",
+              "offset": 0,
+              "type": {
+                "label": "bytes32",
+                "encoding": "inplace",
+                "numberOfBytes": "32"
+              }
+            },
+            {
+              "label": "finalizerFacet",
+              "slot": "4",
+              "offset": 0,
+              "type": {
+                "label": "address",
+                "encoding": "inplace",
+                "numberOfBytes": "20"
+              }
+            }
+          ]
+        },
+        "sha256": "b53ca17e72a7923b1341624bf6cfefcda730e736b48913dfc920158e65ecd482"
+      },
+      "storagePointerUses": [
+        {
+          "source": "packages/3_staking/src/libraries/LibStakingLaunch.sol",
+          "function": "getLayout",
+          "line": "32"
+        }
+      ]
+    },
+    {
+      "namespace": "openzeppelin.storage.AccessControlEnumerable",
+      "formula": "erc7201",
+      "slot": "0xc1f6fe24621ce81ec5827caf0253cadb74709b061630e6b55e82371705932000",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "core",
+        "governance",
+        "staking"
+      ],
+      "declarations": [
+        "lib/openzeppelin-contracts-upgradeable/contracts/access/extensions/AccessControlEnumerableUpgradeable.sol#AccessControlEnumerableStorageLocation"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct AccessControlEnumerableUpgradeable.AccessControlEnumerableStorage",
+        "tree": {
+          "label": "struct AccessControlEnumerableUpgradeable.AccessControlEnumerableStorage",
+          "encoding": "inplace",
+          "numberOfBytes": "32",
+          "members": [
+            {
+              "label": "_roleMembers",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "mapping(bytes32 => struct EnumerableSet.AddressSet)",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "bytes32",
+                  "encoding": "inplace",
+                  "numberOfBytes": "32"
+                },
+                "value": {
+                  "label": "struct EnumerableSet.AddressSet",
+                  "encoding": "inplace",
+                  "numberOfBytes": "64",
+                  "members": [
+                    {
+                      "label": "_inner",
+                      "slot": "0",
+                      "offset": 0,
+                      "type": {
+                        "label": "struct EnumerableSet.Set",
+                        "encoding": "inplace",
+                        "numberOfBytes": "64",
+                        "members": [
+                          {
+                            "label": "_values",
+                            "slot": "0",
+                            "offset": 0,
+                            "type": {
+                              "label": "bytes32[]",
+                              "encoding": "dynamic_array",
+                              "numberOfBytes": "32",
+                              "base": {
+                                "label": "bytes32",
+                                "encoding": "inplace",
+                                "numberOfBytes": "32"
+                              }
+                            }
+                          },
+                          {
+                            "label": "_positions",
+                            "slot": "1",
+                            "offset": 0,
+                            "type": {
+                              "label": "mapping(bytes32 => uint256)",
+                              "encoding": "mapping",
+                              "numberOfBytes": "32",
+                              "key": {
+                                "label": "bytes32",
+                                "encoding": "inplace",
+                                "numberOfBytes": "32"
+                              },
+                              "value": {
+                                "label": "uint256",
+                                "encoding": "inplace",
+                                "numberOfBytes": "32"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "sha256": "747642611f100299dcb95972e4bf4b37b7be2f0fc058cf5135595b3b0832f83d"
+      },
+      "storagePointerUses": [
+        {
+          "source": "lib/openzeppelin-contracts-upgradeable/contracts/access/extensions/AccessControlEnumerableUpgradeable.sol",
+          "function": "_getAccessControlEnumerableStorage",
+          "line": "27"
+        }
+      ]
+    },
+    {
+      "namespace": "diamond.standard.diamond.storage",
+      "formula": "keccak256-string",
+      "slot": "0xc8fcad8db84d3cc18b4c41d551ea0ee66dd599cde068d998e57d5e09332c131c",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "core",
+        "governance",
+        "staking"
+      ],
+      "declarations": [
+        "lib/diamond-1-hardhat/contracts/libraries/LibDiamond.sol#DIAMOND_STORAGE_POSITION",
+        "packages/1_core/src/migration/CoreDiamondCutMigrationFacet.sol#DIAMOND_STORAGE_POSITION"
+      ],
+      "aliases": [
+        {
+          "alias": "packages/1_core/src/migration/CoreDiamondCutMigrationFacet.sol#DIAMOND_STORAGE_POSITION",
+          "canonical": "lib/diamond-1-hardhat/contracts/libraries/LibDiamond.sol#DIAMOND_STORAGE_POSITION"
+        }
+      ],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct LibDiamond.DiamondStorage",
+        "tree": {
+          "label": "struct LibDiamond.DiamondStorage",
+          "encoding": "inplace",
+          "numberOfBytes": "128",
+          "members": [
+            {
+              "label": "facetAddressAndSelectorPosition",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "mapping(bytes4 => struct LibDiamond.FacetAddressAndSelectorPosition)",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "bytes4",
+                  "encoding": "inplace",
+                  "numberOfBytes": "4"
+                },
+                "value": {
+                  "label": "struct LibDiamond.FacetAddressAndSelectorPosition",
+                  "encoding": "inplace",
+                  "numberOfBytes": "32",
+                  "members": [
+                    {
+                      "label": "facetAddress",
+                      "slot": "0",
+                      "offset": 0,
+                      "type": {
+                        "label": "address",
+                        "encoding": "inplace",
+                        "numberOfBytes": "20"
+                      }
+                    },
+                    {
+                      "label": "selectorPosition",
+                      "slot": "0",
+                      "offset": 20,
+                      "type": {
+                        "label": "uint16",
+                        "encoding": "inplace",
+                        "numberOfBytes": "2"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "label": "selectors",
+              "slot": "1",
+              "offset": 0,
+              "type": {
+                "label": "bytes4[]",
+                "encoding": "dynamic_array",
+                "numberOfBytes": "32",
+                "base": {
+                  "label": "bytes4",
+                  "encoding": "inplace",
+                  "numberOfBytes": "4"
+                }
+              }
+            },
+            {
+              "label": "supportedInterfaces",
+              "slot": "2",
+              "offset": 0,
+              "type": {
+                "label": "mapping(bytes4 => bool)",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "bytes4",
+                  "encoding": "inplace",
+                  "numberOfBytes": "4"
+                },
+                "value": {
+                  "label": "bool",
+                  "encoding": "inplace",
+                  "numberOfBytes": "1"
+                }
+              }
+            },
+            {
+              "label": "contractOwner",
+              "slot": "3",
+              "offset": 0,
+              "type": {
+                "label": "address",
+                "encoding": "inplace",
+                "numberOfBytes": "20"
+              }
+            }
+          ]
+        },
+        "sha256": "6a07a48ccf2066c0a2f2a8215415d38fc82f7149a8bdedeaf10ac09b733277fb"
+      },
+      "storagePointerUses": [
+        {
+          "source": "lib/diamond-1-hardhat/contracts/Diamond.sol",
+          "function": "fallback",
+          "line": "44"
+        },
+        {
+          "source": "lib/diamond-1-hardhat/contracts/libraries/LibDiamond.sol",
+          "function": "diamondStorage",
+          "line": "49"
+        },
+        {
+          "source": "packages/0_shared/src/diamond/ProtocolDiamond.sol",
+          "function": "fallback",
+          "line": "31"
+        }
+      ]
+    },
+    {
+      "namespace": "cybergold.init.context",
+      "formula": "literal",
+      "slot": "0xcbb2ce56a049a64c9c08535426fc3e60a12a71c4d714a6454bc239b37e97e32d",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "core",
+        "governance",
+        "staking"
+      ],
+      "declarations": [
+        "packages/0_shared/src/helpers/InitContext.sol#INIT_CONTEXT_SLOT"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "bool",
+        "tree": {
+          "label": "bool",
+          "encoding": "inplace",
+          "numberOfBytes": "1"
+        },
+        "sha256": "83d8a557cca968e25209ba68aa20b8425ed33f56a1c99005574070523c482a7e"
+      },
+      "storagePointerUses": []
+    },
+    {
+      "namespace": "openzeppelin.storage.Pausable",
+      "formula": "erc7201",
+      "slot": "0xcd5ed15c6e187e77e9aee88184c21f4f2182ab5827cb3b7e07fbedcd63f03300",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "core",
+        "governance",
+        "staking"
+      ],
+      "declarations": [
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/PausableUpgradeable.sol#PausableStorageLocation"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct PausableUpgradeable.PausableStorage",
+        "tree": {
+          "label": "struct PausableUpgradeable.PausableStorage",
+          "encoding": "inplace",
+          "numberOfBytes": "32",
+          "members": [
+            {
+              "label": "_paused",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "bool",
+                "encoding": "inplace",
+                "numberOfBytes": "1"
+              }
+            }
+          ]
+        },
+        "sha256": "2a829c9d8e71517116e6cd01db350cb07110f20a10ef7c903c53165313a3a1fe"
+      },
+      "storagePointerUses": [
+        {
+          "source": "lib/openzeppelin-contracts-upgradeable/contracts/utils/PausableUpgradeable.sol",
+          "function": "_getPausableStorage",
+          "line": "28"
+        }
+      ]
+    },
+    {
+      "namespace": "cybergold.core.app.storage.v2",
+      "formula": "keccak256-string",
+      "slot": "0xdd08e88ea05e62d6ee9945c333b5650cf644c3aaf1bff03f5da22efc622d35f7",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "core"
+      ],
+      "declarations": [
+        "packages/1_core/src/diamond/LibAppStorage.sol#APP_STORAGE_POSITION"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct LibAppStorage.AppStorage",
+        "tree": {
+          "label": "struct LibAppStorage.AppStorage",
+          "encoding": "inplace",
+          "numberOfBytes": "288",
+          "members": [
+            {
+              "label": "controller",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "struct LibAppStorage.ControllerStorage",
+                "encoding": "inplace",
+                "numberOfBytes": "288",
+                "members": [
+                  {
+                    "label": "treasury",
+                    "slot": "0",
+                    "offset": 0,
+                    "type": {
+                      "label": "address",
+                      "encoding": "inplace",
+                      "numberOfBytes": "20"
+                    }
+                  },
+                  {
+                    "label": "issuanceFeePpm",
+                    "slot": "1",
+                    "offset": 0,
+                    "type": {
+                      "label": "uint256",
+                      "encoding": "inplace",
+                      "numberOfBytes": "32"
+                    }
+                  },
+                  {
+                    "label": "redemptionFeePpm",
+                    "slot": "2",
+                    "offset": 0,
+                    "type": {
+                      "label": "uint256",
+                      "encoding": "inplace",
+                      "numberOfBytes": "32"
+                    }
+                  },
+                  {
+                    "label": "basketAssets",
+                    "slot": "3",
+                    "offset": 0,
+                    "type": {
+                      "label": "address[]",
+                      "encoding": "dynamic_array",
+                      "numberOfBytes": "32",
+                      "base": {
+                        "label": "address",
+                        "encoding": "inplace",
+                        "numberOfBytes": "20"
+                      }
+                    }
+                  },
+                  {
+                    "label": "basketTargetsPpm",
+                    "slot": "4",
+                    "offset": 0,
+                    "type": {
+                      "label": "uint256[]",
+                      "encoding": "dynamic_array",
+                      "numberOfBytes": "32",
+                      "base": {
+                        "label": "uint256",
+                        "encoding": "inplace",
+                        "numberOfBytes": "32"
+                      }
+                    }
+                  },
+                  {
+                    "label": "cygldRefGramsFp18",
+                    "slot": "5",
+                    "offset": 0,
+                    "type": {
+                      "label": "uint256",
+                      "encoding": "inplace",
+                      "numberOfBytes": "32"
+                    }
+                  },
+                  {
+                    "label": "basketGoldRefGramsFp18",
+                    "slot": "6",
+                    "offset": 0,
+                    "type": {
+                      "label": "uint256[]",
+                      "encoding": "dynamic_array",
+                      "numberOfBytes": "32",
+                      "base": {
+                        "label": "uint256",
+                        "encoding": "inplace",
+                        "numberOfBytes": "32"
+                      }
+                    }
+                  },
+                  {
+                    "label": "basketCygldPerUnitFp18",
+                    "slot": "7",
+                    "offset": 0,
+                    "type": {
+                      "label": "uint256[]",
+                      "encoding": "dynamic_array",
+                      "numberOfBytes": "32",
+                      "base": {
+                        "label": "uint256",
+                        "encoding": "inplace",
+                        "numberOfBytes": "32"
+                      }
+                    }
+                  },
+                  {
+                    "label": "maxTotalSupply",
+                    "slot": "8",
+                    "offset": 0,
+                    "type": {
+                      "label": "uint256",
+                      "encoding": "inplace",
+                      "numberOfBytes": "32"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "sha256": "71df8e671a37696862afef8061d0cf5d4d8f0b7324d4434681c91f2d7a46bdc4"
+      },
+      "storagePointerUses": [
+        {
+          "source": "packages/1_core/src/diamond/LibAppStorage.sol",
+          "function": "appStorage",
+          "line": "37"
+        }
+      ]
+    },
+    {
+      "namespace": "openzeppelin.storage.Votes",
+      "formula": "erc7201",
+      "slot": "0xe8b26c30fad74198956032a3533d903385d56dd795af560196f9c78d4af40d00",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "governance"
+      ],
+      "declarations": [
+        "lib/openzeppelin-contracts-upgradeable/contracts/governance/utils/VotesUpgradeable.sol#VotesStorageLocation"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct VotesUpgradeable.VotesStorage",
+        "tree": {
+          "label": "struct VotesUpgradeable.VotesStorage",
+          "encoding": "inplace",
+          "numberOfBytes": "96",
+          "members": [
+            {
+              "label": "_delegatee",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "mapping(address => address)",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "address",
+                  "encoding": "inplace",
+                  "numberOfBytes": "20"
+                },
+                "value": {
+                  "label": "address",
+                  "encoding": "inplace",
+                  "numberOfBytes": "20"
+                }
+              }
+            },
+            {
+              "label": "_delegateCheckpoints",
+              "slot": "1",
+              "offset": 0,
+              "type": {
+                "label": "mapping(address => struct Checkpoints.Trace208)",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "address",
+                  "encoding": "inplace",
+                  "numberOfBytes": "20"
+                },
+                "value": {
+                  "label": "struct Checkpoints.Trace208",
+                  "encoding": "inplace",
+                  "numberOfBytes": "32",
+                  "members": [
+                    {
+                      "label": "_checkpoints",
+                      "slot": "0",
+                      "offset": 0,
+                      "type": {
+                        "label": "struct Checkpoints.Checkpoint208[]",
+                        "encoding": "dynamic_array",
+                        "numberOfBytes": "32",
+                        "base": {
+                          "label": "struct Checkpoints.Checkpoint208",
+                          "encoding": "inplace",
+                          "numberOfBytes": "32",
+                          "members": [
+                            {
+                              "label": "_key",
+                              "slot": "0",
+                              "offset": 0,
+                              "type": {
+                                "label": "uint48",
+                                "encoding": "inplace",
+                                "numberOfBytes": "6"
+                              }
+                            },
+                            {
+                              "label": "_value",
+                              "slot": "0",
+                              "offset": 6,
+                              "type": {
+                                "label": "uint208",
+                                "encoding": "inplace",
+                                "numberOfBytes": "26"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "label": "_totalCheckpoints",
+              "slot": "2",
+              "offset": 0,
+              "type": {
+                "label": "struct Checkpoints.Trace208",
+                "encoding": "inplace",
+                "numberOfBytes": "32",
+                "members": [
+                  {
+                    "label": "_checkpoints",
+                    "slot": "0",
+                    "offset": 0,
+                    "type": {
+                      "label": "struct Checkpoints.Checkpoint208[]",
+                      "encoding": "dynamic_array",
+                      "numberOfBytes": "32",
+                      "base": {
+                        "label": "struct Checkpoints.Checkpoint208",
+                        "encoding": "inplace",
+                        "numberOfBytes": "32",
+                        "members": [
+                          {
+                            "label": "_key",
+                            "slot": "0",
+                            "offset": 0,
+                            "type": {
+                              "label": "uint48",
+                              "encoding": "inplace",
+                              "numberOfBytes": "6"
+                            }
+                          },
+                          {
+                            "label": "_value",
+                            "slot": "0",
+                            "offset": 6,
+                            "type": {
+                              "label": "uint208",
+                              "encoding": "inplace",
+                              "numberOfBytes": "26"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "sha256": "41d46e9d053060214f9d6f63bb0e7da95d6aecee805cdc251abbf82e6849a7f6"
+      },
+      "storagePointerUses": [
+        {
+          "source": "lib/openzeppelin-contracts-upgradeable/contracts/governance/utils/VotesUpgradeable.sol",
+          "function": "_getVotesStorage",
+          "line": "54"
+        }
+      ]
+    },
+    {
+      "namespace": "openzeppelin.storage.AccessControlDefaultAdminRules",
+      "formula": "erc7201",
+      "slot": "0xeef3dac4538c82c8ace4063ab0acd2d15cdb5883aa1dff7c2673abb3d8698400",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "core",
+        "governance",
+        "staking"
+      ],
+      "declarations": [
+        "lib/openzeppelin-contracts-upgradeable/contracts/access/extensions/AccessControlDefaultAdminRulesUpgradeable.sol#AccessControlDefaultAdminRulesStorageLocation"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct AccessControlDefaultAdminRulesUpgradeable.AccessControlDefaultAdminRulesStorage",
+        "tree": {
+          "label": "struct AccessControlDefaultAdminRulesUpgradeable.AccessControlDefaultAdminRulesStorage",
+          "encoding": "inplace",
+          "numberOfBytes": "64",
+          "members": [
+            {
+              "label": "_pendingDefaultAdmin",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "address",
+                "encoding": "inplace",
+                "numberOfBytes": "20"
+              }
+            },
+            {
+              "label": "_pendingDefaultAdminSchedule",
+              "slot": "0",
+              "offset": 20,
+              "type": {
+                "label": "uint48",
+                "encoding": "inplace",
+                "numberOfBytes": "6"
+              }
+            },
+            {
+              "label": "_currentDelay",
+              "slot": "0",
+              "offset": 26,
+              "type": {
+                "label": "uint48",
+                "encoding": "inplace",
+                "numberOfBytes": "6"
+              }
+            },
+            {
+              "label": "_currentDefaultAdmin",
+              "slot": "1",
+              "offset": 0,
+              "type": {
+                "label": "address",
+                "encoding": "inplace",
+                "numberOfBytes": "20"
+              }
+            },
+            {
+              "label": "_pendingDelay",
+              "slot": "1",
+              "offset": 20,
+              "type": {
+                "label": "uint48",
+                "encoding": "inplace",
+                "numberOfBytes": "6"
+              }
+            },
+            {
+              "label": "_pendingDelaySchedule",
+              "slot": "1",
+              "offset": 26,
+              "type": {
+                "label": "uint48",
+                "encoding": "inplace",
+                "numberOfBytes": "6"
+              }
+            }
+          ]
+        },
+        "sha256": "b7c5845894b3f293f9f1c2e4a3f262034969e49df34725cf5f05aa31e3b1bdb2"
+      },
+      "storagePointerUses": [
+        {
+          "source": "lib/openzeppelin-contracts-upgradeable/contracts/access/extensions/AccessControlDefaultAdminRulesUpgradeable.sol",
+          "function": "_getAccessControlDefaultAdminRulesStorage",
+          "line": "62"
+        }
+      ]
+    },
+    {
+      "namespace": "openzeppelin.storage.Initializable",
+      "formula": "erc7201",
+      "slot": "0xf0c57e16840df040f15088dc2f81fe391c3923bec73e23a9662efc9c229c6a00",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "core",
+        "governance",
+        "staking"
+      ],
+      "declarations": [
+        "lib/openzeppelin-contracts/contracts/proxy/utils/Initializable.sol#INITIALIZABLE_STORAGE"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct Initializable.InitializableStorage",
+        "tree": {
+          "label": "struct Initializable.InitializableStorage",
+          "encoding": "inplace",
+          "numberOfBytes": "32",
+          "members": [
+            {
+              "label": "_initialized",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "uint64",
+                "encoding": "inplace",
+                "numberOfBytes": "8"
+              }
+            },
+            {
+              "label": "_initializing",
+              "slot": "0",
+              "offset": 8,
+              "type": {
+                "label": "bool",
+                "encoding": "inplace",
+                "numberOfBytes": "1"
+              }
+            }
+          ]
+        },
+        "sha256": "397a227157b79abeaa99a82c12ca78dedbc769487e5c5eaa1a4678d4877bd179"
+      },
+      "storagePointerUses": [
+        {
+          "source": "lib/openzeppelin-contracts/contracts/proxy/utils/Initializable.sol",
+          "function": "_getInitializableStorage",
+          "line": "234"
+        }
+      ]
+    },
+    {
+      "namespace": "cybergold.governance.policy.storage",
+      "formula": "keccak256-string",
+      "slot": "0xf46cb26f842ba9df25b89f527955756ae69338644cf9a49e6bd285d106a40bdd",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "governance"
+      ],
+      "declarations": [
+        "packages/2_governance/src/libraries/LibGovernorPolicy.sol#STORAGE_POSITION"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct LibGovernorPolicy.PolicyStorage",
+        "tree": {
+          "label": "struct LibGovernorPolicy.PolicyStorage",
+          "encoding": "inplace",
+          "numberOfBytes": "32",
+          "members": [
+            {
+              "label": "votingDelay",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "uint48",
+                "encoding": "inplace",
+                "numberOfBytes": "6"
+              }
+            },
+            {
+              "label": "executionDelay",
+              "slot": "0",
+              "offset": 6,
+              "type": {
+                "label": "uint48",
+                "encoding": "inplace",
+                "numberOfBytes": "6"
+              }
+            },
+            {
+              "label": "executionGracePeriod",
+              "slot": "0",
+              "offset": 12,
+              "type": {
+                "label": "uint48",
+                "encoding": "inplace",
+                "numberOfBytes": "6"
+              }
+            },
+            {
+              "label": "votingPeriod",
+              "slot": "0",
+              "offset": 18,
+              "type": {
+                "label": "uint32",
+                "encoding": "inplace",
+                "numberOfBytes": "4"
+              }
+            },
+            {
+              "label": "proposalThresholdNumerator",
+              "slot": "0",
+              "offset": 22,
+              "type": {
+                "label": "uint32",
+                "encoding": "inplace",
+                "numberOfBytes": "4"
+              }
+            },
+            {
+              "label": "quorumNumerator",
+              "slot": "0",
+              "offset": 26,
+              "type": {
+                "label": "uint8",
+                "encoding": "inplace",
+                "numberOfBytes": "1"
+              }
+            }
+          ]
+        },
+        "sha256": "4b75053af896f08cbb1875955fe3a77556f0b04d601d9ee4c077a3d1194e5f5d"
+      },
+      "storagePointerUses": [
+        {
+          "source": "packages/2_governance/src/libraries/LibGovernorPolicy.sol",
+          "function": "policyStorage",
+          "line": "22"
+        }
+      ]
+    },
+    {
+      "namespace": "cybergold.core.reserve-lifecycle.storage.v1",
+      "formula": "erc7201",
+      "slot": "0xfae32cdf893d4572f8f24b8f81455fdd935e54a7d0ca9330a89269db42408c00",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "core"
+      ],
+      "declarations": [
+        "packages/1_core/src/libraries/LibReserveLifecycleStorage.sol#STORAGE_LOCATION"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct LibReserveLifecycleStorage.Layout",
+        "tree": {
+          "label": "struct LibReserveLifecycleStorage.Layout",
+          "encoding": "inplace",
+          "numberOfBytes": "32",
+          "members": [
+            {
+              "label": "records",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "mapping(address => struct LibReserveLifecycleStorage.ReserveLifecycleRecord)",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "address",
+                  "encoding": "inplace",
+                  "numberOfBytes": "20"
+                },
+                "value": {
+                  "label": "struct LibReserveLifecycleStorage.ReserveLifecycleRecord",
+                  "encoding": "inplace",
+                  "numberOfBytes": "64",
+                  "members": [
+                    {
+                      "label": "lifecycle",
+                      "slot": "0",
+                      "offset": 0,
+                      "type": {
+                        "label": "enum IRecoveryTypes.ReserveLifecycle",
+                        "encoding": "inplace",
+                        "numberOfBytes": "1"
+                      }
+                    },
+                    {
+                      "label": "exitEntitlementRaw",
+                      "slot": "1",
+                      "offset": 0,
+                      "type": {
+                        "label": "uint256",
+                        "encoding": "inplace",
+                        "numberOfBytes": "32"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "sha256": "11811a2ec4e2f969ab22d6ce9e8fb9ebd2408ae4cc19c3940ea1a06679ce02a7"
+      },
+      "storagePointerUses": [
+        {
+          "source": "packages/1_core/src/libraries/LibReserveLifecycleStorage.sol",
+          "function": "getLayout",
+          "line": "29"
+        }
+      ]
+    },
+    {
+      "namespace": "cybergold.validated.diamond.cut.state",
+      "formula": "literal",
+      "slot": "0xfef9e0d4830ecb9885f5f0122b2da44d5685ac964d58d6fbe52ef636cf84be43",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "core",
+        "governance",
+        "staking"
+      ],
+      "declarations": [
+        "packages/0_shared/src/helpers/LiveValidatedDiamondCut.sol#LIVE_VALIDATED_DIAMOND_CUT_STATE_SLOT",
+        "packages/0_shared/src/helpers/ValidatedDiamondCut.sol#VALIDATED_DIAMOND_CUT_STATE_SLOT",
+        "packages/1_core/src/migration/CoreDiamondCutMigrationFacet.sol#VALIDATED_DIAMOND_CUT_STATE_SLOT"
+      ],
+      "aliases": [
+        {
+          "alias": "packages/0_shared/src/helpers/LiveValidatedDiamondCut.sol#LIVE_VALIDATED_DIAMOND_CUT_STATE_SLOT",
+          "canonical": "packages/0_shared/src/helpers/ValidatedDiamondCut.sol#VALIDATED_DIAMOND_CUT_STATE_SLOT"
+        },
+        {
+          "alias": "packages/1_core/src/migration/CoreDiamondCutMigrationFacet.sol#VALIDATED_DIAMOND_CUT_STATE_SLOT",
+          "canonical": "packages/0_shared/src/helpers/ValidatedDiamondCut.sol#VALIDATED_DIAMOND_CUT_STATE_SLOT"
+        }
+      ],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct ValidatedDiamondCut.UpgradeState",
+        "tree": {
+          "label": "struct ValidatedDiamondCut.UpgradeState",
+          "encoding": "inplace",
+          "numberOfBytes": "32",
+          "members": [
+            {
+              "label": "active",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "bool",
+                "encoding": "inplace",
+                "numberOfBytes": "1"
+              }
+            }
+          ]
+        },
+        "sha256": "6f1ffd785bc7d97b7307e4cccd044dbd9e8a5c0af01f22172a879054ad6d23a6"
+      },
+      "storagePointerUses": [
+        {
+          "source": "packages/0_shared/src/helpers/LiveValidatedDiamondCut.sol",
+          "function": "_upgradeState",
+          "line": "671"
+        },
+        {
+          "source": "packages/0_shared/src/helpers/ValidatedDiamondCut.sol",
+          "function": "_upgradeState",
+          "line": "312"
+        },
+        {
+          "source": "packages/1_core/src/migration/CoreDiamondCutMigrationFacet.sol",
+          "function": "_upgradeState",
+          "line": "458"
+        }
+      ]
+    },
+    {
+      "namespace": "cybergold.interface.selector.manifests",
+      "formula": "keccak256-string",
+      "slot": "0xff092d620461098e263264e3201620767bd3639a1424ca912571a18d26f5966e",
+      "storageDomain": "persistent",
+      "diamonds": [
+        "core",
+        "governance",
+        "staking"
+      ],
+      "declarations": [
+        "packages/0_shared/src/libraries/LibInterfaceInvariant.sol#INTERFACE_SELECTOR_MANIFESTS_SLOT"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "struct LibInterfaceInvariant.Layout",
+        "tree": {
+          "label": "struct LibInterfaceInvariant.Layout",
+          "encoding": "inplace",
+          "numberOfBytes": "96",
+          "members": [
+            {
+              "label": "interfaceIds",
+              "slot": "0",
+              "offset": 0,
+              "type": {
+                "label": "bytes4[]",
+                "encoding": "dynamic_array",
+                "numberOfBytes": "32",
+                "base": {
+                  "label": "bytes4",
+                  "encoding": "inplace",
+                  "numberOfBytes": "4"
+                }
+              }
+            },
+            {
+              "label": "selectors",
+              "slot": "1",
+              "offset": 0,
+              "type": {
+                "label": "mapping(bytes4 => bytes)",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "bytes4",
+                  "encoding": "inplace",
+                  "numberOfBytes": "4"
+                },
+                "value": {
+                  "label": "bytes",
+                  "encoding": "bytes",
+                  "numberOfBytes": "32"
+                }
+              }
+            },
+            {
+              "label": "advertised",
+              "slot": "2",
+              "offset": 0,
+              "type": {
+                "label": "mapping(bytes4 => bool)",
+                "encoding": "mapping",
+                "numberOfBytes": "32",
+                "key": {
+                  "label": "bytes4",
+                  "encoding": "inplace",
+                  "numberOfBytes": "4"
+                },
+                "value": {
+                  "label": "bool",
+                  "encoding": "inplace",
+                  "numberOfBytes": "1"
+                }
+              }
+            }
+          ]
+        },
+        "sha256": "401908702a0dae2f45e8910fa3827e40a6b345a48fc7f1659746e096a7b3a034"
+      },
+      "storagePointerUses": [
+        {
+          "source": "packages/0_shared/src/libraries/LibInterfaceInvariant.sol",
+          "function": "getLayout",
+          "line": "161"
+        }
+      ]
+    },
+    {
+      "namespace": "cybergold.core.diamond-cut-migration.transient.commitment",
+      "formula": "keccak256-string",
+      "slot": "0x0dd762c654109493dd9da5293de505433971952c04d786607776b70c739876f9",
+      "storageDomain": "transient",
+      "diamonds": [
+        "core"
+      ],
+      "declarations": [
+        "packages/1_core/src/migration/LibCoreDiamondCutMigration.sol#MIGRATION_COMMITMENT_SLOT"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "bytes32",
+        "tree": {
+          "label": "bytes32",
+          "encoding": "inplace",
+          "numberOfBytes": "32"
+        },
+        "sha256": "c55cdc377823cba9b782a1a13d4cbf00e3638fc573d859cff4f8d3f464c78f5a"
+      },
+      "storagePointerUses": []
+    },
+    {
+      "namespace": "openzeppelin.storage.ReentrancyGuard",
+      "formula": "erc7201",
+      "slot": "0x9b779b17422d0df92223018b32b4d1fa46e071723d6817e2486d003becc55f00",
+      "storageDomain": "transient",
+      "diamonds": [
+        "core",
+        "governance",
+        "staking"
+      ],
+      "declarations": [
+        "lib/openzeppelin-contracts/contracts/utils/ReentrancyGuardTransient.sol#REENTRANCY_GUARD_STORAGE"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "bool",
+        "tree": {
+          "label": "bool",
+          "encoding": "inplace",
+          "numberOfBytes": "1"
+        },
+        "sha256": "83d8a557cca968e25209ba68aa20b8425ed33f56a1c99005574070523c482a7e"
+      },
+      "storagePointerUses": []
+    },
+    {
+      "namespace": "cybergold.core.facet-registry-retirement.transient.commitment",
+      "formula": "keccak256-string",
+      "slot": "0xb620cdbb4ea1eef66ba4230f6eb1b08429c5d1846482320fb04baba0dfc60a86",
+      "storageDomain": "transient",
+      "diamonds": [
+        "core"
+      ],
+      "declarations": [
+        "packages/1_core/src/migration/LibCoreDiamondCutMigration.sol#RETIREMENT_COMMITMENT_SLOT"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "bytes32",
+        "tree": {
+          "label": "bytes32",
+          "encoding": "inplace",
+          "numberOfBytes": "32"
+        },
+        "sha256": "c55cdc377823cba9b782a1a13d4cbf00e3638fc573d859cff4f8d3f464c78f5a"
+      },
+      "storagePointerUses": []
+    },
+    {
+      "namespace": "cybergold.core.optional-initializer-migration.transient.commitment",
+      "formula": "keccak256-string",
+      "slot": "0xbe848502f5493ea46ec0a5c991080f01ace7e22a5ee18b33cfbd316d1c4cc092",
+      "storageDomain": "transient",
+      "diamonds": [
+        "core"
+      ],
+      "declarations": [
+        "packages/1_core/src/migration/LibCoreOptionalInitializerMigration.sol#COMMITMENT_SLOT"
+      ],
+      "aliases": [],
+      "layout": {
+        "kind": "compiler-resolved",
+        "rootType": "bytes32",
+        "tree": {
+          "label": "bytes32",
+          "encoding": "inplace",
+          "numberOfBytes": "32"
+        },
+        "sha256": "c55cdc377823cba9b782a1a13d4cbf00e3638fc573d859cff4f8d3f464c78f5a"
+      },
+      "storagePointerUses": []
+    }
+  ]
+}

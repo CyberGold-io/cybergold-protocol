@@ -1,0 +1,2193 @@
+{
+  "schemaVersion": 1,
+  "authority": "script/config/governance-release-abi.json",
+  "contractName": "GovernanceDiamond",
+  "compiler": {
+    "version": "0.8.37+commit.f401782d",
+    "evmVersion": "osaka",
+    "optimizer": {
+      "enabled": true,
+      "runs": 100
+    }
+  },
+  "initializerIntent": {
+    "contract": "DiamondInit",
+    "source": "packages/2_governance/src/deploy/DiamondInit.sol",
+    "function": "init",
+    "stateOnlySchemaAdvancementAllowed": false,
+    "runtimeCodeHash": "0x15e6ba408d66be7e091f81841285ffa308a2d931b5cf1747230f44907690e47b",
+    "digest": "sha256:01d858ae1ec79473c7840911e634bcfd082c104115402ba6736f37c0855324b6"
+  },
+  "selectorCount": 98,
+  "interfaceId": "0x3290c796",
+  "selectors": [
+    {
+      "selector": "0x001f229b",
+      "signature": "recoveryFundTreasuryStatus()",
+      "facet": "recoveryFundLens",
+      "scope": "product"
+    },
+    {
+      "selector": "0x01ffc9a7",
+      "signature": "supportsInterface(bytes4)",
+      "facet": "loupe",
+      "scope": "base"
+    },
+    {
+      "selector": "0x02a251a3",
+      "signature": "votingPeriod()",
+      "facet": "governorSettings",
+      "scope": "product"
+    },
+    {
+      "selector": "0x06fdde03",
+      "signature": "name()",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0x07389841",
+      "signature": "upgraderRole()",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0x095ea7b3",
+      "signature": "approve(address,uint256)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x0d11c635",
+      "signature": "facetGeneration(bytes32)",
+      "facet": "cut",
+      "scope": "base"
+    },
+    {
+      "selector": "0x0f00c179",
+      "signature": "setVotingPeriod(uint32,uint32)",
+      "facet": "governorSettings",
+      "scope": "product"
+    },
+    {
+      "selector": "0x143489d0",
+      "signature": "proposalProposer(uint256)",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0x146d838b",
+      "signature": "externalCygovSupply()",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0x150b7a02",
+      "signature": "onERC721Received(address,address,uint256,bytes)",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0x18160ddd",
+      "signature": "totalSupply()",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x1f931c1c",
+      "signature": "diamondCut((address,uint8,bytes4[])[],address,bytes)",
+      "facet": "cut",
+      "scope": "base"
+    },
+    {
+      "selector": "0x23b872dd",
+      "signature": "transferFrom(address,address,uint256)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x248a9ca3",
+      "signature": "getRoleAdmin(bytes32)",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0x2656227d",
+      "signature": "execute(address[],uint256[],bytes[],bytes32)",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0x2d63f693",
+      "signature": "proposalSnapshot(uint256)",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0x2f2ff15d",
+      "signature": "grantRole(bytes32,address)",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0x313ce567",
+      "signature": "decimals()",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x327a71e7",
+      "signature": "proposalThresholdNumerator()",
+      "facet": "governorSettings",
+      "scope": "product"
+    },
+    {
+      "selector": "0x3644e515",
+      "signature": "DOMAIN_SEPARATOR()",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x36568abe",
+      "signature": "renounceRole(bytes32,address)",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0x3932abb1",
+      "signature": "votingDelay()",
+      "facet": "governorSettings",
+      "scope": "product"
+    },
+    {
+      "selector": "0x3a46b1a8",
+      "signature": "getPastVotes(address,uint256)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x3e35db1e",
+      "signature": "activateAssetRecoveryFund((address,uint64,uint256,uint256))",
+      "facet": "recoveryFund",
+      "scope": "product"
+    },
+    {
+      "selector": "0x3e4f49e6",
+      "signature": "state(uint256)",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0x3f4ba83a",
+      "signature": "unpause()",
+      "facet": "pause",
+      "scope": "base"
+    },
+    {
+      "selector": "0x43859632",
+      "signature": "hasVoted(uint256,address)",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0x441a9bd5",
+      "signature": "acquiredRecoveryShares(address)",
+      "facet": "recoveryFundLens",
+      "scope": "product"
+    },
+    {
+      "selector": "0x452115d6",
+      "signature": "cancel(address[],uint256[],bytes[],bytes32)",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0x4bf5d7e9",
+      "signature": "CLOCK_MODE()",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0x4e62da25",
+      "signature": "setVotingDelay(uint48,uint48)",
+      "facet": "governorSettings",
+      "scope": "product"
+    },
+    {
+      "selector": "0x52ef6b2c",
+      "signature": "facetAddresses()",
+      "facet": "loupe",
+      "scope": "base"
+    },
+    {
+      "selector": "0x544ffc9c",
+      "signature": "proposalVotes(uint256)",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0x54b02e3b",
+      "signature": "onRecoveryShareRedemption(address,uint256,address,uint256,uint256)",
+      "facet": "recoveryFund",
+      "scope": "product"
+    },
+    {
+      "selector": "0x54fd4d50",
+      "signature": "version()",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0x56781388",
+      "signature": "castVote(uint256,uint8)",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0x587cde1e",
+      "signature": "delegates(address)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x5aa21375",
+      "signature": "proposalExpiresAt(uint256)",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0x5c19a95c",
+      "signature": "delegate(address)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x5c975abb",
+      "signature": "paused()",
+      "facet": "pause",
+      "scope": "base"
+    },
+    {
+      "selector": "0x69c61caa",
+      "signature": "setExecutionGracePeriod(uint48,uint48)",
+      "facet": "governorSettings",
+      "scope": "product"
+    },
+    {
+      "selector": "0x6fcfff45",
+      "signature": "numCheckpoints(address)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x70a08231",
+      "signature": "balanceOf(address)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x75b24ebe",
+      "signature": "canPause(address)",
+      "facet": "pause",
+      "scope": "base"
+    },
+    {
+      "selector": "0x7a0ed627",
+      "signature": "facets()",
+      "facet": "loupe",
+      "scope": "base"
+    },
+    {
+      "selector": "0x7b1b6abf",
+      "signature": "setExecutionDelay(uint48,uint48)",
+      "facet": "governorSettings",
+      "scope": "product"
+    },
+    {
+      "selector": "0x7b3c71d3",
+      "signature": "castVoteWithReason(uint256,uint8,string)",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0x7d5e81e2",
+      "signature": "propose(address[],uint256[],bytes[],string)",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0x7ecebe00",
+      "signature": "nonces(address)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x8456cb59",
+      "signature": "pause()",
+      "facet": "pause",
+      "scope": "base"
+    },
+    {
+      "selector": "0x84b0196e",
+      "signature": "eip712Domain()",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0x8886834b",
+      "signature": "onCygldOutflow(address,address,uint256,uint256,uint256)",
+      "facet": "recoveryFund",
+      "scope": "product"
+    },
+    {
+      "selector": "0x88cfce56",
+      "signature": "safeWallet()",
+      "facet": "pause",
+      "scope": "base"
+    },
+    {
+      "selector": "0x8b257989",
+      "signature": "executionDelay()",
+      "facet": "governorSettings",
+      "scope": "product"
+    },
+    {
+      "selector": "0x8b313110",
+      "signature": "trustedRecoveryFundCore()",
+      "facet": "recoveryFundLens",
+      "scope": "product"
+    },
+    {
+      "selector": "0x8e539e8c",
+      "signature": "getPastTotalSupply(uint256)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x8ff262e3",
+      "signature": "castVoteBySig(uint256,uint8,address,bytes)",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0x9010d07c",
+      "signature": "getRoleMember(bytes32,uint256)",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0x91d14854",
+      "signature": "hasRole(bytes32,address)",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0x91ddadf4",
+      "signature": "clock()",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0x95d89b41",
+      "signature": "symbol()",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x9ab24eb0",
+      "signature": "getVotes(address)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x9cc2d2ce",
+      "signature": "setQuorumNumerator(uint8,uint8)",
+      "facet": "governorSettings",
+      "scope": "product"
+    },
+    {
+      "selector": "0xa217fddf",
+      "signature": "DEFAULT_ADMIN_ROLE()",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0xa3246ad3",
+      "signature": "getRoleMembers(bytes32)",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0xa7713a70",
+      "signature": "quorumNumerator()",
+      "facet": "governorSettings",
+      "scope": "product"
+    },
+    {
+      "selector": "0xa8f8a668",
+      "signature": "getProposalId(address[],uint256[],bytes[],bytes32)",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0xa9059cbb",
+      "signature": "transfer(address,uint256)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0xa9a95294",
+      "signature": "proposalNeedsQueuing(uint256)",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0xab58fb8e",
+      "signature": "proposalEta(uint256)",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0xadfca15e",
+      "signature": "facetFunctionSelectors(address)",
+      "facet": "loupe",
+      "scope": "base"
+    },
+    {
+      "selector": "0xb58131b0",
+      "signature": "proposalThreshold()",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0xb8b17531",
+      "signature": "setSafeWallet(address,address)",
+      "facet": "pause",
+      "scope": "base"
+    },
+    {
+      "selector": "0xbbcde2c6",
+      "signature": "previewAssetRecoveryFundPurchase(address,uint256)",
+      "facet": "recoveryFundLens",
+      "scope": "product"
+    },
+    {
+      "selector": "0xbc197c81",
+      "signature": "onERC1155BatchReceived(address,address,uint256[],uint256[],bytes)",
+      "facet": "recoveryFund",
+      "scope": "product"
+    },
+    {
+      "selector": "0xbd1ff441",
+      "signature": "treasuryWithdraw(address,address,uint256)",
+      "facet": "treasury",
+      "scope": "product"
+    },
+    {
+      "selector": "0xc01f9e37",
+      "signature": "proposalDeadline(uint256)",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0xc3cda520",
+      "signature": "delegateBySig(address,uint256,uint256,uint8,bytes32,bytes32)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0xc59057e4",
+      "signature": "hashProposal(address[],uint256[],bytes[],bytes32)",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0xc723c768",
+      "signature": "onRecoveryShareOutflow(address,address,uint256[],uint256[])",
+      "facet": "recoveryFund",
+      "scope": "product"
+    },
+    {
+      "selector": "0xc8a81e3b",
+      "signature": "onCygldApprovalChange(address,uint256,uint256,uint256,uint256)",
+      "facet": "recoveryFund",
+      "scope": "product"
+    },
+    {
+      "selector": "0xca15c873",
+      "signature": "getRoleMemberCount(bytes32)",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0xcdffacc6",
+      "signature": "facetAddress(bytes4)",
+      "facet": "loupe",
+      "scope": "base"
+    },
+    {
+      "selector": "0xd08cc542",
+      "signature": "assetRecoveryFund(address)",
+      "facet": "recoveryFundLens",
+      "scope": "product"
+    },
+    {
+      "selector": "0xd090d134",
+      "signature": "canUnpause(address)",
+      "facet": "pause",
+      "scope": "base"
+    },
+    {
+      "selector": "0xd505accf",
+      "signature": "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0xd547741f",
+      "signature": "revokeRole(bytes32,address)",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0xdd4e2ba5",
+      "signature": "COUNTING_MODE()",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0xdd62ed3e",
+      "signature": "allowance(address,address)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0xdeaaa7cc",
+      "signature": "BALLOT_TYPEHASH()",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0xeb9019d4",
+      "signature": "getVotes(address,uint256)",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0xec0a12d9",
+      "signature": "executionGracePeriod()",
+      "facet": "governorSettings",
+      "scope": "product"
+    },
+    {
+      "selector": "0xf1127ed8",
+      "signature": "checkpoints(address,uint32)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0xf23a6e61",
+      "signature": "onERC1155Received(address,address,uint256,uint256,bytes)",
+      "facet": "recoveryFund",
+      "scope": "product"
+    },
+    {
+      "selector": "0xf4c3ff58",
+      "signature": "setProposalThresholdNumerator(uint32,uint32)",
+      "facet": "governorSettings",
+      "scope": "product"
+    },
+    {
+      "selector": "0xfb999fcb",
+      "signature": "proposalQuorum(uint256)",
+      "facet": "governorCore",
+      "scope": "product"
+    },
+    {
+      "selector": "0xfc0c546a",
+      "signature": "token()",
+      "facet": "governorCore",
+      "scope": "product"
+    }
+  ],
+  "facets": [
+    {
+      "name": "cut",
+      "scope": "base",
+      "contract": "DiamondCutAccessLiveFacet",
+      "source": "packages/0_shared/src/facets/DiamondCutAccessLiveFacet.sol",
+      "selectorFunction": null,
+      "priority": null,
+      "runtime": {
+        "metadataSource": "packages/0_shared/src/facets/DiamondCutAccessLiveFacet.sol",
+        "namespaceLabel": "cybergold.upgrade.coordinator.access",
+        "namespace": "0x626b89c71ba90e51f414b53ce8377e910c80db26516176c7d6a07018b256d311",
+        "codeHash": "0xcb8844fd1fdf35869f1ee946fee684e6350b5e238cf6c722c190192f075a8dcf"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0x0d11c635",
+          "signature": "facetGeneration(bytes32)"
+        },
+        {
+          "selector": "0x1f931c1c",
+          "signature": "diamondCut((address,uint8,bytes4[])[],address,bytes)"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        }
+      ]
+    },
+    {
+      "name": "loupe",
+      "scope": "base",
+      "contract": "ProtocolDiamondLoupeFacet",
+      "source": "packages/0_shared/src/facets/ProtocolDiamondLoupeFacet.sol",
+      "selectorFunction": null,
+      "priority": null,
+      "runtime": {
+        "metadataSource": "packages/0_shared/src/facets/ProtocolDiamondLoupeFacet.sol",
+        "namespaceLabel": "cybergold.shared.diamond.loupe",
+        "namespace": "0xaa53250261304dcb78a3bd8fbe39fc4d53ef40fd5024a4a0044ee0ca6d7752ee",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0xb6a7e54bc6c7de6fb69d8a50c7726c92f0e0cdce4943d6e96fc3bdb0ca670cb8"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)"
+        },
+        {
+          "selector": "0x52ef6b2c",
+          "signature": "facetAddresses()"
+        },
+        {
+          "selector": "0x7a0ed627",
+          "signature": "facets()"
+        },
+        {
+          "selector": "0xadfca15e",
+          "signature": "facetFunctionSelectors(address)"
+        },
+        {
+          "selector": "0xcdffacc6",
+          "signature": "facetAddress(bytes4)"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Legacy facet labels are excluded when present and are never consumed by live generation policy."
+        }
+      ]
+    },
+    {
+      "name": "access",
+      "scope": "base",
+      "contract": "AccessControlFacet",
+      "source": "packages/0_shared/src/facets/AccessControlFacet.sol",
+      "selectorFunction": null,
+      "priority": null,
+      "runtime": {
+        "metadataSource": "packages/0_shared/src/facets/AccessControlFacet.sol",
+        "namespaceLabel": "openzeppelin.storage.AccessControl",
+        "namespace": "0xe9257b4db0cfec945fe652af65fa925db50849d08d52a66369133a7b647a8d5d",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0xd0b63e0ab6e2f7722be23590724ea35c8247f867d94d7abd3d9bb9310523837f"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0x07389841",
+          "signature": "upgraderRole()"
+        },
+        {
+          "selector": "0x248a9ca3",
+          "signature": "getRoleAdmin(bytes32)"
+        },
+        {
+          "selector": "0x2f2ff15d",
+          "signature": "grantRole(bytes32,address)"
+        },
+        {
+          "selector": "0x36568abe",
+          "signature": "renounceRole(bytes32,address)"
+        },
+        {
+          "selector": "0x9010d07c",
+          "signature": "getRoleMember(bytes32,uint256)"
+        },
+        {
+          "selector": "0x91d14854",
+          "signature": "hasRole(bytes32,address)"
+        },
+        {
+          "selector": "0xa217fddf",
+          "signature": "DEFAULT_ADMIN_ROLE()"
+        },
+        {
+          "selector": "0xa3246ad3",
+          "signature": "getRoleMembers(bytes32)"
+        },
+        {
+          "selector": "0xca15c873",
+          "signature": "getRoleMemberCount(bytes32)"
+        },
+        {
+          "selector": "0xd547741f",
+          "signature": "revokeRole(bytes32,address)"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Legacy facet labels are excluded when present and are never consumed by live generation policy."
+        },
+        {
+          "selector": "0x4f219f90",
+          "signature": "initAccessControl(address)",
+          "category": "explicit",
+          "reason": "Standalone initializer is delegatecall-only and absent from the runtime cut."
+        },
+        {
+          "selector": "0x5b7c1130",
+          "signature": "initAccessControlFromOuter(address)",
+          "category": "explicit",
+          "reason": "Outer-coordinator initializer is delegatecall-only and absent from the runtime cut."
+        },
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured loupe facet; access must not duplicate it."
+        }
+      ]
+    },
+    {
+      "name": "pause",
+      "scope": "base",
+      "contract": "PausableFacet",
+      "source": "packages/0_shared/src/facets/PausableFacet.sol",
+      "selectorFunction": null,
+      "priority": null,
+      "runtime": {
+        "metadataSource": "packages/0_shared/src/facets/PausableFacet.sol",
+        "namespaceLabel": "openzeppelin.storage.Pausable",
+        "namespace": "0xc25745a6f4844d6334e8c74b6186760f1eee2b95e99d9a7e545c551bc81264b2",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0x287fac67b57e4a4a062729d2a478ce45f92f7cb352f40f6304d323238b18b134"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0x3f4ba83a",
+          "signature": "unpause()"
+        },
+        {
+          "selector": "0x5c975abb",
+          "signature": "paused()"
+        },
+        {
+          "selector": "0x75b24ebe",
+          "signature": "canPause(address)"
+        },
+        {
+          "selector": "0x8456cb59",
+          "signature": "pause()"
+        },
+        {
+          "selector": "0x88cfce56",
+          "signature": "safeWallet()"
+        },
+        {
+          "selector": "0xb8b17531",
+          "signature": "setSafeWallet(address,address)"
+        },
+        {
+          "selector": "0xd090d134",
+          "signature": "canUnpause(address)"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Legacy facet labels are excluded when present and are never consumed by live generation policy."
+        },
+        {
+          "selector": "0xd9bb2fdc",
+          "signature": "initPausable(address)",
+          "category": "explicit",
+          "reason": "Standalone initializer is delegatecall-only and absent from the runtime cut."
+        },
+        {
+          "selector": "0xe5f7da7b",
+          "signature": "initPausableFromOuter(address)",
+          "category": "explicit",
+          "reason": "Outer-coordinator initializer is delegatecall-only and absent from the runtime cut."
+        }
+      ]
+    },
+    {
+      "name": "recoveryFund",
+      "scope": "product",
+      "contract": "RecoveryFundFacet",
+      "source": "packages/2_governance/src/facets/RecoveryFundFacet.sol",
+      "selectorFunction": "recoveryFundSelectors",
+      "priority": 15,
+      "runtime": {
+        "metadataSource": "packages/2_governance/src/facets/RecoveryFundFacet.sol",
+        "namespaceLabel": "cybergold.governance.recovery-fund",
+        "namespace": "0x9c5598b346191ac11668c6750ab964ad2768d4e234209eb85c2fac41a8254e93",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0x7cb03f835da6f36eea6a59149c3d492cb710963d05a5e52444ccbe7fe2005eea"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0x3e35db1e",
+          "signature": "activateAssetRecoveryFund((address,uint64,uint256,uint256))"
+        },
+        {
+          "selector": "0x54b02e3b",
+          "signature": "onRecoveryShareRedemption(address,uint256,address,uint256,uint256)"
+        },
+        {
+          "selector": "0x8886834b",
+          "signature": "onCygldOutflow(address,address,uint256,uint256,uint256)"
+        },
+        {
+          "selector": "0xbc197c81",
+          "signature": "onERC1155BatchReceived(address,address,uint256[],uint256[],bytes)"
+        },
+        {
+          "selector": "0xc723c768",
+          "signature": "onRecoveryShareOutflow(address,address,uint256[],uint256[])"
+        },
+        {
+          "selector": "0xc8a81e3b",
+          "signature": "onCygldApprovalChange(address,uint256,uint256,uint256,uint256)"
+        },
+        {
+          "selector": "0xf23a6e61",
+          "signature": "onERC1155Received(address,address,uint256,uint256,bytes)"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Legacy facet labels are excluded when present and are never consumed by live generation policy."
+        },
+        {
+          "selector": "0x5c975abb",
+          "signature": "paused()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured pause facet; recoveryFund must not duplicate it."
+        }
+      ]
+    },
+    {
+      "name": "governorCore",
+      "scope": "product",
+      "contract": "GovernorCoreFacet",
+      "source": "packages/2_governance/src/facets/GovernorCoreFacet.sol",
+      "selectorFunction": "governorCoreSelectors",
+      "priority": 20,
+      "runtime": {
+        "metadataSource": "packages/2_governance/src/facets/GovernorCoreFacet.sol",
+        "namespaceLabel": "cybergold.governance.core",
+        "namespace": "0x3de16d0cfe2a5738900c623ca69080cf19b81b32ca5620aa26d12480497a167a",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0x88520dfec5758525475e2d63d25706c90122607ba36628216cece55c586a0e42"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0x06fdde03",
+          "signature": "name()"
+        },
+        {
+          "selector": "0x143489d0",
+          "signature": "proposalProposer(uint256)"
+        },
+        {
+          "selector": "0x146d838b",
+          "signature": "externalCygovSupply()"
+        },
+        {
+          "selector": "0x150b7a02",
+          "signature": "onERC721Received(address,address,uint256,bytes)"
+        },
+        {
+          "selector": "0x2656227d",
+          "signature": "execute(address[],uint256[],bytes[],bytes32)"
+        },
+        {
+          "selector": "0x2d63f693",
+          "signature": "proposalSnapshot(uint256)"
+        },
+        {
+          "selector": "0x3e4f49e6",
+          "signature": "state(uint256)"
+        },
+        {
+          "selector": "0x43859632",
+          "signature": "hasVoted(uint256,address)"
+        },
+        {
+          "selector": "0x452115d6",
+          "signature": "cancel(address[],uint256[],bytes[],bytes32)"
+        },
+        {
+          "selector": "0x4bf5d7e9",
+          "signature": "CLOCK_MODE()"
+        },
+        {
+          "selector": "0x544ffc9c",
+          "signature": "proposalVotes(uint256)"
+        },
+        {
+          "selector": "0x54fd4d50",
+          "signature": "version()"
+        },
+        {
+          "selector": "0x56781388",
+          "signature": "castVote(uint256,uint8)"
+        },
+        {
+          "selector": "0x5aa21375",
+          "signature": "proposalExpiresAt(uint256)"
+        },
+        {
+          "selector": "0x7b3c71d3",
+          "signature": "castVoteWithReason(uint256,uint8,string)"
+        },
+        {
+          "selector": "0x7d5e81e2",
+          "signature": "propose(address[],uint256[],bytes[],string)"
+        },
+        {
+          "selector": "0x84b0196e",
+          "signature": "eip712Domain()"
+        },
+        {
+          "selector": "0x8ff262e3",
+          "signature": "castVoteBySig(uint256,uint8,address,bytes)"
+        },
+        {
+          "selector": "0x91ddadf4",
+          "signature": "clock()"
+        },
+        {
+          "selector": "0xa8f8a668",
+          "signature": "getProposalId(address[],uint256[],bytes[],bytes32)"
+        },
+        {
+          "selector": "0xa9a95294",
+          "signature": "proposalNeedsQueuing(uint256)"
+        },
+        {
+          "selector": "0xab58fb8e",
+          "signature": "proposalEta(uint256)"
+        },
+        {
+          "selector": "0xb58131b0",
+          "signature": "proposalThreshold()"
+        },
+        {
+          "selector": "0xc01f9e37",
+          "signature": "proposalDeadline(uint256)"
+        },
+        {
+          "selector": "0xc59057e4",
+          "signature": "hashProposal(address[],uint256[],bytes[],bytes32)"
+        },
+        {
+          "selector": "0xdd4e2ba5",
+          "signature": "COUNTING_MODE()"
+        },
+        {
+          "selector": "0xdeaaa7cc",
+          "signature": "BALLOT_TYPEHASH()"
+        },
+        {
+          "selector": "0xeb9019d4",
+          "signature": "getVotes(address,uint256)"
+        },
+        {
+          "selector": "0xfb999fcb",
+          "signature": "proposalQuorum(uint256)"
+        },
+        {
+          "selector": "0xfc0c546a",
+          "signature": "token()"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0x2fe3e261",
+          "signature": "EXTENDED_BALLOT_TYPEHASH()",
+          "category": "policy",
+          "reason": "The simplified Governance voting surface omits parameterized ballots and their standalone typehash."
+        },
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Legacy facet labels are excluded when present and are never consumed by live generation policy."
+        },
+        {
+          "selector": "0x5f398a14",
+          "signature": "castVoteWithReasonAndParams(uint256,uint8,string,bytes)",
+          "category": "policy",
+          "reason": "The simplified Governance voting surface intentionally omits arbitrary vote parameters."
+        },
+        {
+          "selector": "0x5b8d0e0d",
+          "signature": "castVoteWithReasonAndParamsBySig(uint256,uint8,address,string,bytes,bytes)",
+          "category": "policy",
+          "reason": "The simplified Governance voting surface intentionally omits signed arbitrary-parameter ballots."
+        },
+        {
+          "selector": "0x9a802a6d",
+          "signature": "getVotesWithParams(address,uint256,bytes)",
+          "category": "policy",
+          "reason": "The simplified Governance voting surface intentionally omits parameter-dependent vote lookup."
+        },
+        {
+          "selector": "0xd3077d7a",
+          "signature": "initCore(string)",
+          "category": "initializer-only",
+          "reason": "Initializer entrypoints execute only as reviewed delegatecall targets and are never installed runtime selectors."
+        },
+        {
+          "selector": "0x7ecebe00",
+          "signature": "nonces(address)",
+          "category": "preferred-owner",
+          "reason": "The token facet is the canonical EIP-2612 and Votes nonce owner."
+        },
+        {
+          "selector": "0xbc197c81",
+          "signature": "onERC1155BatchReceived(address,address,uint256[],uint256[],bytes)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured recoveryFund facet; governorCore must not duplicate it."
+        },
+        {
+          "selector": "0xf23a6e61",
+          "signature": "onERC1155Received(address,address,uint256,uint256,bytes)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured recoveryFund facet; governorCore must not duplicate it."
+        },
+        {
+          "selector": "0x160cbed7",
+          "signature": "queue(address[],uint256[],bytes[],bytes32)",
+          "category": "policy",
+          "reason": "The self-executing governance model has no separate timelock queue surface."
+        },
+        {
+          "selector": "0xf8ce560a",
+          "signature": "quorum(uint256)",
+          "category": "policy",
+          "reason": "Governance uses proposal-snapshotted quorum metadata; the inherited timepoint entrypoint fails closed and is intentionally absent."
+        },
+        {
+          "selector": "0xc28bc2fa",
+          "signature": "relay(address,uint256,bytes)",
+          "category": "policy",
+          "reason": "The Governance diamond is its own executor, so an inherited relay entrypoint is redundant and intentionally absent."
+        },
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured loupe facet; governorCore must not duplicate it."
+        },
+        {
+          "selector": "0x3932abb1",
+          "signature": "votingDelay()",
+          "category": "preferred-owner",
+          "reason": "The settings facet is the canonical owner of mutable voting-delay policy."
+        },
+        {
+          "selector": "0x02a251a3",
+          "signature": "votingPeriod()",
+          "category": "preferred-owner",
+          "reason": "The settings facet is the canonical owner of mutable voting-period policy."
+        }
+      ]
+    },
+    {
+      "name": "token",
+      "scope": "product",
+      "contract": "TokenFacet",
+      "source": "packages/2_governance/src/facets/TokenFacet.sol",
+      "selectorFunction": "tokenSelectors",
+      "priority": 30,
+      "runtime": {
+        "metadataSource": "packages/2_governance/src/facets/TokenFacet.sol",
+        "namespaceLabel": "cybergold.governance.token",
+        "namespace": "0x96bedb355c7d8748704ee3031688efcb2397e56b27b8b241639baa16da71a0a0",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0xaa9bbf32d7b32101a427828a992e32332630beffcb4ecdffe64bf548e7e2693b"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0x095ea7b3",
+          "signature": "approve(address,uint256)"
+        },
+        {
+          "selector": "0x18160ddd",
+          "signature": "totalSupply()"
+        },
+        {
+          "selector": "0x23b872dd",
+          "signature": "transferFrom(address,address,uint256)"
+        },
+        {
+          "selector": "0x313ce567",
+          "signature": "decimals()"
+        },
+        {
+          "selector": "0x3644e515",
+          "signature": "DOMAIN_SEPARATOR()"
+        },
+        {
+          "selector": "0x3a46b1a8",
+          "signature": "getPastVotes(address,uint256)"
+        },
+        {
+          "selector": "0x587cde1e",
+          "signature": "delegates(address)"
+        },
+        {
+          "selector": "0x5c19a95c",
+          "signature": "delegate(address)"
+        },
+        {
+          "selector": "0x6fcfff45",
+          "signature": "numCheckpoints(address)"
+        },
+        {
+          "selector": "0x70a08231",
+          "signature": "balanceOf(address)"
+        },
+        {
+          "selector": "0x7ecebe00",
+          "signature": "nonces(address)"
+        },
+        {
+          "selector": "0x8e539e8c",
+          "signature": "getPastTotalSupply(uint256)"
+        },
+        {
+          "selector": "0x95d89b41",
+          "signature": "symbol()"
+        },
+        {
+          "selector": "0x9ab24eb0",
+          "signature": "getVotes(address)"
+        },
+        {
+          "selector": "0xa9059cbb",
+          "signature": "transfer(address,uint256)"
+        },
+        {
+          "selector": "0xc3cda520",
+          "signature": "delegateBySig(address,uint256,uint256,uint8,bytes32,bytes32)"
+        },
+        {
+          "selector": "0xd505accf",
+          "signature": "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)"
+        },
+        {
+          "selector": "0xdd62ed3e",
+          "signature": "allowance(address,address)"
+        },
+        {
+          "selector": "0xf1127ed8",
+          "signature": "checkpoints(address,uint32)"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0x4bf5d7e9",
+          "signature": "CLOCK_MODE()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured governorCore facet; token must not duplicate it."
+        },
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Legacy facet labels are excluded when present and are never consumed by live generation policy."
+        },
+        {
+          "selector": "0x91ddadf4",
+          "signature": "clock()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured governorCore facet; token must not duplicate it."
+        },
+        {
+          "selector": "0x84b0196e",
+          "signature": "eip712Domain()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured governorCore facet; token must not duplicate it."
+        },
+        {
+          "selector": "0x34a0ebf1",
+          "signature": "initToken(string,string,address,uint256,uint256)",
+          "category": "initializer-only",
+          "reason": "Initializer entrypoints execute only as reviewed delegatecall targets and are never installed runtime selectors."
+        },
+        {
+          "selector": "0x06fdde03",
+          "signature": "name()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured governorCore facet; token must not duplicate it."
+        },
+        {
+          "selector": "0x5c975abb",
+          "signature": "paused()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured pause facet; token must not duplicate it."
+        }
+      ]
+    },
+    {
+      "name": "treasury",
+      "scope": "product",
+      "contract": "TreasuryFacet",
+      "source": "packages/2_governance/src/facets/TreasuryFacet.sol",
+      "selectorFunction": "treasurySelectors",
+      "priority": 35,
+      "runtime": {
+        "metadataSource": "packages/2_governance/src/facets/TreasuryFacet.sol",
+        "namespaceLabel": "cybergold.governance.treasury",
+        "namespace": "0xf3a82304512fbaa86501ebb3bf9ab143f94ebb75c512aa4296a61dcb807444db",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0xabe514fcdcf34d7df7ec9a107f059f8d24e786cf7f0ef65f1103ceb274f2faef"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0xbd1ff441",
+          "signature": "treasuryWithdraw(address,address,uint256)"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0xa217fddf",
+          "signature": "DEFAULT_ADMIN_ROLE()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; treasury must not duplicate it."
+        },
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Legacy facet labels are excluded when present and are never consumed by live generation policy."
+        },
+        {
+          "selector": "0x248a9ca3",
+          "signature": "getRoleAdmin(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; treasury must not duplicate it."
+        },
+        {
+          "selector": "0x9010d07c",
+          "signature": "getRoleMember(bytes32,uint256)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; treasury must not duplicate it."
+        },
+        {
+          "selector": "0xca15c873",
+          "signature": "getRoleMemberCount(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; treasury must not duplicate it."
+        },
+        {
+          "selector": "0xa3246ad3",
+          "signature": "getRoleMembers(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; treasury must not duplicate it."
+        },
+        {
+          "selector": "0x2f2ff15d",
+          "signature": "grantRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; treasury must not duplicate it."
+        },
+        {
+          "selector": "0x91d14854",
+          "signature": "hasRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; treasury must not duplicate it."
+        },
+        {
+          "selector": "0x5c975abb",
+          "signature": "paused()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured pause facet; treasury must not duplicate it."
+        },
+        {
+          "selector": "0x36568abe",
+          "signature": "renounceRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; treasury must not duplicate it."
+        },
+        {
+          "selector": "0xd547741f",
+          "signature": "revokeRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; treasury must not duplicate it."
+        },
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured loupe facet; treasury must not duplicate it."
+        }
+      ]
+    },
+    {
+      "name": "governorSettings",
+      "scope": "product",
+      "contract": "GovernorSettingsFacet",
+      "source": "packages/2_governance/src/facets/GovernorSettingsFacet.sol",
+      "selectorFunction": "governorSettingsSelectors",
+      "priority": 50,
+      "runtime": {
+        "metadataSource": "packages/2_governance/src/facets/GovernorSettingsFacet.sol",
+        "namespaceLabel": "cybergold.governance.settings",
+        "namespace": "0x5991f7e06622fd1c3ec4fd8f7fca40dd48fd85e3560c5ef41f10a0764b56f1d7",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0x54f1bd00c27c2ea50aa940f884bcf3d6e8da81985101f8ec95e10a95064e816e"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0x02a251a3",
+          "signature": "votingPeriod()"
+        },
+        {
+          "selector": "0x0f00c179",
+          "signature": "setVotingPeriod(uint32,uint32)"
+        },
+        {
+          "selector": "0x327a71e7",
+          "signature": "proposalThresholdNumerator()"
+        },
+        {
+          "selector": "0x3932abb1",
+          "signature": "votingDelay()"
+        },
+        {
+          "selector": "0x4e62da25",
+          "signature": "setVotingDelay(uint48,uint48)"
+        },
+        {
+          "selector": "0x69c61caa",
+          "signature": "setExecutionGracePeriod(uint48,uint48)"
+        },
+        {
+          "selector": "0x7b1b6abf",
+          "signature": "setExecutionDelay(uint48,uint48)"
+        },
+        {
+          "selector": "0x8b257989",
+          "signature": "executionDelay()"
+        },
+        {
+          "selector": "0x9cc2d2ce",
+          "signature": "setQuorumNumerator(uint8,uint8)"
+        },
+        {
+          "selector": "0xa7713a70",
+          "signature": "quorumNumerator()"
+        },
+        {
+          "selector": "0xec0a12d9",
+          "signature": "executionGracePeriod()"
+        },
+        {
+          "selector": "0xf4c3ff58",
+          "signature": "setProposalThresholdNumerator(uint32,uint32)"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Legacy facet labels are excluded when present and are never consumed by live generation policy."
+        },
+        {
+          "selector": "0x00ac0529",
+          "signature": "initSettings(uint256,uint256,uint32,uint8,uint256,uint256)",
+          "category": "initializer-only",
+          "reason": "Initializer entrypoints execute only as reviewed delegatecall targets and are never installed runtime selectors."
+        }
+      ]
+    },
+    {
+      "name": "recoveryFundLens",
+      "scope": "product",
+      "contract": "RecoveryFundLensFacet",
+      "source": "packages/2_governance/src/facets/RecoveryFundLensFacet.sol",
+      "selectorFunction": "recoveryFundLensSelectors",
+      "priority": 70,
+      "runtime": {
+        "metadataSource": "packages/2_governance/src/facets/RecoveryFundLensFacet.sol",
+        "namespaceLabel": "cybergold.governance.recovery-fund-lens",
+        "namespace": "0x6228b58a761d4971039a38fd9454f48bb908b56602cebe24f10b2b94956f3a8e",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0xf5a9ab105f329e1cfb182e37fd31111415a6fe162689422aae956b99eeaf8972"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0x001f229b",
+          "signature": "recoveryFundTreasuryStatus()"
+        },
+        {
+          "selector": "0x441a9bd5",
+          "signature": "acquiredRecoveryShares(address)"
+        },
+        {
+          "selector": "0x8b313110",
+          "signature": "trustedRecoveryFundCore()"
+        },
+        {
+          "selector": "0xbbcde2c6",
+          "signature": "previewAssetRecoveryFundPurchase(address,uint256)"
+        },
+        {
+          "selector": "0xd08cc542",
+          "signature": "assetRecoveryFund(address)"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Legacy facet labels are excluded when present and are never consumed by live generation policy."
+        }
+      ]
+    }
+  ],
+  "advertisedInterfaces": [
+    {
+      "name": "IERC165",
+      "interfaceId": "0x01ffc9a7",
+      "interfaceSelectorCount": 1,
+      "interfaceSelectors": [
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "facet": "loupe"
+        }
+      ],
+      "manifestSelectorCount": 1,
+      "manifestSelectors": [
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "facet": "loupe"
+        }
+      ]
+    },
+    {
+      "name": "IDiamondCut",
+      "interfaceId": "0x1f931c1c",
+      "interfaceSelectorCount": 1,
+      "interfaceSelectors": [
+        {
+          "selector": "0x1f931c1c",
+          "signature": "diamondCut((address,uint8,bytes4[])[],address,bytes)",
+          "facet": "cut"
+        }
+      ],
+      "manifestSelectorCount": 1,
+      "manifestSelectors": [
+        {
+          "selector": "0x1f931c1c",
+          "signature": "diamondCut((address,uint8,bytes4[])[],address,bytes)",
+          "facet": "cut"
+        }
+      ]
+    },
+    {
+      "name": "IDiamondLoupe",
+      "interfaceId": "0x48e2b093",
+      "interfaceSelectorCount": 4,
+      "interfaceSelectors": [
+        {
+          "selector": "0x7a0ed627",
+          "signature": "facets()",
+          "facet": "loupe"
+        },
+        {
+          "selector": "0xadfca15e",
+          "signature": "facetFunctionSelectors(address)",
+          "facet": "loupe"
+        },
+        {
+          "selector": "0x52ef6b2c",
+          "signature": "facetAddresses()",
+          "facet": "loupe"
+        },
+        {
+          "selector": "0xcdffacc6",
+          "signature": "facetAddress(bytes4)",
+          "facet": "loupe"
+        }
+      ],
+      "manifestSelectorCount": 4,
+      "manifestSelectors": [
+        {
+          "selector": "0x7a0ed627",
+          "signature": "facets()",
+          "facet": "loupe"
+        },
+        {
+          "selector": "0xadfca15e",
+          "signature": "facetFunctionSelectors(address)",
+          "facet": "loupe"
+        },
+        {
+          "selector": "0x52ef6b2c",
+          "signature": "facetAddresses()",
+          "facet": "loupe"
+        },
+        {
+          "selector": "0xcdffacc6",
+          "signature": "facetAddress(bytes4)",
+          "facet": "loupe"
+        }
+      ]
+    },
+    {
+      "name": "IAccessControl",
+      "interfaceId": "0x7965db0b",
+      "interfaceSelectorCount": 5,
+      "interfaceSelectors": [
+        {
+          "selector": "0x91d14854",
+          "signature": "hasRole(bytes32,address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x248a9ca3",
+          "signature": "getRoleAdmin(bytes32)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x2f2ff15d",
+          "signature": "grantRole(bytes32,address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0xd547741f",
+          "signature": "revokeRole(bytes32,address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x36568abe",
+          "signature": "renounceRole(bytes32,address)",
+          "facet": "access"
+        }
+      ],
+      "manifestSelectorCount": 6,
+      "manifestSelectors": [
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "facet": "loupe"
+        },
+        {
+          "selector": "0x91d14854",
+          "signature": "hasRole(bytes32,address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x248a9ca3",
+          "signature": "getRoleAdmin(bytes32)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x2f2ff15d",
+          "signature": "grantRole(bytes32,address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0xd547741f",
+          "signature": "revokeRole(bytes32,address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x36568abe",
+          "signature": "renounceRole(bytes32,address)",
+          "facet": "access"
+        }
+      ]
+    },
+    {
+      "name": "IAccessControlEnumerable",
+      "interfaceId": "0x5a05180f",
+      "interfaceSelectorCount": 2,
+      "interfaceSelectors": [
+        {
+          "selector": "0x9010d07c",
+          "signature": "getRoleMember(bytes32,uint256)",
+          "facet": "access"
+        },
+        {
+          "selector": "0xca15c873",
+          "signature": "getRoleMemberCount(bytes32)",
+          "facet": "access"
+        }
+      ],
+      "manifestSelectorCount": 8,
+      "manifestSelectors": [
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "facet": "loupe"
+        },
+        {
+          "selector": "0x91d14854",
+          "signature": "hasRole(bytes32,address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x248a9ca3",
+          "signature": "getRoleAdmin(bytes32)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x2f2ff15d",
+          "signature": "grantRole(bytes32,address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0xd547741f",
+          "signature": "revokeRole(bytes32,address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x36568abe",
+          "signature": "renounceRole(bytes32,address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x9010d07c",
+          "signature": "getRoleMember(bytes32,uint256)",
+          "facet": "access"
+        },
+        {
+          "selector": "0xca15c873",
+          "signature": "getRoleMemberCount(bytes32)",
+          "facet": "access"
+        }
+      ]
+    },
+    {
+      "name": "IDiamondEmergencyAuthority",
+      "interfaceId": "0x955c24ed",
+      "interfaceSelectorCount": 4,
+      "interfaceSelectors": [
+        {
+          "selector": "0x88cfce56",
+          "signature": "safeWallet()",
+          "facet": "pause"
+        },
+        {
+          "selector": "0x75b24ebe",
+          "signature": "canPause(address)",
+          "facet": "pause"
+        },
+        {
+          "selector": "0xd090d134",
+          "signature": "canUnpause(address)",
+          "facet": "pause"
+        },
+        {
+          "selector": "0xb8b17531",
+          "signature": "setSafeWallet(address,address)",
+          "facet": "pause"
+        }
+      ],
+      "manifestSelectorCount": 7,
+      "manifestSelectors": [
+        {
+          "selector": "0x8456cb59",
+          "signature": "pause()",
+          "facet": "pause"
+        },
+        {
+          "selector": "0x3f4ba83a",
+          "signature": "unpause()",
+          "facet": "pause"
+        },
+        {
+          "selector": "0x5c975abb",
+          "signature": "paused()",
+          "facet": "pause"
+        },
+        {
+          "selector": "0x88cfce56",
+          "signature": "safeWallet()",
+          "facet": "pause"
+        },
+        {
+          "selector": "0x75b24ebe",
+          "signature": "canPause(address)",
+          "facet": "pause"
+        },
+        {
+          "selector": "0xd090d134",
+          "signature": "canUnpause(address)",
+          "facet": "pause"
+        },
+        {
+          "selector": "0xb8b17531",
+          "signature": "setSafeWallet(address,address)",
+          "facet": "pause"
+        }
+      ]
+    },
+    {
+      "name": "IERC6372",
+      "interfaceId": "0xda287a1d",
+      "interfaceSelectorCount": 2,
+      "interfaceSelectors": [
+        {
+          "selector": "0x91ddadf4",
+          "signature": "clock()",
+          "facet": "governorCore"
+        },
+        {
+          "selector": "0x4bf5d7e9",
+          "signature": "CLOCK_MODE()",
+          "facet": "governorCore"
+        }
+      ],
+      "manifestSelectorCount": 2,
+      "manifestSelectors": [
+        {
+          "selector": "0x91ddadf4",
+          "signature": "clock()",
+          "facet": "governorCore"
+        },
+        {
+          "selector": "0x4bf5d7e9",
+          "signature": "CLOCK_MODE()",
+          "facet": "governorCore"
+        }
+      ]
+    },
+    {
+      "name": "IERC20",
+      "interfaceId": "0x36372b07",
+      "interfaceSelectorCount": 6,
+      "interfaceSelectors": [
+        {
+          "selector": "0x18160ddd",
+          "signature": "totalSupply()",
+          "facet": "token"
+        },
+        {
+          "selector": "0x70a08231",
+          "signature": "balanceOf(address)",
+          "facet": "token"
+        },
+        {
+          "selector": "0xa9059cbb",
+          "signature": "transfer(address,uint256)",
+          "facet": "token"
+        },
+        {
+          "selector": "0xdd62ed3e",
+          "signature": "allowance(address,address)",
+          "facet": "token"
+        },
+        {
+          "selector": "0x095ea7b3",
+          "signature": "approve(address,uint256)",
+          "facet": "token"
+        },
+        {
+          "selector": "0x23b872dd",
+          "signature": "transferFrom(address,address,uint256)",
+          "facet": "token"
+        }
+      ],
+      "manifestSelectorCount": 6,
+      "manifestSelectors": [
+        {
+          "selector": "0x18160ddd",
+          "signature": "totalSupply()",
+          "facet": "token"
+        },
+        {
+          "selector": "0x70a08231",
+          "signature": "balanceOf(address)",
+          "facet": "token"
+        },
+        {
+          "selector": "0xa9059cbb",
+          "signature": "transfer(address,uint256)",
+          "facet": "token"
+        },
+        {
+          "selector": "0xdd62ed3e",
+          "signature": "allowance(address,address)",
+          "facet": "token"
+        },
+        {
+          "selector": "0x095ea7b3",
+          "signature": "approve(address,uint256)",
+          "facet": "token"
+        },
+        {
+          "selector": "0x23b872dd",
+          "signature": "transferFrom(address,address,uint256)",
+          "facet": "token"
+        }
+      ]
+    },
+    {
+      "name": "IERC20Metadata",
+      "interfaceId": "0xa219a025",
+      "interfaceSelectorCount": 3,
+      "interfaceSelectors": [
+        {
+          "selector": "0x06fdde03",
+          "signature": "name()",
+          "facet": "governorCore"
+        },
+        {
+          "selector": "0x95d89b41",
+          "signature": "symbol()",
+          "facet": "token"
+        },
+        {
+          "selector": "0x313ce567",
+          "signature": "decimals()",
+          "facet": "token"
+        }
+      ],
+      "manifestSelectorCount": 9,
+      "manifestSelectors": [
+        {
+          "selector": "0x18160ddd",
+          "signature": "totalSupply()",
+          "facet": "token"
+        },
+        {
+          "selector": "0x70a08231",
+          "signature": "balanceOf(address)",
+          "facet": "token"
+        },
+        {
+          "selector": "0xa9059cbb",
+          "signature": "transfer(address,uint256)",
+          "facet": "token"
+        },
+        {
+          "selector": "0xdd62ed3e",
+          "signature": "allowance(address,address)",
+          "facet": "token"
+        },
+        {
+          "selector": "0x095ea7b3",
+          "signature": "approve(address,uint256)",
+          "facet": "token"
+        },
+        {
+          "selector": "0x23b872dd",
+          "signature": "transferFrom(address,address,uint256)",
+          "facet": "token"
+        },
+        {
+          "selector": "0x06fdde03",
+          "signature": "name()",
+          "facet": "governorCore"
+        },
+        {
+          "selector": "0x95d89b41",
+          "signature": "symbol()",
+          "facet": "token"
+        },
+        {
+          "selector": "0x313ce567",
+          "signature": "decimals()",
+          "facet": "token"
+        }
+      ]
+    },
+    {
+      "name": "IERC20Permit",
+      "interfaceId": "0x9d8ff7da",
+      "interfaceSelectorCount": 3,
+      "interfaceSelectors": [
+        {
+          "selector": "0xd505accf",
+          "signature": "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+          "facet": "token"
+        },
+        {
+          "selector": "0x7ecebe00",
+          "signature": "nonces(address)",
+          "facet": "token"
+        },
+        {
+          "selector": "0x3644e515",
+          "signature": "DOMAIN_SEPARATOR()",
+          "facet": "token"
+        }
+      ],
+      "manifestSelectorCount": 3,
+      "manifestSelectors": [
+        {
+          "selector": "0xd505accf",
+          "signature": "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+          "facet": "token"
+        },
+        {
+          "selector": "0x7ecebe00",
+          "signature": "nonces(address)",
+          "facet": "token"
+        },
+        {
+          "selector": "0x3644e515",
+          "signature": "DOMAIN_SEPARATOR()",
+          "facet": "token"
+        }
+      ]
+    },
+    {
+      "name": "IERC721Receiver",
+      "interfaceId": "0x150b7a02",
+      "interfaceSelectorCount": 1,
+      "interfaceSelectors": [
+        {
+          "selector": "0x150b7a02",
+          "signature": "onERC721Received(address,address,uint256,bytes)",
+          "facet": "governorCore"
+        }
+      ],
+      "manifestSelectorCount": 1,
+      "manifestSelectors": [
+        {
+          "selector": "0x150b7a02",
+          "signature": "onERC721Received(address,address,uint256,bytes)",
+          "facet": "governorCore"
+        }
+      ]
+    },
+    {
+      "name": "IERC1155Receiver",
+      "interfaceId": "0x4e2312e0",
+      "interfaceSelectorCount": 2,
+      "interfaceSelectors": [
+        {
+          "selector": "0xf23a6e61",
+          "signature": "onERC1155Received(address,address,uint256,uint256,bytes)",
+          "facet": "recoveryFund"
+        },
+        {
+          "selector": "0xbc197c81",
+          "signature": "onERC1155BatchReceived(address,address,uint256[],uint256[],bytes)",
+          "facet": "recoveryFund"
+        }
+      ],
+      "manifestSelectorCount": 3,
+      "manifestSelectors": [
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "facet": "loupe"
+        },
+        {
+          "selector": "0xf23a6e61",
+          "signature": "onERC1155Received(address,address,uint256,uint256,bytes)",
+          "facet": "recoveryFund"
+        },
+        {
+          "selector": "0xbc197c81",
+          "signature": "onERC1155BatchReceived(address,address,uint256[],uint256[],bytes)",
+          "facet": "recoveryFund"
+        }
+      ]
+    },
+    {
+      "name": "ICygldOutflowCallback",
+      "interfaceId": "0x8886834b",
+      "interfaceSelectorCount": 1,
+      "interfaceSelectors": [
+        {
+          "selector": "0x8886834b",
+          "signature": "onCygldOutflow(address,address,uint256,uint256,uint256)",
+          "facet": "recoveryFund"
+        }
+      ],
+      "manifestSelectorCount": 1,
+      "manifestSelectors": [
+        {
+          "selector": "0x8886834b",
+          "signature": "onCygldOutflow(address,address,uint256,uint256,uint256)",
+          "facet": "recoveryFund"
+        }
+      ]
+    },
+    {
+      "name": "ICygldApprovalCallback",
+      "interfaceId": "0xc8a81e3b",
+      "interfaceSelectorCount": 1,
+      "interfaceSelectors": [
+        {
+          "selector": "0xc8a81e3b",
+          "signature": "onCygldApprovalChange(address,uint256,uint256,uint256,uint256)",
+          "facet": "recoveryFund"
+        }
+      ],
+      "manifestSelectorCount": 1,
+      "manifestSelectors": [
+        {
+          "selector": "0xc8a81e3b",
+          "signature": "onCygldApprovalChange(address,uint256,uint256,uint256,uint256)",
+          "facet": "recoveryFund"
+        }
+      ]
+    },
+    {
+      "name": "IRecoveryShareOutflowCallback",
+      "interfaceId": "0xc723c768",
+      "interfaceSelectorCount": 1,
+      "interfaceSelectors": [
+        {
+          "selector": "0xc723c768",
+          "signature": "onRecoveryShareOutflow(address,address,uint256[],uint256[])",
+          "facet": "recoveryFund"
+        }
+      ],
+      "manifestSelectorCount": 1,
+      "manifestSelectors": [
+        {
+          "selector": "0xc723c768",
+          "signature": "onRecoveryShareOutflow(address,address,uint256[],uint256[])",
+          "facet": "recoveryFund"
+        }
+      ]
+    },
+    {
+      "name": "IRecoveryShareRedemptionCallback",
+      "interfaceId": "0x54b02e3b",
+      "interfaceSelectorCount": 1,
+      "interfaceSelectors": [
+        {
+          "selector": "0x54b02e3b",
+          "signature": "onRecoveryShareRedemption(address,uint256,address,uint256,uint256)",
+          "facet": "recoveryFund"
+        }
+      ],
+      "manifestSelectorCount": 1,
+      "manifestSelectors": [
+        {
+          "selector": "0x54b02e3b",
+          "signature": "onRecoveryShareRedemption(address,uint256,address,uint256,uint256)",
+          "facet": "recoveryFund"
+        }
+      ]
+    }
+  ],
+  "compatibilityInputs": {
+    "aggregateAbi": "generated/abi/GovernanceDiamond.json",
+    "aggregateSolidityInterface": "packages/2_governance/src/interfaces/ICyberGoldGovernance.sol",
+    "storageInventory": "ci/storage-inventory.json",
+    "interfaceAdvertisementAuthority": "packages/0_shared/src/libraries/LibInterfaceInvariant.sol",
+    "activeGenerationAuthority": "packages/0_shared/src/helpers/LiveFacetVersionRegistry.sol",
+    "validatedCutAuthority": "packages/0_shared/src/helpers/LiveValidatedDiamondCut.sol",
+    "extensionModel": {
+      "default": "additive",
+      "selectorRemovalOrMove": "exact-owner-reviewed-exception",
+      "requiredProtections": [
+        "storage-namespace-and-full-compiler-layout-compatibility",
+        "advertised-interface-and-manifest-truth",
+        "facet-namespace-active-generation-and-live-runtime-transition-binding",
+        "immutable-dependency-change-requires-explicit-migration-record"
+      ]
+    }
+  }
+}

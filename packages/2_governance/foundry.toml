@@ -1,0 +1,37 @@
+[profile.default]
+solc_version = "0.8.37"
+evm_version = "osaka"
+libs = ["lib"]
+src = "src"
+test = "test"
+cache_path = "../../cache"
+offline = true
+optimizer = true
+optimizer_runs = 100
+auto_detect_remappings = false
+allow_paths = ["src", "test", "lib", "../1_core/src", "../3_staking/src", "../0_shared/src", "../../test", "../../config"]
+include_paths = ["../../lib"]
+fs_permissions = [
+  { access = "read", path = "config" },
+  { access = "read", path = "../../config" },
+  { access = "read", path = "../1_core/test/fixtures/immediate-recovery.json" },
+  { access = "read", path = "generated" },
+  { access = "read", path = "../../generated" },
+  { access = "read-write", path = "out" },
+  { access = "read-write", path = "../../out" },
+  { access = "read-write", path = "../../../cybergold-ops/deployments" }
+]
+remappings = [
+  "shared=../../test/",
+  "cybergold-core=../1_core/src/",
+  "diamond-infra=../0_shared/src/",
+  "diamond-1=../../lib/diamond-1-hardhat/contracts/",
+  "@openzeppelin/contracts=../../lib/openzeppelin-contracts/contracts/",
+  "@openzeppelin/contracts-upgradeable=../../lib/openzeppelin-contracts-upgradeable/contracts/",
+  "staking=../3_staking/src/",
+  "staking-mocks=../3_staking/test/mocks/",
+  "forge-std=../../lib/forge-std/src/",
+  "script=../../script/"
+]
+[lint]
+ignore = ["../../lib/**", "../*/**/src/**", "../*/**/test/**", "lib/**"]

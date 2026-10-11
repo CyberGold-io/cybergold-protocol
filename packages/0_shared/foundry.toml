@@ -1,0 +1,23 @@
+[profile.default]
+solc_version = "0.8.37"
+evm_version = "osaka"
+libs = ["lib"]
+src = "src"
+test = "test"
+cache_path = "../../cache"
+offline = true
+optimizer = true
+optimizer_runs = 100
+auto_detect_remappings = false
+allow_paths = ["src", "test", "lib", "../../test"]
+include_paths = ["lib"]
+remappings = [
+  "shared=../../test/",
+  "diamond-infra=src/",
+  "diamond-1=lib/diamond-1-hardhat/contracts/",
+  "@openzeppelin/contracts=lib/openzeppelin-contracts/contracts/",
+  "@openzeppelin/contracts-upgradeable=lib/openzeppelin-contracts-upgradeable/contracts/",
+  "forge-std=lib/forge-std/src/"
+]
+[lint]
+ignore = ["**/lib/**"]

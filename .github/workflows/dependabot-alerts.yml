@@ -1,0 +1,40 @@
+name: Dependabot alerts
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "43 6 * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  alerts:
+    name: zero-open-dependabot-alerts
+    runs-on: ubuntu-latest
+    permissions:
+      vulnerability-alerts: read
+    steps:
+      - name: Check all open alerts on the default branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! pages="$(gh api --paginate --slurp "repos/$GH_REPO/dependabot/alerts?state=open&per_page=100")"; then
+            echo "::error::Dependabot alerts API request failed; alert state is unknown."
+            exit 2
+          fi
+          if ! jq -e 'type == "array" and length > 0 and all(.[]; type == "array")' <<<"$pages" >/dev/null; then
+            echo "::error::Dependabot alerts API returned malformed or incomplete page data."
+            exit 2
+          fi
+          count="$(jq '[.[][]] | length' <<<"$pages")"
+          printf '%s: %s open Dependabot alerts at %s\n' "$GH_REPO" "$count" "$(date -u +%FT%TZ)"
+          if [ "$count" -gt 0 ]; then
+            jq -r '.[][] | "#\(.number) \(.security_advisory.severity) \(.dependency.package.name) (\(.dependency.manifest_path)): \(.html_url)"' <<<"$pages"
+            echo "::error::Open Dependabot alerts remain; see the alert list above."
+            exit 1
+          fi

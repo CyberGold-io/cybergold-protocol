@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0",
+  "namespace": "cybergold.core.app.storage.v2",
+  "slot": "0xdd08e88ea05e62d6ee9945c333b5650cf644c3aaf1bff03f5da22efc622d35f7",
+  "compatibility": "first-deployment-clean-break",
+  "selfAddresses": {
+    "controller": "address(this)",
+    "reserve": "address(this)",
+    "token": "address(this)"
+  },
+  "controllerStorage": [
+    {"slotOffset": 0, "field": "treasury", "type": "address"},
+    {"slotOffset": 1, "field": "issuanceFeePpm", "type": "uint256"},
+    {"slotOffset": 2, "field": "redemptionFeePpm", "type": "uint256"},
+    {"slotOffset": 3, "field": "basketAssets", "type": "address[]"},
+    {"slotOffset": 4, "field": "basketTargetsPpm", "type": "uint256[]"},
+    {"slotOffset": 5, "field": "cygldRefGramsFp18", "type": "uint256"},
+    {"slotOffset": 6, "field": "basketGoldRefGramsFp18", "type": "uint256[]"},
+    {"slotOffset": 7, "field": "basketCygldPerUnitFp18", "type": "uint256[]"},
+    {"slotOffset": 8, "field": "maxTotalSupply", "type": "uint256"}
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "protocol": {
+    "admin": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "safeWallet": "0x0000000000000000000000000000000000000000",
+    "allocator": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "performanceFeePpm": "30000",
+    "queue": {
+      "claimExpiry": "86400",
+      "headSweepLimit": "5",
+      "autoProcessMax": "5"
+    },
+    "basket": {
+      "name": "CyberGold",
+      "symbol": "CYGLD",
+      "cygldRefGramsFp18": "1000000000000000000",
+      "maxTotalSupply": "250000000000000000000",
+      "issuanceFeePpm": "1000",
+      "redemptionFeePpm": "1000",
+      "assets": {
+        "names": ["PAX Gold", "Tether Gold"],
+        "symbols": ["PAXG", "XAUT"],
+        "addresses": [
+          "0x45804880De22913dAFE09f4980848ECE6EcbAf78",
+          "0x68749665FF8D2d112Fa859AA293F07A622782F38"
+        ],
+        "targetsPpm": ["600000", "400000"],
+        "goldRefGramsFp18": [
+          "31103476800000000000",
+          "31103476800000000000"
+        ]
+      }
+    },
+    "staking": {
+      "name": "Wrapped Staked CYGLD",
+      "symbol": "wstCYGLD",
+      "withdrawers": []
+    },
+    "governance": {
+      "executionDelay": "172800",
+      "executionGracePeriod": "1209600",
+      "name": "CyberGold Governance",
+      "tokenSymbol": "CYGOV",
+      "tokenInitialHolder": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+      "tokenInitialSupply": "10000000000000000000000000",
+      "tokenTreasurySupply": "10000000000000000000000000",
+      "votingDelay": "172800",
+      "votingPeriod": "432000",
+      "proposalThresholdNumerator": "100",
+      "quorumNumerator": "8"
+    }
+  },
+  "fork": {
+    "rpcUrl": "http://127.0.0.1:8545",
+    "chainId": "31337",
+    "useFixedBlock": false,
+    "fixedBlock": "24339398",
+    "blockTimeSeconds": "0",
+    "cachePath": "../tmp/anvil-cache",
+    "stateEnabled": false,
+    "statePath": "../tmp/anvil-state.json",
+    "funding": {
+      "enabled": true,
+      "fundAddrs": [
+        "0x08f12B0d72e7778cB564f2bCeB9688Cc06cEf2A6",
+        "0xc1f6C7CF4b4d1eDA5a6cE749b5f63A714B03FD7B",
+        "0xD6a70B6Da2798c62BB4b4b38A45Bd1F99c888488",
+        "0x34AE1cD13f1B442C91B3bE398bbC7494543bDF93"
+      ],
+      "ethPerAddr": "10000000000000000000",
+      "tokenHolder": "0xC48A38499A90E3b883c509ca08eC1b540CDF15EE",
+      "holderEth": "1000000000000000000",
+      "tokenFunding": {
+        "symbols": ["PAXG", "XAUT", "USDC", "USDT"],
+        "addresses": [
+          "0x45804880De22913dAFE09f4980848ECE6EcbAf78",
+          "0x68749665FF8D2d112Fa859AA293F07A622782F38",
+          "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+          "0xdAC17F958D2ee523a2206206994597C13D831ec7"
+        ],
+        "holders": [
+          "0xC48A38499A90E3b883c509ca08eC1b540CDF15EE",
+          "0xC48A38499A90E3b883c509ca08eC1b540CDF15EE",
+          "0xbEbc44782C7dB0a1A60Cb6Fe97d0b483032FF1C7",
+          "0xbEbc44782C7dB0a1A60Cb6Fe97d0b483032FF1C7"
+        ],
+        "perAddr": ["5000000000000000000", "5000000", "10000000000", "10000000000"]
+      },
+      "faucet": {
+        "enabled": true,
+        "cooldownSeconds": "3600",
+        "maxCallsPerAddress": "3",
+        "maxTotalCalls": "100",
+        "stateFile": "/tmp/cybergold-fork-fund-state.json",
+        "allowlist": []
+      }
+    }
+  }
+}

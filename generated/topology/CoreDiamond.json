@@ -1,0 +1,3109 @@
+{
+  "schemaVersion": 1,
+  "authority": "script/config/core-release-abi.json",
+  "contractName": "CoreDiamond",
+  "compiler": {
+    "version": "0.8.37+commit.f401782d",
+    "evmVersion": "osaka",
+    "optimizer": {
+      "enabled": true,
+      "runs": 100
+    }
+  },
+  "initializerIntent": {
+    "contract": "DiamondInit",
+    "source": "packages/1_core/src/deploy/DiamondInit.sol",
+    "function": "init",
+    "stateOnlySchemaAdvancementAllowed": false,
+    "runtimeCodeHash": "0x889856b51f932ab3110ab1947c03d637318e8eefa45c1560c212144f65f8cc97",
+    "digest": "sha256:5434d32f47367c423e6034e377768a55243a160fabf93fee0efb561c067aa457"
+  },
+  "selectorCount": 103,
+  "interfaceId": "0x1e260249",
+  "selectors": [
+    {
+      "selector": "0x00fdd58e",
+      "signature": "balanceOf(address,uint256)",
+      "facet": "recoveryShare",
+      "scope": "product"
+    },
+    {
+      "selector": "0x01ff572d",
+      "signature": "MAX_FEE_PPM()",
+      "facet": "controllerConfig",
+      "scope": "product"
+    },
+    {
+      "selector": "0x01ffc9a7",
+      "signature": "supportsInterface(bytes4)",
+      "facet": "loupe",
+      "scope": "base"
+    },
+    {
+      "selector": "0x022d63fb",
+      "signature": "defaultAdminDelayIncreaseWait()",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0x04551e9d",
+      "signature": "REDEMPTION_FEE_EXEMPT_ROLE()",
+      "facet": "controllerConfig",
+      "scope": "product"
+    },
+    {
+      "selector": "0x06fdde03",
+      "signature": "name()",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x07389841",
+      "signature": "upgraderRole()",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0x095ea7b3",
+      "signature": "approve(address,uint256)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x0aa6220b",
+      "signature": "rollbackDefaultAdminDelay()",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0x0e89341c",
+      "signature": "uri(uint256)",
+      "facet": "recoveryShareMetadata",
+      "scope": "product"
+    },
+    {
+      "selector": "0x0f9182e7",
+      "signature": "effectiveCygldSupplyCap()",
+      "facet": "lens",
+      "scope": "product"
+    },
+    {
+      "selector": "0x14370f0c",
+      "signature": "previewRebalanceSwapExactIn(address,address,uint256)",
+      "facet": "rebalance",
+      "scope": "product"
+    },
+    {
+      "selector": "0x18160ddd",
+      "signature": "totalSupply()",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x1f931c1c",
+      "signature": "diamondCut((address,uint8,bytes4[])[],address,bytes)",
+      "facet": "cut",
+      "scope": "base"
+    },
+    {
+      "selector": "0x23b872dd",
+      "signature": "transferFrom(address,address,uint256)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x248a9ca3",
+      "signature": "getRoleAdmin(bytes32)",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0x2ab4d052",
+      "signature": "maxTotalSupply()",
+      "facet": "lens",
+      "scope": "product"
+    },
+    {
+      "selector": "0x2eb2c2d6",
+      "signature": "safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)",
+      "facet": "recoveryShare",
+      "scope": "product"
+    },
+    {
+      "selector": "0x2f2ff15d",
+      "signature": "grantRole(bytes32,address)",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0x313ce567",
+      "signature": "decimals()",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x3221c094",
+      "signature": "setIssuanceFeePpm(uint256,uint256)",
+      "facet": "controllerConfig",
+      "scope": "product"
+    },
+    {
+      "selector": "0x32866daf",
+      "signature": "issueRecoveryShares(address,address[],uint256[])",
+      "facet": "recoveryShare",
+      "scope": "product"
+    },
+    {
+      "selector": "0x3644e515",
+      "signature": "DOMAIN_SEPARATOR()",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x36568abe",
+      "signature": "renounceRole(bytes32,address)",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0x3f4ba83a",
+      "signature": "unpause()",
+      "facet": "pause",
+      "scope": "base"
+    },
+    {
+      "selector": "0x40c10f19",
+      "signature": "mint(address,uint256)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x420394b2",
+      "signature": "basketAssets()",
+      "facet": "lens",
+      "scope": "product"
+    },
+    {
+      "selector": "0x4211fe70",
+      "signature": "unallowancedBalanceOf(address)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x4e1273f4",
+      "signature": "balanceOfBatch(address[],uint256[])",
+      "facet": "recoveryShare",
+      "scope": "product"
+    },
+    {
+      "selector": "0x5098fc00",
+      "signature": "coreAttachedRecoveryAssets()",
+      "facet": "lens",
+      "scope": "product"
+    },
+    {
+      "selector": "0x52ef6b2c",
+      "signature": "facetAddresses()",
+      "facet": "loupe",
+      "scope": "base"
+    },
+    {
+      "selector": "0x53473ae0",
+      "signature": "setBasket(bytes32,address[],uint256[],uint256[])",
+      "facet": "basketAdmin",
+      "scope": "product"
+    },
+    {
+      "selector": "0x5a487e17",
+      "signature": "basketGoldRefGramsFp18()",
+      "facet": "lens",
+      "scope": "product"
+    },
+    {
+      "selector": "0x5c975abb",
+      "signature": "paused()",
+      "facet": "pause",
+      "scope": "base"
+    },
+    {
+      "selector": "0x5f8a5e47",
+      "signature": "finalizeReserveInactivation((address,bytes32,address[],uint256[],uint256[]))",
+      "facet": "reserveLifecycle",
+      "scope": "product"
+    },
+    {
+      "selector": "0x61d027b3",
+      "signature": "treasury()",
+      "facet": "lens",
+      "scope": "product"
+    },
+    {
+      "selector": "0x634e93da",
+      "signature": "beginDefaultAdminTransfer(address)",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0x649a5ec7",
+      "signature": "changeDefaultAdminDelay(uint48)",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0x69588208",
+      "signature": "safeRedeem(uint256,(uint8,address,uint256,uint256)[])",
+      "facet": "redemption",
+      "scope": "product"
+    },
+    {
+      "selector": "0x6bfe1c58",
+      "signature": "burnRecoveryShares(address,address,uint256)",
+      "facet": "recoveryShare",
+      "scope": "product"
+    },
+    {
+      "selector": "0x6f790d9e",
+      "signature": "redeemRecoveryShares(address,uint256,address,uint256)",
+      "facet": "recoveryPoolSettlement",
+      "scope": "product"
+    },
+    {
+      "selector": "0x70a08231",
+      "signature": "balanceOf(address)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x75b24ebe",
+      "signature": "canPause(address)",
+      "facet": "pause",
+      "scope": "base"
+    },
+    {
+      "selector": "0x75deee16",
+      "signature": "activateAsset((address,uint8,bytes32,uint256,address[],uint256[],uint256[]))",
+      "facet": "reserveLifecycle",
+      "scope": "product"
+    },
+    {
+      "selector": "0x78bac762",
+      "signature": "previewRedeemExactIn(uint256)",
+      "facet": "preview",
+      "scope": "product"
+    },
+    {
+      "selector": "0x798e9658",
+      "signature": "basketCygldPerUnitFp18()",
+      "facet": "lens",
+      "scope": "product"
+    },
+    {
+      "selector": "0x7a0ed627",
+      "signature": "facets()",
+      "facet": "loupe",
+      "scope": "base"
+    },
+    {
+      "selector": "0x7e435382",
+      "signature": "reserveCustodyStatus(address)",
+      "facet": "lens",
+      "scope": "product"
+    },
+    {
+      "selector": "0x7ecebe00",
+      "signature": "nonces(address)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x8264ba8d",
+      "signature": "outstandingRecoveryAssetCount()",
+      "facet": "lens",
+      "scope": "product"
+    },
+    {
+      "selector": "0x8456cb59",
+      "signature": "pause()",
+      "facet": "pause",
+      "scope": "base"
+    },
+    {
+      "selector": "0x84b0196e",
+      "signature": "eip712Domain()",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x84ef8ffc",
+      "signature": "defaultAdmin()",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0x860ecd33",
+      "signature": "beginReserveExit((address,bytes32,uint256,address[],uint256[],uint256[]))",
+      "facet": "reserveLifecycle",
+      "scope": "product"
+    },
+    {
+      "selector": "0x87198cf2",
+      "signature": "setMaxTotalSupply(uint256,uint256)",
+      "facet": "controllerConfig",
+      "scope": "product"
+    },
+    {
+      "selector": "0x88cfce56",
+      "signature": "safeWallet()",
+      "facet": "pause",
+      "scope": "base"
+    },
+    {
+      "selector": "0x9010d07c",
+      "signature": "getRoleMember(bytes32,uint256)",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0x91d14854",
+      "signature": "hasRole(bytes32,address)",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0x95d89b41",
+      "signature": "symbol()",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0x9dc29fac",
+      "signature": "burn(address,uint256)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0xa1eda53c",
+      "signature": "pendingDefaultAdminDelay()",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0xa217fddf",
+      "signature": "DEFAULT_ADMIN_ROLE()",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0xa22cb465",
+      "signature": "setApprovalForAll(address,bool)",
+      "facet": "recoveryShare",
+      "scope": "product"
+    },
+    {
+      "selector": "0xa3246ad3",
+      "signature": "getRoleMembers(bytes32)",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0xa7a19e71",
+      "signature": "issuanceFeePpm()",
+      "facet": "lens",
+      "scope": "product"
+    },
+    {
+      "selector": "0xa9059cbb",
+      "signature": "transfer(address,uint256)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0xadfca15e",
+      "signature": "facetFunctionSelectors(address)",
+      "facet": "loupe",
+      "scope": "base"
+    },
+    {
+      "selector": "0xadfe0870",
+      "signature": "setTreasury(address,address)",
+      "facet": "controllerConfig",
+      "scope": "product"
+    },
+    {
+      "selector": "0xb2538ec2",
+      "signature": "basketConfigHash()",
+      "facet": "lens",
+      "scope": "product"
+    },
+    {
+      "selector": "0xb3fd7741",
+      "signature": "basketTargetsPpm()",
+      "facet": "lens",
+      "scope": "product"
+    },
+    {
+      "selector": "0xb8b17531",
+      "signature": "setSafeWallet(address,address)",
+      "facet": "pause",
+      "scope": "base"
+    },
+    {
+      "selector": "0xba588430",
+      "signature": "previewRedeemRecoveryShares(address,uint256)",
+      "facet": "lens",
+      "scope": "product"
+    },
+    {
+      "selector": "0xbd85b039",
+      "signature": "totalSupply(uint256)",
+      "facet": "recoveryShare",
+      "scope": "product"
+    },
+    {
+      "selector": "0xc6122eb7",
+      "signature": "reserveLifecycle(address)",
+      "facet": "lens",
+      "scope": "product"
+    },
+    {
+      "selector": "0xc81212d5",
+      "signature": "cygldRefGramsFp18()",
+      "facet": "lens",
+      "scope": "product"
+    },
+    {
+      "selector": "0xc8ba2f6d",
+      "signature": "previewRedeemExactOut((uint8,address,uint256,uint256)[])",
+      "facet": "preview",
+      "scope": "product"
+    },
+    {
+      "selector": "0xca15c873",
+      "signature": "getRoleMemberCount(bytes32)",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0xcc649f16",
+      "signature": "recoveryPool(address)",
+      "facet": "lens",
+      "scope": "product"
+    },
+    {
+      "selector": "0xcc8463c8",
+      "signature": "defaultAdminDelay()",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0xcc872b66",
+      "signature": "issue(uint256)",
+      "facet": "issuance",
+      "scope": "product"
+    },
+    {
+      "selector": "0xcdffacc6",
+      "signature": "facetAddress(bytes4)",
+      "facet": "loupe",
+      "scope": "base"
+    },
+    {
+      "selector": "0xcefc1429",
+      "signature": "acceptDefaultAdminTransfer()",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0xcf6eefb7",
+      "signature": "pendingDefaultAdmin()",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0xd090d134",
+      "signature": "canUnpause(address)",
+      "facet": "pause",
+      "scope": "base"
+    },
+    {
+      "selector": "0xd505accf",
+      "signature": "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0xd547741f",
+      "signature": "revokeRole(bytes32,address)",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0xd602b9fd",
+      "signature": "cancelDefaultAdminTransfer()",
+      "facet": "access",
+      "scope": "base"
+    },
+    {
+      "selector": "0xdb006a75",
+      "signature": "redeem(uint256)",
+      "facet": "redemption",
+      "scope": "product"
+    },
+    {
+      "selector": "0xdb129a1c",
+      "signature": "previewIssueFromBasketExactIn(uint256[])",
+      "facet": "preview",
+      "scope": "product"
+    },
+    {
+      "selector": "0xdd62ed3e",
+      "signature": "allowance(address,address)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0xdf809d9f",
+      "signature": "activateRecovery((address,uint8,bytes32,uint256,address[],uint256[],uint256[],uint256))",
+      "facet": "recoveryAdmin",
+      "scope": "product"
+    },
+    {
+      "selector": "0xe144eeff",
+      "signature": "safeIssue(uint256,address[],uint256[])",
+      "facet": "issuance",
+      "scope": "product"
+    },
+    {
+      "selector": "0xe5b323f3",
+      "signature": "rebalanceSwapExactIn(address,address,uint256,uint256)",
+      "facet": "rebalance",
+      "scope": "product"
+    },
+    {
+      "selector": "0xe8a3d485",
+      "signature": "contractURI()",
+      "facet": "recoveryShareMetadata",
+      "scope": "product"
+    },
+    {
+      "selector": "0xe985e9c5",
+      "signature": "isApprovedForAll(address,address)",
+      "facet": "recoveryShare",
+      "scope": "product"
+    },
+    {
+      "selector": "0xeb33347d",
+      "signature": "setRedemptionFeePpm(uint256,uint256)",
+      "facet": "controllerConfig",
+      "scope": "product"
+    },
+    {
+      "selector": "0xebdd2f41",
+      "signature": "allowanceExposure(address)",
+      "facet": "token",
+      "scope": "product"
+    },
+    {
+      "selector": "0xec4661fb",
+      "signature": "rehabilitateRecoveryAsset((address,bytes32,uint256,uint256,uint256,address[],uint256[],uint256[]))",
+      "facet": "recoveryAdmin",
+      "scope": "product"
+    },
+    {
+      "selector": "0xf1f487d5",
+      "signature": "previewIssueFromBasketExactOut(uint256)",
+      "facet": "preview",
+      "scope": "product"
+    },
+    {
+      "selector": "0xf242432a",
+      "signature": "safeTransferFrom(address,address,uint256,uint256,bytes)",
+      "facet": "recoveryShare",
+      "scope": "product"
+    },
+    {
+      "selector": "0xf9cdd808",
+      "signature": "outstandingRecoveryAssets(uint256,uint256)",
+      "facet": "lens",
+      "scope": "product"
+    },
+    {
+      "selector": "0xfd0602f1",
+      "signature": "redemptionFeePpm()",
+      "facet": "lens",
+      "scope": "product"
+    },
+    {
+      "selector": "0xfe90b33d",
+      "signature": "finalizeZeroEntitlementRecovery(address)",
+      "facet": "recoveryAdmin",
+      "scope": "product"
+    }
+  ],
+  "facets": [
+    {
+      "name": "cut",
+      "scope": "base",
+      "contract": "DiamondCutAccessFacet",
+      "source": "packages/0_shared/src/facets/DiamondCutAccessFacet.sol",
+      "selectorFunction": null,
+      "priority": null,
+      "runtime": {
+        "metadataSource": "packages/0_shared/src/facets/DiamondCutAccessFacet.sol",
+        "namespaceLabel": "cybergold.upgrade.coordinator.access",
+        "namespace": "0x626b89c71ba90e51f414b53ce8377e910c80db26516176c7d6a07018b256d311",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0x7477caac82f01b4395952e62f7902b668ba8fb7e726de245fed5ccebdebd1d1c"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0x1f931c1c",
+          "signature": "diamondCut((address,uint8,bytes4[])[],address,bytes)"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        }
+      ]
+    },
+    {
+      "name": "loupe",
+      "scope": "base",
+      "contract": "ProtocolDiamondLoupeFacet",
+      "source": "packages/0_shared/src/facets/ProtocolDiamondLoupeFacet.sol",
+      "selectorFunction": null,
+      "priority": null,
+      "runtime": {
+        "metadataSource": "packages/0_shared/src/facets/ProtocolDiamondLoupeFacet.sol",
+        "namespaceLabel": "cybergold.shared.diamond.loupe",
+        "namespace": "0xaa53250261304dcb78a3bd8fbe39fc4d53ef40fd5024a4a0044ee0ca6d7752ee",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0xb6a7e54bc6c7de6fb69d8a50c7726c92f0e0cdce4943d6e96fc3bdb0ca670cb8"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)"
+        },
+        {
+          "selector": "0x52ef6b2c",
+          "signature": "facetAddresses()"
+        },
+        {
+          "selector": "0x7a0ed627",
+          "signature": "facets()"
+        },
+        {
+          "selector": "0xadfca15e",
+          "signature": "facetFunctionSelectors(address)"
+        },
+        {
+          "selector": "0xcdffacc6",
+          "signature": "facetAddress(bytes4)"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        }
+      ]
+    },
+    {
+      "name": "access",
+      "scope": "base",
+      "contract": "DefaultAdminAccessControlFacet",
+      "source": "packages/0_shared/src/facets/DefaultAdminAccessControlFacet.sol",
+      "selectorFunction": null,
+      "priority": null,
+      "runtime": {
+        "metadataSource": "packages/0_shared/src/facets/DefaultAdminAccessControlFacet.sol",
+        "namespaceLabel": "cybergold.access-control.default-admin-rules",
+        "namespace": "0x62aff0a244da0ee0e8ac4dfbddd7e7c4b3c8d0b71e87515f69be347d2bf633b6",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0x6535d526a82e3a7614be8e6a74f9b623c8b98d256a659b677a33273a094a8184"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0x022d63fb",
+          "signature": "defaultAdminDelayIncreaseWait()"
+        },
+        {
+          "selector": "0x07389841",
+          "signature": "upgraderRole()"
+        },
+        {
+          "selector": "0x0aa6220b",
+          "signature": "rollbackDefaultAdminDelay()"
+        },
+        {
+          "selector": "0x248a9ca3",
+          "signature": "getRoleAdmin(bytes32)"
+        },
+        {
+          "selector": "0x2f2ff15d",
+          "signature": "grantRole(bytes32,address)"
+        },
+        {
+          "selector": "0x36568abe",
+          "signature": "renounceRole(bytes32,address)"
+        },
+        {
+          "selector": "0x634e93da",
+          "signature": "beginDefaultAdminTransfer(address)"
+        },
+        {
+          "selector": "0x649a5ec7",
+          "signature": "changeDefaultAdminDelay(uint48)"
+        },
+        {
+          "selector": "0x84ef8ffc",
+          "signature": "defaultAdmin()"
+        },
+        {
+          "selector": "0x9010d07c",
+          "signature": "getRoleMember(bytes32,uint256)"
+        },
+        {
+          "selector": "0x91d14854",
+          "signature": "hasRole(bytes32,address)"
+        },
+        {
+          "selector": "0xa1eda53c",
+          "signature": "pendingDefaultAdminDelay()"
+        },
+        {
+          "selector": "0xa217fddf",
+          "signature": "DEFAULT_ADMIN_ROLE()"
+        },
+        {
+          "selector": "0xa3246ad3",
+          "signature": "getRoleMembers(bytes32)"
+        },
+        {
+          "selector": "0xca15c873",
+          "signature": "getRoleMemberCount(bytes32)"
+        },
+        {
+          "selector": "0xcc8463c8",
+          "signature": "defaultAdminDelay()"
+        },
+        {
+          "selector": "0xcefc1429",
+          "signature": "acceptDefaultAdminTransfer()"
+        },
+        {
+          "selector": "0xcf6eefb7",
+          "signature": "pendingDefaultAdmin()"
+        },
+        {
+          "selector": "0xd547741f",
+          "signature": "revokeRole(bytes32,address)"
+        },
+        {
+          "selector": "0xd602b9fd",
+          "signature": "cancelDefaultAdminTransfer()"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xda9b722d",
+          "signature": "initDefaultAdminAccessControl(address)",
+          "category": "explicit",
+          "reason": "Standalone initializer is delegatecall-only and absent from the runtime cut."
+        },
+        {
+          "selector": "0xa45883a8",
+          "signature": "initDefaultAdminAccessControlFromOuter(address)",
+          "category": "explicit",
+          "reason": "Outer-coordinator initializer is delegatecall-only and absent from the runtime cut."
+        },
+        {
+          "selector": "0x8da5cb5b",
+          "signature": "owner()",
+          "category": "explicit",
+          "reason": "Core deliberately has no ERC-5313 owner surface; two-step AccessControl is authoritative."
+        },
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured loupe facet; access must not duplicate it."
+        }
+      ]
+    },
+    {
+      "name": "pause",
+      "scope": "base",
+      "contract": "PausableFacet",
+      "source": "packages/0_shared/src/facets/PausableFacet.sol",
+      "selectorFunction": null,
+      "priority": null,
+      "runtime": {
+        "metadataSource": "packages/0_shared/src/facets/PausableFacet.sol",
+        "namespaceLabel": "openzeppelin.storage.Pausable",
+        "namespace": "0xc25745a6f4844d6334e8c74b6186760f1eee2b95e99d9a7e545c551bc81264b2",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0x287fac67b57e4a4a062729d2a478ce45f92f7cb352f40f6304d323238b18b134"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0x3f4ba83a",
+          "signature": "unpause()"
+        },
+        {
+          "selector": "0x5c975abb",
+          "signature": "paused()"
+        },
+        {
+          "selector": "0x75b24ebe",
+          "signature": "canPause(address)"
+        },
+        {
+          "selector": "0x8456cb59",
+          "signature": "pause()"
+        },
+        {
+          "selector": "0x88cfce56",
+          "signature": "safeWallet()"
+        },
+        {
+          "selector": "0xb8b17531",
+          "signature": "setSafeWallet(address,address)"
+        },
+        {
+          "selector": "0xd090d134",
+          "signature": "canUnpause(address)"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xd9bb2fdc",
+          "signature": "initPausable(address)",
+          "category": "explicit",
+          "reason": "Standalone initializer is delegatecall-only and absent from the runtime cut."
+        },
+        {
+          "selector": "0xe5f7da7b",
+          "signature": "initPausableFromOuter(address)",
+          "category": "explicit",
+          "reason": "Outer-coordinator initializer is delegatecall-only and absent from the runtime cut."
+        }
+      ]
+    },
+    {
+      "name": "token",
+      "scope": "product",
+      "contract": "TokenFacet",
+      "source": "packages/1_core/src/facets/TokenFacet.sol",
+      "selectorFunction": "tokenSelectors",
+      "priority": 0,
+      "runtime": {
+        "metadataSource": "packages/1_core/src/facets/TokenFacet.sol",
+        "namespaceLabel": "cybergold.core.token",
+        "namespace": "0x14a89b7b3d10f67e7c4bd9c0a82d9ee5890ba3a15e39ca7ef16135bd16312ca7",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0xcb8a43011bb52378ffb94080b9acf3fffa7c1e71b5fa54a848e06c32f61e1499"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0x06fdde03",
+          "signature": "name()"
+        },
+        {
+          "selector": "0x095ea7b3",
+          "signature": "approve(address,uint256)"
+        },
+        {
+          "selector": "0x18160ddd",
+          "signature": "totalSupply()"
+        },
+        {
+          "selector": "0x23b872dd",
+          "signature": "transferFrom(address,address,uint256)"
+        },
+        {
+          "selector": "0x313ce567",
+          "signature": "decimals()"
+        },
+        {
+          "selector": "0x3644e515",
+          "signature": "DOMAIN_SEPARATOR()"
+        },
+        {
+          "selector": "0x40c10f19",
+          "signature": "mint(address,uint256)"
+        },
+        {
+          "selector": "0x4211fe70",
+          "signature": "unallowancedBalanceOf(address)"
+        },
+        {
+          "selector": "0x70a08231",
+          "signature": "balanceOf(address)"
+        },
+        {
+          "selector": "0x7ecebe00",
+          "signature": "nonces(address)"
+        },
+        {
+          "selector": "0x84b0196e",
+          "signature": "eip712Domain()"
+        },
+        {
+          "selector": "0x95d89b41",
+          "signature": "symbol()"
+        },
+        {
+          "selector": "0x9dc29fac",
+          "signature": "burn(address,uint256)"
+        },
+        {
+          "selector": "0xa9059cbb",
+          "signature": "transfer(address,uint256)"
+        },
+        {
+          "selector": "0xd505accf",
+          "signature": "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)"
+        },
+        {
+          "selector": "0xdd62ed3e",
+          "signature": "allowance(address,address)"
+        },
+        {
+          "selector": "0xebdd2f41",
+          "signature": "allowanceExposure(address)"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0x6e655c89",
+          "signature": "initToken(string,string)",
+          "category": "initializer-only",
+          "reason": "Initializer entrypoints execute only as reviewed delegatecall targets and are never installed runtime selectors."
+        },
+        {
+          "selector": "0x5c975abb",
+          "signature": "paused()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured pause facet; token must not duplicate it."
+        }
+      ]
+    },
+    {
+      "name": "issuance",
+      "scope": "product",
+      "contract": "IssuanceFacet",
+      "source": "packages/1_core/src/facets/IssuanceFacet.sol",
+      "selectorFunction": "issuanceSelectors",
+      "priority": 1,
+      "runtime": {
+        "metadataSource": "packages/1_core/src/facets/IssuanceFacet.sol",
+        "namespaceLabel": "cybergold.controller.issuance",
+        "namespace": "0x56a7eef5db75ce822d511c55e0882fa3bcd1e3642a5d0cfb46d75422e9e79a15",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0x8b722cc78a6f555b09cbdb72688b76ba45e599a913265bcfaa02d9d4507be997"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0xcc872b66",
+          "signature": "issue(uint256)"
+        },
+        {
+          "selector": "0xe144eeff",
+          "signature": "safeIssue(uint256,address[],uint256[])"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0xa217fddf",
+          "signature": "DEFAULT_ADMIN_ROLE()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; issuance must not duplicate it."
+        },
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0x04551e9d",
+          "signature": "REDEMPTION_FEE_EXEMPT_ROLE()",
+          "category": "preferred-owner",
+          "reason": "The controller configuration facet is the canonical role-constant owner."
+        },
+        {
+          "selector": "0x248a9ca3",
+          "signature": "getRoleAdmin(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; issuance must not duplicate it."
+        },
+        {
+          "selector": "0x9010d07c",
+          "signature": "getRoleMember(bytes32,uint256)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; issuance must not duplicate it."
+        },
+        {
+          "selector": "0xca15c873",
+          "signature": "getRoleMemberCount(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; issuance must not duplicate it."
+        },
+        {
+          "selector": "0xa3246ad3",
+          "signature": "getRoleMembers(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; issuance must not duplicate it."
+        },
+        {
+          "selector": "0x2f2ff15d",
+          "signature": "grantRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; issuance must not duplicate it."
+        },
+        {
+          "selector": "0x91d14854",
+          "signature": "hasRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; issuance must not duplicate it."
+        },
+        {
+          "selector": "0x5c975abb",
+          "signature": "paused()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured pause facet; issuance must not duplicate it."
+        },
+        {
+          "selector": "0x36568abe",
+          "signature": "renounceRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; issuance must not duplicate it."
+        },
+        {
+          "selector": "0xd547741f",
+          "signature": "revokeRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; issuance must not duplicate it."
+        },
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured loupe facet; issuance must not duplicate it."
+        }
+      ]
+    },
+    {
+      "name": "redemption",
+      "scope": "product",
+      "contract": "RedemptionFacet",
+      "source": "packages/1_core/src/facets/RedemptionFacet.sol",
+      "selectorFunction": "redemptionSelectors",
+      "priority": 2,
+      "runtime": {
+        "metadataSource": "packages/1_core/src/facets/RedemptionFacet.sol",
+        "namespaceLabel": "cybergold.controller.redemption",
+        "namespace": "0xa82eb3572414a13b10ae30b390e14247375143fd2eba7cd0b3e85dd629c23614",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0x6f1e4d9ab3e1922d317a15f0e23a502bc33d686a7940c39853cd43ab4eebeae7"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0x69588208",
+          "signature": "safeRedeem(uint256,(uint8,address,uint256,uint256)[])"
+        },
+        {
+          "selector": "0xdb006a75",
+          "signature": "redeem(uint256)"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0xa217fddf",
+          "signature": "DEFAULT_ADMIN_ROLE()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; redemption must not duplicate it."
+        },
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0x04551e9d",
+          "signature": "REDEMPTION_FEE_EXEMPT_ROLE()",
+          "category": "preferred-owner",
+          "reason": "The controller configuration facet is the canonical role-constant owner."
+        },
+        {
+          "selector": "0x248a9ca3",
+          "signature": "getRoleAdmin(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; redemption must not duplicate it."
+        },
+        {
+          "selector": "0x9010d07c",
+          "signature": "getRoleMember(bytes32,uint256)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; redemption must not duplicate it."
+        },
+        {
+          "selector": "0xca15c873",
+          "signature": "getRoleMemberCount(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; redemption must not duplicate it."
+        },
+        {
+          "selector": "0xa3246ad3",
+          "signature": "getRoleMembers(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; redemption must not duplicate it."
+        },
+        {
+          "selector": "0x2f2ff15d",
+          "signature": "grantRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; redemption must not duplicate it."
+        },
+        {
+          "selector": "0x91d14854",
+          "signature": "hasRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; redemption must not duplicate it."
+        },
+        {
+          "selector": "0x5c975abb",
+          "signature": "paused()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured pause facet; redemption must not duplicate it."
+        },
+        {
+          "selector": "0x36568abe",
+          "signature": "renounceRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; redemption must not duplicate it."
+        },
+        {
+          "selector": "0xd547741f",
+          "signature": "revokeRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; redemption must not duplicate it."
+        },
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured loupe facet; redemption must not duplicate it."
+        }
+      ]
+    },
+    {
+      "name": "rebalance",
+      "scope": "product",
+      "contract": "RebalanceFacet",
+      "source": "packages/1_core/src/facets/RebalanceFacet.sol",
+      "selectorFunction": "rebalanceSelectors",
+      "priority": 3,
+      "runtime": {
+        "metadataSource": "packages/1_core/src/facets/RebalanceFacet.sol",
+        "namespaceLabel": "cybergold.controller.rebalance",
+        "namespace": "0x278cb43ce4666162c741d9a2f4ef23203f1c27e13e4ba8561d9016c3f38d6f88",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0xbd92f2847ee84d3e1571b0324858673c749d9d8dc3493ac10104f4be9c60ec38"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0x14370f0c",
+          "signature": "previewRebalanceSwapExactIn(address,address,uint256)"
+        },
+        {
+          "selector": "0xe5b323f3",
+          "signature": "rebalanceSwapExactIn(address,address,uint256,uint256)"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0xa217fddf",
+          "signature": "DEFAULT_ADMIN_ROLE()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; rebalance must not duplicate it."
+        },
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0x04551e9d",
+          "signature": "REDEMPTION_FEE_EXEMPT_ROLE()",
+          "category": "preferred-owner",
+          "reason": "The controller configuration facet is the canonical role-constant owner."
+        },
+        {
+          "selector": "0x248a9ca3",
+          "signature": "getRoleAdmin(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; rebalance must not duplicate it."
+        },
+        {
+          "selector": "0x9010d07c",
+          "signature": "getRoleMember(bytes32,uint256)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; rebalance must not duplicate it."
+        },
+        {
+          "selector": "0xca15c873",
+          "signature": "getRoleMemberCount(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; rebalance must not duplicate it."
+        },
+        {
+          "selector": "0xa3246ad3",
+          "signature": "getRoleMembers(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; rebalance must not duplicate it."
+        },
+        {
+          "selector": "0x2f2ff15d",
+          "signature": "grantRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; rebalance must not duplicate it."
+        },
+        {
+          "selector": "0x91d14854",
+          "signature": "hasRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; rebalance must not duplicate it."
+        },
+        {
+          "selector": "0x5c975abb",
+          "signature": "paused()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured pause facet; rebalance must not duplicate it."
+        },
+        {
+          "selector": "0x36568abe",
+          "signature": "renounceRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; rebalance must not duplicate it."
+        },
+        {
+          "selector": "0xd547741f",
+          "signature": "revokeRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; rebalance must not duplicate it."
+        },
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured loupe facet; rebalance must not duplicate it."
+        }
+      ]
+    },
+    {
+      "name": "preview",
+      "scope": "product",
+      "contract": "PreviewFacet",
+      "source": "packages/1_core/src/facets/PreviewFacet.sol",
+      "selectorFunction": "previewSelectors",
+      "priority": 4,
+      "runtime": {
+        "metadataSource": "packages/1_core/src/facets/PreviewFacet.sol",
+        "namespaceLabel": "cybergold.controller.preview",
+        "namespace": "0x310255444a958564491591b651a37c4ed715fae67ea72f25ce6989ab7aa39401",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0x4b4479352a6382514afa7295d41046600c045e0663d0d6d12a1542ceb3cfbec8"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0x78bac762",
+          "signature": "previewRedeemExactIn(uint256)"
+        },
+        {
+          "selector": "0xc8ba2f6d",
+          "signature": "previewRedeemExactOut((uint8,address,uint256,uint256)[])"
+        },
+        {
+          "selector": "0xdb129a1c",
+          "signature": "previewIssueFromBasketExactIn(uint256[])"
+        },
+        {
+          "selector": "0xf1f487d5",
+          "signature": "previewIssueFromBasketExactOut(uint256)"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0xa217fddf",
+          "signature": "DEFAULT_ADMIN_ROLE()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; preview must not duplicate it."
+        },
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0x04551e9d",
+          "signature": "REDEMPTION_FEE_EXEMPT_ROLE()",
+          "category": "preferred-owner",
+          "reason": "The controller configuration facet is the canonical role-constant owner."
+        },
+        {
+          "selector": "0x248a9ca3",
+          "signature": "getRoleAdmin(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; preview must not duplicate it."
+        },
+        {
+          "selector": "0x9010d07c",
+          "signature": "getRoleMember(bytes32,uint256)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; preview must not duplicate it."
+        },
+        {
+          "selector": "0xca15c873",
+          "signature": "getRoleMemberCount(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; preview must not duplicate it."
+        },
+        {
+          "selector": "0xa3246ad3",
+          "signature": "getRoleMembers(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; preview must not duplicate it."
+        },
+        {
+          "selector": "0x2f2ff15d",
+          "signature": "grantRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; preview must not duplicate it."
+        },
+        {
+          "selector": "0x91d14854",
+          "signature": "hasRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; preview must not duplicate it."
+        },
+        {
+          "selector": "0x5c975abb",
+          "signature": "paused()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured pause facet; preview must not duplicate it."
+        },
+        {
+          "selector": "0x36568abe",
+          "signature": "renounceRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; preview must not duplicate it."
+        },
+        {
+          "selector": "0xd547741f",
+          "signature": "revokeRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; preview must not duplicate it."
+        },
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured loupe facet; preview must not duplicate it."
+        }
+      ]
+    },
+    {
+      "name": "basketAdmin",
+      "scope": "product",
+      "contract": "BasketAdminFacet",
+      "source": "packages/1_core/src/facets/BasketAdminFacet.sol",
+      "selectorFunction": "basketAdminSelectors",
+      "priority": 5,
+      "runtime": {
+        "metadataSource": "packages/1_core/src/facets/BasketAdminFacet.sol",
+        "namespaceLabel": "cybergold.controller.basket.admin",
+        "namespace": "0x4f02e3b6b83102db88b51c5ebc969f2a332b24f4968d051bfebb310466c1a16f",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0x15b74d5e2bff1518ef0137da943e2d5a122015d6e6e56908022a1f395ed8d883"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0x53473ae0",
+          "signature": "setBasket(bytes32,address[],uint256[],uint256[])"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0xa217fddf",
+          "signature": "DEFAULT_ADMIN_ROLE()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; basketAdmin must not duplicate it."
+        },
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0x04551e9d",
+          "signature": "REDEMPTION_FEE_EXEMPT_ROLE()",
+          "category": "preferred-owner",
+          "reason": "The controller configuration facet is the canonical role-constant owner."
+        },
+        {
+          "selector": "0x248a9ca3",
+          "signature": "getRoleAdmin(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; basketAdmin must not duplicate it."
+        },
+        {
+          "selector": "0x9010d07c",
+          "signature": "getRoleMember(bytes32,uint256)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; basketAdmin must not duplicate it."
+        },
+        {
+          "selector": "0xca15c873",
+          "signature": "getRoleMemberCount(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; basketAdmin must not duplicate it."
+        },
+        {
+          "selector": "0xa3246ad3",
+          "signature": "getRoleMembers(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; basketAdmin must not duplicate it."
+        },
+        {
+          "selector": "0x2f2ff15d",
+          "signature": "grantRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; basketAdmin must not duplicate it."
+        },
+        {
+          "selector": "0x91d14854",
+          "signature": "hasRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; basketAdmin must not duplicate it."
+        },
+        {
+          "selector": "0x5c975abb",
+          "signature": "paused()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured pause facet; basketAdmin must not duplicate it."
+        },
+        {
+          "selector": "0x36568abe",
+          "signature": "renounceRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; basketAdmin must not duplicate it."
+        },
+        {
+          "selector": "0xd547741f",
+          "signature": "revokeRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; basketAdmin must not duplicate it."
+        },
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured loupe facet; basketAdmin must not duplicate it."
+        }
+      ]
+    },
+    {
+      "name": "controllerConfig",
+      "scope": "product",
+      "contract": "ControllerConfigFacet",
+      "source": "packages/1_core/src/facets/ControllerConfigFacet.sol",
+      "selectorFunction": "configSelectors",
+      "priority": 6,
+      "runtime": {
+        "metadataSource": "packages/1_core/src/facets/ControllerConfigFacet.sol",
+        "namespaceLabel": "cybergold.controller.config",
+        "namespace": "0x1c20f42be257b6f5c4b82223943d451abcf8b31d79e50854a5ed68bc0d2bb7e6",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0xd96d353c0c52cbd6d555c934422328561dd6a939a33ee35bcd884a6e478405a6"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0x01ff572d",
+          "signature": "MAX_FEE_PPM()"
+        },
+        {
+          "selector": "0x04551e9d",
+          "signature": "REDEMPTION_FEE_EXEMPT_ROLE()"
+        },
+        {
+          "selector": "0x3221c094",
+          "signature": "setIssuanceFeePpm(uint256,uint256)"
+        },
+        {
+          "selector": "0x87198cf2",
+          "signature": "setMaxTotalSupply(uint256,uint256)"
+        },
+        {
+          "selector": "0xadfe0870",
+          "signature": "setTreasury(address,address)"
+        },
+        {
+          "selector": "0xeb33347d",
+          "signature": "setRedemptionFeePpm(uint256,uint256)"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0xa217fddf",
+          "signature": "DEFAULT_ADMIN_ROLE()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; controllerConfig must not duplicate it."
+        },
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0x248a9ca3",
+          "signature": "getRoleAdmin(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; controllerConfig must not duplicate it."
+        },
+        {
+          "selector": "0x9010d07c",
+          "signature": "getRoleMember(bytes32,uint256)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; controllerConfig must not duplicate it."
+        },
+        {
+          "selector": "0xca15c873",
+          "signature": "getRoleMemberCount(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; controllerConfig must not duplicate it."
+        },
+        {
+          "selector": "0xa3246ad3",
+          "signature": "getRoleMembers(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; controllerConfig must not duplicate it."
+        },
+        {
+          "selector": "0x2f2ff15d",
+          "signature": "grantRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; controllerConfig must not duplicate it."
+        },
+        {
+          "selector": "0x91d14854",
+          "signature": "hasRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; controllerConfig must not duplicate it."
+        },
+        {
+          "selector": "0x5c975abb",
+          "signature": "paused()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured pause facet; controllerConfig must not duplicate it."
+        },
+        {
+          "selector": "0x36568abe",
+          "signature": "renounceRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; controllerConfig must not duplicate it."
+        },
+        {
+          "selector": "0xd547741f",
+          "signature": "revokeRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; controllerConfig must not duplicate it."
+        },
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured loupe facet; controllerConfig must not duplicate it."
+        }
+      ]
+    },
+    {
+      "name": "lens",
+      "scope": "product",
+      "contract": "LensFacet",
+      "source": "packages/1_core/src/facets/LensFacet.sol",
+      "selectorFunction": "lensSelectors",
+      "priority": 7,
+      "runtime": {
+        "metadataSource": "packages/1_core/src/facets/LensFacet.sol",
+        "namespaceLabel": "cybergold.core.lens",
+        "namespace": "0x230d44d4cc174bbd344d5d1f9ba1fc479a89a493478f35055127b2d3fdadf2df",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0x9b6c277abe151b47aa4d52c1acc0b24708f9b3fb4a62b5dccc2ef4d408cc258d"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0x0f9182e7",
+          "signature": "effectiveCygldSupplyCap()"
+        },
+        {
+          "selector": "0x2ab4d052",
+          "signature": "maxTotalSupply()"
+        },
+        {
+          "selector": "0x420394b2",
+          "signature": "basketAssets()"
+        },
+        {
+          "selector": "0x5098fc00",
+          "signature": "coreAttachedRecoveryAssets()"
+        },
+        {
+          "selector": "0x5a487e17",
+          "signature": "basketGoldRefGramsFp18()"
+        },
+        {
+          "selector": "0x61d027b3",
+          "signature": "treasury()"
+        },
+        {
+          "selector": "0x798e9658",
+          "signature": "basketCygldPerUnitFp18()"
+        },
+        {
+          "selector": "0x7e435382",
+          "signature": "reserveCustodyStatus(address)"
+        },
+        {
+          "selector": "0x8264ba8d",
+          "signature": "outstandingRecoveryAssetCount()"
+        },
+        {
+          "selector": "0xa7a19e71",
+          "signature": "issuanceFeePpm()"
+        },
+        {
+          "selector": "0xb2538ec2",
+          "signature": "basketConfigHash()"
+        },
+        {
+          "selector": "0xb3fd7741",
+          "signature": "basketTargetsPpm()"
+        },
+        {
+          "selector": "0xba588430",
+          "signature": "previewRedeemRecoveryShares(address,uint256)"
+        },
+        {
+          "selector": "0xc6122eb7",
+          "signature": "reserveLifecycle(address)"
+        },
+        {
+          "selector": "0xc81212d5",
+          "signature": "cygldRefGramsFp18()"
+        },
+        {
+          "selector": "0xcc649f16",
+          "signature": "recoveryPool(address)"
+        },
+        {
+          "selector": "0xf9cdd808",
+          "signature": "outstandingRecoveryAssets(uint256,uint256)"
+        },
+        {
+          "selector": "0xfd0602f1",
+          "signature": "redemptionFeePpm()"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        }
+      ]
+    },
+    {
+      "name": "reserveLifecycle",
+      "scope": "product",
+      "contract": "ReserveLifecycleFacet",
+      "source": "packages/1_core/src/facets/ReserveLifecycleFacet.sol",
+      "selectorFunction": "reserveLifecycleSelectors",
+      "priority": 8,
+      "runtime": {
+        "metadataSource": "packages/1_core/src/facets/ReserveLifecycleFacet.sol",
+        "namespaceLabel": "cybergold.core.reserve-lifecycle",
+        "namespace": "0x0225184f06f48d9e5124577200cb4235de8035caf444ec5f434a40843c711551",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0x254bcc35b82f8cc8b4f8c3ab59aaf78e0844f7ea4c5df424dc8fd054b6decf8c"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0x5f8a5e47",
+          "signature": "finalizeReserveInactivation((address,bytes32,address[],uint256[],uint256[]))"
+        },
+        {
+          "selector": "0x75deee16",
+          "signature": "activateAsset((address,uint8,bytes32,uint256,address[],uint256[],uint256[]))"
+        },
+        {
+          "selector": "0x860ecd33",
+          "signature": "beginReserveExit((address,bytes32,uint256,address[],uint256[],uint256[]))"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0xa217fddf",
+          "signature": "DEFAULT_ADMIN_ROLE()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; reserveLifecycle must not duplicate it."
+        },
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0x04551e9d",
+          "signature": "REDEMPTION_FEE_EXEMPT_ROLE()",
+          "category": "preferred-owner",
+          "reason": "The controller configuration facet is the canonical role-constant owner."
+        },
+        {
+          "selector": "0x248a9ca3",
+          "signature": "getRoleAdmin(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; reserveLifecycle must not duplicate it."
+        },
+        {
+          "selector": "0x9010d07c",
+          "signature": "getRoleMember(bytes32,uint256)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; reserveLifecycle must not duplicate it."
+        },
+        {
+          "selector": "0xca15c873",
+          "signature": "getRoleMemberCount(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; reserveLifecycle must not duplicate it."
+        },
+        {
+          "selector": "0xa3246ad3",
+          "signature": "getRoleMembers(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; reserveLifecycle must not duplicate it."
+        },
+        {
+          "selector": "0x2f2ff15d",
+          "signature": "grantRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; reserveLifecycle must not duplicate it."
+        },
+        {
+          "selector": "0x91d14854",
+          "signature": "hasRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; reserveLifecycle must not duplicate it."
+        },
+        {
+          "selector": "0x5c975abb",
+          "signature": "paused()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured pause facet; reserveLifecycle must not duplicate it."
+        },
+        {
+          "selector": "0x36568abe",
+          "signature": "renounceRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; reserveLifecycle must not duplicate it."
+        },
+        {
+          "selector": "0xd547741f",
+          "signature": "revokeRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; reserveLifecycle must not duplicate it."
+        },
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured loupe facet; reserveLifecycle must not duplicate it."
+        }
+      ]
+    },
+    {
+      "name": "recoveryShare",
+      "scope": "product",
+      "contract": "RecoveryShareFacet",
+      "source": "packages/1_core/src/facets/RecoveryShareFacet.sol",
+      "selectorFunction": "recoveryShareSelectors",
+      "priority": 9,
+      "runtime": {
+        "metadataSource": "packages/1_core/src/facets/RecoveryShareFacet.sol",
+        "namespaceLabel": "cybergold.core.recovery-share",
+        "namespace": "0x2dd85f045de43d5667c7928214f4e83e1e7fe3d9eb1bb5ca200dbb9df558e93d",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0x8ab40440218891dc7c62f67d21e22e154bdb5a0e246b78c03f3e5e03470fdf79"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0x00fdd58e",
+          "signature": "balanceOf(address,uint256)"
+        },
+        {
+          "selector": "0x2eb2c2d6",
+          "signature": "safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)"
+        },
+        {
+          "selector": "0x32866daf",
+          "signature": "issueRecoveryShares(address,address[],uint256[])"
+        },
+        {
+          "selector": "0x4e1273f4",
+          "signature": "balanceOfBatch(address[],uint256[])"
+        },
+        {
+          "selector": "0x6bfe1c58",
+          "signature": "burnRecoveryShares(address,address,uint256)"
+        },
+        {
+          "selector": "0xa22cb465",
+          "signature": "setApprovalForAll(address,bool)"
+        },
+        {
+          "selector": "0xbd85b039",
+          "signature": "totalSupply(uint256)"
+        },
+        {
+          "selector": "0xe985e9c5",
+          "signature": "isApprovedForAll(address,address)"
+        },
+        {
+          "selector": "0xf242432a",
+          "signature": "safeTransferFrom(address,address,uint256,uint256,bytes)"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0x5c975abb",
+          "signature": "paused()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured pause facet; recoveryShare must not duplicate it."
+        },
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured loupe facet; recoveryShare must not duplicate it."
+        },
+        {
+          "selector": "0x0e89341c",
+          "signature": "uri(uint256)",
+          "category": "preferred-owner",
+          "reason": "The dedicated recovery-share metadata facet is the canonical ERC-1155 URI owner."
+        }
+      ]
+    },
+    {
+      "name": "recoveryShareMetadata",
+      "scope": "product",
+      "contract": "RecoveryShareMetadataFacet",
+      "source": "packages/1_core/src/facets/RecoveryShareMetadataFacet.sol",
+      "selectorFunction": "recoveryShareMetadataSelectors",
+      "priority": 10,
+      "runtime": {
+        "metadataSource": "packages/1_core/src/facets/RecoveryShareMetadataFacet.sol",
+        "namespaceLabel": "cybergold.core.recovery-share-metadata",
+        "namespace": "0x21d7043f3ec5ef4ff4eb30969d8842ce121d77a551f6e7a95fec8ec8275fa8f6",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0x1f2b4137e5eeea524f847e0bd6b8c20dd64fda5f16089465fd4814659d735c84"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0x0e89341c",
+          "signature": "uri(uint256)"
+        },
+        {
+          "selector": "0xe8a3d485",
+          "signature": "contractURI()"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        }
+      ]
+    },
+    {
+      "name": "recoveryAdmin",
+      "scope": "product",
+      "contract": "RecoveryAdminFacet",
+      "source": "packages/1_core/src/facets/RecoveryAdminFacet.sol",
+      "selectorFunction": "recoveryAdminSelectors",
+      "priority": 11,
+      "runtime": {
+        "metadataSource": "packages/1_core/src/facets/RecoveryAdminFacet.sol",
+        "namespaceLabel": "cybergold.core.recovery-admin",
+        "namespace": "0xd05d6431a2c3e8bdf62c31191df560486700a42e67d68879f8a59f02ace258ae",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0x87a09574faebfed0f2b431cb1bad854b49e7c0861d3bde2fbb535aa7b1a301ca"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0xdf809d9f",
+          "signature": "activateRecovery((address,uint8,bytes32,uint256,address[],uint256[],uint256[],uint256))"
+        },
+        {
+          "selector": "0xec4661fb",
+          "signature": "rehabilitateRecoveryAsset((address,bytes32,uint256,uint256,uint256,address[],uint256[],uint256[]))"
+        },
+        {
+          "selector": "0xfe90b33d",
+          "signature": "finalizeZeroEntitlementRecovery(address)"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0xa217fddf",
+          "signature": "DEFAULT_ADMIN_ROLE()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; recoveryAdmin must not duplicate it."
+        },
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0x04551e9d",
+          "signature": "REDEMPTION_FEE_EXEMPT_ROLE()",
+          "category": "preferred-owner",
+          "reason": "The controller configuration facet is the canonical role-constant owner."
+        },
+        {
+          "selector": "0x248a9ca3",
+          "signature": "getRoleAdmin(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; recoveryAdmin must not duplicate it."
+        },
+        {
+          "selector": "0x9010d07c",
+          "signature": "getRoleMember(bytes32,uint256)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; recoveryAdmin must not duplicate it."
+        },
+        {
+          "selector": "0xca15c873",
+          "signature": "getRoleMemberCount(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; recoveryAdmin must not duplicate it."
+        },
+        {
+          "selector": "0xa3246ad3",
+          "signature": "getRoleMembers(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; recoveryAdmin must not duplicate it."
+        },
+        {
+          "selector": "0x2f2ff15d",
+          "signature": "grantRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; recoveryAdmin must not duplicate it."
+        },
+        {
+          "selector": "0x91d14854",
+          "signature": "hasRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; recoveryAdmin must not duplicate it."
+        },
+        {
+          "selector": "0x5c975abb",
+          "signature": "paused()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured pause facet; recoveryAdmin must not duplicate it."
+        },
+        {
+          "selector": "0x36568abe",
+          "signature": "renounceRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; recoveryAdmin must not duplicate it."
+        },
+        {
+          "selector": "0xd547741f",
+          "signature": "revokeRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; recoveryAdmin must not duplicate it."
+        },
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured loupe facet; recoveryAdmin must not duplicate it."
+        }
+      ]
+    },
+    {
+      "name": "recoveryPoolSettlement",
+      "scope": "product",
+      "contract": "RecoveryPoolSettlementFacet",
+      "source": "packages/1_core/src/facets/RecoveryPoolSettlementFacet.sol",
+      "selectorFunction": "recoveryPoolSettlementSelectors",
+      "priority": 12,
+      "runtime": {
+        "metadataSource": "packages/1_core/src/facets/RecoveryPoolSettlementFacet.sol",
+        "namespaceLabel": "cybergold.core.recovery-pool-settlement",
+        "namespace": "0xe1660f84304b7adee37b00ef841e22bc3ca8467897930ffddc1cab4b7eaa8c34",
+        "legacyDeclaredVersion": 1,
+        "codeHash": "0xe2bb7e539763845cb70a11ee43eda9b46a65d560945b73f5fb9d945b8d5511ff"
+      },
+      "immutableBindings": [],
+      "selectors": [
+        {
+          "selector": "0x6f790d9e",
+          "signature": "redeemRecoveryShares(address,uint256,address,uint256)"
+        }
+      ],
+      "exclusions": [
+        {
+          "selector": "0xa217fddf",
+          "signature": "DEFAULT_ADMIN_ROLE()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; recoveryPoolSettlement must not duplicate it."
+        },
+        {
+          "selector": "0x84dc61c3",
+          "signature": "FACET_NAMESPACE()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0xaaaf2321",
+          "signature": "FACET_VERSION()",
+          "category": "runtime-metadata",
+          "reason": "Facet runtime metadata is probed directly on implementations and is never installed in a diamond."
+        },
+        {
+          "selector": "0x04551e9d",
+          "signature": "REDEMPTION_FEE_EXEMPT_ROLE()",
+          "category": "preferred-owner",
+          "reason": "The controller configuration facet is the canonical role-constant owner."
+        },
+        {
+          "selector": "0x248a9ca3",
+          "signature": "getRoleAdmin(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; recoveryPoolSettlement must not duplicate it."
+        },
+        {
+          "selector": "0x9010d07c",
+          "signature": "getRoleMember(bytes32,uint256)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; recoveryPoolSettlement must not duplicate it."
+        },
+        {
+          "selector": "0xca15c873",
+          "signature": "getRoleMemberCount(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; recoveryPoolSettlement must not duplicate it."
+        },
+        {
+          "selector": "0xa3246ad3",
+          "signature": "getRoleMembers(bytes32)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; recoveryPoolSettlement must not duplicate it."
+        },
+        {
+          "selector": "0x2f2ff15d",
+          "signature": "grantRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; recoveryPoolSettlement must not duplicate it."
+        },
+        {
+          "selector": "0x91d14854",
+          "signature": "hasRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; recoveryPoolSettlement must not duplicate it."
+        },
+        {
+          "selector": "0x5c975abb",
+          "signature": "paused()",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured pause facet; recoveryPoolSettlement must not duplicate it."
+        },
+        {
+          "selector": "0x36568abe",
+          "signature": "renounceRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; recoveryPoolSettlement must not duplicate it."
+        },
+        {
+          "selector": "0xd547741f",
+          "signature": "revokeRole(bytes32,address)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured access facet; recoveryPoolSettlement must not duplicate it."
+        },
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "category": "precedence",
+          "reason": "Selector precedence assigns this inherited/overlapping selector to the configured loupe facet; recoveryPoolSettlement must not duplicate it."
+        }
+      ]
+    }
+  ],
+  "advertisedInterfaces": [
+    {
+      "name": "IERC165",
+      "interfaceId": "0x01ffc9a7",
+      "interfaceSelectorCount": 1,
+      "interfaceSelectors": [
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "facet": "loupe"
+        }
+      ],
+      "manifestSelectorCount": 1,
+      "manifestSelectors": [
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "facet": "loupe"
+        }
+      ]
+    },
+    {
+      "name": "IDiamondCut",
+      "interfaceId": "0x1f931c1c",
+      "interfaceSelectorCount": 1,
+      "interfaceSelectors": [
+        {
+          "selector": "0x1f931c1c",
+          "signature": "diamondCut((address,uint8,bytes4[])[],address,bytes)",
+          "facet": "cut"
+        }
+      ],
+      "manifestSelectorCount": 1,
+      "manifestSelectors": [
+        {
+          "selector": "0x1f931c1c",
+          "signature": "diamondCut((address,uint8,bytes4[])[],address,bytes)",
+          "facet": "cut"
+        }
+      ]
+    },
+    {
+      "name": "IDiamondLoupe",
+      "interfaceId": "0x48e2b093",
+      "interfaceSelectorCount": 4,
+      "interfaceSelectors": [
+        {
+          "selector": "0x7a0ed627",
+          "signature": "facets()",
+          "facet": "loupe"
+        },
+        {
+          "selector": "0xadfca15e",
+          "signature": "facetFunctionSelectors(address)",
+          "facet": "loupe"
+        },
+        {
+          "selector": "0x52ef6b2c",
+          "signature": "facetAddresses()",
+          "facet": "loupe"
+        },
+        {
+          "selector": "0xcdffacc6",
+          "signature": "facetAddress(bytes4)",
+          "facet": "loupe"
+        }
+      ],
+      "manifestSelectorCount": 4,
+      "manifestSelectors": [
+        {
+          "selector": "0x7a0ed627",
+          "signature": "facets()",
+          "facet": "loupe"
+        },
+        {
+          "selector": "0xadfca15e",
+          "signature": "facetFunctionSelectors(address)",
+          "facet": "loupe"
+        },
+        {
+          "selector": "0x52ef6b2c",
+          "signature": "facetAddresses()",
+          "facet": "loupe"
+        },
+        {
+          "selector": "0xcdffacc6",
+          "signature": "facetAddress(bytes4)",
+          "facet": "loupe"
+        }
+      ]
+    },
+    {
+      "name": "IAccessControl",
+      "interfaceId": "0x7965db0b",
+      "interfaceSelectorCount": 5,
+      "interfaceSelectors": [
+        {
+          "selector": "0x91d14854",
+          "signature": "hasRole(bytes32,address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x248a9ca3",
+          "signature": "getRoleAdmin(bytes32)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x2f2ff15d",
+          "signature": "grantRole(bytes32,address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0xd547741f",
+          "signature": "revokeRole(bytes32,address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x36568abe",
+          "signature": "renounceRole(bytes32,address)",
+          "facet": "access"
+        }
+      ],
+      "manifestSelectorCount": 6,
+      "manifestSelectors": [
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "facet": "loupe"
+        },
+        {
+          "selector": "0x91d14854",
+          "signature": "hasRole(bytes32,address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x248a9ca3",
+          "signature": "getRoleAdmin(bytes32)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x2f2ff15d",
+          "signature": "grantRole(bytes32,address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0xd547741f",
+          "signature": "revokeRole(bytes32,address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x36568abe",
+          "signature": "renounceRole(bytes32,address)",
+          "facet": "access"
+        }
+      ]
+    },
+    {
+      "name": "IAccessControlEnumerable",
+      "interfaceId": "0x5a05180f",
+      "interfaceSelectorCount": 2,
+      "interfaceSelectors": [
+        {
+          "selector": "0x9010d07c",
+          "signature": "getRoleMember(bytes32,uint256)",
+          "facet": "access"
+        },
+        {
+          "selector": "0xca15c873",
+          "signature": "getRoleMemberCount(bytes32)",
+          "facet": "access"
+        }
+      ],
+      "manifestSelectorCount": 8,
+      "manifestSelectors": [
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "facet": "loupe"
+        },
+        {
+          "selector": "0x91d14854",
+          "signature": "hasRole(bytes32,address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x248a9ca3",
+          "signature": "getRoleAdmin(bytes32)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x2f2ff15d",
+          "signature": "grantRole(bytes32,address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0xd547741f",
+          "signature": "revokeRole(bytes32,address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x36568abe",
+          "signature": "renounceRole(bytes32,address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x9010d07c",
+          "signature": "getRoleMember(bytes32,uint256)",
+          "facet": "access"
+        },
+        {
+          "selector": "0xca15c873",
+          "signature": "getRoleMemberCount(bytes32)",
+          "facet": "access"
+        }
+      ]
+    },
+    {
+      "name": "IAccessControlDefaultAdminRules",
+      "interfaceId": "0x31498786",
+      "interfaceSelectorCount": 10,
+      "interfaceSelectors": [
+        {
+          "selector": "0x84ef8ffc",
+          "signature": "defaultAdmin()",
+          "facet": "access"
+        },
+        {
+          "selector": "0xcf6eefb7",
+          "signature": "pendingDefaultAdmin()",
+          "facet": "access"
+        },
+        {
+          "selector": "0xcc8463c8",
+          "signature": "defaultAdminDelay()",
+          "facet": "access"
+        },
+        {
+          "selector": "0xa1eda53c",
+          "signature": "pendingDefaultAdminDelay()",
+          "facet": "access"
+        },
+        {
+          "selector": "0x022d63fb",
+          "signature": "defaultAdminDelayIncreaseWait()",
+          "facet": "access"
+        },
+        {
+          "selector": "0x634e93da",
+          "signature": "beginDefaultAdminTransfer(address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0xd602b9fd",
+          "signature": "cancelDefaultAdminTransfer()",
+          "facet": "access"
+        },
+        {
+          "selector": "0xcefc1429",
+          "signature": "acceptDefaultAdminTransfer()",
+          "facet": "access"
+        },
+        {
+          "selector": "0x649a5ec7",
+          "signature": "changeDefaultAdminDelay(uint48)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x0aa6220b",
+          "signature": "rollbackDefaultAdminDelay()",
+          "facet": "access"
+        }
+      ],
+      "manifestSelectorCount": 16,
+      "manifestSelectors": [
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "facet": "loupe"
+        },
+        {
+          "selector": "0x91d14854",
+          "signature": "hasRole(bytes32,address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x248a9ca3",
+          "signature": "getRoleAdmin(bytes32)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x2f2ff15d",
+          "signature": "grantRole(bytes32,address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0xd547741f",
+          "signature": "revokeRole(bytes32,address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x36568abe",
+          "signature": "renounceRole(bytes32,address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x84ef8ffc",
+          "signature": "defaultAdmin()",
+          "facet": "access"
+        },
+        {
+          "selector": "0xcf6eefb7",
+          "signature": "pendingDefaultAdmin()",
+          "facet": "access"
+        },
+        {
+          "selector": "0xcc8463c8",
+          "signature": "defaultAdminDelay()",
+          "facet": "access"
+        },
+        {
+          "selector": "0xa1eda53c",
+          "signature": "pendingDefaultAdminDelay()",
+          "facet": "access"
+        },
+        {
+          "selector": "0x022d63fb",
+          "signature": "defaultAdminDelayIncreaseWait()",
+          "facet": "access"
+        },
+        {
+          "selector": "0x634e93da",
+          "signature": "beginDefaultAdminTransfer(address)",
+          "facet": "access"
+        },
+        {
+          "selector": "0xd602b9fd",
+          "signature": "cancelDefaultAdminTransfer()",
+          "facet": "access"
+        },
+        {
+          "selector": "0xcefc1429",
+          "signature": "acceptDefaultAdminTransfer()",
+          "facet": "access"
+        },
+        {
+          "selector": "0x649a5ec7",
+          "signature": "changeDefaultAdminDelay(uint48)",
+          "facet": "access"
+        },
+        {
+          "selector": "0x0aa6220b",
+          "signature": "rollbackDefaultAdminDelay()",
+          "facet": "access"
+        }
+      ]
+    },
+    {
+      "name": "IDiamondEmergencyAuthority",
+      "interfaceId": "0x955c24ed",
+      "interfaceSelectorCount": 4,
+      "interfaceSelectors": [
+        {
+          "selector": "0x88cfce56",
+          "signature": "safeWallet()",
+          "facet": "pause"
+        },
+        {
+          "selector": "0x75b24ebe",
+          "signature": "canPause(address)",
+          "facet": "pause"
+        },
+        {
+          "selector": "0xd090d134",
+          "signature": "canUnpause(address)",
+          "facet": "pause"
+        },
+        {
+          "selector": "0xb8b17531",
+          "signature": "setSafeWallet(address,address)",
+          "facet": "pause"
+        }
+      ],
+      "manifestSelectorCount": 7,
+      "manifestSelectors": [
+        {
+          "selector": "0x8456cb59",
+          "signature": "pause()",
+          "facet": "pause"
+        },
+        {
+          "selector": "0x3f4ba83a",
+          "signature": "unpause()",
+          "facet": "pause"
+        },
+        {
+          "selector": "0x5c975abb",
+          "signature": "paused()",
+          "facet": "pause"
+        },
+        {
+          "selector": "0x88cfce56",
+          "signature": "safeWallet()",
+          "facet": "pause"
+        },
+        {
+          "selector": "0x75b24ebe",
+          "signature": "canPause(address)",
+          "facet": "pause"
+        },
+        {
+          "selector": "0xd090d134",
+          "signature": "canUnpause(address)",
+          "facet": "pause"
+        },
+        {
+          "selector": "0xb8b17531",
+          "signature": "setSafeWallet(address,address)",
+          "facet": "pause"
+        }
+      ]
+    },
+    {
+      "name": "IERC20",
+      "interfaceId": "0x36372b07",
+      "interfaceSelectorCount": 6,
+      "interfaceSelectors": [
+        {
+          "selector": "0x18160ddd",
+          "signature": "totalSupply()",
+          "facet": "token"
+        },
+        {
+          "selector": "0x70a08231",
+          "signature": "balanceOf(address)",
+          "facet": "token"
+        },
+        {
+          "selector": "0xa9059cbb",
+          "signature": "transfer(address,uint256)",
+          "facet": "token"
+        },
+        {
+          "selector": "0xdd62ed3e",
+          "signature": "allowance(address,address)",
+          "facet": "token"
+        },
+        {
+          "selector": "0x095ea7b3",
+          "signature": "approve(address,uint256)",
+          "facet": "token"
+        },
+        {
+          "selector": "0x23b872dd",
+          "signature": "transferFrom(address,address,uint256)",
+          "facet": "token"
+        }
+      ],
+      "manifestSelectorCount": 6,
+      "manifestSelectors": [
+        {
+          "selector": "0x18160ddd",
+          "signature": "totalSupply()",
+          "facet": "token"
+        },
+        {
+          "selector": "0x70a08231",
+          "signature": "balanceOf(address)",
+          "facet": "token"
+        },
+        {
+          "selector": "0xa9059cbb",
+          "signature": "transfer(address,uint256)",
+          "facet": "token"
+        },
+        {
+          "selector": "0xdd62ed3e",
+          "signature": "allowance(address,address)",
+          "facet": "token"
+        },
+        {
+          "selector": "0x095ea7b3",
+          "signature": "approve(address,uint256)",
+          "facet": "token"
+        },
+        {
+          "selector": "0x23b872dd",
+          "signature": "transferFrom(address,address,uint256)",
+          "facet": "token"
+        }
+      ]
+    },
+    {
+      "name": "IERC20Metadata",
+      "interfaceId": "0xa219a025",
+      "interfaceSelectorCount": 3,
+      "interfaceSelectors": [
+        {
+          "selector": "0x06fdde03",
+          "signature": "name()",
+          "facet": "token"
+        },
+        {
+          "selector": "0x95d89b41",
+          "signature": "symbol()",
+          "facet": "token"
+        },
+        {
+          "selector": "0x313ce567",
+          "signature": "decimals()",
+          "facet": "token"
+        }
+      ],
+      "manifestSelectorCount": 9,
+      "manifestSelectors": [
+        {
+          "selector": "0x18160ddd",
+          "signature": "totalSupply()",
+          "facet": "token"
+        },
+        {
+          "selector": "0x70a08231",
+          "signature": "balanceOf(address)",
+          "facet": "token"
+        },
+        {
+          "selector": "0xa9059cbb",
+          "signature": "transfer(address,uint256)",
+          "facet": "token"
+        },
+        {
+          "selector": "0xdd62ed3e",
+          "signature": "allowance(address,address)",
+          "facet": "token"
+        },
+        {
+          "selector": "0x095ea7b3",
+          "signature": "approve(address,uint256)",
+          "facet": "token"
+        },
+        {
+          "selector": "0x23b872dd",
+          "signature": "transferFrom(address,address,uint256)",
+          "facet": "token"
+        },
+        {
+          "selector": "0x06fdde03",
+          "signature": "name()",
+          "facet": "token"
+        },
+        {
+          "selector": "0x95d89b41",
+          "signature": "symbol()",
+          "facet": "token"
+        },
+        {
+          "selector": "0x313ce567",
+          "signature": "decimals()",
+          "facet": "token"
+        }
+      ]
+    },
+    {
+      "name": "IERC20Permit",
+      "interfaceId": "0x9d8ff7da",
+      "interfaceSelectorCount": 3,
+      "interfaceSelectors": [
+        {
+          "selector": "0xd505accf",
+          "signature": "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+          "facet": "token"
+        },
+        {
+          "selector": "0x7ecebe00",
+          "signature": "nonces(address)",
+          "facet": "token"
+        },
+        {
+          "selector": "0x3644e515",
+          "signature": "DOMAIN_SEPARATOR()",
+          "facet": "token"
+        }
+      ],
+      "manifestSelectorCount": 3,
+      "manifestSelectors": [
+        {
+          "selector": "0xd505accf",
+          "signature": "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+          "facet": "token"
+        },
+        {
+          "selector": "0x7ecebe00",
+          "signature": "nonces(address)",
+          "facet": "token"
+        },
+        {
+          "selector": "0x3644e515",
+          "signature": "DOMAIN_SEPARATOR()",
+          "facet": "token"
+        }
+      ]
+    },
+    {
+      "name": "IERC1155",
+      "interfaceId": "0xd9b67a26",
+      "interfaceSelectorCount": 6,
+      "interfaceSelectors": [
+        {
+          "selector": "0x00fdd58e",
+          "signature": "balanceOf(address,uint256)",
+          "facet": "recoveryShare"
+        },
+        {
+          "selector": "0x4e1273f4",
+          "signature": "balanceOfBatch(address[],uint256[])",
+          "facet": "recoveryShare"
+        },
+        {
+          "selector": "0xa22cb465",
+          "signature": "setApprovalForAll(address,bool)",
+          "facet": "recoveryShare"
+        },
+        {
+          "selector": "0xe985e9c5",
+          "signature": "isApprovedForAll(address,address)",
+          "facet": "recoveryShare"
+        },
+        {
+          "selector": "0xf242432a",
+          "signature": "safeTransferFrom(address,address,uint256,uint256,bytes)",
+          "facet": "recoveryShare"
+        },
+        {
+          "selector": "0x2eb2c2d6",
+          "signature": "safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)",
+          "facet": "recoveryShare"
+        }
+      ],
+      "manifestSelectorCount": 7,
+      "manifestSelectors": [
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "facet": "loupe"
+        },
+        {
+          "selector": "0x00fdd58e",
+          "signature": "balanceOf(address,uint256)",
+          "facet": "recoveryShare"
+        },
+        {
+          "selector": "0x4e1273f4",
+          "signature": "balanceOfBatch(address[],uint256[])",
+          "facet": "recoveryShare"
+        },
+        {
+          "selector": "0xa22cb465",
+          "signature": "setApprovalForAll(address,bool)",
+          "facet": "recoveryShare"
+        },
+        {
+          "selector": "0xe985e9c5",
+          "signature": "isApprovedForAll(address,address)",
+          "facet": "recoveryShare"
+        },
+        {
+          "selector": "0xf242432a",
+          "signature": "safeTransferFrom(address,address,uint256,uint256,bytes)",
+          "facet": "recoveryShare"
+        },
+        {
+          "selector": "0x2eb2c2d6",
+          "signature": "safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)",
+          "facet": "recoveryShare"
+        }
+      ]
+    },
+    {
+      "name": "IERC1155MetadataURI",
+      "interfaceId": "0x0e89341c",
+      "interfaceSelectorCount": 1,
+      "interfaceSelectors": [
+        {
+          "selector": "0x0e89341c",
+          "signature": "uri(uint256)",
+          "facet": "recoveryShareMetadata"
+        }
+      ],
+      "manifestSelectorCount": 8,
+      "manifestSelectors": [
+        {
+          "selector": "0x01ffc9a7",
+          "signature": "supportsInterface(bytes4)",
+          "facet": "loupe"
+        },
+        {
+          "selector": "0x00fdd58e",
+          "signature": "balanceOf(address,uint256)",
+          "facet": "recoveryShare"
+        },
+        {
+          "selector": "0x4e1273f4",
+          "signature": "balanceOfBatch(address[],uint256[])",
+          "facet": "recoveryShare"
+        },
+        {
+          "selector": "0xa22cb465",
+          "signature": "setApprovalForAll(address,bool)",
+          "facet": "recoveryShare"
+        },
+        {
+          "selector": "0xe985e9c5",
+          "signature": "isApprovedForAll(address,address)",
+          "facet": "recoveryShare"
+        },
+        {
+          "selector": "0xf242432a",
+          "signature": "safeTransferFrom(address,address,uint256,uint256,bytes)",
+          "facet": "recoveryShare"
+        },
+        {
+          "selector": "0x2eb2c2d6",
+          "signature": "safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)",
+          "facet": "recoveryShare"
+        },
+        {
+          "selector": "0x0e89341c",
+          "signature": "uri(uint256)",
+          "facet": "recoveryShareMetadata"
+        }
+      ]
+    },
+    {
+      "name": "ICoreRedemption",
+      "interfaceId": "0x02580072",
+      "interfaceSelectorCount": 4,
+      "interfaceSelectors": [
+        {
+          "selector": "0xdb006a75",
+          "signature": "redeem(uint256)",
+          "facet": "redemption"
+        },
+        {
+          "selector": "0x69588208",
+          "signature": "safeRedeem(uint256,(uint8,address,uint256,uint256)[])",
+          "facet": "redemption"
+        },
+        {
+          "selector": "0x78bac762",
+          "signature": "previewRedeemExactIn(uint256)",
+          "facet": "preview"
+        },
+        {
+          "selector": "0xc8ba2f6d",
+          "signature": "previewRedeemExactOut((uint8,address,uint256,uint256)[])",
+          "facet": "preview"
+        }
+      ],
+      "manifestSelectorCount": 4,
+      "manifestSelectors": [
+        {
+          "selector": "0xdb006a75",
+          "signature": "redeem(uint256)",
+          "facet": "redemption"
+        },
+        {
+          "selector": "0x69588208",
+          "signature": "safeRedeem(uint256,(uint8,address,uint256,uint256)[])",
+          "facet": "redemption"
+        },
+        {
+          "selector": "0x78bac762",
+          "signature": "previewRedeemExactIn(uint256)",
+          "facet": "preview"
+        },
+        {
+          "selector": "0xc8ba2f6d",
+          "signature": "previewRedeemExactOut((uint8,address,uint256,uint256)[])",
+          "facet": "preview"
+        }
+      ]
+    }
+  ],
+  "compatibilityInputs": {
+    "aggregateAbi": "generated/abi/CoreDiamond.json",
+    "aggregateSolidityInterface": "packages/1_core/src/interfaces/ICyberGoldCore.sol",
+    "storageInventory": "ci/storage-inventory.json",
+    "interfaceAdvertisementAuthority": "packages/0_shared/src/libraries/LibInterfaceInvariant.sol",
+    "runtimeVersionAuthority": "packages/0_shared/src/helpers/FacetVersionRegistry.sol",
+    "validatedCutAuthority": "packages/0_shared/src/helpers/ValidatedDiamondCut.sol",
+    "extensionModel": {
+      "default": "additive",
+      "selectorRemovalOrMove": "exact-owner-reviewed-exception",
+      "requiredProtections": [
+        "storage-namespace-and-full-compiler-layout-compatibility",
+        "advertised-interface-and-manifest-truth",
+        "facet-namespace-version-installed-runtime-and-initializer-binding",
+        "immutable-dependency-change-requires-explicit-migration-record"
+      ]
+    }
+  }
+}

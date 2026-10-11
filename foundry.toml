@@ -1,0 +1,41 @@
+[profile.default]
+solc_version = "0.8.37"
+evm_version = "osaka"
+libs = ["lib"]
+out = "out"
+optimizer = true
+optimizer_runs = 100
+# Pin every compiler remapping so nested dependency discovery cannot change bytecode metadata.
+auto_detect_remappings = false
+remappings = [
+  "shared/=test/",
+  "cybergold-core/=packages/1_core/src/",
+  "diamond-infra/=packages/0_shared/src/",
+  "diamond-1/=lib/diamond-1-hardhat/contracts/",
+  "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+  "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+  "staking/=packages/3_staking/src/",
+  "staking-mocks/=packages/3_staking/test/mocks/",
+  "diamond-1-hardhat/=lib/diamond-1-hardhat/contracts/",
+  "erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+  "forge-std/=lib/forge-std/src/",
+  "halmos-cheatcodes/=lib/openzeppelin-contracts-upgradeable/lib/halmos-cheatcodes/src/",
+  "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+  "openzeppelin-contracts/=lib/openzeppelin-contracts/"
+]
+offline = true
+fs_permissions = [
+  { access = "read", path = "config" },
+  { access = "read", path = "generated" },
+  { access = "read-write", path = "out" },
+  { access = "read-write", path = "../cybergold-ops/deployments" }
+]
+[lint]
+ignore = ["lib/**", "**/lib/**"]
+
+# global remaps for common deps; add more as needed
+#remappings = [
+#  "forge-std/=lib/forge-std/src/",
+#  "openzeppelin/=lib/openzeppelin-contracts/contracts/",
+#  "openzeppelin-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/"
+#]
