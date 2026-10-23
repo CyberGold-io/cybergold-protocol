@@ -11083,5 +11083,13 @@
         "Event indexing/cap-update-event limitations and standard selected ERC4626/token/adapter semantics remain as recorded; no source gate, timeout or return-data admission rule was added."
       ]
     }
+  },
+  "normalizationSummary": {
+    "rawNormalizedOccurrences": 496,
+    "uniqueNormalizedFindings": 455,
+    "requiredAndAcceptedDispositions": 310,
+    "newFindings": 0,
+    "staleBaselineEntries": 0,
+    "note": "The canonical normalizer deduplicates by fingerprint; original quarterly-review input counts remain preserved verbatim."
   }
 }

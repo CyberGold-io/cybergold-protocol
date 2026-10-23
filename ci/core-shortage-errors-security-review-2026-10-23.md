@@ -68,8 +68,10 @@ Two aggregate fingerprints change:
 | `require-revert-in-loop` | `4aee4e17719cf03fd95c520876332712ca184fded182b41a900e1f934317dcd6` | `246c52cc377f725126c81c4a2e320f8fe6abacab689c14b5a42e142456c06ca5` | The aggregate remains 92 locations. Updated Core locations and error payloads preserve fail-fast conditions and transaction rollback. |
 
 The separate quarterly re-review matched all 288 fingerprints against the
-496 current normalized findings and examined their current source and prior
-rationales. Its 39 target files include 38 that are byte-identical between
+496 raw normalized occurrences and examined their current source and prior
+rationales. The canonical normalizer collapses duplicate fingerprints to 455
+unique findings, of which 310 require and have exact dispositions; there are
+zero new or stale entries. Its 39 target files include 38 that are byte-identical between
 `240b11b` and `33d2f7f`; the other target is the generated Core interface, whose
 reported ERC20 functions are unchanged. This comparison does not assert byte
 identity to the July review source. All 159 Foundry serialization findings also
