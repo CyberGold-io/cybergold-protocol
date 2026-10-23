@@ -2,6 +2,7 @@
 pragma solidity ^0.8.37;
 
 import {ICoreRedemption} from "../src/interfaces/ICoreRedemption.sol";
+import {ICoreTypes} from "../src/interfaces/ICoreTypes.sol";
 import {IRecoveryTypes} from "../src/interfaces/IRecoveryTypes.sol";
 
 import {RecoveryPoolTestBase} from "./helpers/RecoveryPoolTestBase.t.sol";
@@ -125,6 +126,58 @@ contract MixedRedemptionTest is RecoveryPoolTestBase {
         ICoreRedemption.RedemptionQuote memory result = redemption.safeRedeem(quote.grossCygldIn, minimums);
         assertEq(result.outputs[0].amount, 0);
         assertEq(recoveryShare.balanceOf(user, _shareId(address(tokA))), result.outputs[1].amount);
+    }
+
+    function test_exactOutPreviewDistinguishesReserveAndAttachedShareShortages() public {
+        ICoreRedemption.TokenMinimum[] memory minimums = _minimums(preview.previewRedeemExactIn(0.25 ether));
+        uint256 reserveAvailable = testRecoveryLens.reserveCustodyStatus(address(tokB)).activeAvailableRaw;
+        uint256 attachedShares = testRecoveryLens.recoveryPool(address(tokA)).coreAttachedShares;
+        assertEq(recoveryShare.balanceOf(user, _shareId(address(tokA))), 0);
+
+        minimums[0].minimumAmount = reserveAvailable + 1;
+        minimums[1].minimumAmount = attachedShares + 1;
+        vm.expectRevert(ICoreTypes.InsufficientReserveBalance.selector);
+        preview.previewRedeemExactOut(minimums);
+
+        minimums[0].minimumAmount = 0;
+        vm.expectRevert(ICoreTypes.InsufficientRecoveryShares.selector);
+        preview.previewRedeemExactOut(minimums);
+
+        minimums[1].minimumAmount = attachedShares;
+        ICoreRedemption.RedemptionQuote memory quote = preview.previewRedeemExactOut(minimums);
+        assertEq(quote.outputs[1].amount, attachedShares);
+    }
+
+    function test_exactOutPreviewRejectsUnavailableReserveWithoutBurn() public {
+        ICoreRedemption.TokenMinimum[] memory minimums = _minimums(preview.previewRedeemExactIn(0.25 ether));
+        minimums[0].minimumAmount = 1;
+        minimums[1].minimumAmount = 0;
+        deal(address(tokB), diamond, 0);
+        uint256 supplyBefore = token.totalSupply();
+        uint256 attachedBefore = testRecoveryLens.recoveryPool(address(tokA)).coreAttachedShares;
+
+        vm.expectRevert(ICoreTypes.InsufficientReserveBalance.selector);
+        preview.previewRedeemExactOut(minimums);
+
+        assertEq(token.totalSupply(), supplyBefore);
+        assertEq(testRecoveryLens.recoveryPool(address(tokA)).coreAttachedShares, attachedBefore);
+    }
+
+    function test_exactOutRecoveryOnlyPreviewClassifiesBothSortedLegs() public {
+        _activateRecovery(address(tokB));
+        ICoreRedemption.TokenMinimum[] memory minimums = _minimums(preview.previewRedeemExactIn(0.25 ether));
+        assertEq(minimums.length, 2);
+        assertLt(minimums[0].id, minimums[1].id);
+
+        for (uint256 i; i < minimums.length; ++i) {
+            assertEq(uint256(minimums[i].kind), uint256(ICoreRedemption.TokenKind.ERC1155));
+            minimums[0].minimumAmount = 0;
+            minimums[1].minimumAmount = 0;
+            address asset = address(uint160(minimums[i].id));
+            minimums[i].minimumAmount = testRecoveryLens.recoveryPool(asset).coreAttachedShares + 1;
+            vm.expectRevert(ICoreTypes.InsufficientRecoveryShares.selector);
+            preview.previewRedeemExactOut(minimums);
+        }
     }
 
     function test_safeMixedRedemptionRejectsPositiveMinimumForZeroLegBeforeBurn() public {

@@ -192,7 +192,7 @@ contract RebalanceFacetTest is ControllerTestBase {
 
         _setRecoveryPoolRaw(address(tokB), rawCustody - 1_000);
         assertEq(testRecoveryLens.reserveCustodyStatus(address(tokB)).activeAvailableRaw, 1_000);
-        vm.expectRevert(ICoreTypes.InsufficientSupply.selector);
+        vm.expectRevert(ICoreTypes.InsufficientReserveBalance.selector);
         vm.prank(user);
         rebalance.rebalanceSwapExactIn(address(tokA), address(tokB), 0.001 ether, 0);
 
@@ -203,7 +203,7 @@ contract RebalanceFacetTest is ControllerTestBase {
         uint256[] memory rates = lens.basketCygldPerUnitFp18();
         uint256 cygldNeeded = Math.mulDiv(exiting.exitEntitlementRaw + 1, rates[2], 1e18, Math.Rounding.Ceil);
         uint256 amountIn = Math.mulDiv(cygldNeeded, 1e18, rates[0], Math.Rounding.Ceil);
-        vm.expectRevert(ICoreTypes.InsufficientSupply.selector);
+        vm.expectRevert(ICoreTypes.InsufficientReserveBalance.selector);
         rebalance.previewRebalanceSwapExactIn(address(tokA), address(tokB), amountIn);
     }
 

@@ -133,7 +133,7 @@ abstract contract RedemptionControllerBase is ControllerBase {
         returns (ICoreRedemption.RedemptionQuote memory quote)
     {
         if (grossCygldIn == 0) revert ValueMustBeGreaterThanZero();
-        if (context.config.supply < grossCygldIn) revert InsufficientSupply();
+        if (context.config.supply < grossCygldIn) revert InsufficientCygldSupply();
 
         (quote.netCygldIn, quote.protocolFeeCygld) = _splitFee(grossCygldIn, context.config.effectiveFeePpm);
         quote.grossCygldIn = grossCygldIn;
@@ -151,7 +151,11 @@ abstract contract RedemptionControllerBase is ControllerBase {
         uint256 requiredNet;
         for (uint256 i; i < minimumOutputs.length;) {
             requiredNet = _accumulateRequiredNet(
-                requiredNet, minimumOutputs[i].minimumAmount, context.availableAmounts[i], context.denominator
+                requiredNet,
+                minimumOutputs[i].minimumAmount,
+                context.availableAmounts[i],
+                context.denominator,
+                i >= context.config.orderedBasketAssets.length
             );
             unchecked {
                 ++i;
@@ -159,7 +163,7 @@ abstract contract RedemptionControllerBase is ControllerBase {
         }
 
         (uint256 grossCygldIn,) = _grossForNet(requiredNet, context.config.effectiveFeePpm);
-        if (grossCygldIn > context.config.supply) revert InsufficientSupply();
+        if (grossCygldIn > context.config.supply) revert InsufficientCygldSupply();
         quote = _calculateMixedRedeemExactIn(context, grossCygldIn);
         _validateMixedRedemptionMinima(quote, minimumOutputs);
     }
@@ -260,14 +264,20 @@ abstract contract RedemptionControllerBase is ControllerBase {
     /// @param minimum Minimum output requested for this leg.
     /// @param available Current amount available to this leg.
     /// @param denominator Common redemption denominator for the snapshot.
+    /// @param recoveryOutput Whether the canonical output leg represents Core-attached recovery shares.
     /// @return requiredNet Updated greatest net CYGLD requirement.
-    function _accumulateRequiredNet(uint256 current, uint256 minimum, uint256 available, uint256 denominator)
-        internal
-        pure
-        returns (uint256 requiredNet)
-    {
+    function _accumulateRequiredNet(
+        uint256 current,
+        uint256 minimum,
+        uint256 available,
+        uint256 denominator,
+        bool recoveryOutput
+    ) internal pure returns (uint256 requiredNet) {
         if (minimum == 0) return current;
-        if (available == 0 || minimum > available) revert InsufficientSupply();
+        if (available == 0 || minimum > available) {
+            if (recoveryOutput) revert InsufficientRecoveryShares();
+            revert InsufficientReserveBalance();
+        }
         uint256 required = Math.mulDiv(minimum, denominator, available, Math.Rounding.Ceil);
         return required > current ? required : current;
     }
