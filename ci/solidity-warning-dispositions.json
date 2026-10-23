@@ -7,17 +7,23 @@
       "reviewBy": "2026-10-23",
       "expiryCondition": "compiler, Foundry profile, dependency revision, warning code/path/span, or deployability classification change"
     },
-    "pause-gate-warning-agent-review-2026-09-24": {
-      "owner": "Codex agent-assisted source review",
-      "reviewedAt": "2026-09-24",
-      "reviewBy": "2026-10-20",
-      "expiryCondition": "test-harness source/span, compiler, Foundry profile, dependency revision, warning code, or deployability classification change; agent-assisted analysis is not human approval"
-    },
     "optional-initializer-warning-agent-review-2026-09-28": {
       "owner": "Codex agent-assisted source review",
       "reviewedAt": "2026-09-28",
       "reviewBy": "2026-10-23",
       "expiryCondition": "test-harness source/span, compiler, Foundry profile, dependency revision, warning code, or deployability classification change; agent-assisted analysis is not human approval"
+    },
+    "pause-gate-warning-agent-rereview-2026-10-23": {
+      "owner": "Codex agent-assisted source and compiler-warning re-review",
+      "reviewedAt": "2026-10-23",
+      "reviewBy": "2026-11-18",
+      "expiryCondition": "test-harness source/span, compiler, Foundry profile, dependency revision, warning code, or deployability classification change; agent-assisted analysis is not human approval"
+    },
+    "shortage-errors-warning-agent-review-2026-10-23": {
+      "owner": "Codex agent-assisted source and compiler-warning re-review",
+      "reviewedAt": "2026-10-23",
+      "reviewBy": "2027-01-23",
+      "expiryCondition": "compiler, Foundry profile, dependency revision, warning code/path/span, or deployability classification change"
     }
   },
   "rationales": {
@@ -165,15 +171,15 @@
     {
       "code": "3860",
       "path": "packages/1_core/test/RecoveryRedemption.t.sol",
-      "start": 275,
-      "end": 10750,
-      "spanSha256": "3d5e77606912ec8da4c371f522e725cddc523924d2879e922cc58d34ba15c6fb",
-      "fingerprint": "0ad2a4aec56111676691c0eb3e99b6de43d6c5f00696a6474f5fb2a6e4ad13f4",
+      "start": 336,
+      "end": 13514,
+      "spanSha256": "05a86d6f50caed1f88cbe9bb32283d7ec2d7dabbb5878dc0f810510fe851e369",
+      "fingerprint": "d9564577027785d85c79fe80a1e3a075cc721d4ac0c419020b7fcc0cdf4e537e",
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
-      "rationaleId": "nondeployable-harness-size"
+      "rationaleId": "nondeployable-harness-size",
+      "reviewMetadataId": "shortage-errors-warning-agent-review-2026-10-23"
     },
     {
       "code": "3860",
@@ -224,7 +230,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "pause-gate-warning-agent-review-2026-09-24",
+      "reviewMetadataId": "pause-gate-warning-agent-rereview-2026-10-23",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -263,7 +269,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "pause-gate-warning-agent-review-2026-09-24",
+      "reviewMetadataId": "pause-gate-warning-agent-rereview-2026-10-23",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -302,7 +308,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "pause-gate-warning-agent-review-2026-09-24",
+      "reviewMetadataId": "pause-gate-warning-agent-rereview-2026-10-23",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -445,7 +451,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "pause-gate-warning-agent-review-2026-09-24",
+      "reviewMetadataId": "pause-gate-warning-agent-rereview-2026-10-23",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -711,15 +717,15 @@
     {
       "code": "5574",
       "path": "packages/1_core/test/ControllerBaseWs1Coverage.t.sol",
-      "start": 28252,
-      "end": 38692,
-      "spanSha256": "6b290700b10a48b295d6c6048d65f45deac1def919620b11803db47b35469b70",
-      "fingerprint": "3d01a3f32f28b649559d9b7d1489717c495d817625fac01854239cf552d9747c",
+      "start": 28289,
+      "end": 41396,
+      "spanSha256": "1f7973a399bd900cc2f6439f9a54da4d6482680cb4101b4f5b71890a59bd1e7c",
+      "fingerprint": "017532917d650ad1addbf6fd22b64c04eee99362f85b81ee0d747b0f564ea998",
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
-      "rationaleId": "nondeployable-harness-size"
+      "rationaleId": "nondeployable-harness-size",
+      "reviewMetadataId": "shortage-errors-warning-agent-review-2026-10-23"
     },
     {
       "code": "5574",
@@ -794,14 +800,14 @@
       "code": "5574",
       "path": "packages/1_core/test/BasketRegression.t.sol",
       "start": 824,
-      "end": 16120,
-      "spanSha256": "4896e62bda4fc41d5b646782d8e017673c3448d19be1d264e57d4aab790b9999",
-      "fingerprint": "47e62af983929fe4dbbfadde1a6f558ad47d0b2ce8a812bbc9047d7cf5abcf58",
+      "end": 16422,
+      "spanSha256": "ec3ff402cacd5ddb6e6457737d1a6bf0be01fe182832295ea76889b0b4734732",
+      "fingerprint": "02d5de505a72405eb9888a4c2cc77c77ec12ef40ee971bfb64076f622b7577bd",
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
-      "rationaleId": "nondeployable-harness-size"
+      "rationaleId": "nondeployable-harness-size",
+      "reviewMetadataId": "shortage-errors-warning-agent-review-2026-10-23"
     },
     {
       "code": "5574",
@@ -819,15 +825,15 @@
     {
       "code": "5574",
       "path": "packages/1_core/test/RecoveryRedemption.t.sol",
-      "start": 275,
-      "end": 10750,
-      "spanSha256": "3d5e77606912ec8da4c371f522e725cddc523924d2879e922cc58d34ba15c6fb",
-      "fingerprint": "4b157d2c495cae3f85e8bee2105356dfa5045fb075d6245b21a83f222ec7e6e6",
+      "start": 336,
+      "end": 13514,
+      "spanSha256": "05a86d6f50caed1f88cbe9bb32283d7ec2d7dabbb5878dc0f810510fe851e369",
+      "fingerprint": "8df120d16e7f63eab0cde27e1c03b78abb0a3796342a062a67eaec234f84af8f",
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
-      "rationaleId": "nondeployable-harness-size"
+      "rationaleId": "nondeployable-harness-size",
+      "reviewMetadataId": "shortage-errors-warning-agent-review-2026-10-23"
     },
     {
       "code": "3860",
@@ -950,14 +956,14 @@
       "code": "5574",
       "path": "packages/1_core/test/RebalanceFacet.t.sol",
       "start": 598,
-      "end": 14074,
-      "spanSha256": "63182ad51735d109a9c3e4b8d8b551ff9c325f3c2c424b697709f3a3b3bec9d7",
-      "fingerprint": "53eb1981ef6cf245ddce5dd1d41b7d8e7b8f0a957df7467076a7456f77a403fd",
+      "end": 14090,
+      "spanSha256": "3932c9e5af81cba4be635fe7b6df57a1ba8e261318cd2c325421c750722adc66",
+      "fingerprint": "47b353c7ab2584ae73e3f6a01063b36b7d40bd0d1c4b4af3d80be97cdf4bcdef",
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
-      "rationaleId": "nondeployable-harness-size"
+      "rationaleId": "nondeployable-harness-size",
+      "reviewMetadataId": "shortage-errors-warning-agent-review-2026-10-23"
     },
     {
       "code": "5574",
@@ -1555,14 +1561,14 @@
       "code": "5574",
       "path": "packages/1_core/test/SafeSettlementFacet.t.sol",
       "start": 404,
-      "end": 26540,
-      "spanSha256": "00171504605dc26d77432013b15925261748b7aa7bc1b588ef207901c7d6697e",
-      "fingerprint": "7f619c932ac026b47ae1bc78b24f0f9d48613c5372419e0ca836df4929a365aa",
+      "end": 26545,
+      "spanSha256": "056884d13e4b2fce58484e14f602b2378d3161883a7e1a047475dfd1ed17678d",
+      "fingerprint": "afbd1948e22a6eb9c85296ae4d4a180e73337b09790b88305a629d984e09c265",
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
-      "rationaleId": "nondeployable-harness-size"
+      "rationaleId": "nondeployable-harness-size",
+      "reviewMetadataId": "shortage-errors-warning-agent-review-2026-10-23"
     },
     {
       "code": "3860",
@@ -1689,27 +1695,27 @@
       "code": "3860",
       "path": "packages/1_core/test/SafeSettlementFacet.t.sol",
       "start": 404,
-      "end": 26540,
-      "spanSha256": "00171504605dc26d77432013b15925261748b7aa7bc1b588ef207901c7d6697e",
-      "fingerprint": "922512fac4f45f265d0c934c5229bcb6fd745728ca07ff9816579f846565747d",
+      "end": 26545,
+      "spanSha256": "056884d13e4b2fce58484e14f602b2378d3161883a7e1a047475dfd1ed17678d",
+      "fingerprint": "ec9de330f2477cce9679eccd7c6b0f30d7941907afd150ffe51042963d20d143",
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
-      "rationaleId": "nondeployable-harness-size"
+      "rationaleId": "nondeployable-harness-size",
+      "reviewMetadataId": "shortage-errors-warning-agent-review-2026-10-23"
     },
     {
       "code": "5574",
       "path": "packages/1_core/test/ControllerBaseWs1Coverage.t.sol",
-      "start": 8814,
-      "end": 28250,
+      "start": 8851,
+      "end": 28287,
       "spanSha256": "5890bf19659b0096fca77c33981f4a78a41660a34f42481eacebb6b08740bfe0",
-      "fingerprint": "96e9a25505f069bfaac0a597b3550a1ca36cdcd441eca34f7707f50714c17eba",
+      "fingerprint": "2517d543b3577fddafc2507f43cfd7c2d0718bdc7aba883885e188215f12781f",
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
-      "rationaleId": "nondeployable-harness-size"
+      "rationaleId": "nondeployable-harness-size",
+      "reviewMetadataId": "shortage-errors-warning-agent-review-2026-10-23"
     },
     {
       "code": "5740",
@@ -1974,7 +1980,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "pause-gate-warning-agent-review-2026-09-24",
+      "reviewMetadataId": "pause-gate-warning-agent-rereview-2026-10-23",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2210,14 +2216,14 @@
       "code": "3860",
       "path": "packages/1_core/test/BasketRegression.t.sol",
       "start": 824,
-      "end": 16120,
-      "spanSha256": "4896e62bda4fc41d5b646782d8e017673c3448d19be1d264e57d4aab790b9999",
-      "fingerprint": "c3210bb8759a82d6e1616fe089ea91694787559dfaf3885117f6fb23be7fde2f",
+      "end": 16422,
+      "spanSha256": "ec3ff402cacd5ddb6e6457737d1a6bf0be01fe182832295ea76889b0b4734732",
+      "fingerprint": "53c29ce9521877e6c8fa4ccbca00e831b73513c5056ddcbc642149124aed3e62",
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
-      "rationaleId": "nondeployable-harness-size"
+      "rationaleId": "nondeployable-harness-size",
+      "reviewMetadataId": "shortage-errors-warning-agent-review-2026-10-23"
     },
     {
       "code": "3860",
@@ -2281,7 +2287,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "pause-gate-warning-agent-review-2026-09-24",
+      "reviewMetadataId": "pause-gate-warning-agent-rereview-2026-10-23",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2351,7 +2357,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "pause-gate-warning-agent-review-2026-09-24",
+      "reviewMetadataId": "pause-gate-warning-agent-rereview-2026-10-23",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2518,14 +2524,14 @@
       "code": "3860",
       "path": "packages/1_core/test/RebalanceFacet.t.sol",
       "start": 598,
-      "end": 14074,
-      "spanSha256": "63182ad51735d109a9c3e4b8d8b551ff9c325f3c2c424b697709f3a3b3bec9d7",
-      "fingerprint": "de48d9efb39bcdb354ee8064f293c168afa7d62a581c90eaed41531a8f516973",
+      "end": 14090,
+      "spanSha256": "3932c9e5af81cba4be635fe7b6df57a1ba8e261318cd2c325421c750722adc66",
+      "fingerprint": "9e45993b725b9e0041d70fe01e925562277aae09f678d90653c9b522743e809a",
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
-      "rationaleId": "nondeployable-harness-size"
+      "rationaleId": "nondeployable-harness-size",
+      "reviewMetadataId": "shortage-errors-warning-agent-review-2026-10-23"
     },
     {
       "code": "5574",
@@ -2654,7 +2660,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "pause-gate-warning-agent-review-2026-09-24",
+      "reviewMetadataId": "pause-gate-warning-agent-rereview-2026-10-23",
       "rationaleId": "nondeployable-harness-size"
     },
     {
