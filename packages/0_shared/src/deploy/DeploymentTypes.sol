@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 import {ProtocolDiamond} from "../diamond/ProtocolDiamond.sol";
 import {DiamondCutAccessFacet} from "diamond-infra/facets/DiamondCutAccessFacet.sol";

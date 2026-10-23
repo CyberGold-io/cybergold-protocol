@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 /// @notice Narrow Core ABI for generic current-state CYGLD redemption.
 /// @dev ERC-20 amounts use each token's raw units. ERC-1155 recovery outputs use project-defined

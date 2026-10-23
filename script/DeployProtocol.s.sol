@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 import {Script} from "forge-std/Script.sol";
 import {console2} from "forge-std/console2.sol";

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 /// @notice Package-owned immutable proposal-window storage and validation helpers.
 library LibGovernorExecution {

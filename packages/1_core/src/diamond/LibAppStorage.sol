@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 /// @notice Core diamond shared storage for CyberGold-specific controller state.
 /// @dev OZ token/access/pause state lives in each module's ERC-7201 namespace; reentrancy state is transient.

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 /// @notice EIP-7201 storage for exact aggregate CYGLD allowance exposure.
 library LibAllowanceExposureStorage {

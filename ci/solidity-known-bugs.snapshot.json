@@ -2,27 +2,27 @@
   "schemaVersion": 2,
   "source": {
     "repository": "https://github.com/argotorg/solidity",
-    "commit": "f401782df49be312ea4ef52a2d467cf5183b5906",
+    "commit": "1835d247de183f23e7b0e2bc4a50732af525b77c",
     "path": "docs/bugs_by_version.json",
-    "retrievedAt": "2026-09-15T00:00:00Z",
-    "upstreamFileSha256": "e67aba151b323ead83f8816f7bae875f04f1eb4defdc9895133b89f8712631f1",
+    "retrievedAt": "2026-10-23T00:00:00Z",
+    "upstreamFileSha256": "42aede2095751ac858504786834ee6c0698f16782fb6470790c474ebae51ae08",
     "bugDetailsPath": "docs/bugs.json",
-    "bugDetailsFileSha256": "ee8e0a9d7b2b54914eda10f4533d3c2f1136176bd99df2b2abb4c25a4548a582"
+    "bugDetailsFileSha256": "7766acac0c69aa152c98bc4fefa97679c19a56eac997e3043ea6738c764a23df"
   },
   "normalization": {
-    "compilerVersion": "0.8.37",
+    "compilerVersion": "0.8.38",
     "publishedBugUids": [],
-    "statement": "The immutable official v0.8.37 version index and bug details publish no known bug for Solidity 0.8.37. This release fixes the three bugs now associated with 0.8.36: MisorderedNamedParametersInRequireWithCustomErrors, MemoryByteArrayElementDeleteClearsWholeWord, and SpillSlotCollisionAcrossMutualRecursion. The normalized schema retains condition and source-predicate fields so future nonempty snapshots are evaluated rather than accepted by version alone.",
+    "statement": "The immutable official v0.8.38 version index publishes no known bug for Solidity 0.8.38. This release fixes SOL-2026-7 (YulOptimizerKnowledgeBaseStaleBookkeeping), which the same index now associates with 0.8.37. This snapshot reviews only Protocol; the byte-exact prior 0.8.37 snapshot and its original official inputs are retained separately as historical Helpers evidence, not a current assertion that 0.8.37 has no published bugs.",
     "review": {
-      "owner": "security-maintainer",
-      "reviewedAt": "2026-09-15",
-      "reviewBy": "2026-12-15",
+      "owner": "Codex agent-assisted immutable upstream and Protocol settings review",
+      "reviewedAt": "2026-10-23",
+      "reviewBy": "2027-01-22",
       "expiryCondition": "compiler pin, compiler settings, official snapshot commit/digest, or normalized bug records change",
-      "result": "No published Solidity bug UID is associated with compiler 0.8.37 in the retained official version index."
+      "result": "No published Solidity bug UID is associated with compiler 0.8.38 in the retained official version index; all five Protocol profiles retain Osaka, optimizer enabled/runs 100 and no IR. Agent-assisted analysis is not human or external certification."
     }
   },
   "compilerDefaults": {
-    "0.8.37": {
+    "0.8.38": {
       "viaIR": false,
       "evmVersion": "osaka"
     }
@@ -41,29 +41,12 @@
         "script",
         "test"
       ]
-    },
-    "helpers": {
-      "configurationPaths": [
-        "foundry.toml",
-        "lib/cybergold-protocol/foundry.toml",
-        "lib/cybergold-protocol/packages/0_shared/foundry.toml",
-        "lib/cybergold-protocol/packages/1_core/foundry.toml",
-        "lib/cybergold-protocol/packages/2_governance/foundry.toml",
-        "lib/cybergold-protocol/packages/3_staking/foundry.toml"
-      ],
-      "authoredSourceRoots": [
-        "src",
-        "script",
-        "test",
-        "lib/cybergold-protocol/packages",
-        "lib/cybergold-protocol/test"
-      ]
     }
   },
   "reviewedConfigurations": {
     "protocol": {
       "foundry.toml": {
-        "compilerVersion": "0.8.37",
+        "compilerVersion": "0.8.38",
         "optimizer": {
           "enabled": true,
           "runs": 100
@@ -72,7 +55,7 @@
         "evmVersion": "osaka"
       },
       "packages/0_shared/foundry.toml": {
-        "compilerVersion": "0.8.37",
+        "compilerVersion": "0.8.38",
         "optimizer": {
           "enabled": true,
           "runs": 100
@@ -81,7 +64,7 @@
         "evmVersion": "osaka"
       },
       "packages/1_core/foundry.toml": {
-        "compilerVersion": "0.8.37",
+        "compilerVersion": "0.8.38",
         "optimizer": {
           "enabled": true,
           "runs": 100
@@ -90,7 +73,7 @@
         "evmVersion": "osaka"
       },
       "packages/2_governance/foundry.toml": {
-        "compilerVersion": "0.8.37",
+        "compilerVersion": "0.8.38",
         "optimizer": {
           "enabled": true,
           "runs": 100
@@ -99,63 +82,7 @@
         "evmVersion": "osaka"
       },
       "packages/3_staking/foundry.toml": {
-        "compilerVersion": "0.8.37",
-        "optimizer": {
-          "enabled": true,
-          "runs": 100
-        },
-        "viaIR": false,
-        "evmVersion": "osaka"
-      }
-    },
-    "helpers": {
-      "foundry.toml": {
-        "compilerVersion": "0.8.37",
-        "optimizer": {
-          "enabled": true,
-          "runs": 100
-        },
-        "viaIR": false,
-        "evmVersion": "osaka"
-      },
-      "lib/cybergold-protocol/foundry.toml": {
-        "compilerVersion": "0.8.37",
-        "optimizer": {
-          "enabled": true,
-          "runs": 100
-        },
-        "viaIR": false,
-        "evmVersion": "osaka"
-      },
-      "lib/cybergold-protocol/packages/0_shared/foundry.toml": {
-        "compilerVersion": "0.8.37",
-        "optimizer": {
-          "enabled": true,
-          "runs": 100
-        },
-        "viaIR": false,
-        "evmVersion": "osaka"
-      },
-      "lib/cybergold-protocol/packages/1_core/foundry.toml": {
-        "compilerVersion": "0.8.37",
-        "optimizer": {
-          "enabled": true,
-          "runs": 100
-        },
-        "viaIR": false,
-        "evmVersion": "osaka"
-      },
-      "lib/cybergold-protocol/packages/2_governance/foundry.toml": {
-        "compilerVersion": "0.8.37",
-        "optimizer": {
-          "enabled": true,
-          "runs": 100
-        },
-        "viaIR": false,
-        "evmVersion": "osaka"
-      },
-      "lib/cybergold-protocol/packages/3_staking/foundry.toml": {
-        "compilerVersion": "0.8.37",
+        "compilerVersion": "0.8.38",
         "optimizer": {
           "enabled": true,
           "runs": 100

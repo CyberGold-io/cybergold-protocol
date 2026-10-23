@@ -13,7 +13,7 @@
     "out": "out"
   },
   "compiler": {
-    "version": "0.8.37",
+    "version": "0.8.38",
     "evmVersion": "osaka"
   },
   "remappings": [

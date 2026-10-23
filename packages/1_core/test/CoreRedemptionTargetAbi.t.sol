@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 import {Test} from "forge-std/Test.sol";
 import {ICoreRedemption} from "../src/interfaces/ICoreRedemption.sol";

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 /// @notice EIP-7201-style namespaced storage for shared emergency authority.
 library LibEmergencyAuthority {

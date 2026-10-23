@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 /// @notice Minimal current-state Core reserve-lifecycle and asset recovery ABI.
 /// @dev Field order is part of the release ABI. Shares use asset-native raw participation units,

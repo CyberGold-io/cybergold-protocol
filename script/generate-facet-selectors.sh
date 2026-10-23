@@ -238,7 +238,7 @@ generate_package() {
 
   {
     echo "// SPDX-License-Identifier: AGPL-3.0"
-    echo "pragma solidity ^0.8.37;"
+    echo "pragma solidity ^0.8.38;"
     echo ""
     echo "import {FacetSpec} from \"diamond-infra/deploy/FacetSpec.sol\";"
     echo ""

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 contract MockStakingVault {
     bytes32 public constant FACET_NAMESPACE = keccak256("cybergold.staking.test.mock-vault");

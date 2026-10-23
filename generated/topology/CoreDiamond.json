@@ -3,7 +3,7 @@
   "authority": "script/config/core-release-abi.json",
   "contractName": "CoreDiamond",
   "compiler": {
-    "version": "0.8.37+commit.f401782d",
+    "version": "0.8.38+commit.1835d247",
     "evmVersion": "osaka",
     "optimizer": {
       "enabled": true,
@@ -15,8 +15,8 @@
     "source": "packages/1_core/src/deploy/DiamondInit.sol",
     "function": "init",
     "stateOnlySchemaAdvancementAllowed": false,
-    "runtimeCodeHash": "0xc9a4f3134b89edd202506354760f0a209a5f9d6bada56ed1077dadc1acabbbf2",
-    "digest": "sha256:3a842890e2f6a073d9d95465678dd20593e7c5674c717875f05fbc8e0aa0733a"
+    "runtimeCodeHash": "0xa6730f95cf61a22e4c4add7314ffe191fd48bb8e151ab451b42a43e5cf75e970",
+    "digest": "sha256:ebdd707993faa0ac5ab5bce219c6863c6c9bc11130c57897403a4c35d29d5760"
   },
   "selectorCount": 103,
   "interfaceId": "0x1e260249",
@@ -653,7 +653,7 @@
         "namespaceLabel": "cybergold.upgrade.coordinator.access",
         "namespace": "0x626b89c71ba90e51f414b53ce8377e910c80db26516176c7d6a07018b256d311",
         "legacyDeclaredVersion": 1,
-        "codeHash": "0x7477caac82f01b4395952e62f7902b668ba8fb7e726de245fed5ccebdebd1d1c"
+        "codeHash": "0x189ee20ba176c43291cad3d67d3325c45d9bf36e66b8502d302a4f2b8cfd5948"
       },
       "immutableBindings": [],
       "selectors": [
@@ -689,7 +689,7 @@
         "namespaceLabel": "cybergold.shared.diamond.loupe",
         "namespace": "0xaa53250261304dcb78a3bd8fbe39fc4d53ef40fd5024a4a0044ee0ca6d7752ee",
         "legacyDeclaredVersion": 1,
-        "codeHash": "0xb6a7e54bc6c7de6fb69d8a50c7726c92f0e0cdce4943d6e96fc3bdb0ca670cb8"
+        "codeHash": "0xfa2022ab7c7eff8e6e25efaa47b0b636c61a50eda7af8e9b8d693e8a33ceddd3"
       },
       "immutableBindings": [],
       "selectors": [
@@ -741,7 +741,7 @@
         "namespaceLabel": "cybergold.access-control.default-admin-rules",
         "namespace": "0x62aff0a244da0ee0e8ac4dfbddd7e7c4b3c8d0b71e87515f69be347d2bf633b6",
         "legacyDeclaredVersion": 1,
-        "codeHash": "0x6535d526a82e3a7614be8e6a74f9b623c8b98d256a659b677a33273a094a8184"
+        "codeHash": "0x386352fc5841e05e30ef8739aebd57a4f1fd8e0e7f5f6d28e42240d10c542602"
       },
       "immutableBindings": [],
       "selectors": [
@@ -877,7 +877,7 @@
         "namespaceLabel": "openzeppelin.storage.Pausable",
         "namespace": "0xc25745a6f4844d6334e8c74b6186760f1eee2b95e99d9a7e545c551bc81264b2",
         "legacyDeclaredVersion": 1,
-        "codeHash": "0x287fac67b57e4a4a062729d2a478ce45f92f7cb352f40f6304d323238b18b134"
+        "codeHash": "0xcb1c0e46f4366c86ebf0a66334956adc9dcbaee7c59932a1eda0fe370698640d"
       },
       "immutableBindings": [],
       "selectors": [
@@ -949,7 +949,7 @@
         "namespaceLabel": "cybergold.core.token",
         "namespace": "0x14a89b7b3d10f67e7c4bd9c0a82d9ee5890ba3a15e39ca7ef16135bd16312ca7",
         "legacyDeclaredVersion": 1,
-        "codeHash": "0xcb8a43011bb52378ffb94080b9acf3fffa7c1e71b5fa54a848e06c32f61e1499"
+        "codeHash": "0x6cbbc22e2fb001150553c41639124bc00d72d577386527b710f899fc6dd7bc3c"
       },
       "immutableBindings": [],
       "selectors": [
@@ -1061,7 +1061,7 @@
         "namespaceLabel": "cybergold.controller.issuance",
         "namespace": "0x56a7eef5db75ce822d511c55e0882fa3bcd1e3642a5d0cfb46d75422e9e79a15",
         "legacyDeclaredVersion": 1,
-        "codeHash": "0x0638d6a738901f88ca61eca449d9439fbf0d3223b63387b8b4f0356f40d06252"
+        "codeHash": "0xc996bd45d51ca0fd735395650a946feca03a4f72fa262ab7e173d5310bcde792"
       },
       "immutableBindings": [],
       "selectors": [
@@ -1173,7 +1173,7 @@
         "namespaceLabel": "cybergold.controller.redemption",
         "namespace": "0xa82eb3572414a13b10ae30b390e14247375143fd2eba7cd0b3e85dd629c23614",
         "legacyDeclaredVersion": 1,
-        "codeHash": "0xd2c635976176919848726bcbb934cbfd2ac50238babd964b1f75be077bcd3607"
+        "codeHash": "0x086ea728442059a5d30426cf3455d1377a730a4ae5425897b57ac2ca07c46722"
       },
       "immutableBindings": [],
       "selectors": [
@@ -1285,7 +1285,7 @@
         "namespaceLabel": "cybergold.controller.rebalance",
         "namespace": "0x278cb43ce4666162c741d9a2f4ef23203f1c27e13e4ba8561d9016c3f38d6f88",
         "legacyDeclaredVersion": 1,
-        "codeHash": "0x9337db3fc3a776473a968fcef2e549b131c0c9405a85661c7d1ff5a8e6f2e3f8"
+        "codeHash": "0x18f39c588cb5d69f93352f748b64ee9bf26c58eebeee06962376a5dced49d46a"
       },
       "immutableBindings": [],
       "selectors": [
@@ -1397,7 +1397,7 @@
         "namespaceLabel": "cybergold.controller.preview",
         "namespace": "0x310255444a958564491591b651a37c4ed715fae67ea72f25ce6989ab7aa39401",
         "legacyDeclaredVersion": 1,
-        "codeHash": "0xd9818f4e3db32f509661d4560b10317946bbb5562a1eb7afe559048130ef2f5f"
+        "codeHash": "0xdcd9e4dd7544dc4de37dc6f820f59c5c43ed10f357796bb45470d37c986e0613"
       },
       "immutableBindings": [],
       "selectors": [
@@ -1517,7 +1517,7 @@
         "namespaceLabel": "cybergold.controller.basket.admin",
         "namespace": "0x4f02e3b6b83102db88b51c5ebc969f2a332b24f4968d051bfebb310466c1a16f",
         "legacyDeclaredVersion": 1,
-        "codeHash": "0x8d49bd497b3d7b88f3eb98890316f1d6cecfb0a086c4d82e1ab922f74910f8d5"
+        "codeHash": "0x1c29e871c8460c510b32fa9595c200feb567134f02d6bcf7e8477f2d22bdf17a"
       },
       "immutableBindings": [],
       "selectors": [
@@ -1625,7 +1625,7 @@
         "namespaceLabel": "cybergold.controller.config",
         "namespace": "0x1c20f42be257b6f5c4b82223943d451abcf8b31d79e50854a5ed68bc0d2bb7e6",
         "legacyDeclaredVersion": 1,
-        "codeHash": "0x6918a36c1a748b4000e135f8a0587678742e7f5ee13581ebde89f7ea0e4f2925"
+        "codeHash": "0x6d408e8d7361ded353577105b9a38a7e365007101af8a8cec12252c3c68edcc9"
       },
       "immutableBindings": [],
       "selectors": [
@@ -1747,7 +1747,7 @@
         "namespaceLabel": "cybergold.core.lens",
         "namespace": "0x230d44d4cc174bbd344d5d1f9ba1fc479a89a493478f35055127b2d3fdadf2df",
         "legacyDeclaredVersion": 1,
-        "codeHash": "0x9eecd8055c02db6a7bdcbe8d6b55cd4ac9cb340dec2633d1d12fb41490a50565"
+        "codeHash": "0x70cdafb541052dbcc073fad9182b381e1b7d5ca7117b776d35ceaa3b99efd1b8"
       },
       "immutableBindings": [],
       "selectors": [
@@ -1851,7 +1851,7 @@
         "namespaceLabel": "cybergold.core.reserve-lifecycle",
         "namespace": "0x0225184f06f48d9e5124577200cb4235de8035caf444ec5f434a40843c711551",
         "legacyDeclaredVersion": 1,
-        "codeHash": "0xb6ee0abc824d903a13c62b18004f062dc069d4e6f59c875a60a8c0292dd60d31"
+        "codeHash": "0xa2fb5cd850d1827c2d97627743b237f9effc847d894161e0636042ba04e55302"
       },
       "immutableBindings": [],
       "selectors": [
@@ -1967,7 +1967,7 @@
         "namespaceLabel": "cybergold.core.recovery-share",
         "namespace": "0x2dd85f045de43d5667c7928214f4e83e1e7fe3d9eb1bb5ca200dbb9df558e93d",
         "legacyDeclaredVersion": 1,
-        "codeHash": "0x8ab40440218891dc7c62f67d21e22e154bdb5a0e246b78c03f3e5e03470fdf79"
+        "codeHash": "0x0ad983b0d5ec1d809ddc7b7ff376c9fc3317226463c90a593e4232b1aed98166"
       },
       "immutableBindings": [],
       "selectors": [
@@ -2053,7 +2053,7 @@
         "namespaceLabel": "cybergold.core.recovery-share-metadata",
         "namespace": "0x21d7043f3ec5ef4ff4eb30969d8842ce121d77a551f6e7a95fec8ec8275fa8f6",
         "legacyDeclaredVersion": 1,
-        "codeHash": "0x1f2b4137e5eeea524f847e0bd6b8c20dd64fda5f16089465fd4814659d735c84"
+        "codeHash": "0x90e3a1c44f81f19e8b099a94a6e5eb2774c4a9e581ef88ee1aa973f137bc4c87"
       },
       "immutableBindings": [],
       "selectors": [
@@ -2093,7 +2093,7 @@
         "namespaceLabel": "cybergold.core.recovery-admin",
         "namespace": "0xd05d6431a2c3e8bdf62c31191df560486700a42e67d68879f8a59f02ace258ae",
         "legacyDeclaredVersion": 1,
-        "codeHash": "0x07b8550e6436963da18538e8b5569dfbaf8e0792e376834505cf4bf8777598a4"
+        "codeHash": "0xbef7660d5c958e5eb5fda95ba0c239e5e6516d3300f618c031996c7c72d6e214"
       },
       "immutableBindings": [],
       "selectors": [
@@ -2209,7 +2209,7 @@
         "namespaceLabel": "cybergold.core.recovery-pool-settlement",
         "namespace": "0xe1660f84304b7adee37b00ef841e22bc3ca8467897930ffddc1cab4b7eaa8c34",
         "legacyDeclaredVersion": 1,
-        "codeHash": "0x6498b50dfca94757e0440e77dd161bd05dc1c0b61c1699dd7610d3d5e1080f4a"
+        "codeHash": "0x3c869471272af9d98d94c4efa87262b67f3dab844b2bb3f0e4b85b9ffe932b2c"
       },
       "immutableBindings": [],
       "selectors": [

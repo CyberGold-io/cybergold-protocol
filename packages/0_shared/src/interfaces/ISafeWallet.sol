@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 /// @notice Minimal Safe wallet surface used by diamond emergency authority.
 interface ISafeWallet {

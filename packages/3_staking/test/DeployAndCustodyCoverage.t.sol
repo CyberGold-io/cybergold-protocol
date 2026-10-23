@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 import {Test} from "forge-std/Test.sol";
 import {Vm} from "forge-std/Vm.sol";
@@ -446,7 +446,7 @@ contract StakingDeployAndCustodyCoverageTest is Test {
         assertEq(vm.parseJsonString(written, ".schemaVersion"), "1.0");
         assertEq(vm.parseJsonString(written, ".kind"), "cybergold-staking-prepared-launch");
         assertEq(vm.parseJsonString(written, ".protocolCommit"), "55df1efe8c01622e77b54bff713a84e0ce834bfb");
-        assertEq(vm.parseJsonString(written, ".compilerVersion"), "0.8.37");
+        assertEq(vm.parseJsonString(written, ".compilerVersion"), "0.8.38");
         assertEq(vm.parseJsonString(written, ".compilerProfile"), "default");
         assertEq(vm.parseJsonUint(written, ".compilerOptimizerRuns"), 100);
         assertEq(vm.parseJsonUint(written, ".chainId"), block.chainid);

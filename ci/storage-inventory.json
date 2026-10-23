@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "generator": "ci/check-storage-inventory.py",
   "compiler": {
-    "version": "0.8.37",
+    "version": "0.8.38",
     "evmVersion": "osaka",
     "layoutSource": "temporary Foundry storageLayout harness"
   },
