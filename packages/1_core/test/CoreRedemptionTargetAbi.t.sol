@@ -3,6 +3,7 @@ pragma solidity ^0.8.37;
 
 import {Test} from "forge-std/Test.sol";
 import {ICoreRedemption} from "../src/interfaces/ICoreRedemption.sol";
+import {ICoreTypes} from "../src/interfaces/ICoreTypes.sol";
 
 /// @notice Compile-time and CI freeze for the installed mixed-output redemption ABI.
 contract CoreRedemptionTargetAbiTest is Test {
@@ -12,6 +13,12 @@ contract CoreRedemptionTargetAbiTest is Test {
         assertEq(ICoreRedemption.previewRedeemExactIn.selector, bytes4(0x78bac762));
         assertEq(ICoreRedemption.previewRedeemExactOut.selector, bytes4(0xc8ba2f6d));
         assertEq(type(ICoreRedemption).interfaceId, bytes4(0x02580072));
+    }
+
+    function testShortageErrorsHaveDistinctNoArgumentSelectors() public pure {
+        assertEq(ICoreTypes.InsufficientCygldSupply.selector, bytes4(0xde0652dd));
+        assertEq(ICoreTypes.InsufficientReserveBalance.selector, bytes4(0x940681ca));
+        assertEq(ICoreTypes.InsufficientRecoveryShares.selector, bytes4(0x80fbee92));
     }
 
     function testTargetKindsAndCanonicalOrderAreFrozen() public pure {

@@ -125,7 +125,7 @@ contract BasketRegressionTest is Test {
         harness.redeem(1);
 
         harness.setTreasury(address(0xB0B));
-        vm.expectRevert(ICoreTypes.InsufficientSupply.selector);
+        vm.expectRevert(ICoreTypes.InsufficientCygldSupply.selector);
         harness.redeem(1);
 
         harness.setTotalSupply(1);
@@ -174,7 +174,7 @@ contract BasketRegressionTest is Test {
         harness.previewRedeemExactIn(1);
 
         harness.setTreasury(address(0xB0B));
-        vm.expectRevert(ICoreTypes.InsufficientSupply.selector);
+        vm.expectRevert(ICoreTypes.InsufficientCygldSupply.selector);
         harness.previewRedeemExactIn(1);
     }
 
@@ -190,21 +190,25 @@ contract BasketRegressionTest is Test {
         harness.previewRedeemExactOut(_minimum(address(asset), 1));
 
         harness.setBasketManual(_addresses(address(asset)), _uints(1_000_000), _uints(1 ether));
+        ICoreRedemption.RedemptionQuote memory zeroQuote = harness.previewRedeemExactOut(_minimum(address(asset), 0));
+        assertEq(zeroQuote.grossCygldIn, 0);
+        assertEq(zeroQuote.outputs.length, 1);
+        assertEq(zeroQuote.outputs[0].amount, 0);
         vm.expectRevert(
             abi.encodeWithSelector(ICoreRedemption.RedemptionOutputsLengthMismatch.selector, uint256(0), uint256(1))
         );
         harness.previewRedeemExactOut(new ICoreRedemption.TokenMinimum[](0));
 
-        vm.expectRevert(ICoreTypes.InsufficientSupply.selector);
+        vm.expectRevert(ICoreTypes.InsufficientCygldSupply.selector);
         harness.previewRedeemExactOut(_minimum(address(asset), 1));
 
         harness.setTotalSupply(100);
-        vm.expectRevert(ICoreTypes.InsufficientSupply.selector);
+        vm.expectRevert(ICoreTypes.InsufficientReserveBalance.selector);
         harness.previewRedeemExactOut(_minimum(address(asset), 1));
 
         asset.mint(address(harness), 100);
         harness.setRedemptionFeePpm(10_000);
-        vm.expectRevert(ICoreTypes.InsufficientSupply.selector);
+        vm.expectRevert(ICoreTypes.InsufficientCygldSupply.selector);
         harness.previewRedeemExactOut(_minimum(address(asset), 100));
     }
 
@@ -214,7 +218,7 @@ contract BasketRegressionTest is Test {
         vm.expectRevert(ICoreTypes.ValueMustBeGreaterThanZero.selector);
         harness.calculateRedeemExactInExternal(1, 0);
 
-        vm.expectRevert(ICoreTypes.InsufficientSupply.selector);
+        vm.expectRevert(ICoreTypes.InsufficientCygldSupply.selector);
         harness.calculateRedeemExactInExternal(0, 1);
 
         vm.expectRevert(
@@ -244,7 +248,7 @@ contract BasketRegressionTest is Test {
         tinyOutput.previewRebalanceSwapExactIn(address(assetIn), address(assetOut), 1);
 
         BranchRebalanceHarness insufficient = _rebalanceHarness(assetIn, assetOut, 1 ether, 1 ether, 0, 1 ether);
-        vm.expectRevert(ICoreTypes.InsufficientSupply.selector);
+        vm.expectRevert(ICoreTypes.InsufficientReserveBalance.selector);
         insufficient.previewRebalanceSwapExactIn(address(assetIn), address(assetOut), 2 ether);
     }
 

@@ -30,7 +30,7 @@ contract RedemptionFacet is RedemptionControllerBase {
     {
         if (grossCygldIn == 0) revert ValueMustBeGreaterThanZero();
         MixedRedemptionConfig memory config = _loadMixedRedemptionConfig(msg.sender);
-        if (config.supply < grossCygldIn) revert InsufficientSupply();
+        if (config.supply < grossCygldIn) revert InsufficientCygldSupply();
         _requireMixedRedemptionOutputs(config);
 
         result = _calculateMixedRedeemExactIn(_observeMixedRedemption(config), grossCygldIn);
@@ -49,7 +49,7 @@ contract RedemptionFacet is RedemptionControllerBase {
     {
         if (grossCygldIn == 0) revert ValueMustBeGreaterThanZero();
         MixedRedemptionConfig memory config = _loadMixedRedemptionConfig(msg.sender);
-        if (config.supply < grossCygldIn) revert InsufficientSupply();
+        if (config.supply < grossCygldIn) revert InsufficientCygldSupply();
         _requireMixedRedemptionOutputs(config);
         _validateMixedRedemptionDescriptors(config, expectedOutputs);
 

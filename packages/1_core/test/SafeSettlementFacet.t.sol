@@ -328,7 +328,7 @@ contract SafeSettlementFacetTest is ControllerTestBase {
     function test_safeRedeem_rejectsGrossAboveCurrentSupply() public {
         ICoreRedemption.TokenMinimum[] memory minima = _basketMinimums(new uint256[](2));
 
-        vm.expectRevert(ICoreTypes.InsufficientSupply.selector);
+        vm.expectRevert(ICoreTypes.InsufficientCygldSupply.selector);
         vm.prank(user);
         redemption.safeRedeem(1, minima);
     }

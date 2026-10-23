@@ -209,12 +209,12 @@ contract RedemptionControllerBaseWs2Harness is RedemptionControllerBase {
         return _solveMixedRedeemExactOut(context, minimumOutputs);
     }
 
-    function accumulate(uint256 current, uint256 minimum, uint256 available, uint256 denominator)
+    function accumulate(uint256 current, uint256 minimum, uint256 available, uint256 denominator, bool recoveryOutput)
         external
         pure
         returns (uint256)
     {
-        return _accumulateRequiredNet(current, minimum, available, denominator);
+        return _accumulateRequiredNet(current, minimum, available, denominator, recoveryOutput);
     }
 
     function zeroQuote(MixedRedemptionConfig calldata config)
@@ -751,7 +751,7 @@ contract RedemptionControllerBaseWs2CoverageTest is Test {
         RedemptionControllerBase.MixedRedemptionContext memory context = _context(10, 10, 1, 1);
         vm.expectRevert(ICoreTypes.ValueMustBeGreaterThanZero.selector);
         harness.calculate(context, 0);
-        vm.expectRevert(ICoreTypes.InsufficientSupply.selector);
+        vm.expectRevert(ICoreTypes.InsufficientCygldSupply.selector);
         harness.calculate(context, 11);
 
         context.denominator = 100;
@@ -781,7 +781,7 @@ contract RedemptionControllerBaseWs2CoverageTest is Test {
         context.denominator = 2;
         context.availableAmounts[0] = 1;
         minima = _minimums(1, 0);
-        vm.expectRevert(ICoreTypes.InsufficientSupply.selector);
+        vm.expectRevert(ICoreTypes.InsufficientCygldSupply.selector);
         harness.solve(context, minima);
 
         context = _context(10, 10, 10, 10);
@@ -794,16 +794,68 @@ contract RedemptionControllerBaseWs2CoverageTest is Test {
     }
 
     function testAccumulateAllBranches() public view {
-        assertEq(harness.accumulate(7, 0, 0, 0), 7);
-        assertEq(harness.accumulate(7, 2, 10, 10), 7);
-        assertEq(harness.accumulate(1, 2, 10, 10), 2);
+        assertEq(harness.accumulate(7, 0, 0, 0, false), 7);
+        assertEq(harness.accumulate(7, 0, 0, 0, true), 7);
+        assertEq(harness.accumulate(7, 2, 10, 10, false), 7);
+        assertEq(harness.accumulate(1, 2, 10, 10, false), 2);
+    }
+
+    function testExactOutClassifiesMixedAvailabilityShortages() public {
+        RedemptionControllerBase.MixedRedemptionContext memory context = _context(100, 100, 10, 20);
+        vm.expectRevert(ICoreTypes.InsufficientReserveBalance.selector);
+        harness.solve(context, _minimums(11, 21));
+
+        vm.expectRevert(ICoreTypes.InsufficientRecoveryShares.selector);
+        harness.solve(context, _minimums(0, 21));
+
+        context.availableAmounts[0] = 0;
+        vm.expectRevert(ICoreTypes.InsufficientReserveBalance.selector);
+        harness.solve(context, _minimums(1, 0));
+    }
+
+    function testExactOutClassifiesEveryLegWithoutAnErc20Prefix() public {
+        RedemptionControllerBase.MixedRedemptionContext memory context = _context(100, 100, 10, 20);
+        context.config.orderedBasketAssets = new address[](0);
+        context.config.cygldPerUnitFp18 = new uint256[](0);
+        context.config.orderedRecoveryAssets = _addresses(RECOVERY, address(0x3333));
+        context.config.coreAttachedShares = _uints(10, 20);
+        ICoreRedemption.TokenMinimum[] memory minima = _minimums(11, 0);
+        minima[0].kind = ICoreRedemption.TokenKind.ERC1155;
+        minima[0].token = address(harness);
+        minima[0].id = uint256(uint160(RECOVERY));
+        minima[1].id = uint256(uint160(address(0x3333)));
+
+        vm.expectRevert(ICoreTypes.InsufficientRecoveryShares.selector);
+        harness.solve(context, minima);
+
+        minima[0].minimumAmount = 0;
+        minima[1].minimumAmount = 21;
+        vm.expectRevert(ICoreTypes.InsufficientRecoveryShares.selector);
+        harness.solve(context, minima);
+    }
+
+    function testExactAvailabilityIsAllowedBeforeGrossSupplyAndFeeBounds() public {
+        RedemptionControllerBase.MixedRedemptionContext memory context = _context(100, 100, 100, 100);
+        ICoreRedemption.RedemptionQuote memory quote = harness.solve(context, _minimums(100, 100));
+        assertEq(quote.grossCygldIn, 100);
+        assertEq(quote.outputs[0].amount, 100);
+        assertEq(quote.outputs[1].amount, 100);
+        assertEq(harness.calculate(context, 100).grossCygldIn, 100);
+
+        context.config.effectiveFeePpm = 10_000;
+        vm.expectRevert(ICoreTypes.InsufficientCygldSupply.selector);
+        harness.solve(context, _minimums(100, 100));
     }
 
     function testAccumulateRejectsUnavailableAndExcessMinimum() public {
-        vm.expectRevert(ICoreTypes.InsufficientSupply.selector);
-        harness.accumulate(0, 1, 0, 1);
-        vm.expectRevert(ICoreTypes.InsufficientSupply.selector);
-        harness.accumulate(0, 2, 1, 1);
+        vm.expectRevert(ICoreTypes.InsufficientReserveBalance.selector);
+        harness.accumulate(0, 1, 0, 1, false);
+        vm.expectRevert(ICoreTypes.InsufficientReserveBalance.selector);
+        harness.accumulate(0, 2, 1, 1, false);
+        vm.expectRevert(ICoreTypes.InsufficientRecoveryShares.selector);
+        harness.accumulate(0, 1, 0, 1, true);
+        vm.expectRevert(ICoreTypes.InsufficientRecoveryShares.selector);
+        harness.accumulate(0, 2, 1, 1, true);
     }
 
     function testDescriptorValidationEveryGuardAndSuccess() public {

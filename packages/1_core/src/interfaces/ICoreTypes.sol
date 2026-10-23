@@ -103,8 +103,12 @@ interface ICoreTypes {
     error BasketAssetDecimalsTooLarge(address asset, uint8 decimals);
     /// @notice A basket-dependent operation was attempted before successful basket initialization.
     error BasketNotConfigured();
-    /// @notice A redemption or burn requires more CYGLD supply than is currently available.
-    error InsufficientSupply();
+    /// @notice A redemption requires more CYGLD than the current total supply.
+    error InsufficientCygldSupply();
+    /// @notice A requested reserve-token output exceeds the ordinary reserve currently available to the operation.
+    error InsufficientReserveBalance();
+    /// @notice A requested recovery-share output exceeds the Core-attached participation units currently available.
+    error InsufficientRecoveryShares();
     /// @notice A requested issuance, redemption, or rebalance asset is not in the current basket.
     /// @param asset Requested ERC-20 address that is absent from the current basket.
     error BasketAssetNotFound(address asset);
