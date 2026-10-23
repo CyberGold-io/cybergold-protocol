@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 /// @notice Read-only guard ensuring facet initialization hooks run only while the coordinator's context is active.
 abstract contract InitContext {

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 import {VerifyCoreOnly} from "../script/VerifyCoreOnly.s.sol";
 import {ControllerTestBase} from "../packages/1_core/test/helpers/ControllerTestBase.t.sol";

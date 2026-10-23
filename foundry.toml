@@ -1,5 +1,5 @@
 [profile.default]
-solc_version = "0.8.37"
+solc_version = "0.8.38"
 evm_version = "osaka"
 libs = ["lib"]
 out = "out"

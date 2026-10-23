@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 import {Vm} from "forge-std/Vm.sol";
 import {IDiamondLoupe} from "diamond-1/interfaces/IDiamondLoupe.sol";
@@ -291,7 +291,7 @@ library DeployParams {
         string memory out = vm_.serializeString(label, "schemaVersion", "1.0");
         out = vm_.serializeString(label, "kind", "cybergold-staking-prepared-launch");
         out = vm_.serializeString(label, "protocolCommit", protocolCommit);
-        out = vm_.serializeString(label, "compilerVersion", "0.8.37");
+        out = vm_.serializeString(label, "compilerVersion", "0.8.38");
         out = vm_.serializeString(label, "compilerProfile", "default");
         out = vm_.serializeUint(label, "compilerOptimizerRuns", 100);
         out = vm_.serializeUint(label, "chainId", block.chainid);

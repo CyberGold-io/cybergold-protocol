@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 import {DeploymentHelper as CoreHelper} from "packages/1_core/src/deploy/DeploymentHelper.sol";
 import {DeploymentTypes as CoreTypes} from "packages/1_core/src/deploy/DeploymentTypes.sol";

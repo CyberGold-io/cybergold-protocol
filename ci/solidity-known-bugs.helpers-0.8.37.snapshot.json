@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 2,
+  "source": {
+    "repository": "https://github.com/argotorg/solidity",
+    "commit": "f401782df49be312ea4ef52a2d467cf5183b5906",
+    "path": "docs/bugs_by_version.json",
+    "retrievedAt": "2026-09-15T00:00:00Z",
+    "upstreamFileSha256": "e67aba151b323ead83f8816f7bae875f04f1eb4defdc9895133b89f8712631f1",
+    "bugDetailsPath": "docs/bugs.json",
+    "bugDetailsFileSha256": "ee8e0a9d7b2b54914eda10f4533d3c2f1136176bd99df2b2abb4c25a4548a582"
+  },
+  "normalization": {
+    "compilerVersion": "0.8.37",
+    "publishedBugUids": [],
+    "statement": "The immutable official v0.8.37 version index and bug details publish no known bug for Solidity 0.8.37. This release fixes the three bugs now associated with 0.8.36: MisorderedNamedParametersInRequireWithCustomErrors, MemoryByteArrayElementDeleteClearsWholeWord, and SpillSlotCollisionAcrossMutualRecursion. The normalized schema retains condition and source-predicate fields so future nonempty snapshots are evaluated rather than accepted by version alone.",
+    "review": {
+      "owner": "security-maintainer",
+      "reviewedAt": "2026-09-15",
+      "reviewBy": "2026-12-15",
+      "expiryCondition": "compiler pin, compiler settings, official snapshot commit/digest, or normalized bug records change",
+      "result": "No published Solidity bug UID is associated with compiler 0.8.37 in the retained official version index."
+    }
+  },
+  "compilerDefaults": {
+    "0.8.37": {
+      "viaIR": false,
+      "evmVersion": "osaka"
+    }
+  },
+  "reviewedProjectTopologies": {
+    "protocol": {
+      "configurationPaths": [
+        "foundry.toml",
+        "packages/0_shared/foundry.toml",
+        "packages/1_core/foundry.toml",
+        "packages/2_governance/foundry.toml",
+        "packages/3_staking/foundry.toml"
+      ],
+      "authoredSourceRoots": [
+        "packages",
+        "script",
+        "test"
+      ]
+    },
+    "helpers": {
+      "configurationPaths": [
+        "foundry.toml",
+        "lib/cybergold-protocol/foundry.toml",
+        "lib/cybergold-protocol/packages/0_shared/foundry.toml",
+        "lib/cybergold-protocol/packages/1_core/foundry.toml",
+        "lib/cybergold-protocol/packages/2_governance/foundry.toml",
+        "lib/cybergold-protocol/packages/3_staking/foundry.toml"
+      ],
+      "authoredSourceRoots": [
+        "src",
+        "script",
+        "test",
+        "lib/cybergold-protocol/packages",
+        "lib/cybergold-protocol/test"
+      ]
+    }
+  },
+  "reviewedConfigurations": {
+    "protocol": {
+      "foundry.toml": {
+        "compilerVersion": "0.8.37",
+        "optimizer": {
+          "enabled": true,
+          "runs": 100
+        },
+        "viaIR": false,
+        "evmVersion": "osaka"
+      },
+      "packages/0_shared/foundry.toml": {
+        "compilerVersion": "0.8.37",
+        "optimizer": {
+          "enabled": true,
+          "runs": 100
+        },
+        "viaIR": false,
+        "evmVersion": "osaka"
+      },
+      "packages/1_core/foundry.toml": {
+        "compilerVersion": "0.8.37",
+        "optimizer": {
+          "enabled": true,
+          "runs": 100
+        },
+        "viaIR": false,
+        "evmVersion": "osaka"
+      },
+      "packages/2_governance/foundry.toml": {
+        "compilerVersion": "0.8.37",
+        "optimizer": {
+          "enabled": true,
+          "runs": 100
+        },
+        "viaIR": false,
+        "evmVersion": "osaka"
+      },
+      "packages/3_staking/foundry.toml": {
+        "compilerVersion": "0.8.37",
+        "optimizer": {
+          "enabled": true,
+          "runs": 100
+        },
+        "viaIR": false,
+        "evmVersion": "osaka"
+      }
+    },
+    "helpers": {
+      "foundry.toml": {
+        "compilerVersion": "0.8.37",
+        "optimizer": {
+          "enabled": true,
+          "runs": 100
+        },
+        "viaIR": false,
+        "evmVersion": "osaka"
+      },
+      "lib/cybergold-protocol/foundry.toml": {
+        "compilerVersion": "0.8.37",
+        "optimizer": {
+          "enabled": true,
+          "runs": 100
+        },
+        "viaIR": false,
+        "evmVersion": "osaka"
+      },
+      "lib/cybergold-protocol/packages/0_shared/foundry.toml": {
+        "compilerVersion": "0.8.37",
+        "optimizer": {
+          "enabled": true,
+          "runs": 100
+        },
+        "viaIR": false,
+        "evmVersion": "osaka"
+      },
+      "lib/cybergold-protocol/packages/1_core/foundry.toml": {
+        "compilerVersion": "0.8.37",
+        "optimizer": {
+          "enabled": true,
+          "runs": 100
+        },
+        "viaIR": false,
+        "evmVersion": "osaka"
+      },
+      "lib/cybergold-protocol/packages/2_governance/foundry.toml": {
+        "compilerVersion": "0.8.37",
+        "optimizer": {
+          "enabled": true,
+          "runs": 100
+        },
+        "viaIR": false,
+        "evmVersion": "osaka"
+      },
+      "lib/cybergold-protocol/packages/3_staking/foundry.toml": {
+        "compilerVersion": "0.8.37",
+        "optimizer": {
+          "enabled": true,
+          "runs": 100
+        },
+        "viaIR": false,
+        "evmVersion": "osaka"
+      }
+    }
+  },
+  "normalizedBugs": [],
+  "applicableDispositions": []
+}

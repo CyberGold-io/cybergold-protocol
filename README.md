@@ -27,7 +27,7 @@ and shared diamond infrastructure.
 - The ten immediate-recovery facet replacements and precision initializer were
   compiled from
   `b84209ed5d398e01b6b622fd0fe1a8233a955a98`,
-  using Solidity `0.8.37`, EVM `osaka`, optimizer 100 runs and no IR pipeline.
+  using Solidity `0.8.38`, EVM `osaka`, optimizer 100 runs and no IR pipeline.
   The [Core upgrade transaction](https://etherscan.io/tx/0x7c18d51432601edcef9fb243a45c1a8269ffc363d6390492c384c8989fbc55de)
   was mined at block **26,030,290**. The shell, live coordinator and Helpers
   deployment were retained; later documentation commits do not change these

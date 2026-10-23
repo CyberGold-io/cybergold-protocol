@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 import {Vm} from "forge-std/Vm.sol";
 import {DeploymentTypes} from "./DeploymentTypes.sol";

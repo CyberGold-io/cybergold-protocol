@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 import {IGovernor} from "@openzeppelin/contracts/governance/IGovernor.sol";
 import {IERC5805} from "@openzeppelin/contracts/interfaces/IERC5805.sol";

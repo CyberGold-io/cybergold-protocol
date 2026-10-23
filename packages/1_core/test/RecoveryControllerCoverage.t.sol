@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 import {IRecoveryTypes} from "../src/interfaces/IRecoveryTypes.sol";
 import {ICoreRedemption} from "../src/interfaces/ICoreRedemption.sol";
