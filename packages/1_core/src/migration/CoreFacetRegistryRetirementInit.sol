@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 import {FacetVersionRegistry} from "diamond-infra/helpers/FacetVersionRegistry.sol";
 import {LibCoreDiamondCutMigration} from "./LibCoreDiamondCutMigration.sol";

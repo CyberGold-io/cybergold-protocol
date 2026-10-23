@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 /// @notice Informational HTTPS metadata locators for Core recovery shares.
 /// @dev Recovery-share amounts use the asset-native `recoveryPool(asset).shareDecimals` precision.

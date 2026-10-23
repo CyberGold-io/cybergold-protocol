@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 /// @notice Common accounting and capital-operation interface implemented by every Staking Sleeve.
 interface ISleeve {

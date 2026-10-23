@@ -33,10 +33,18 @@ test gates.
 ## Compiler and artifact policy
 
 `ci/toolchain.env` and the five checked-in Foundry authorities select Solidity
-0.8.37, EVM `osaka`, and optimizer runs 100. Candidate validation is offline
+0.8.38, EVM `osaka`, and optimizer runs 100. Candidate validation is offline
 and exact-pin-bound; the scheduled/manual dependency job performs
 non-authorizing live discovery. No CI, analysis, ABI, size, gas, deployment, or
 verification command may override the EVM or optimizer settings.
+
+The default known-bug snapshot reviews only the current Protocol compiler.
+`ci/solidity-known-bugs.helpers-0.8.37.snapshot.json` preserves the prior
+Helpers review byte for byte; select it explicitly with the existing
+`--snapshot` option when checking that historical compiler configuration.
+Its original upstream inputs and the current compiler's official inputs are
+retained in `ci/solidity-0.8.38-review/`. The historical snapshot does not
+assert that Solidity 0.8.37 has no subsequently published bugs.
 
 One optimizer setting preserves one reviewable artifact graph across all
 Protocol diamonds. Runs 100 is selected to retain the current Core recovery

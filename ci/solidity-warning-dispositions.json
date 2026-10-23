@@ -1,26 +1,26 @@
 {
   "schemaVersion": 1,
   "reviewMetadata": {
-    "compiler-warning-review-2026-07": {
-      "owner": "security-maintainer",
-      "reviewedAt": "2026-07-23",
+    "solc038-20261023-compiler-warning-review-2026-07": {
+      "owner": "Codex agent-assisted source and current-compiler warning requalification",
+      "reviewedAt": "2026-10-23",
       "reviewBy": "2026-10-23",
       "expiryCondition": "compiler, Foundry profile, dependency revision, warning code/path/span, or deployability classification change"
     },
-    "optional-initializer-warning-agent-review-2026-09-28": {
-      "owner": "Codex agent-assisted source review",
-      "reviewedAt": "2026-09-28",
+    "solc038-20261023-optional-initializer-warning-agent-review-2026-09-28": {
+      "owner": "Codex agent-assisted source and current-compiler warning requalification",
+      "reviewedAt": "2026-10-23",
       "reviewBy": "2026-10-23",
       "expiryCondition": "test-harness source/span, compiler, Foundry profile, dependency revision, warning code, or deployability classification change; agent-assisted analysis is not human approval"
     },
-    "pause-gate-warning-agent-rereview-2026-10-23": {
-      "owner": "Codex agent-assisted source and compiler-warning re-review",
+    "solc038-20261023-pause-gate-warning-agent-rereview-2026-10-23": {
+      "owner": "Codex agent-assisted source and current-compiler warning requalification",
       "reviewedAt": "2026-10-23",
       "reviewBy": "2026-11-18",
       "expiryCondition": "test-harness source/span, compiler, Foundry profile, dependency revision, warning code, or deployability classification change; agent-assisted analysis is not human approval"
     },
-    "shortage-errors-warning-agent-review-2026-10-23": {
-      "owner": "Codex agent-assisted source and compiler-warning re-review",
+    "solc038-20261023-shortage-errors-warning-agent-review-2026-10-23": {
+      "owner": "Codex agent-assisted source and current-compiler warning requalification",
       "reviewedAt": "2026-10-23",
       "reviewBy": "2027-01-23",
       "expiryCondition": "compiler, Foundry profile, dependency revision, warning code/path/span, or deployability classification change"
@@ -47,7 +47,7 @@
         "governance",
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "pinned-openzeppelin-future-keyword"
     },
     {
@@ -60,7 +60,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -73,7 +73,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -86,7 +86,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -99,7 +99,7 @@
       "scopes": [
         "shared"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -112,7 +112,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -125,7 +125,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -139,7 +139,7 @@
         "governance",
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "pinned-openzeppelin-future-keyword"
     },
     {
@@ -152,7 +152,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -165,7 +165,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -179,7 +179,7 @@
         "core"
       ],
       "rationaleId": "nondeployable-harness-size",
-      "reviewMetadataId": "shortage-errors-warning-agent-review-2026-10-23"
+      "reviewMetadataId": "solc038-20261023-shortage-errors-warning-agent-review-2026-10-23"
     },
     {
       "code": "3860",
@@ -191,7 +191,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -204,7 +204,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -217,7 +217,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -230,7 +230,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "pause-gate-warning-agent-rereview-2026-10-23",
+      "reviewMetadataId": "solc038-20261023-pause-gate-warning-agent-rereview-2026-10-23",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -243,7 +243,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -256,7 +256,7 @@
       "scopes": [
         "shared"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -269,7 +269,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "pause-gate-warning-agent-rereview-2026-10-23",
+      "reviewMetadataId": "solc038-20261023-pause-gate-warning-agent-rereview-2026-10-23",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -277,12 +277,12 @@
       "path": "packages/3_staking/test/DeployAndCustodyCoverage.t.sol",
       "start": 2540,
       "end": 49383,
-      "spanSha256": "82ad8c409a12a2ad557b9498672d825c0ed442a5d6076fe1a226d1b600bda7d5",
-      "fingerprint": "17ddcf207b17000e6ddd73973944a815e1626c3f1a6ba8b4b9faeb1b98b69202",
+      "spanSha256": "4521266aa675e6bc55c95ad04c004156ab0cb365607fc04e09fa76cf0e37a94c",
+      "fingerprint": "b50bd0c650cea040a491d2bd00bf0c6a5adf91d5c48998e3eb597f5755a1efb3",
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -295,7 +295,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -308,7 +308,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "pause-gate-warning-agent-rereview-2026-10-23",
+      "reviewMetadataId": "solc038-20261023-pause-gate-warning-agent-rereview-2026-10-23",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -321,7 +321,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -334,7 +334,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -347,7 +347,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -360,7 +360,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -373,7 +373,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -386,7 +386,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -399,7 +399,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -412,7 +412,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -425,7 +425,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -438,7 +438,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -451,7 +451,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "pause-gate-warning-agent-rereview-2026-10-23",
+      "reviewMetadataId": "solc038-20261023-pause-gate-warning-agent-rereview-2026-10-23",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -464,7 +464,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -477,7 +477,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -490,7 +490,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -503,7 +503,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -516,7 +516,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "test-only-forced-ether-selfdestruct"
     },
     {
@@ -529,7 +529,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -542,7 +542,7 @@
       "scopes": [
         "shared"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -555,7 +555,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -568,7 +568,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -581,7 +581,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -594,7 +594,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -607,7 +607,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -620,7 +620,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -633,7 +633,7 @@
       "scopes": [
         "shared"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -646,7 +646,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -659,7 +659,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -672,7 +672,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -685,7 +685,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -698,7 +698,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -711,7 +711,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -725,7 +725,7 @@
         "core"
       ],
       "rationaleId": "nondeployable-harness-size",
-      "reviewMetadataId": "shortage-errors-warning-agent-review-2026-10-23"
+      "reviewMetadataId": "solc038-20261023-shortage-errors-warning-agent-review-2026-10-23"
     },
     {
       "code": "5574",
@@ -737,7 +737,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -750,7 +750,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "optional-initializer-warning-agent-review-2026-09-28",
+      "reviewMetadataId": "solc038-20261023-optional-initializer-warning-agent-review-2026-09-28",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -767,7 +767,7 @@
         "shared",
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "pinned-openzeppelin-transient-slot-composability"
     },
     {
@@ -780,7 +780,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -793,7 +793,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -807,7 +807,7 @@
         "core"
       ],
       "rationaleId": "nondeployable-harness-size",
-      "reviewMetadataId": "shortage-errors-warning-agent-review-2026-10-23"
+      "reviewMetadataId": "solc038-20261023-shortage-errors-warning-agent-review-2026-10-23"
     },
     {
       "code": "5574",
@@ -819,7 +819,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -833,7 +833,7 @@
         "core"
       ],
       "rationaleId": "nondeployable-harness-size",
-      "reviewMetadataId": "shortage-errors-warning-agent-review-2026-10-23"
+      "reviewMetadataId": "solc038-20261023-shortage-errors-warning-agent-review-2026-10-23"
     },
     {
       "code": "3860",
@@ -845,7 +845,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -858,7 +858,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "optional-initializer-warning-agent-review-2026-09-28",
+      "reviewMetadataId": "solc038-20261023-optional-initializer-warning-agent-review-2026-09-28",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -871,7 +871,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -884,7 +884,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -897,7 +897,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -910,7 +910,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -923,7 +923,7 @@
       "scopes": [
         "shared"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -936,7 +936,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -949,7 +949,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -963,7 +963,7 @@
         "core"
       ],
       "rationaleId": "nondeployable-harness-size",
-      "reviewMetadataId": "shortage-errors-warning-agent-review-2026-10-23"
+      "reviewMetadataId": "solc038-20261023-shortage-errors-warning-agent-review-2026-10-23"
     },
     {
       "code": "5574",
@@ -975,7 +975,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -988,7 +988,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1001,7 +1001,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1015,7 +1015,7 @@
         "governance",
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "pinned-openzeppelin-future-keyword"
     },
     {
@@ -1028,7 +1028,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1041,7 +1041,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1054,7 +1054,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1071,7 +1071,7 @@
         "shared",
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "pinned-openzeppelin-future-keyword"
     },
     {
@@ -1084,7 +1084,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1097,7 +1097,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1110,7 +1110,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1123,7 +1123,7 @@
       "scopes": [
         "shared"
       ],
-      "reviewMetadataId": "optional-initializer-warning-agent-review-2026-09-28",
+      "reviewMetadataId": "solc038-20261023-optional-initializer-warning-agent-review-2026-09-28",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1131,12 +1131,12 @@
       "path": "packages/3_staking/test/DeployAndCustodyCoverage.t.sol",
       "start": 2540,
       "end": 49383,
-      "spanSha256": "82ad8c409a12a2ad557b9498672d825c0ed442a5d6076fe1a226d1b600bda7d5",
-      "fingerprint": "5df51ec38455cc75aadc4d1b21476f9929ccb15e3302ee5433b5247f696a3f45",
+      "spanSha256": "4521266aa675e6bc55c95ad04c004156ab0cb365607fc04e09fa76cf0e37a94c",
+      "fingerprint": "bd15074b2ea4257e7ea1c94a177c80bc038c413a251b3684de3404cbc2c56152",
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1149,7 +1149,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1162,7 +1162,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1175,7 +1175,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1189,7 +1189,7 @@
         "governance",
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "pinned-openzeppelin-future-keyword"
     },
     {
@@ -1202,7 +1202,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1215,7 +1215,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1228,7 +1228,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1241,7 +1241,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1254,7 +1254,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1267,7 +1267,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1280,7 +1280,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1293,7 +1293,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1306,7 +1306,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1319,7 +1319,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1332,7 +1332,7 @@
       "scopes": [
         "shared"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1345,7 +1345,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1358,7 +1358,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1371,7 +1371,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1384,7 +1384,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1397,7 +1397,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1410,7 +1410,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1423,7 +1423,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1436,7 +1436,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1449,7 +1449,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1462,7 +1462,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1475,7 +1475,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1488,7 +1488,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1501,7 +1501,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1514,7 +1514,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1527,7 +1527,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1541,7 +1541,7 @@
         "root",
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "pinned-openzeppelin-erc4626-unreachable"
     },
     {
@@ -1554,7 +1554,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1568,7 +1568,7 @@
         "core"
       ],
       "rationaleId": "nondeployable-harness-size",
-      "reviewMetadataId": "shortage-errors-warning-agent-review-2026-10-23"
+      "reviewMetadataId": "solc038-20261023-shortage-errors-warning-agent-review-2026-10-23"
     },
     {
       "code": "3860",
@@ -1580,7 +1580,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1593,7 +1593,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1606,7 +1606,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1619,7 +1619,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1632,7 +1632,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1645,7 +1645,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1658,7 +1658,7 @@
       "scopes": [
         "shared"
       ],
-      "reviewMetadataId": "optional-initializer-warning-agent-review-2026-09-28",
+      "reviewMetadataId": "solc038-20261023-optional-initializer-warning-agent-review-2026-09-28",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1675,7 +1675,7 @@
         "shared",
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "pinned-openzeppelin-future-keyword"
     },
     {
@@ -1688,7 +1688,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1702,7 +1702,7 @@
         "core"
       ],
       "rationaleId": "nondeployable-harness-size",
-      "reviewMetadataId": "shortage-errors-warning-agent-review-2026-10-23"
+      "reviewMetadataId": "solc038-20261023-shortage-errors-warning-agent-review-2026-10-23"
     },
     {
       "code": "5574",
@@ -1715,7 +1715,7 @@
         "core"
       ],
       "rationaleId": "nondeployable-harness-size",
-      "reviewMetadataId": "shortage-errors-warning-agent-review-2026-10-23"
+      "reviewMetadataId": "solc038-20261023-shortage-errors-warning-agent-review-2026-10-23"
     },
     {
       "code": "5740",
@@ -1728,7 +1728,7 @@
         "root",
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "pinned-openzeppelin-erc4626-unreachable"
     },
     {
@@ -1741,7 +1741,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1754,7 +1754,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1767,7 +1767,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1780,7 +1780,7 @@
       "scopes": [
         "shared"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1793,7 +1793,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1806,7 +1806,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1823,7 +1823,7 @@
         "shared",
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "pinned-openzeppelin-future-keyword"
     },
     {
@@ -1836,7 +1836,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1849,7 +1849,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1862,7 +1862,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1876,7 +1876,7 @@
         "root",
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "pinned-openzeppelin-erc4626-unreachable"
     },
     {
@@ -1889,7 +1889,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1902,7 +1902,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1915,7 +1915,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1928,7 +1928,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1941,7 +1941,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1954,7 +1954,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1967,7 +1967,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1980,7 +1980,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "pause-gate-warning-agent-rereview-2026-10-23",
+      "reviewMetadataId": "solc038-20261023-pause-gate-warning-agent-rereview-2026-10-23",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -1993,7 +1993,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2006,7 +2006,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2019,7 +2019,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2036,7 +2036,7 @@
         "shared",
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "pinned-diamond-memory-safe-comment"
     },
     {
@@ -2049,7 +2049,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2066,7 +2066,7 @@
         "shared",
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "pinned-openzeppelin-future-keyword"
     },
     {
@@ -2079,7 +2079,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2092,7 +2092,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2105,7 +2105,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2118,7 +2118,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2131,7 +2131,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2144,7 +2144,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2157,7 +2157,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2170,7 +2170,7 @@
       "scopes": [
         "shared"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2183,7 +2183,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2196,7 +2196,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2209,7 +2209,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2223,7 +2223,7 @@
         "core"
       ],
       "rationaleId": "nondeployable-harness-size",
-      "reviewMetadataId": "shortage-errors-warning-agent-review-2026-10-23"
+      "reviewMetadataId": "solc038-20261023-shortage-errors-warning-agent-review-2026-10-23"
     },
     {
       "code": "3860",
@@ -2235,7 +2235,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2248,7 +2248,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2261,7 +2261,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2274,7 +2274,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2287,7 +2287,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "pause-gate-warning-agent-rereview-2026-10-23",
+      "reviewMetadataId": "solc038-20261023-pause-gate-warning-agent-rereview-2026-10-23",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2304,7 +2304,7 @@
         "shared",
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "pinned-diamond-future-keyword"
     },
     {
@@ -2317,7 +2317,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2330,7 +2330,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2344,7 +2344,7 @@
         "governance",
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "pinned-openzeppelin-future-keyword"
     },
     {
@@ -2357,7 +2357,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "pause-gate-warning-agent-rereview-2026-10-23",
+      "reviewMetadataId": "solc038-20261023-pause-gate-warning-agent-rereview-2026-10-23",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2374,7 +2374,7 @@
         "shared",
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "pinned-openzeppelin-future-keyword"
     },
     {
@@ -2387,7 +2387,7 @@
       "scopes": [
         "shared"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2400,7 +2400,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2413,7 +2413,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2426,7 +2426,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2439,7 +2439,7 @@
       "scopes": [
         "shared"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2452,7 +2452,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "optional-initializer-warning-agent-review-2026-09-28",
+      "reviewMetadataId": "solc038-20261023-optional-initializer-warning-agent-review-2026-09-28",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2465,7 +2465,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2478,7 +2478,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2491,7 +2491,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2504,7 +2504,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2517,7 +2517,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2531,7 +2531,7 @@
         "core"
       ],
       "rationaleId": "nondeployable-harness-size",
-      "reviewMetadataId": "shortage-errors-warning-agent-review-2026-10-23"
+      "reviewMetadataId": "solc038-20261023-shortage-errors-warning-agent-review-2026-10-23"
     },
     {
       "code": "5574",
@@ -2543,7 +2543,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2556,7 +2556,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2569,7 +2569,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2582,7 +2582,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2595,7 +2595,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2608,7 +2608,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2621,7 +2621,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2634,7 +2634,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2647,7 +2647,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2660,7 +2660,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "pause-gate-warning-agent-rereview-2026-10-23",
+      "reviewMetadataId": "solc038-20261023-pause-gate-warning-agent-rereview-2026-10-23",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2673,7 +2673,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "optional-initializer-warning-agent-review-2026-09-28",
+      "reviewMetadataId": "solc038-20261023-optional-initializer-warning-agent-review-2026-09-28",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2686,7 +2686,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2699,7 +2699,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2712,7 +2712,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2725,7 +2725,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2738,7 +2738,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2755,7 +2755,7 @@
         "shared",
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "pinned-openzeppelin-future-keyword"
     },
     {
@@ -2768,7 +2768,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2782,7 +2782,7 @@
         "root",
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "pinned-openzeppelin-erc4626-unreachable"
     },
     {
@@ -2795,7 +2795,7 @@
       "scopes": [
         "staking"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2808,7 +2808,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2821,7 +2821,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2834,7 +2834,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2847,7 +2847,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2860,7 +2860,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2873,7 +2873,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2886,7 +2886,7 @@
       "scopes": [
         "root"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2899,7 +2899,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2912,7 +2912,7 @@
       "scopes": [
         "governance"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2925,7 +2925,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "compiler-warning-review-2026-07",
+      "reviewMetadataId": "solc038-20261023-compiler-warning-review-2026-07",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2938,7 +2938,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "optional-initializer-warning-agent-review-2026-09-28",
+      "reviewMetadataId": "solc038-20261023-optional-initializer-warning-agent-review-2026-09-28",
       "rationaleId": "nondeployable-harness-size"
     },
     {
@@ -2951,7 +2951,7 @@
       "scopes": [
         "core"
       ],
-      "reviewMetadataId": "optional-initializer-warning-agent-review-2026-09-28",
+      "reviewMetadataId": "solc038-20261023-optional-initializer-warning-agent-review-2026-09-28",
       "rationaleId": "nondeployable-harness-size"
     }
   ]

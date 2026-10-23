@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 library TestUtils {
     function arr2(address a, address b) internal pure returns (address[] memory r) {

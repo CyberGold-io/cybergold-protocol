@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 import {LibGovernorExecution} from "../../src/libraries/LibGovernorExecution.sol";
 import {LibRecoveryFundMath} from "../../src/libraries/LibRecoveryFundMath.sol";

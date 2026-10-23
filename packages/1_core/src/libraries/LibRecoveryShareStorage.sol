@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 /// @notice EIP-7201 namespaced custom ERC-1155 asset-scoped recovery-share supply storage.
 library LibRecoveryShareStorage {

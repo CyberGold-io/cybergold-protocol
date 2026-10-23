@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 /// @notice Bounded, fallible ERC-20 `balanceOf` observations.
 /// @dev The probe never copies more than one word of returndata and accepts only canonical 32-byte responses.

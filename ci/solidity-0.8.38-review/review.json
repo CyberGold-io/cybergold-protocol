@@ -1,0 +1,1551 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-23",
+  "reviewer": "Codex agent-assisted source, immutable-upstream, analyzer and compiler requalification",
+  "status": "Exact disposition maintenance independently reviewed and authorized by coordinating Codex agent; final canonical qualification follows commit",
+  "baseCommit": "a1cf04bdf6d750a53ef476fd6f0f356e3bee1fd3",
+  "previousQualifiedSource": "19bf56e53641aa2419a69b72c46f0a942558d852",
+  "toolchain": {
+    "previousSolc": "0.8.37+commit.f401782d",
+    "solc": "0.8.38+commit.1835d247",
+    "foundry": "1.7.1",
+    "evm": "osaka",
+    "optimizerRuns": 100,
+    "viaIR": false,
+    "forgeStdPrevious": "bf647bd6046f2f7da30d0c2bf435e5c76a780c1b",
+    "forgeStd": "f3dae6e6ee381f25eb6a246f7da9b85c91a68219",
+    "securityToolLockSha256": "8ebfcda1134c872c3110d896522ece77bc22d317537236bc3206a89d239a40d2"
+  },
+  "sourceReview": {
+    "pragmaOnlyExcept": [
+      "ci/tests/fixtures/solc-bootstrap/src/CompilerBootstrap.sol: compiler version return literal",
+      "packages/3_staking/src/deploy/DeployParams.sol: compilerVersion manifest literal",
+      "packages/3_staking/test/DeployAndCustodyCoverage.t.sol: expected compilerVersion assertion"
+    ],
+    "sourcePolicyPragmas": 327,
+    "storageInventoryOnlyDifference": "compiler.version",
+    "selectedRuntimeClosureForgeStdImports": [],
+    "forgeStdReachability": "Selected Redemption/Preview/Rebalance 51-source runtime union contains no forge-std import. Vm imports in deployment helpers and Test/Script imports are outside that runtime union; all five test scopes are requalified.",
+    "forgeStdReview": "Version1.17.0 updates Vm interfaces, StdStorage, StdConfig/StdJson, adds StdSecp256k1 and includes dependency CI/test changes. No StdAssertions change; Protocol does not call lastCallGas/lastFrameGas or new helpers. Package tests and archive forks must establish compatibility with pinned Foundry1.7.1."
+  },
+  "compilerArtifacts": {
+    "oldSource": "19bf56e53641aa2419a69b72c46f0a942558d852",
+    "newBase": "a1cf04bdf6d750a53ef476fd6f0f356e3bee1fd3",
+    "facets": {
+      "RedemptionFacet": {
+        "oldCompiler": "0.8.37+commit.f401782d",
+        "newCompiler": "0.8.38+commit.1835d247",
+        "oldRuntimeBytes": 11414,
+        "newRuntimeBytes": 11414,
+        "oldExecutableBytes": 11361,
+        "newExecutableBytes": 11361,
+        "runtimeIdentical": false,
+        "metadataStrippedRuntimeIdentical": true,
+        "oldRuntimeSha256": "9f531c095eece28481fa4c26a9bad04f6935dca195b8055ccab6bc7b5f69d8a6",
+        "newRuntimeSha256": "219532dc10d57cef72e2dee5c46218f5dfe264f9d25604af20007f4973116326",
+        "executableSha256": "db57e198e4a38547d9019e25fa1421bd7ef445c0ad7bd74d857f3b6d4c45aa9e",
+        "oldCreationSha256": "e817eb8b363f5ffe97f8dccaae60fb24a3fe19465798ceb175c19fa24bae2a45",
+        "newCreationSha256": "59f94bef45f7d2e5a03b7ab50ee5bc80b2db53f1cf4a4a4921b8bee973035e21"
+      },
+      "PreviewFacet": {
+        "oldCompiler": "0.8.37+commit.f401782d",
+        "newCompiler": "0.8.38+commit.1835d247",
+        "oldRuntimeBytes": 11069,
+        "newRuntimeBytes": 11069,
+        "oldExecutableBytes": 11016,
+        "newExecutableBytes": 11016,
+        "runtimeIdentical": false,
+        "metadataStrippedRuntimeIdentical": true,
+        "oldRuntimeSha256": "29a8019198f4d97de92a1cbe3fc621798234fa202c2eb9d9e51b7222d78159e6",
+        "newRuntimeSha256": "18e5bc11d71e13df1d88f03cde17d548bd38f2f9742ff780ffc1449e9a923185",
+        "executableSha256": "6bf1258a14d67a0a39095128541aa4d59bd2e175e734abe0fa7a0493a2eb338a",
+        "oldCreationSha256": "e70f8c765642fbec5769692006ad43cc799cacb39b1641059a0d89fe2fedcb1a",
+        "newCreationSha256": "56b0752ce2076c5797b3f9630799acfa5e9467cf9a28d22bde2dd5798e6609c4"
+      },
+      "RebalanceFacet": {
+        "oldCompiler": "0.8.37+commit.f401782d",
+        "newCompiler": "0.8.38+commit.1835d247",
+        "oldRuntimeBytes": 8400,
+        "newRuntimeBytes": 8400,
+        "oldExecutableBytes": 8347,
+        "newExecutableBytes": 8347,
+        "runtimeIdentical": false,
+        "metadataStrippedRuntimeIdentical": true,
+        "oldRuntimeSha256": "9520439496a8578806e9a54a48615bd5b6dec8b764b51642c98355627b996aba",
+        "newRuntimeSha256": "8f529d63c0d79b598b1b894b8638c0541d1d8c48dc519aba5bc2f9a3837530f7",
+        "executableSha256": "03dd6b457a6080a68c3467d8047604c8c14ccc86ceaecc737cedd3da0b7cbf79",
+        "oldCreationSha256": "089dea5c466354507c677261f4729af2c4a6aea0f7e6e8f628e0b606dd79c7af",
+        "newCreationSha256": "45623bf9540946451e1681cf965d1d0e3cc7116fb8c623e296af34a96fb0869f"
+      }
+    },
+    "abi": {
+      "GovernanceDiamond.json": {
+        "sha256": "ac6ec072fc74d8cb72f6b3f8a1826184a381373a6d057695cccf36425d93e192",
+        "byteIdentical": true
+      },
+      "StakingDiamond.json": {
+        "sha256": "de6ac0f243171353edca1361e250ffdfcb759136ad26ef74f66aff91837ccbbd",
+        "byteIdentical": true
+      },
+      "CoreDiamond.json": {
+        "sha256": "920c6980ef8a6230582a09b6ef53e267a469768b8464298d2cadcbc391e9c008",
+        "byteIdentical": true
+      }
+    }
+  },
+  "officialInputs": {
+    "0.8.37-bugs.json": {
+      "sha256": "ee8e0a9d7b2b54914eda10f4533d3c2f1136176bd99df2b2abb4c25a4548a582",
+      "bytes": 69286
+    },
+    "0.8.37-bugs_by_version.json": {
+      "sha256": "e67aba151b323ead83f8816f7bae875f04f1eb4defdc9895133b89f8712631f1",
+      "bytes": 93149
+    },
+    "0.8.38-bugs.json": {
+      "sha256": "7766acac0c69aa152c98bc4fefa97679c19a56eac997e3043ea6738c764a23df",
+      "bytes": 72036
+    },
+    "0.8.38-bugs_by_version.json": {
+      "sha256": "42aede2095751ac858504786834ee6c0698f16782fb6470790c474ebae51ae08",
+      "bytes": 94316
+    }
+  },
+  "knownBugs": {
+    "currentCompilerPublishedBugs": [],
+    "fixedBug": "SOL-2026-7 YulOptimizerKnowledgeBaseStaleBookkeeping",
+    "priorCompilerNowPublishedBugs": [
+      "YulOptimizerKnowledgeBaseStaleBookkeeping"
+    ],
+    "riskBoundary": "The official bug can affect isolated inline assembly/compiler-generated utility Yul in optimized evmasm; viaIR=false alone is not an immunity argument. Protocol target0.8.38 fixes it. The historical Helpers0.8.37 copy preserves prior review evidence and is not a fresh bug-free assessment.",
+    "defaultSnapshotTopology": "protocol only",
+    "historicalSnapshotSha256": "d3e1318b0bfc67fd2e7452b84c5ac216779fc5bab93b492f24d4e3e2f6fd1199",
+    "normalizationReviewIntervalDays": 91
+  },
+  "staticReview": {
+    "summary": {
+      "total": 455,
+      "blocking": 26,
+      "reviewRequired": 310,
+      "accepted": 307,
+      "new": 3,
+      "newBlocking": 0,
+      "staleBaselineEntries": 3
+    },
+    "new": [
+      {
+        "tool": "slither",
+        "detector": "pragma",
+        "impact": "Informational",
+        "confidence": "High",
+        "locations": [
+          {
+            "path": "packages/0_shared/src/deploy/BaseDiamondHelper.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/0_shared/src/deploy/DeployParamsHelper.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/0_shared/src/deploy/FacetCutBuilder.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/0_shared/src/deploy/FacetSelectors.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/0_shared/src/deploy/FacetSpec.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/0_shared/src/diamond/ProtocolDiamond.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/0_shared/src/facets/AccessControlFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/0_shared/src/facets/DefaultAdminAccessControlFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/0_shared/src/facets/DiamondCutAccessFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/0_shared/src/facets/DiamondCutAccessLiveFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/0_shared/src/facets/PausableFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/0_shared/src/facets/ProtocolDiamondLoupeFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/0_shared/src/facets/ReentrancyGuardFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/0_shared/src/helpers/FacetVersionRegistry.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/0_shared/src/helpers/InitContext.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/0_shared/src/helpers/InitCoordinator.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/0_shared/src/helpers/LiveFacetVersionRegistry.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/0_shared/src/helpers/LiveInitCoordinator.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/0_shared/src/helpers/LiveValidatedDiamondCut.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/0_shared/src/helpers/ReentrancyGuardInitializable.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/0_shared/src/helpers/ValidatedDiamondCut.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/0_shared/src/interfaces/IDiamondEmergencyAuthority.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/0_shared/src/interfaces/ISafeWallet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/0_shared/src/libraries/LibEmergencyAuthority.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/0_shared/src/libraries/LibInterfaceInvariant.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/0_shared/src/libraries/StandardInterfaceManifests.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/deploy/CoreAuthorityInvariant.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/deploy/DeploymentHelper.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/deploy/DeploymentTypes.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/deploy/DiamondInit.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/deploy/FacetSelectors.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/diamond/CoreDiamond.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/diamond/LibAppStorage.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/facets/BasketAdminFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/facets/ControllerBase.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/facets/ControllerConfigFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/facets/InitFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/facets/IssuanceFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/facets/LensFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/facets/PreviewFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/facets/RebalanceFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/facets/RecoveryAdminFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/facets/RecoveryPoolSettlementFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/facets/RecoveryShareFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/facets/RecoveryShareMetadataFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/facets/RedemptionControllerBase.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/facets/RedemptionFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/facets/ReserveLifecycleFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/facets/TokenFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/interfaces/ICoreRecovery.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/interfaces/ICoreRedemption.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/interfaces/ICoreTypes.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/interfaces/ICyberGoldCore.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/interfaces/ICygldApprovalCallback.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/interfaces/ICygldOutflowCallback.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/interfaces/IRecoveryShareMetadata.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/interfaces/IRecoveryShareOutflowCallback.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/interfaces/IRecoveryShareRedemptionCallback.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/interfaces/IRecoveryTypes.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/libraries/LibAccountCallbacks.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/libraries/LibActiveReserve.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/libraries/LibAllowanceExposureStorage.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/libraries/LibBasketConfig.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/libraries/LibCoreAssetCardinality.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/libraries/LibRecoveryPoolSettlement.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/libraries/LibRecoveryShareStorage.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/libraries/LibRecoveryState.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/libraries/LibRecoveryStorage.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/libraries/LibRedemptionCap.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/libraries/LibReserve.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/libraries/LibReserveLifecycle.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/libraries/LibReserveLifecycleStorage.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/libraries/LibStrictBalanceProbe.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/1_core/src/libraries/LibSupplyCap.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/2_governance/src/deploy/DeployParams.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/2_governance/src/deploy/DeploymentHelper.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/2_governance/src/deploy/DeploymentTypes.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/2_governance/src/deploy/DiamondInit.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/2_governance/src/deploy/FacetSelectors.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/2_governance/src/diamond/GovernanceDiamond.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/2_governance/src/facets/GovernorCoreFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/2_governance/src/facets/GovernorSettingsFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/2_governance/src/facets/RecoveryFundBase.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/2_governance/src/facets/RecoveryFundFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/2_governance/src/facets/RecoveryFundLensFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/2_governance/src/facets/TokenFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/2_governance/src/facets/TreasuryFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/2_governance/src/interfaces/IRecoveryFundCore.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/2_governance/src/interfaces/IRecoveryFundTypes.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/2_governance/src/libraries/LibGovernorBounds.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/2_governance/src/libraries/LibGovernorExecution.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/2_governance/src/libraries/LibGovernorExternalSupply.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/2_governance/src/libraries/LibGovernorPolicy.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/2_governance/src/libraries/LibRecoveryFundMath.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/2_governance/src/libraries/LibRecoveryFundStorage.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/2_governance/src/libraries/LibRecoveryFundTransfer.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/deploy/DeployParams.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/deploy/DeploymentHelper.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/deploy/DeploymentTypes.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/deploy/DiamondInit.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/deploy/FacetSelectors.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/deploy/SleeveArtifactWriter.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/deploy/SleeveDeployerHelper.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/deploy/StakingAuthorityInvariant.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/deploy/StakingBootstrapInit.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/deploy/StakingInterfaceInit.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/deploy/StakingLaunchTypes.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/deploy/StakingSleeveInvariant.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/diamond/LibAppStorage.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/diamond/StakingDiamond.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/facets/CustodyFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/facets/FundManagerFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/facets/LensFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/facets/QueueFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/facets/QueueOperatorFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/facets/QueueRequestBase.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/facets/QueueSigFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/facets/SleeveRegistryFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/facets/StakingDiamondLoupeFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/facets/StakingFinalizerFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/facets/TokenFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/facets/VaultFacet.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/interfaces/ICyberGoldStaking.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/libraries/LibQueueEIP712.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/libraries/LibQueueIndex.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/libraries/LibQueueReadiness.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/libraries/LibStakingDiamondAuthority.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/libraries/LibStakingLaunch.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/sleeves/ISleeve.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/sleeves/Sleeve4626.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/sleeves/SleeveBase.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/sleeves/SleeveCurve.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/sleeves/SleeveManual.sol",
+            "symbol": "^0.8.38"
+          },
+          {
+            "path": "packages/3_staking/src/sleeves/SleeveProxy.sol",
+            "symbol": "^0.8.38"
+          }
+        ],
+        "fingerprint": "49456165ceeced195753c21e3d655fb0f978980cbe0d49e75224e984cf91873f",
+        "blocking": false
+      },
+      {
+        "tool": "slither",
+        "detector": "write-after-write",
+        "impact": "Medium",
+        "confidence": "High",
+        "locations": [
+          {
+            "path": "packages/3_staking/src/deploy/DeployParams.sol",
+            "symbol": "out"
+          },
+          {
+            "path": "packages/3_staking/src/deploy/DeployParams.sol",
+            "symbol": "out = vm_.serializeString(label,protocolCommit,protocolCommit)"
+          },
+          {
+            "path": "packages/3_staking/src/deploy/DeployParams.sol",
+            "symbol": "out = vm_.serializeString(label,compilerVersion,0.8.38)"
+          }
+        ],
+        "automaticDisposition": "foundry-vm-serialization-chain",
+        "fingerprint": "4b98ecb0e0ad9fd5144a6146ce9e05cebc0ac34d769da49e3c967a8f5001602c",
+        "blocking": false
+      },
+      {
+        "tool": "slither",
+        "detector": "write-after-write",
+        "impact": "Medium",
+        "confidence": "High",
+        "locations": [
+          {
+            "path": "packages/3_staking/src/deploy/DeployParams.sol",
+            "symbol": "out"
+          },
+          {
+            "path": "packages/3_staking/src/deploy/DeployParams.sol",
+            "symbol": "out = vm_.serializeString(label,compilerVersion,0.8.38)"
+          },
+          {
+            "path": "packages/3_staking/src/deploy/DeployParams.sol",
+            "symbol": "out = vm_.serializeString(label,compilerProfile,default)"
+          }
+        ],
+        "automaticDisposition": "foundry-vm-serialization-chain",
+        "fingerprint": "9ec62c80e7603c4bf3d259fb7abf03208007f20ee3e6a2c68336f5185f1bf933",
+        "blocking": false
+      }
+    ],
+    "stale": [
+      {
+        "baseline": {
+          "fingerprint": "7eaeb72fc9657e9df6772060fb46cb52a2d49175350d0616b177c7b4f951de81",
+          "tool": "slither",
+          "detector": "write-after-write",
+          "locationSummary": "Foundry JSON serialization accumulator in packages/3_staking/src/deploy/DeployParams.sol",
+          "rationaleId": "staking-foundry-serialization",
+          "reviewMetadataId": "solidity-0.8.37-metadata-review"
+        },
+        "finding": {
+          "tool": "slither",
+          "detector": "write-after-write",
+          "impact": "Medium",
+          "confidence": "High",
+          "locations": [
+            {
+              "path": "packages/3_staking/src/deploy/DeployParams.sol",
+              "symbol": "out"
+            },
+            {
+              "path": "packages/3_staking/src/deploy/DeployParams.sol",
+              "symbol": "out = vm_.serializeString(label,compilerVersion,0.8.37)"
+            },
+            {
+              "path": "packages/3_staking/src/deploy/DeployParams.sol",
+              "symbol": "out = vm_.serializeString(label,compilerProfile,default)"
+            }
+          ],
+          "automaticDisposition": "foundry-vm-serialization-chain",
+          "fingerprint": "7eaeb72fc9657e9df6772060fb46cb52a2d49175350d0616b177c7b4f951de81",
+          "blocking": false
+        }
+      },
+      {
+        "baseline": {
+          "fingerprint": "88b47401ee8b56c2978260c8356eda084b686c03b94460f0a97723d245ded8e8",
+          "tool": "slither",
+          "detector": "write-after-write",
+          "locationSummary": "Foundry JSON serialization accumulator in packages/3_staking/src/deploy/DeployParams.sol",
+          "rationaleId": "staking-foundry-serialization",
+          "reviewMetadataId": "solidity-0.8.37-metadata-review"
+        },
+        "finding": {
+          "tool": "slither",
+          "detector": "write-after-write",
+          "impact": "Medium",
+          "confidence": "High",
+          "locations": [
+            {
+              "path": "packages/3_staking/src/deploy/DeployParams.sol",
+              "symbol": "out"
+            },
+            {
+              "path": "packages/3_staking/src/deploy/DeployParams.sol",
+              "symbol": "out = vm_.serializeString(label,protocolCommit,protocolCommit)"
+            },
+            {
+              "path": "packages/3_staking/src/deploy/DeployParams.sol",
+              "symbol": "out = vm_.serializeString(label,compilerVersion,0.8.37)"
+            }
+          ],
+          "automaticDisposition": "foundry-vm-serialization-chain",
+          "fingerprint": "88b47401ee8b56c2978260c8356eda084b686c03b94460f0a97723d245ded8e8",
+          "blocking": false
+        }
+      },
+      {
+        "baseline": {
+          "fingerprint": "9d0e2c7f86fb15758052e11d9c9c7138427c8410d87495779b18994c3e54f329",
+          "tool": "slither",
+          "detector": "pragma",
+          "locationSummary": "Slither pragma aggregate spanning 134 exact authored Shared, Core, Governance, and Staking paths",
+          "rationale": "Every reported source declares ^0.8.37 while all five canonical Foundry profiles and ci/toolchain.env select exactly 0.8.37. Exact compiler prefetch, build-policy, compiler-version, and known-bug gates prevent either CI or release tooling from selecting another compatible compiler; any source, compiler, or build-authority change invalidates this fingerprint.",
+          "reviewMetadataId": "solidity-0.8.37-metadata-review"
+        },
+        "finding": {
+          "tool": "slither",
+          "detector": "pragma",
+          "impact": "Informational",
+          "confidence": "High",
+          "locations": [
+            {
+              "path": "packages/0_shared/src/deploy/BaseDiamondHelper.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/0_shared/src/deploy/DeployParamsHelper.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/0_shared/src/deploy/FacetCutBuilder.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/0_shared/src/deploy/FacetSelectors.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/0_shared/src/deploy/FacetSpec.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/0_shared/src/diamond/ProtocolDiamond.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/0_shared/src/facets/AccessControlFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/0_shared/src/facets/DefaultAdminAccessControlFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/0_shared/src/facets/DiamondCutAccessFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/0_shared/src/facets/DiamondCutAccessLiveFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/0_shared/src/facets/PausableFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/0_shared/src/facets/ProtocolDiamondLoupeFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/0_shared/src/facets/ReentrancyGuardFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/0_shared/src/helpers/FacetVersionRegistry.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/0_shared/src/helpers/InitContext.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/0_shared/src/helpers/InitCoordinator.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/0_shared/src/helpers/LiveFacetVersionRegistry.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/0_shared/src/helpers/LiveInitCoordinator.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/0_shared/src/helpers/LiveValidatedDiamondCut.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/0_shared/src/helpers/ReentrancyGuardInitializable.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/0_shared/src/helpers/ValidatedDiamondCut.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/0_shared/src/interfaces/IDiamondEmergencyAuthority.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/0_shared/src/interfaces/ISafeWallet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/0_shared/src/libraries/LibEmergencyAuthority.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/0_shared/src/libraries/LibInterfaceInvariant.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/0_shared/src/libraries/StandardInterfaceManifests.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/deploy/CoreAuthorityInvariant.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/deploy/DeploymentHelper.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/deploy/DeploymentTypes.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/deploy/DiamondInit.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/deploy/FacetSelectors.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/diamond/CoreDiamond.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/diamond/LibAppStorage.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/facets/BasketAdminFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/facets/ControllerBase.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/facets/ControllerConfigFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/facets/InitFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/facets/IssuanceFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/facets/LensFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/facets/PreviewFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/facets/RebalanceFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/facets/RecoveryAdminFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/facets/RecoveryPoolSettlementFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/facets/RecoveryShareFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/facets/RecoveryShareMetadataFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/facets/RedemptionControllerBase.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/facets/RedemptionFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/facets/ReserveLifecycleFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/facets/TokenFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/interfaces/ICoreRecovery.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/interfaces/ICoreRedemption.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/interfaces/ICoreTypes.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/interfaces/ICyberGoldCore.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/interfaces/ICygldApprovalCallback.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/interfaces/ICygldOutflowCallback.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/interfaces/IRecoveryShareMetadata.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/interfaces/IRecoveryShareOutflowCallback.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/interfaces/IRecoveryShareRedemptionCallback.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/interfaces/IRecoveryTypes.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/libraries/LibAccountCallbacks.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/libraries/LibActiveReserve.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/libraries/LibAllowanceExposureStorage.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/libraries/LibBasketConfig.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/libraries/LibCoreAssetCardinality.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/libraries/LibRecoveryPoolSettlement.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/libraries/LibRecoveryShareStorage.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/libraries/LibRecoveryState.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/libraries/LibRecoveryStorage.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/libraries/LibRedemptionCap.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/libraries/LibReserve.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/libraries/LibReserveLifecycle.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/libraries/LibReserveLifecycleStorage.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/libraries/LibStrictBalanceProbe.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/1_core/src/libraries/LibSupplyCap.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/2_governance/src/deploy/DeployParams.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/2_governance/src/deploy/DeploymentHelper.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/2_governance/src/deploy/DeploymentTypes.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/2_governance/src/deploy/DiamondInit.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/2_governance/src/deploy/FacetSelectors.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/2_governance/src/diamond/GovernanceDiamond.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/2_governance/src/facets/GovernorCoreFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/2_governance/src/facets/GovernorSettingsFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/2_governance/src/facets/RecoveryFundBase.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/2_governance/src/facets/RecoveryFundFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/2_governance/src/facets/RecoveryFundLensFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/2_governance/src/facets/TokenFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/2_governance/src/facets/TreasuryFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/2_governance/src/interfaces/IRecoveryFundCore.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/2_governance/src/interfaces/IRecoveryFundTypes.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/2_governance/src/libraries/LibGovernorBounds.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/2_governance/src/libraries/LibGovernorExecution.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/2_governance/src/libraries/LibGovernorExternalSupply.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/2_governance/src/libraries/LibGovernorPolicy.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/2_governance/src/libraries/LibRecoveryFundMath.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/2_governance/src/libraries/LibRecoveryFundStorage.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/2_governance/src/libraries/LibRecoveryFundTransfer.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/deploy/DeployParams.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/deploy/DeploymentHelper.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/deploy/DeploymentTypes.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/deploy/DiamondInit.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/deploy/FacetSelectors.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/deploy/SleeveArtifactWriter.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/deploy/SleeveDeployerHelper.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/deploy/StakingAuthorityInvariant.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/deploy/StakingBootstrapInit.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/deploy/StakingInterfaceInit.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/deploy/StakingLaunchTypes.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/deploy/StakingSleeveInvariant.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/diamond/LibAppStorage.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/diamond/StakingDiamond.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/facets/CustodyFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/facets/FundManagerFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/facets/LensFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/facets/QueueFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/facets/QueueOperatorFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/facets/QueueRequestBase.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/facets/QueueSigFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/facets/SleeveRegistryFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/facets/StakingDiamondLoupeFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/facets/StakingFinalizerFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/facets/TokenFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/facets/VaultFacet.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/interfaces/ICyberGoldStaking.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/libraries/LibQueueEIP712.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/libraries/LibQueueIndex.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/libraries/LibQueueReadiness.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/libraries/LibStakingDiamondAuthority.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/libraries/LibStakingLaunch.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/sleeves/ISleeve.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/sleeves/Sleeve4626.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/sleeves/SleeveBase.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/sleeves/SleeveCurve.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/sleeves/SleeveManual.sol",
+              "symbol": "^0.8.37"
+            },
+            {
+              "path": "packages/3_staking/src/sleeves/SleeveProxy.sol",
+              "symbol": "^0.8.37"
+            }
+          ],
+          "fingerprint": "9d0e2c7f86fb15758052e11d9c9c7138427c8410d87495779b18994c3e54f329",
+          "blocking": false
+        }
+      }
+    ],
+    "previousMetadata": {
+      "slither-0116-agent-review-2026-09-27": {
+        "owner": "Codex agent-assisted source review",
+        "reviewedAt": "2026-09-27",
+        "reviewBy": "2026-10-27",
+        "expiryCondition": "SleeveProxy or ERC1967Proxy implementation semantics, analyzer/tool lock, compiler target, or detector result changes; agent-assisted analysis is not human approval"
+      },
+      "solidity-0.8.37-metadata-review": {
+        "owner": "security-maintainer",
+        "reviewedAt": "2026-09-15",
+        "reviewBy": "2026-12-14",
+        "expiryCondition": "source, compiler, analyzer, detector result, or trust-boundary change"
+      },
+      "hosted-ci-static-review-2026-07-28": {
+        "owner": "security-maintainer",
+        "reviewedAt": "2026-07-28",
+        "reviewBy": "2026-10-26",
+        "expiryCondition": "source path or line, analyzer/tool lock, detector aggregate, build authority, deployment target, or trust-boundary change"
+      },
+      "pause-gate-agent-rereview-2026-10-23": {
+        "owner": "Codex agent-assisted source and analyzer-report re-review",
+        "reviewedAt": "2026-10-23",
+        "reviewBy": "2026-11-18",
+        "expiryCondition": "reviewed source location or semantics, analyzer/tool lock, compiler/EVM target, detector aggregate, or trust-boundary change; agent-assisted analysis is not human approval"
+      },
+      "immediate-recovery-agent-rereview-2026-10-23": {
+        "owner": "Codex agent-assisted source and analyzer-report re-review",
+        "reviewedAt": "2026-10-23",
+        "reviewBy": "2026-11-22",
+        "expiryCondition": "reviewed source location or semantics, call mutability, analyzer/tool lock, compiler/EVM target, detector aggregate, or trust-boundary change; agent-assisted analysis is not human approval"
+      },
+      "erc20-storage-gap-agent-rereview-2026-10-23": {
+        "owner": "Codex agent-assisted source and analyzer-report re-review",
+        "reviewedAt": "2026-10-23",
+        "reviewBy": "2027-01-21",
+        "expiryCondition": "source path or line, analyzer/tool lock, detector aggregate, build authority, deployment target, or trust-boundary change"
+      },
+      "optional-initializer-agent-rereview-2026-10-23": {
+        "owner": "Codex agent-assisted source and analyzer-report re-review",
+        "reviewedAt": "2026-10-23",
+        "reviewBy": "2026-11-14",
+        "expiryCondition": "source, analyzer or compiler version, target EVM, exact aggregate locations, or migration authority/storage/topology boundary change; agent-assisted analysis is not human security-maintainer approval"
+      },
+      "quarterly-agent-rereview-2026-10-23": {
+        "owner": "Codex agent-assisted source and analyzer-report re-review",
+        "reviewedAt": "2026-10-23",
+        "reviewBy": "2027-01-12",
+        "expiryCondition": "source, analyzer, detector result, or trust-boundary change"
+      }
+    },
+    "previousMetadataCounts": {
+      "quarterly-agent-rereview-2026-10-23": 288,
+      "solidity-0.8.37-metadata-review": 4,
+      "hosted-ci-static-review-2026-07-28": 2,
+      "immediate-recovery-agent-rereview-2026-10-23": 3,
+      "erc20-storage-gap-agent-rereview-2026-10-23": 2,
+      "optional-initializer-agent-rereview-2026-10-23": 7,
+      "slither-0116-agent-review-2026-09-27": 1,
+      "pause-gate-agent-rereview-2026-10-23": 3
+    },
+    "unchangedFingerprintCount": 307,
+    "findingsTotal": 455,
+    "acceptedInventoryCount": 310,
+    "proposal": "Map the three exact replacement fingerprints, update compiler-pragma wording to0.8.38, retain other factual rationales. Requalify unchanged findings against unchanged executable/source boundaries and successful same-lock analyzer execution using agent-attributed groups that preserve original expiry conditions and deadlines. Preserve previous metadata here and in Git.",
+    "fingerprintReplacements": {
+      "7eaeb72fc9657e9df6772060fb46cb52a2d49175350d0616b177c7b4f951de81": "9ec62c80e7603c4bf3d259fb7abf03208007f20ee3e6a2c68336f5185f1bf933",
+      "88b47401ee8b56c2978260c8356eda084b686c03b94460f0a97723d245ded8e8": "4b98ecb0e0ad9fd5144a6146ce9e05cebc0ac34d769da49e3c967a8f5001602c",
+      "9d0e2c7f86fb15758052e11d9c9c7138427c8410d87495779b18994c3e54f329": "49456165ceeced195753c21e3d655fb0f978980cbe0d49e75224e984cf91873f"
+    },
+    "metadataReplacements": {
+      "slither-0116-agent-review-2026-09-27": "solc038-20261023-slither-0116-agent-review-2026-09-27",
+      "solidity-0.8.37-metadata-review": "solc038-20261023-solidity-0.8.37-metadata-review",
+      "hosted-ci-static-review-2026-07-28": "solc038-20261023-hosted-ci-static-review-2026-07-28",
+      "pause-gate-agent-rereview-2026-10-23": "solc038-20261023-pause-gate-agent-rereview-2026-10-23",
+      "immediate-recovery-agent-rereview-2026-10-23": "solc038-20261023-immediate-recovery-agent-rereview-2026-10-23",
+      "erc20-storage-gap-agent-rereview-2026-10-23": "solc038-20261023-erc20-storage-gap-agent-rereview-2026-10-23",
+      "optional-initializer-agent-rereview-2026-10-23": "solc038-20261023-optional-initializer-agent-rereview-2026-10-23",
+      "quarterly-agent-rereview-2026-10-23": "solc038-20261023-quarterly-agent-rereview-2026-10-23"
+    },
+    "priorRationales": {
+      "staking-zero-sentinel-equality": "These comparisons are unsigned zero sentinels for absent shares, exhausted assets or profit, rejected zero venue usage, and empty reward-token balances. They are not authorization, price, or balance-exactness assumptions; focused SleeveBase, Sleeve4626, and SleeveCurve unit and fuzz tests cover zero, partial, and complete-operation branches.",
+      "staking-ready-epoch-timestamp": "The timestamp equality deliberately coalesces promotions executed at the same block timestamp into one ready epoch; it does not decide authorization, affordability, readiness, or expiry. The same-block sequence test and queue boundary/expiry suites bind this behavior.",
+      "staking-queue-self-call-events": "The reported call is to address(this) and routes to the release-bound VaultFacet.returnShares selector, whose onlyQueue guard permits only the Diamond self-call and whose body performs an internal Staking-share transfer without an external token callback. Every external entry point reaching these helpers uses the shared nonReentrant guard; state effects precede the self-call and any failure rolls back both state and events. Queue cancellation, expiry, promotion, and invariant tests cover these paths.",
+      "staking-diamond-initializer": "DiamondInit.finalize requires Finalizing phase, nonzero active payload, correct commitment and zero owner. StakingFinalizerFacet requires the pristine one-selector shell and exact canonical committed relay; validates initializer/dependency/facet runtime hashes and namespaces before moving phase and cutting. Initializer enters init context, completes product/sleeve/topology validation, installs Governance authority last, and clears launch commitment. Current code registers live launch generations; it does not authenticate FACET_VERSION constants.",
+      "staking-finalization-cut-event": "The permissionless relay accepts only the canonical payload committed by the pristine one-selector shell, validates the complete cut and live code metadata, moves to Finalizing before diamondCut, and verifies the terminal topology and cleared commitment before emitting. Any initializer callback, cut, or postflight failure reverts the entire transaction and event; atomic-launch and adversarial finalization tests cover these cases.",
+      "staking-vault-transfer-from": "VaultFacet.transferFrom is the canonical ERC-20 allowance-backed override: the caller supplies from, but super.transferFrom spends that caller's allowance before transferring, and the additional transfer gate only rejects unsolicited Diamond escrow. ERC-20 allowance, transfer-gate, and release-ABI tests cover the selector.",
+      "staking-state-after-call": "Core's supply-cap read is a same-Diamond release-bound Token-facet call under DEFAULT_ADMIN_ROLE. Staking FundManager and Queue entry points use the shared nonReentrant guard, validate registered/approved sleeves or exact self-facet routing, and update accounting atomically after successful calls. Sleeve4626 initialization is one-shot, checks the committed venue asset, and exposes no callable mutation to the venue during initialization. Supply-cap, allocation/deallocation, queue accounting, callback, and atomic-launch tests cover these boundaries.",
+      "staking-foundry-serialization": "The exact write-after-write sequence is a Foundry vm.serialize* JSON accumulator: each call mutates the object keyed by label and the returned evolving document is intentionally reassigned. Normalization accepts this pattern only in the enumerated deployment artifact writers and only when every assignment matches the reviewed serialize helper grammar.",
+      "staking-reviewed-assembly": "The nine sites comprise fixed namespaced storage-slot assignment; strict 32-byte authority staticcall decoding with bool/address range checks; selector inspection after at-least-four-byte length validation plus canonical ABI re-encoding; and bubbling a compiler-owned bytes returndata buffer. No site changes in this delta. Current launch identity is codehash/namespace/live-generation based; legacy version wording is unnecessary.",
+      "staking-bounded-external-call-loops": "The 17 fingerprints iterate finite committed facet/Sleeve arrays, registered Sleeve lists, max/argument-bounded queue operations or reward/basket rosters. Queue state transitions use nonReentrant; allocation/Sleeve mutations retain entry-specific roles/pause/guards; authority/metadata probes and view Sleeve reads are staticcalls. Permissionless Queue processing intentionally has no allocator role requirement. Finite loops are not a proof that arbitrary configured roster sizes fit an operational gas budget.",
+      "staking-finalizer-complexity": "StakingFinalizerFacet._validateCandidate validates canonical initializer encoding, initializer hash, cut Add/Remove shape, removal of the one bootstrap selector, complete unique facet/dependency membership, facet codehashes and namespaces. It performs no FACET_VERSION check; live launch generation registration occurs in the initializer. Keeping the exact dependent checks together is not by itself an exploitable complexity defect.",
+      "staking-selector-helper-live": "Slither reports _requireSelectorGroup as dead even though _requireProductionTopology calls it once for each of the thirteen committed facet groups. The exact calls and final selector-count check are compiled and exercised by topology mismatch tests.",
+      "staking-cap-observability": "setMaxLpTokens is Governance-admin restricted and its exact replacement value is synchronously readable through maxLpTokens. The missing dedicated event is an observability/API concern rather than an unchecked arithmetic transition; this fingerprint expires if the setter, authority, or release ABI changes.",
+      "staking-checked-low-level-calls": "The exact low-level calls are either static metadata/authority probes with strict success and returndata-shape checks, a committed initializer delegatecall with revert bubbling and atomic rollback, or ERC-20 compatibility wrappers that accept only empty data or canonical true. No reported call result is trusted unchecked.",
+      "staking-diamond-interface-composition": "Staking facets intentionally distribute aggregate interface selectors across independent Diamond facets rather than inheriting whole interfaces, and SleeveProxy intentionally exposes a generic implementation fallback. Release-ABI, selector-owner, ERC-165, and topology conformance gates bind the resulting external surface.",
+      "staking-optional-adapter-zero": "Curve zero gauge/adapter values are explicitly documented disabled states. _claimRewards returns zero for absent gauge/roster, requires a reward adapter before claiming/swapping; _unwrapToOtherAsset requires a nonzero basket adapter only when a positive non-other-asset output needs conversion. That check follows Core redemption, so the correct safety statement is no committed value movement after an eventual atomic revert, not that every dependency check precedes every call.",
+      "staking-release-naming": "The exact names are standards-bound role/typehash/domain constants, unit-explicit public protocol constants following the established Core ABI convention, OpenZeppelin upgrade-storage gaps/initializer conventions, or Curve venue ABI methods whose snake_case spelling must match deployed contracts. Renaming them would break an external standard, selector, established protocol ABI convention, or storage convention rather than improve internal consistency.",
+      "staking-source-pragma-policy": "Authored sources deliberately use ^0.8.37 while every Foundry profile and the CI toolchain pin exactly 0.8.37. The compiler-freshness and condition-aware official known-bug gates reject an unreviewed compiler/settings change, so the broad source pragma cannot select a different release in canonical builds.",
+      "staking-benign-reentrancy-report": "The Queue report is an address(this) call into the release-bound onlyQueue returnShares selector while the external entry point holds the shared guard. The initializer report is a one-shot committed delegatecall under init context; every later failure rolls back the pause state and events. Focused callback and atomic-finalization tests cover both paths.",
+      "staking-local-name-shadowing": "Slither targets aggregate interface parameter/return labels plus TokenFacet.initToken asset parameter. Aderyn targets CurveInitParams/CurveLaunchParams struct member labels such as otherAsset/gauge/rewardSwapAdapter. Executable accesses distinguish params.member and storage variables; no authorization/storage alias arises from these separate declaration scopes.",
+      "staking-timestamp-policy": "The exact timestamp uses implement expiry/deadline rejection, same-block request sequence uniqueness, and same-block ready-epoch coalescing. They do not provide randomness or pricing, and boundary/same-block/expiry/signature tests freeze their inclusive and exclusive comparisons.",
+      "staking-event-index-policy": "The exact addresses occur in standard inherited Diamond/pause events, aggregate ABI declarations, or single-address configuration events. Indexing changes topic compatibility but not execution; the emitting contract address and decoded event data remain available, and release ABI/event conformance detects drift.",
+      "staking-zero-initialized-locals": "The nine locals are zero-default uint counters/accumulators/packed words, false-default expectedCutFacet/found flags, and a Collection memory value whose request/result/hash/salt fields are assigned before their use. In StakingFinalizerFacet the false flags are deliberately fail-closed: absence of an exact match reverts. No arbitrary assembly pointer or caller-supplied authorization default is introduced.",
+      "staking-intentional-unused-returns": "DeploymentHelper._requireValidSleeves uses the builder for validation/revert behavior; investableFor intentionally ignores the companion health tuple value under existing call semantics. Swap adapter credit is measured from before/after received-token balances and allowances are cleared. ERC4626 deposit ignores returned shares while _onAllocate measures underlying spent; withdraw ignores returned share-burn quantity while requesting an exact asset amount then transferring that amount back to custody. This relies on the selected ERC4626/token contracts and transfer failure rollback, not on believing an ignored return value.",
+      "staking-upgrade-storage-gaps": "The reported __gap arrays are intentionally unused reserved storage in the three UUPS Sleeve implementations. Their exact lengths preserve each version-1 storage segment and are covered by storage-layout/inventory gates; using or removing them would be an upgrade-layout change.",
+      "staking-facet-entrypoints": "The reported public/external functions are Diamond facet selectors invoked through delegatecall, including queue processing entry points protected by exact self/role rules. Lack of an internal Solidity caller is expected and release ABI plus selector-owner tests prove reachability.",
+      "staking-fixed-point-literals": "The exact numeric literals are protocol unit scales and bounded domain constants such as 1e18, parts-per-million, basis points, selector/group counts, ABI offsets, and fixed-width sentinels. Their surrounding named constants, bounds checks, or canonical encoding checks make the unit explicit; arithmetic and deployment-evidence tests bind the values.",
+      "staking-fail-closed-token-wrappers": "The exact blank reverts occur only in private ERC-20 compatibility wrappers after a failed call or noncanonical false returndata. Although no custom payload is returned, the operation fails closed and rolls back allowance/value movement; token compatibility and residual-allowance tests cover the boundary.",
+      "staking-aggregate-abi-declarations": "The reported errors and functions are intentionally declared in generated aggregate release interfaces for off-chain decoding and exact Diamond ABI publication. Their implementations live in separate facets, so a file-local usage heuristic cannot establish reachability; ABI semantic and selector conformance gates bind them.",
+      "staking-domain-literals": "The exact literals include artifact field labels, canonical calldata offsets/lengths, facet-group cardinalities, selector sentinels, and explicit unit conversions. Replacing one-off domain values with shared state would obscure rather than strengthen the validation; exact artifact, ABI, and launch tests bind them.",
+      "staking-checked-effects": "The exact calls either use SafeERC20 (which reverts on failure), invoke contracts whose failure bubbles atomically, or intentionally derive the trusted result from before/after balances rather than a return value. Queue self-calls are release-bound and guarded; no reported unchecked value is used to authorize or credit assets.",
+      "staking-exact-token-operations": "The reported ERC-20 operations are SafeERC20 calls or private compatibility wrappers that inspect low-level success and require empty data or canonical true. Deployment-only balance reads and allowance resets are evidence operations; exact-approval and token-behavior tests cover the state-changing paths.",
+      "staking-import-resolution": "The six locations are imports in ProtocolDiamond/DiamondCutAccessFacet/CoreDiamond/GovernanceDiamond/RecoveryFundFacet/StakingDiamond. Some are used via inherited/qualified type declarations, while some may simply be redundant. Either case has no executable state effect; retaining or later removing a redundant import is not an authorization or value-flow defect.",
+      "staking-governed-authority": "The reported setters and custody operations are intentionally privileged by terminal Governance roles, with Safe restricted to the documented emergency boundary. Two-step/default-admin, role topology, paused launch, and authority invariant gates prevent an implicit EOA or ungoverned control path.",
+      "staking-bounded-loop-liveness": "The exact loops iterate finite caller arrays, registered sleeves, canonical facet groups, reward/basket rosters, or queue work capped by arguments/configuration. Each state transition is atomic and role/pause guarded. This static disposition does not approve operational maxima; separate release-bound queue, sleeve, reward, role, and batch-limit decisions remain required.",
+      "staking-osaka-push0": "The PUSH0 report is expected because every reviewed build targets the Osaka EVM, where EIP-3855 is active. The exact compiler/EVM matrix is retained by the condition-aware known-bug gate and deployment metadata; any target drift invalidates that review.",
+      "staking-state-event-coverage": "The exact state changes are one-shot launch/interface initialization covered by atomic finalization evidence, queue/token transitions with their surrounding lifecycle events, or Governance-readable Curve cap/adapter settings. The alert is retained because several setters have no dedicated event; it does not hide the separate API/event release decision.",
+      "staking-bounded-fail-fast-loops": "The exact reverts are validation or operation failures inside finite facet, sleeve, reward, basket, custody, or queue loops. Reverting the entire transaction is required to avoid partial initialization/accounting; bounded-loop and rollback tests cover the fail-fast behavior.",
+      "staking-deployment-decomposition": "The exact internal helpers are used once to isolate selector groups, candidate construction, sleeve deployment, and artifact serialization into auditable units. Inlining would not remove trust boundaries or bytecode work and would make the committed-launch checks harder to review.",
+      "staking-modifier-order": "The exact functions place role/pause/input modifiers before nonReentrant to preserve canonical authorization and pause revert semantics. Every reported state-changing external-call path still enters the shared guard before its body; adversarial callback and paused-access tests cover the order."
+    },
+    "reviewConclusion": "307remaining static fingerprints exactly match the previous qualified report. Their functional rationales remain valid because every changed Solidity body is identical after removing compiler pragma/version-label changes, selected executable runtimes are identical after validated metadata removal, and both pinned analyzers executed against0.8.38 with the same455findings/26knownblocking classifications. Only3replacement fingerprints and compiler wording change; allother rationale text, deadlines and expiryconditions are preserved."
+  },
+  "warningReview": {
+    "delta": {
+      "new": [
+        "b50bd0c650cea040a491d2bd00bf0c6a5adf91d5c48998e3eb597f5755a1efb3",
+        "bd15074b2ea4257e7ea1c94a177c80bc038c413a251b3684de3404cbc2c56152"
+      ],
+      "stale": [
+        "17ddcf207b17000e6ddd73973944a815e1626c3f1a6ba8b4b9faeb1b98b69202",
+        "5df51ec38455cc75aadc4d1b21476f9929ccb15e3302ee5433b5247f696a3f45"
+      ],
+      "scopeDrift": []
+    },
+    "currentCount": 221,
+    "unchangedFingerprintCount": 219,
+    "previousMetadata": {
+      "compiler-warning-review-2026-07": {
+        "owner": "security-maintainer",
+        "reviewedAt": "2026-07-23",
+        "reviewBy": "2026-10-23",
+        "expiryCondition": "compiler, Foundry profile, dependency revision, warning code/path/span, or deployability classification change"
+      },
+      "optional-initializer-warning-agent-review-2026-09-28": {
+        "owner": "Codex agent-assisted source review",
+        "reviewedAt": "2026-09-28",
+        "reviewBy": "2026-10-23",
+        "expiryCondition": "test-harness source/span, compiler, Foundry profile, dependency revision, warning code, or deployability classification change; agent-assisted analysis is not human approval"
+      },
+      "pause-gate-warning-agent-rereview-2026-10-23": {
+        "owner": "Codex agent-assisted source and compiler-warning re-review",
+        "reviewedAt": "2026-10-23",
+        "reviewBy": "2026-11-18",
+        "expiryCondition": "test-harness source/span, compiler, Foundry profile, dependency revision, warning code, or deployability classification change; agent-assisted analysis is not human approval"
+      },
+      "shortage-errors-warning-agent-review-2026-10-23": {
+        "owner": "Codex agent-assisted source and compiler-warning re-review",
+        "reviewedAt": "2026-10-23",
+        "reviewBy": "2027-01-23",
+        "expiryCondition": "compiler, Foundry profile, dependency revision, warning code/path/span, or deployability classification change"
+      }
+    },
+    "previousMetadataCounts": {
+      "compiler-warning-review-2026-07": 195,
+      "shortage-errors-warning-agent-review-2026-10-23": 10,
+      "pause-gate-warning-agent-rereview-2026-10-23": 8,
+      "optional-initializer-warning-agent-review-2026-09-28": 8
+    },
+    "proposal": "Replace only two nondeployable Staking test-harness size fingerprints whose code/path/span/scopes are unchanged and whose body hash changes with the version assertion. Requalify compiler-dependent warning groups with agent attribution and preserved deadlines/expiry conditions; keep warning scopes and rationale IDs.",
+    "fingerprintReplacements": {
+      "17ddcf207b17000e6ddd73973944a815e1626c3f1a6ba8b4b9faeb1b98b69202": "b50bd0c650cea040a491d2bd00bf0c6a5adf91d5c48998e3eb597f5755a1efb3",
+      "5df51ec38455cc75aadc4d1b21476f9929ccb15e3302ee5433b5247f696a3f45": "bd15074b2ea4257e7ea1c94a177c80bc038c413a251b3684de3404cbc2c56152"
+    },
+    "metadataReplacements": {
+      "compiler-warning-review-2026-07": "solc038-20261023-compiler-warning-review-2026-07",
+      "optional-initializer-warning-agent-review-2026-09-28": "solc038-20261023-optional-initializer-warning-agent-review-2026-09-28",
+      "pause-gate-warning-agent-rereview-2026-10-23": "solc038-20261023-pause-gate-warning-agent-rereview-2026-10-23",
+      "shortage-errors-warning-agent-review-2026-10-23": "solc038-20261023-shortage-errors-warning-agent-review-2026-10-23"
+    },
+    "reviewConclusion": "219of221warnings exactly match;2test-only5574/3860records have identical paths/spans/codes/scopes and differ only in whole-harness body hash after the compilerVersion assertion update. Recompiled every scope without suppression. Retain all rationale IDs, scopes, prior deadlines and expiryconditions; agent attribution records current-compiler requalification."
+  },
+  "validation": {
+    "focused": "80 passed,0 failed",
+    "symbolic": "16 passed,0 failed",
+    "staticAnalyzers": "Both pinned tools executed; acceptance pending independent review of3changedfingerprints",
+    "knownBugAndTopologyFixtures": "pass",
+    "buildPolicy": "pass",
+    "toolchain": "pass",
+    "futureKeywords": "pass",
+    "canonical": "pending"
+  },
+  "limitations": [
+    "This is agent-assisted review, not human/external security certification or deployment authorization.",
+    "Historical0.8.37 evidence is preserved; it is not a current statement that prior deployments or Helpers are unaffected by subsequently published compiler bugs.",
+    "The runtime-byte identity conclusion is scoped to the three selected facets, not every Protocol artifact."
+  ],
+  "authorization": "Coordinating agent reviewed the complete3newstatic location inventories, exact2newwarning records, all327pragma-normalized source changes, knownbug snapshot/test changes and bytecode comparison before authorizing these precise changes. This is agent-assisted requalification, not a claim of human security approval."
+}

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 /// @notice Minimal current-state ABI for the mandatory CYGLD recovery fund.
 interface IRecoveryFundTypes {

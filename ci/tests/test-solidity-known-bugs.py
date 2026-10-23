@@ -20,10 +20,10 @@ GATE = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(GATE)
 
 
-def foundry_config(optimizer_runs: int) -> str:
+def foundry_config(optimizer_runs: int, compiler_version: str = "0.8.37") -> str:
     return (
         "[profile.default]\n"
-        'solc_version = "0.8.37"\n'
+        f'solc_version = "{compiler_version}"\n'
         "optimizer = true\n"
         f"optimizer_runs = {optimizer_runs}\n"
         'evm_version = "osaka"\n'
@@ -41,7 +41,10 @@ def materialize_topology(
         path = root / relative
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(
-            foundry_config(settings[relative]["optimizer"]["runs"]),
+            foundry_config(
+                settings[relative]["optimizer"]["runs"],
+                settings[relative]["compilerVersion"],
+            ),
             encoding="utf-8",
         )
     for relative in topology["authoredSourceRoots"]:
@@ -175,23 +178,26 @@ def main() -> int:
         assert observed == production_snapshot["reviewedConfigurations"]["protocol"]
         assert source_roots == ("packages", "script", "test")
 
+    historical_helpers_snapshot = GATE.load_json(
+        ROOT / "ci/solidity-known-bugs.helpers-0.8.37.snapshot.json"
+    )
     with tempfile.TemporaryDirectory(prefix="known-bug-topology-") as temp_name:
         temp_root = pathlib.Path(temp_name)
-        materialize_topology(temp_root, production_snapshot, "helpers")
+        materialize_topology(temp_root, historical_helpers_snapshot, "helpers")
         helpers_source = temp_root / "src/Helpers.sol"
         helpers_source.write_text("contract Helpers {}\n", encoding="utf-8")
         topology, observed, source_roots = GATE.resolve_project_topology(
-            temp_root, production_snapshot
+            temp_root, historical_helpers_snapshot
         )
         assert topology == "helpers"
-        assert observed == production_snapshot["reviewedConfigurations"]["helpers"]
+        assert observed == historical_helpers_snapshot["reviewedConfigurations"]["helpers"]
         assert "src/Helpers.sol" in GATE.authored_sources(temp_root, source_roots)
 
         extra_config = temp_root / "packages/9_unreviewed/foundry.toml"
         extra_config.parent.mkdir(parents=True)
         extra_config.write_text(foundry_config(100), encoding="utf-8")
         try:
-            GATE.resolve_project_topology(temp_root, production_snapshot)
+            GATE.resolve_project_topology(temp_root, historical_helpers_snapshot)
         except ValueError as exc:
             assert "exactly one reviewed project topology" in str(exc)
         else:
@@ -199,14 +205,14 @@ def main() -> int:
 
     with tempfile.TemporaryDirectory(prefix="known-bug-topology-") as temp_name:
         temp_root = pathlib.Path(temp_name)
-        materialize_topology(temp_root, production_snapshot, "helpers")
+        materialize_topology(temp_root, historical_helpers_snapshot, "helpers")
         missing = (
             temp_root
             / "lib/cybergold-protocol/packages/3_staking/foundry.toml"
         )
         missing.unlink()
         try:
-            GATE.resolve_project_topology(temp_root, production_snapshot)
+            GATE.resolve_project_topology(temp_root, historical_helpers_snapshot)
         except ValueError as exc:
             assert "exactly one reviewed project topology" in str(exc)
         else:

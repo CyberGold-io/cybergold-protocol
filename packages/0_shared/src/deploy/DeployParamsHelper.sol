@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 import {Vm} from "forge-std/Vm.sol";
 import {FacetSpec} from "diamond-infra/deploy/FacetSpec.sol";

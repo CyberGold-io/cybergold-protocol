@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 /// @notice One-time migration surface used to replace Core's legacy upgrade coordinator.
 interface ICoreDiamondCutMigration {

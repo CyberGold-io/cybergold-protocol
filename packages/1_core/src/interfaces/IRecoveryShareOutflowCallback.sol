@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0
-pragma solidity ^0.8.37;
+pragma solidity ^0.8.38;
 
 /// @notice Optional account policy invoked after a non-burn Core recovery-share movement.
 interface IRecoveryShareOutflowCallback {
