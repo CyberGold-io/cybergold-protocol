@@ -388,9 +388,15 @@ interface ICyberGoldCore {
     /// @custom:semantic-doc-exempt Pinned diamond-1 EIP-2535 implementation error; the upstream declaration has no NatSpec and is not authored by CyberGold.
     /// @custom:facets cut
     error InitializationFunctionReverted(address _initializationContractAddress, bytes _calldata);
-    /// @notice A redemption or burn requires more CYGLD supply than is currently available.
+    /// @notice A redemption requires more CYGLD than the current total supply.
     /// @custom:facets basketAdmin,controllerConfig,issuance,preview,rebalance,recoveryAdmin,recoveryPoolSettlement,redemption,reserveLifecycle
-    error InsufficientSupply();
+    error InsufficientCygldSupply();
+    /// @notice A requested recovery-share output exceeds the Core-attached participation units currently available.
+    /// @custom:facets basketAdmin,controllerConfig,issuance,preview,rebalance,recoveryAdmin,recoveryPoolSettlement,redemption,reserveLifecycle
+    error InsufficientRecoveryShares();
+    /// @notice A requested reserve-token output exceeds the ordinary reserve currently available to the operation.
+    /// @custom:facets basketAdmin,controllerConfig,issuance,preview,rebalance,recoveryAdmin,recoveryPoolSettlement,redemption,reserveLifecycle
+    error InsufficientReserveBalance();
     /// @dev The nonce used for an `account` is not the expected current nonce.
     /// @custom:facets token
     error InvalidAccountNonce(address account, uint256 currentNonce);

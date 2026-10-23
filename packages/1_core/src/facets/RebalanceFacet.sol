@@ -174,7 +174,7 @@ contract RebalanceFacet is ControllerBase {
         quote.amountOut = _cygldToRawFloor(cs, indexes.outIndex, quote.cygldEquivalentIn);
         if (quote.amountOut == 0) revert RebalanceAmountTooSmallAfterConversion(assetOut, quote.cygldEquivalentIn);
         quote.cygldEquivalentOut = _rawToCygldFloor(cs, indexes.outIndex, quote.amountOut);
-        if (quote.cygldEquivalentOut > preBalancesCygld[indexes.outIndex]) revert InsufficientSupply();
+        if (quote.cygldEquivalentOut > preBalancesCygld[indexes.outIndex]) revert InsufficientReserveBalance();
 
         _simulateAndValidateRebalancePost(cs, indexes, quote, preBalancesCygld, preTotalCygld);
     }
