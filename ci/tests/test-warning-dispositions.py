@@ -3,7 +3,6 @@
 
 from __future__ import annotations
 
-import datetime as dt
 import importlib.util
 import pathlib
 import tempfile
@@ -36,7 +35,6 @@ def baseline(entries: list[dict]) -> dict:
             GATE.REVIEW_METADATA_ID: {
                 "owner": "security-maintainer",
                 "reviewedAt": "2026-07-23",
-                "reviewBy": "2026-10-23",
                 "expiryCondition": "compiler, settings, source span, or dependency change",
             }
         },
@@ -67,9 +65,22 @@ def main() -> int:
     clean = GATE.validate_baseline(
         [reviewed],
         baseline([accepted(reviewed)]),
-        today=dt.date(2026, 7, 23),
     )
     assert clean == {"new": [], "stale": [], "scopeDrift": []}
+
+    # An unchanged advisory does not expire when its recorded review gets old.
+    historical = baseline([accepted(reviewed)])
+    historical["reviewMetadata"][GATE.REVIEW_METADATA_ID]["reviewedAt"] = "2000-01-01"
+    assert GATE.validate_baseline([reviewed], historical) == clean
+    proposed = GATE.proposed_baseline([reviewed])
+    assert all("reviewBy" not in review for review in proposed["reviewMetadata"].values())
+
+    # Removing the calendar deadline does not accept a changed source span.
+    changed = {**reviewed, "spanSha256": "b" * 64}
+    changed["fingerprint"] = GATE.warning_fingerprint(changed)
+    changed_result = GATE.validate_baseline([changed], historical)
+    assert changed_result["new"] == [changed["fingerprint"]]
+    assert changed_result["stale"] == [reviewed["fingerprint"]]
 
     # A new authored occurrence of an otherwise reviewed code is not covered by
     # the code-level disposition: its path/span fingerprint is necessarily new.
@@ -77,7 +88,6 @@ def main() -> int:
     regression = GATE.validate_baseline(
         [reviewed, authored],
         baseline([accepted(reviewed)]),
-        today=dt.date(2026, 7, 23),
     )
     assert regression["new"] == [authored["fingerprint"]]
     assert regression["stale"] == []
@@ -86,7 +96,6 @@ def main() -> int:
     scope_regression = GATE.validate_baseline(
         [moved],
         baseline([accepted(reviewed)]),
-        today=dt.date(2026, 7, 23),
     )
     assert scope_regression["scopeDrift"] == [reviewed["fingerprint"]]
 
