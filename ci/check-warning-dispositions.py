@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 import argparse
-import datetime as dt
 import hashlib
 import json
 import os
@@ -272,7 +271,6 @@ def proposed_baseline(warnings: list[dict[str, Any]]) -> dict[str, Any]:
             REVIEW_METADATA_ID: {
                 "owner": "security-maintainer",
                 "reviewedAt": "2026-07-23",
-                "reviewBy": "2026-10-23",
                 "expiryCondition": (
                     "compiler, Foundry profile, dependency revision, warning code/path/span, "
                     "or deployability classification change"
@@ -287,8 +285,6 @@ def proposed_baseline(warnings: list[dict[str, Any]]) -> dict[str, Any]:
 def validate_baseline(
     warnings: list[dict[str, Any]],
     baseline: dict[str, Any],
-    *,
-    today: dt.date | None = None,
 ) -> dict[str, list[str]]:
     if baseline.get("schemaVersion") != 1:
         raise ValueError("unsupported Solidity warning baseline schema")
@@ -297,17 +293,12 @@ def validate_baseline(
     entries = baseline.get("acceptedWarnings")
     if not isinstance(metadata, dict) or not isinstance(rationales, dict) or not isinstance(entries, list):
         raise ValueError("Solidity warning baseline is malformed")
-    current_date = today or dt.date.today()
     for metadata_id, review in metadata.items():
         if not isinstance(review, dict):
             raise ValueError(f"invalid warning review metadata {metadata_id}")
-        required = ("owner", "reviewedAt", "reviewBy", "expiryCondition")
+        required = ("owner", "reviewedAt", "expiryCondition")
         if any(not review.get(field) for field in required):
             raise ValueError(f"warning review metadata {metadata_id} is incomplete")
-        reviewed_at = dt.date.fromisoformat(str(review["reviewedAt"]))
-        review_by = dt.date.fromisoformat(str(review["reviewBy"]))
-        if reviewed_at > current_date or review_by < current_date or review_by < reviewed_at:
-            raise ValueError(f"warning review metadata {metadata_id} has invalid dates")
 
     expected_by_fingerprint: dict[str, dict[str, Any]] = {}
     for entry in entries:

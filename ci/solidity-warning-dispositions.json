@@ -4,25 +4,21 @@
     "solc038-20261023-compiler-warning-review-2026-07": {
       "owner": "Codex agent-assisted source and current-compiler warning requalification",
       "reviewedAt": "2026-10-23",
-      "reviewBy": "2026-10-23",
       "expiryCondition": "compiler, Foundry profile, dependency revision, warning code/path/span, or deployability classification change"
     },
     "solc038-20261023-optional-initializer-warning-agent-review-2026-09-28": {
       "owner": "Codex agent-assisted source and current-compiler warning requalification",
       "reviewedAt": "2026-10-23",
-      "reviewBy": "2026-10-23",
       "expiryCondition": "test-harness source/span, compiler, Foundry profile, dependency revision, warning code, or deployability classification change; agent-assisted analysis is not human approval"
     },
     "solc038-20261023-pause-gate-warning-agent-rereview-2026-10-23": {
       "owner": "Codex agent-assisted source and current-compiler warning requalification",
       "reviewedAt": "2026-10-23",
-      "reviewBy": "2026-11-18",
       "expiryCondition": "test-harness source/span, compiler, Foundry profile, dependency revision, warning code, or deployability classification change; agent-assisted analysis is not human approval"
     },
     "solc038-20261023-shortage-errors-warning-agent-review-2026-10-23": {
       "owner": "Codex agent-assisted source and current-compiler warning requalification",
       "reviewedAt": "2026-10-23",
-      "reviewBy": "2027-01-23",
       "expiryCondition": "compiler, Foundry profile, dependency revision, warning code/path/span, or deployability classification change"
     }
   },

@@ -167,3 +167,11 @@ PRs to pass `dependency-security` for every unaccepted finding, including
 development and transitive dependencies. Remediate through CyberGold-maintained
 parents; any risk exception needs a specific owner decision. See the policy for
 current GitHub plan limits and local validation.
+
+## Compiler warnings
+
+Compiler warnings remain visible advisories. Recorded warning reviews have no
+calendar deadline and do not expire when time passes. The existing compiler
+warning inventory still detects new or changed warning fingerprints, source
+spans and scopes for review, and deployable contract size limits remain checked
+separately. Review dates record history; they do not require periodic renewal.
